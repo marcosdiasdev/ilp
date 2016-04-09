@@ -25,14 +25,15 @@ Para exemplificar, vamos começar com um algoritmo descritivo para um problema c
 
 Percebe que o algoritmo acima é basicamente uma receita? Algoritmos são exatamente como receitas.
 
-## Programa de Computador
+Uma boa recomendação para a construção de algoritmos descritivos é sempre utilizar apenas um verbo por linha, já que cada verbo geralmente indicará uma ação diferente a ser tomada.
 
-Um Programa de Computador é um algoritmo escrito com o uso de uma linguagem de computador, ou linguagem de programação, como C, Pascal, Java, JavaScript, PHP etc.
+> O nosso principal objetivo ao estudar Lógica de Programação é compreender como criar programas de computador. Um Programa de Computador nada mais é que um algoritmo escrito com o uso de uma linguagem de computador, ou linguagem de programação, como C, Pascal, Java, JavaScript, PHP etc. Há uma infinidade de linguanges de programação disponíveis mundo afora. Futuramente veremos como elas funcionam.
 
 ## Variável
 
-Uma variável é um local na memória, um endereço que armazena um conteúdo.
-Variáveis podem possuir nomes, seja `y` ou `x` ou qualquer outro nome.
+Na Matemática, variável é o nome que se dá ao termo que substitui um outro desconhecido, como numa equação: `y = 2x + 1`. Em Lógica de Programação, o valor de uma variável pode ser conhecido ou não.
+
+De forma genérica, uma variável é uma referência a um local na memória do computador, onde um valor pode estar armazenado, por exemplo: em um programa de computador, podemos ter uma variável chamada `idade`, que armazena o valor `18`.
 
 ### Nomenclatura de variáveis
 
@@ -44,24 +45,23 @@ Há algumas regras a serem seguidas ao nomear variáveis. Algumas linguanges de 
 - Algumas linguagens de programação diferenciam letras maiúsculas de letras minúsculas, logo: `Nome` pode ser diferente de `nome`
 - Variáveis cujo nome seja um substantivo composto, como "data de nascimento", **podem** ser nomeadas com o padrão camelCase: `dataDeNascimento`. Este padrão define que todas as palavras após a primeira devem começar com letra maiúscula. Outra alternativa é utilizar um traço inferior (`_`), ou underline, entre cada palavra: `data_de_nascimento`.
 
-
-## Atribuição de valores
+### Atribuição de valores
 
 Atribuir um valor a uma variável é dar um valor a uma variável. É o mesmo que guardar um valor em um espaço da memória.
 
 ```
 a = 4			
 ```
-Pode ser lido como: variável a recebe 4.
+Pode ser lido como: variável `a` recebe `4`.
 
 ```
 nome = “José”
 ```
-Pode ser lido como: variável nome recebe José.
+Pode ser lido como: variável `nome` recebe `José`.
 
 Observe que o símbolo de igualdade, `=`, aqui é utilizado como operador de atribuição. Para igualdade, utilize `==`.
 
-## Tipos de variáveis
+### Tipos de variáveis
 
 O tipo de uma variável define o tipo de valor que ela poderá armazenar. Por exemplo, se precisamos armazenar um número inteiro, podemos criar uma variável do tipo **inteiro**; para armazenar nomes, utilizamos **cadeias de caracteres**.
 
@@ -84,7 +84,7 @@ O tipo de uma variável define o tipo de valor que ela poderá armazenar. Por ex
 * h)	Média final de um aluno
 
 ## Operadores
-
+Um operador é um símbolo que, como seu próprio nome diz, é utilizado para representar operações lógico-matemáticas. Os operadores que iremos utilizar são os operadores aritméticos, os operadores relacionais e os operadores lógicos. Observe que alguns deles, já utilizados na Matemática, terão seu símbolo substituído por outro na Programação.
 
 ### Operadores Aritméticos
 
@@ -187,7 +187,7 @@ Para facilitar, isole as expressões que estão antes e após o operador lógico
 - d)	`7 > 2 e 3 -5 < 8`
 - e)	`8 > 12 e 5 < 3 + 4`
 
-## Fluxo básico de um programa
+## Comandos básicos
 
 
 
