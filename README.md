@@ -67,7 +67,7 @@ O tipo de uma variável define o tipo de valor que ela poderá armazenar. Por ex
 -	**Caractere ou Cadeia (string ou char):** número, letras, palavras e/ou outros símbolos. Ex.: "A" ou "abc123" ou "*  é um asterisco.". Tenha sempre em mente que valores do tipo caractere ou cadeia de caracteres são representados entre aspas.
 -	**Lógico (bool):** verdadeiro ou falso, sim ou não, 1 ou 0, true ou false.
 
-## Exercícios
+### Exercícios
 
 **1.	Informe o tipo de variável adequado para cada item abaixo:**
 
@@ -105,17 +105,56 @@ O tipo de uma variável define o tipo de valor que ela poderá armazenar. Por ex
 -	Negação/NÃO (! ou not)
 
 ## Tabela verdade
-![alt text](images/tabela-verdade1.png "Logo Title Text 1")
+Uma tabela verdade é uma tabela utilizada em Lógica para verificar se uma expressão é verdadeira ou falsa.
 
-## Exercícios
+### Operadores "e" e "ou"
+
+No exemplo a seguir, temos a tabela verdade dos operadores lógicos `e` e `ou`. Observe que as variáveis `X` e `Y` representam expressões que podem ser verdadeiras ou falsas de forma independente.
+
+![alt text](imagens/tabela-verdade1.png "Tabela Verdade 1")
+
+Para compreender como se dá a construção dessa tabela verdade, podemos nos fazer estas duas perguntas:
+
+- `X` e `Y` são verdadeiros?
+- `X` ou `Y` são verdadeiros?
+
+Ao questionar se `X` e `Y` são verdadeiros, questionamos se ambos são verdadeiros. Ou seja: a expressão `X e Y` só é verdadeira quando `X == verdadeiro` e `Y == verdadeiro`.
+
+O operador `ou` já funciona de maneira diferente. Ao questionarmos se `X` ou `Y` são verdadeiros, questionamos se pelo menos um deles é verdadeiro. Ou seja: a expressão `X ou Y` é verdadeira quando `X == verdadeiro` e `Y == falso`, ou `X == falso` e `Y == verdadeiro`, ou `X == verdadeiro` e `Y == verdadeiro`.
+
+### Operador "não"
+O operador `não` é utilizado para negar uma determinada expressão. Ex.: se `X == verdadeiro`, então `não X == falso`; se `X == falso`, então `não X == verdadeiro`.
+
+![alt text](imagens/tabela-verdade2.png "Tabela Verdade 2")
+
+### Exercícios
+**1. Complete a seguinte tabela verdade:**
+
+![alt text](imagens/tabela-verdade-exercicios.png "Tabela Verdade - Exercícios")
 
 ## Precedência de operadores
+A precedência, ou ordem, de operadores é a convenção que indica a ordem em que as operações devem ser realizadas em uma expressão. A lista abaixo descreve a ordem em que os operadores devem ser considerados:
+
 1.	Parênteses e funções
 2.	Potência e resto
 3.	Multiplicação e divisão
 4.	Adição e subtração
 5.	Operadores relacionais
 6.	Operadores lógicos
+
+No exemplo abaixo, a multiplicação deve ser resolvida antes da soma.
+```
+3 + 4 * 9
+3 + 36
+39
+```
+
+Neste exemplo, a parte da expressão entre parênteses é resolvida antes da multiplicação.
+```
+(3 + 4) * 9
+7 * 9
+63
+```
 
 Quando operadores de mesma prioridade se chocam, a operação mais à esquerda prevalece sobre as demais. Ex.:
 
@@ -125,41 +164,22 @@ Quando operadores de mesma prioridade se chocam, a operação mais à esquerda p
 4
 ```
 
-```
-3 + 4 * 9
-3 + 36
-39
-```
-
-```
-(3 + 4) * 9
-7 * 9
-63
-```
-
-Prioridade do operador de multiplicação sobre o de soma
-Prioridade dos parênteses sobre o operador de multiplicação
-
-Precedência de operadores
-
+Neste exemplo, o operador de soma tem prioridade sobre os operadores relacionais, e os operadores relacionais têm prioridade sobre o operador lógico.
 ```
 10 < 9 e 6 + 3 > 10
 10 < 9 e 9 > 10
 F e F
 F
 ```
-
-Prioridade do operador de soma sobre os operadores relacionais, e prioridade dos operadores relacionais sobre o operador lógico.
 Para facilitar, isole as expressões que estão antes e após o operador lógico, resolva-as e só então compare seus resultados através do operador lógico.
 
-## Exercícios
-1.	Indique o resultado das expressões seguindo as regras de precedência dos operadores.
-
-a)	`2 + 3 - 5 * 8 / 4`
-b)	`7 * 4 / 2 + 9 - 6`
-c)	`(4 + 2) * 3 / 4`
-d)	`7 > 2 e 3 -5 < 8`
-e)	`8 > 12 e 5 < 3 + 4`
+### Exercícios
+**1.	Indique o resultado das expressões seguindo as regras de precedência dos operadores.**
+- a)    `2 + 3 - 5 * 8 / 4`
+- b)	`7 * 4 / 2 + 9 - 6`
+- c)	`(4 + 2) * 3 / 4`
+- d)	`7 > 2 e 3 -5 < 8`
+- e)	`8 > 12 e 5 < 3 + 4`
 
 ## Comandos de entrada
 
