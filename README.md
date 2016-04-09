@@ -105,29 +105,9 @@ O tipo de uma variável define o tipo de valor que ela poderá armazenar. Por ex
 -	Negação/NÃO (! ou not)
 
 ## Tabela verdade
-X	Y	X e Y	X ou Y
-F	F	F	F
-F	V	F	V
-V	F	F	V
-V	V	V	V
-
-
-
- 
-X	Não X
-F	V
-V	F
-
+![alt text](images/tabela-verdade1.png "Logo Title Text 1")
 
 ## Exercícios
-
-X	Y	X	Y	X e Y	X ou Y
-3 < 5	1 > 2	V	F	F	V
-1 == 1	3 > 1				
-3 <> 3	1 > 2				
-80 < 55	140 > 3				
-28 > 8	4 == 4				
-
 
 ## Precedência de operadores
 1.	Parênteses e funções
