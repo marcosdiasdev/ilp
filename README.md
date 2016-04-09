@@ -4,6 +4,8 @@ A **Lógica de Programação** é a técnica de encadear pensamentos para atingi
 
 Antes de começarmos a programar, é necessário compreender novos conceitos e até rever alguns dos já vistos nas aulas de Matemática.
 
+> Os exemplos contidos neste material adotam a sintaxe de uma variante da linguagem Portugol desenvolvida para a ferramenta Portugol Studio, mantida pela UNIVALI - Universidade do Vale do Itajaí.
+
 ## Algoritmo
 
 Podemos definir algoritmo como uma sequência finita e ordenada de passos para a resolução de um problema específico.
@@ -187,9 +189,34 @@ Para facilitar, isole as expressões que estão antes e após o operador lógico
 - d)	`7 > 2 e 3 -5 < 8`
 - e)	`8 > 12 e 5 < 3 + 4`
 
-## Comandos básicos
+## Primeiros passos em programação
 
+Você deve ter notado no início deste material que mencionamos que a sintaxe utilizada em nossos exemplos seria a mesma de uma variante da linguagem Portugol.
 
+Em Lógica de Programação, a **sintaxe** está ligada à **estrutura** da linguagem de programação. Ela é o conjunto de regras que definem a forma correta de composição das estruturas básicas de uma linguagem. É o que deve responder à pergunta: como construir tal estrutura corretamente?
+
+Outro conceito que precisamos compreender é o de **semântica**. Em Lógica de Programação, a semântica está ligada ao **significado** de um determinado código. A semântica deve responder à pergunta: tal código faz realmente o que se espera que ele faça?
+
+A seguir, são abordados alguns comandos básicos para que possamos finalmente começar a programar.
+
+### Declaração de variáveis
+
+Antes que uma variável possa ser utilizada para armazenamento de um valor qualquer, ela deve ser declarada, ou seja: precisamos reservar aquele pequeno espaço na memória do computador e nomeá-lo para uso futuro:
+```
+inteiro idade
+```
+No exemplo acima, declaramos a variável `idade` como do tipo `inteiro`.
+
+Até que a variável `idade` seja inicializada, ou seja, até que ela receba algum valor, seu conteúdo será nulo ou vazio. É possível inicializar uma variável juntamente à sua declaração:
+```
+cadeira nome = "Fulano"
+```
+Mas podemos também declarar uma variável e inicializá-la com um valor lido:
+```
+real preco
+leia(preco)
+```
+O comando `leia()` utilizado no exemplo acima será abordado a seguir.
 
 ### Comandos de entrada
 
@@ -208,11 +235,17 @@ escreva(“Olá, mundo!”)
 Neste exemplo, o comando `escreva()` irá exibir na tela o texto `Olá, mundo!`.
 
 ### Um básico exemplo de entrada, processamento e saída
+Neste exemplo, iremos declarar três variáveis: `a`, `b` e `c`, todas do tipo `inteiro`. Faremos a leitura de dois valores e os armazenaremos nas variáveis `a` e `b`. A variável `c` receberá a soma de `a` e `b`. Por fim, escreveremos o valor contido em `c`.
 ```
+inteiro a, b, c
 leia(a)
 leia(b)
 c = a + b
 escreva(c)
+```
+Perceba que as últimas duas linhas do exemplo acima poderiam ser substituídas por:
+```
+escreva(a + b + c)
 ```
 
 ## Referências Bibliográficas
