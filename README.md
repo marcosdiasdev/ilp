@@ -2,6 +2,8 @@
 
 A **Lógica de Programação** é a técnica de encadear pensamentos para atingir determinado objetivo por meio de um computador ou outro sistema programável.
 
+Antes de começarmos a programar, é necessário compreender novos conceitos e até rever alguns dos já vistos nas aulas de Matemática.
+
 ## Algoritmo
 
 Podemos definir algoritmo como uma sequência finita e ordenada de passos para a resolução de um problema específico.
@@ -39,7 +41,8 @@ Há algumas regras a serem seguidas ao nomear variáveis. Algumas linguanges de 
 - O nome de uma variável não deve conter espaços ou acentos
 - O nome de uma variável não deve conter operadores
 - O nome de uma variável não deve ser só um número
-- Algumas linguagens de programação diferenciam letras maiúsculas de letras minúsculas, logo: `Nome` pode ser diferente de `nome`.
+- Algumas linguagens de programação diferenciam letras maiúsculas de letras minúsculas, logo: `Nome` pode ser diferente de `nome`
+- Variáveis cujo nome seja um substantivo composto, como "data de nascimento", **podem** ser nomeadas com o padrão camelCase: `dataDeNascimento`. Este padrão define que todas as palavras após a primeira devem começar com letra maiúscula. Outra alternativa é utilizar um traço inferior (`_`), ou underline, entre cada palavra: `data_de_nascimento`.
 
 
 ## Atribuição de valores
@@ -80,29 +83,32 @@ O tipo de uma variável define o tipo de valor que ela poderá armazenar. Por ex
 * g)	Situação de uma determinada fatura (paga/não paga)
 * h)	Média final de um aluno
 
-## Operadores Aritméticos
+## Operadores
 
--	**Soma (+):**				`1 + 3`
--	**Subtração (-):**				`5 – 4`
--	**Multiplicação (*):**			`8 * 8`
--	**Divisão (/):**				`40 / 5`
--	**Resto/Módulo (%):**			`20 % 3`
--	**Potenciação (\*\* ou ^):**		`2 ^ 2`
 
-## Operadores Relacionais
+### Operadores Aritméticos
 
--	**Igual (==)**
--	**Diferente (<> ou !=)**
--	**Maior que (>)**
--	**Menor que (<)**
--	**Maior ou igual (>=)**
--	**Menor ou igual (<=)**
+-	**Soma (+):** `1 + 3`
+-	**Subtração (-):** `5 – 4`
+-	**Multiplicação (*):** `8 * 8`
+-	**Divisão (/):** `40 / 5`
+-	**Resto/Módulo (%):** `20 % 3`
+-	**Potenciação (\*\* ou ^):** `2 ^ 2`
 
-## Operadores Lógicos
+### Operadores Relacionais
 
--	Conjunção/E (&& ou and)
--	Disjunção/OU (|| ou or)
--	Negação/NÃO (! ou not)
+-	**Igual (==):** `5 == 5`
+-	**Diferente (<> ou !=):** `8 != 80`
+-	**Maior que (>):** `12 > 11`
+-	**Menor que (<):** `11 < 12`
+-	**Maior ou igual (>=):** `18 >= 17`
+-	**Menor ou igual (<=):** `16 <= 16`
+
+### Operadores Lógicos
+
+-	**E/Conjunção (&& ou and):** `5 == 5 && 9 > 7`
+-	**OU/Disjunção (|| ou or):** `5 > 3 || 7 >= 1`
+-	**NÃO/Negação (! ou not):** `!(3 > 2) == falso`
 
 ## Tabela verdade
 Uma tabela verdade é uma tabela utilizada em Lógica para verificar se uma expressão é verdadeira ou falsa.
@@ -181,21 +187,33 @@ Para facilitar, isole as expressões que estão antes e após o operador lógico
 - d)	`7 > 2 e 3 -5 < 8`
 - e)	`8 > 12 e 5 < 3 + 4`
 
-## Comandos de entrada
+## Fluxo básico de um programa
+
+
+
+### Comandos de entrada
 
 Comandos de entrada são os responsáveis por receber uma informação do usuário. Ex.: leia, escute, ouça, receba.
 ```
 leia(nome)
 ```
-Quando se trata de linguagens de programação, os comandos costumam ter um par de parênteses logo após seu nome, onde serão informadas opções para sua execução. Neste exemplo, o valor lido é armazenado na variável nome.
+Quando se trata de linguagens de programação, os comandos costumam ter um par de parênteses logo após seu nome, onde serão informadas opções para sua execução. Neste exemplo, o valor lido pelo comando `leia()` é armazenado na variável `nome`.
 
-## Comandos de saída
+### Comandos de saída
 
 Comandos de saída são os responsáveis por enviar uma informação ao usuário. Ex.: escreva, imprima, mostre, exiba.
 ```
 escreva(“Olá, mundo!”)
 ```
 Neste exemplo, o comando `escreva()` irá exibir na tela o texto `Olá, mundo!`.
+
+### Um básico exemplo de entrada, processamento e saída
+```
+leia(a)
+leia(b)
+c = a + b
+escreva(c)
+```
 
 ## Referências Bibliográficas
 - LOPES, Anita. GARCIA, Guto. **Introdução à programação – 500 algoritmos resolvidos**. Rio de Janeiro: Elsevier, 2002 - 15ª Tiragem.
