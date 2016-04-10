@@ -1,4 +1,4 @@
-# Apostila de Lógica de Programação
+# Apostila de Introdução à Lógica de Programação
 
 A **Lógica de Programação** é a técnica de encadear pensamentos para atingir determinado objetivo por meio de um computador ou outro sistema programável.
 
