@@ -117,9 +117,9 @@ Um operador é um símbolo que, como seu próprio nome diz, é utilizado para re
 
 ### 3.3. Operadores Lógicos
 
-- **E/Conjunção (&& ou and):** `5 == 5 && 9 > 7`
-- **OU/Disjunção (|| ou or):** `5 > 3 || 7 >= 1`
-- **NÃO/Negação (! ou not):** `!(3 > 2) == falso`
+- **E/Conjunção (e; &&; and):** `5 == 5 e 9 > 7`
+- **OU/Disjunção (ou; ||; or):** `5 > 3 ou 7 >= 1`
+- **NÃO/Negação (nao; !; not):** `nao(3 > 2) == falso`
 
 ## 4. Tabela verdade
 
