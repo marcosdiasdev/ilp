@@ -293,7 +293,7 @@ escreva(a + b + c)
 
 Em algumas situações precisamos fazer decisões, tomar rumos diferentes para situações diferentes. Isso se repete na programação, e é por isso que existem as **estruturas de decisão** (ou estruturas de controle).
 
-As duas principais estruturas de decisão e que estão presentes na maioria das linguagens de programação são o se (if, em inglês) e o escolha (switch, em inglês).
+As duas principais estruturas de decisão e que estão presentes na maioria das linguagens de programação são o se/senao (if/else, em inglês) e o escolha/caso (switch/case, em inglês).
 
 ## 8\. Referências Bibliográficas
 
@@ -319,7 +319,7 @@ As duas principais estruturas de decisão e que estão presentes na maioria das 
 
 # Lista 2 - Estruturas de decisão
 
-## Se
+## Se/Senao
 
 1. Leia um número inteiro e informe se este número é par ou ímpar.
 2. Leia a idade de uma pessoa e informe se ela já chegou à maioridade. Se ela ainda não chegou, informe quantos anos faltam para a maioridade.
@@ -344,6 +344,6 @@ As duas principais estruturas de decisão e que estão presentes na maioria das 
 21. Crie um algoritmo que leia dois números inteiros e escreva uma mensagem dizendo se estes números são iguais ou diferentes.
 22. O IMC (Índice de Massa Corporal) é uma unidade de medida internacional usada para calcular se uma pessoa está no seu peso ideal. A fórmula mais genérica de cálculo de IMC é `imc = peso / altura * altura`, onde o peso é dado em quilos e a altura em metros. Há uma tabela que define uma classificação para cada faixa de IMC. Segundo esta tabela, pessoas com IMC menor ou igual a 18.5 estão abaixo do peso; pessoas com IMC maior que 18.5 e menor que 25 estão no peso ideal; já as pessoas com IMC maior ou igual a 25 estão acima do peso. Elabore um algoritmo que leia peso e altura de uma pessoa, informe seu IMC e também se ela está abaixo do peso, no peso ideal ou acima do peso.
 
-## Escolha caso
+## Escolha/Caso
 
-1. Faça um algoritmo que leia o percurso em quilômetros, o tipo do carro e informe o consumo estimado de combustível, sabendo-se que um carro tipo A faz 12 km com um litro de gasolina, um tipo B faz 9 km e o tipo C, 8 km por litro.
+23. Faça um algoritmo que leia o percurso em quilômetros, o tipo do carro e informe o consumo estimado de combustível, sabendo-se que um carro tipo A faz 12 km com um litro de gasolina, um tipo B faz 9 km e o tipo C, 8 km por litro.
