@@ -77,10 +77,10 @@ O tipo de uma variável define o tipo de valor que ela poderá armazenar. Por ex
 
 - **Inteiro ou (int):** número inteiro. Ex.: 10 ou 50.
 - **Real (float):** número real. Ex.: 10.5 ou 0.8.
-- **Caractere ou Cadeia (string ou char):** número, letras, palavras e/ou outros símbolos. Ex.: "A" ou "abc123" ou "* é um asterisco.". Tenha sempre em mente que valores do tipo caractere ou cadeia de caracteres são representados entre aspas.
+- **Caracter ou Cadeia (string ou char):** número, letras, palavras e/ou outros símbolos. Ex.: "A" ou "abc123" ou "* é um asterisco.". Tenha sempre em mente que valores do tipo caractere ou cadeia de caracteres são representados entre aspas.
 - **Lógico (bool):** verdadeiro ou falso, sim ou não, 1 ou 0, true ou false.
 
-### 2.4\. Exercícios
+### 2.4\. Exercícios com tipos de variáveis
 
 **1\. Informe o tipo de variável adequado para cada item abaixo:**
 
@@ -146,7 +146,7 @@ O operador `não` é utilizado para negar uma determinada expressão. Ex.: se `X
 
 ![alt text](imagens/tabela-verdade2.png "Tabela Verdade 2")
 
-### 4.3\. Exercícios
+### 4.3\. Exercícios com tabela verdade
 
 **1\. Complete a seguinte tabela verdade:**
 
@@ -198,7 +198,7 @@ F
 
 Para facilitar, isole as expressões que estão antes e após o operador lógico, resolva-as e só então compare seus resultados através do operador lógico.
 
-### 5.1\. Exercícios
+### 5.1\. Exercícios com expressões
 
 **1\. Indique o resultado das expressões seguindo as regras de precedência dos operadores.**
 
@@ -231,7 +231,7 @@ No exemplo acima, declaramos a variável `idade` como do tipo `inteiro`.
 Até que a variável `idade` seja inicializada, ou seja, até que ela receba algum valor, seu conteúdo será nulo ou vazio. É possível inicializar uma variável juntamente à sua declaração:
 
 ```
-cadeira nome = "Fulano"
+cadeia nome = "Fulano"
 ```
 
 Mas podemos também declarar uma variável e inicializá-la com um valor lido:
@@ -241,7 +241,15 @@ real preco
 leia(preco)
 ```
 
-O comando `leia()` utilizado no exemplo acima será abordado a seguir.
+O comando `leia()` utilizado no exemplo acima será abordado na próxima seção.
+
+Antes de prosseguirmos, lembre-se que você pode declarar quantas variáveis quiser e de diversos tipos diferentes em um mesmo programa, por exemplo:
+
+```
+cadeia nome, sobrenome, apelido
+real peso, altura
+inteiro idade
+```
 
 ### 6.2\. Comandos de entrada
 
@@ -281,7 +289,13 @@ Perceba que as últimas duas linhas do exemplo acima poderiam ser substituídas 
 escreva(a + b + c)
 ```
 
-## 7\. Referências Bibliográficas
+## 7\. Problemas com caminhos diferentes
+
+Em algumas situações precisamos fazer decisões, tomar rumos diferentes para situações diferentes. Isso se repete na programação, e é por isso que existem as **estruturas de decisão** (ou estruturas de controle).
+
+As duas principais estruturas de decisão e que estão presentes na maioria das linguagens de programação são o se (if, em inglês) e o escolha (switch, em inglês).
+
+## 8\. Referências Bibliográficas
 
 - LOPES, Anita. GARCIA, Guto. **Introdução à programação – 500 algoritmos resolvidos**. Rio de Janeiro: Elsevier, 2002 - 15ª Tiragem.
 
@@ -301,6 +315,7 @@ escreva(a + b + c)
 12. Para auxiliar uma loja que deseja parcelar o valor das compras de seus clientes, elabore um algoritmo que leia o valor de uma compra e o número de prestações desejadas, e escreva o valor das prestações.
 13. No comércio, os preços dos produtos geralmente são definidos com base em uma margem percentual de lucro. Considere um produto adquirido por uma loja pelo valor de R$ 100,00\. Se esta loja aplicar a este produto um percentual de 15% de lucro, o produto será revendido pelo valor de R$ 115,00\. Elabore um algoritmo que leia o valor de compra de um produto e o percentual de lucro desejado, e escreva o valor de revenda deste produto.
 14. Você foi encarregado de realizar uma pesquisa sobre Inclusão Digital. A sua pesquisa deverá apresentar o percentual de alunos da sua escola que possuem acesso à internet. Para isso, elabore um algoritmo que leia o número total de alunos da sua escola e o número de alunos que possuem acesso à internet, por fim, com base nestes dados, escreva o percentual de alunos com acesso à internet. Ex.: Em uma escola com 200 alunos, apenas 50 alunos possuem acesso à internet, o que equivale a 25% destes 200 alunos.
+15. Em uma pequena loja de eletrônica são vendidos `resistores`, `diodos` e `transistores`. Seus preços são `R$ 0.70`, `R$ 0.80` e `R$ 0.95`, respectivamente. Têm-se os preços unitários de cada tipo de peça e sabe-se que sobre estes preços incidem descontos de `5%` para `resistores`, `6%` para `diodos` e `9%` para `transistores`. Elabore um programa que leia o nome do cliente e as quantidades de cada item comprado; e escreva o valor total de desconto e o valor líquido a ser pago pela compra.
 
 # Lista 2 - Estruturas de decisão
 
@@ -309,7 +324,7 @@ escreva(a + b + c)
 1. Leia um número inteiro e informe se este número é par ou ímpar.
 2. Leia a idade de uma pessoa e informe se ela já chegou à maioridade. Se ela ainda não chegou, informe quantos anos faltam para a maioridade.
 3. Construa um algoritmo que leia um número inteiro A e um número inteiro B. Verifique qual dos dois números é maior e o escreva.
-4. Considerando uma pista em que a velocidade máxima permitida pe de 110 km/h, leia a velocidade de um veículo e informe se ele excedeu ou não a velocidade máxima permitida.
+4. Considerando uma pista em que a velocidade máxima permitida é de 110 km/h, leia a velocidade de um veículo e informe se ele excedeu ou não a velocidade máxima permitida.
 5. Considerando que a temperatura média ideal do corpo humano varia entre 36° C e 36,7° C, elabore um algritmo que, dada uma temperatura lida, informe se esta pessoa está com febre.
 6. Complemente o algoritmo anterior, adicionando a ele a capacidade de informar se a pessoa está com hipotermia (abaixo da temperatura média ideal); dentro da temperatura média ideal ou com febre.
 7. Elabore um algoritmo que leia um número inteiro e informe se este número é um múltiplo de 7.
@@ -327,5 +342,8 @@ escreva(a + b + c)
 19. Construa um algoritmo que leia dois números inteiros diferentes e escreva-os em ordem crescente.
 20. Construa um algoritmo que leia três números inteiros e escreva-os em ordem decrescente.
 21. Crie um algoritmo que leia dois números inteiros e escreva uma mensagem dizendo se estes números são iguais ou diferentes.
-22. Em uma pequena loja de eletrônica são vendidos `resistores`, `diodos` e `transistores`. Seus preços são `R$ 0.70`, `R$ 0.80` e `R$ 0.95`, respectivamente. Têm-se os preços unitários de cada tipo de peça e sabe-se que sobre estes preços incidem descontos de `5%` para `resistores`, `6%` para `diodos` e `9%` para `transistores`. Elabore um programa que leia o nome do cliente e as quantidades de cada item comprado; e escreva o valor total de desconto e o valor líquido a ser pago pela compra.
-23. O IMC (Índice de Massa Corporal) é uma unidade de medida internacional usada para calcular se uma pessoa está no seu peso ideal. A fórmula mais genérica de cálculo de IMC é `imc = peso / altura * altura`, onde o peso é dado em quilos e a altura em metros. Há uma tabela que define uma classificação para cada faixa de IMC. Segundo esta tabela, pessoas com IMC menor ou igual a 18.5 estão abaixo do peso; pessoas com IMC maior que 18.5 e menor que 25 estão no peso ideal; já as pessoas com IMC maior ou igual a 25 estão acima do peso. Elabore um algoritmo que leia peso e altura de uma pessoa, informe seu IMC e também se ela está abaixo do peso, no peso ideal ou acima do peso.
+22. O IMC (Índice de Massa Corporal) é uma unidade de medida internacional usada para calcular se uma pessoa está no seu peso ideal. A fórmula mais genérica de cálculo de IMC é `imc = peso / altura * altura`, onde o peso é dado em quilos e a altura em metros. Há uma tabela que define uma classificação para cada faixa de IMC. Segundo esta tabela, pessoas com IMC menor ou igual a 18.5 estão abaixo do peso; pessoas com IMC maior que 18.5 e menor que 25 estão no peso ideal; já as pessoas com IMC maior ou igual a 25 estão acima do peso. Elabore um algoritmo que leia peso e altura de uma pessoa, informe seu IMC e também se ela está abaixo do peso, no peso ideal ou acima do peso.
+
+## Escolha caso
+
+1. Faça um algoritmo que leia o percurso em quilômetros, o tipo do carro e informe o consumo estimado de combustível, sabendo-se que um carro tipo A faz 12 km com um litro de gasolina, um tipo B faz 9 km e o tipo C, 8 km por litro.
