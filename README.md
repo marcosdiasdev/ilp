@@ -10,7 +10,7 @@ Antes de começarmos a programar, é necessário compreender novos conceitos e a
 
 > Os exemplos contidos neste material adotam a sintaxe de uma variante da linguagem Portugol desenvolvida para a ferramenta [Portugol Studio](http://lite.acad.univali.br/portugol/), mantida pela UNIVALI - Universidade do Vale do Itajaí.
 
-## 1\. Algoritmo
+## 1. Algoritmo
 
 Podemos definir algoritmo como uma sequência finita e ordenada de passos para a resolução de um problema específico.
 
@@ -20,14 +20,14 @@ Para exemplificar, vamos começar com um algoritmo descritivo para um problema c
 /*
 Algoritmo para fritar ovos
 
-1\.    pegar frigideira, ovo, óleo e sal
-2\.    colocar óleo na frigideira
-3\.    acender o fogo
-4\.    levar a frigideira ao fogo
-5\.    esperar o óleo esquentar
-6\.    colocar o ovo
-7\.    colocar sal no ovo
-8\.    retirar quando pronto
+1.    pegar frigideira, ovo, óleo e sal
+2.    colocar óleo na frigideira
+3.    acender o fogo
+4.    levar a frigideira ao fogo
+5.    esperar o óleo esquentar
+6.    colocar o ovo
+7.    colocar sal no ovo
+8.    retirar quando pronto
 */
 ```
 
@@ -295,7 +295,13 @@ Em algumas situações precisamos fazer decisões, tomar rumos diferentes para s
 
 As duas principais estruturas de decisão e que estão presentes na maioria das linguagens de programação são o se/senao (if/else, em inglês) e o escolha/caso (switch/case, em inglês).
 
-## 8\. Referências Bibliográficas
+### 7.1. Se/Senão
+
+### 7.2. Escolha/Caso
+
+## 8. Repetições
+
+## 9. Referências Bibliográficas
 
 - LOPES, Anita. GARCIA, Guto. **Introdução à programação – 500 algoritmos resolvidos**. Rio de Janeiro: Elsevier, 2002 - 15ª Tiragem.
 
@@ -317,9 +323,7 @@ As duas principais estruturas de decisão e que estão presentes na maioria das 
 14. Você foi encarregado de realizar uma pesquisa sobre Inclusão Digital. A sua pesquisa deverá apresentar o percentual de alunos da sua escola que possuem acesso à internet. Para isso, elabore um algoritmo que leia o número total de alunos da sua escola e o número de alunos que possuem acesso à internet, por fim, com base nestes dados, escreva o percentual de alunos com acesso à internet. Ex.: Em uma escola com 200 alunos, apenas 50 alunos possuem acesso à internet, o que equivale a 25% destes 200 alunos.
 15. Em uma pequena loja de eletrônica são vendidos `resistores`, `diodos` e `transistores`. Seus preços são `R$ 0.70`, `R$ 0.80` e `R$ 0.95`, respectivamente. Têm-se os preços unitários de cada tipo de peça e sabe-se que sobre estes preços incidem descontos de `5%` para `resistores`, `6%` para `diodos` e `9%` para `transistores`. Elabore um programa que leia o nome do cliente e as quantidades de cada item comprado; e escreva o valor total de desconto e o valor líquido a ser pago pela compra.
 
-## Lista 2 - Estruturas de decisão
-
-### Se/Senao
+## Lista 2 - Estruturas de decisão: Se/Senão
 
 1. Leia um número inteiro e informe se este número é par ou ímpar.
 2. Leia a idade de uma pessoa e informe se ela já chegou à maioridade. Se ela ainda não chegou, informe quantos anos faltam para a maioridade.
@@ -344,9 +348,44 @@ As duas principais estruturas de decisão e que estão presentes na maioria das 
 21. Crie um algoritmo que leia dois números inteiros e escreva uma mensagem dizendo se estes números são iguais ou diferentes.
 22. O IMC (Índice de Massa Corporal) é uma unidade de medida internacional usada para calcular se uma pessoa está no seu peso ideal. A fórmula mais genérica de cálculo de IMC é `imc = peso / altura * altura`, onde o peso é dado em quilos e a altura em metros. Há uma tabela que define uma classificação para cada faixa de IMC. Segundo esta tabela, pessoas com IMC menor ou igual a 18.5 estão abaixo do peso; pessoas com IMC maior que 18.5 e menor que 25 estão no peso ideal; já as pessoas com IMC maior ou igual a 25 estão acima do peso. Elabore um algoritmo que leia peso e altura de uma pessoa, informe seu IMC e também se ela está abaixo do peso, no peso ideal ou acima do peso.
 
-### Escolha/Caso
+## Lista 3 - Estruturas de decisão: Escolha/Caso
 
-23. Elabore um programa que leia uma letra e informe se esta letra é uma vogal ou uma consoante.
-24. Elabore um programa que funcione como uma calculadora simples. Seu programa deverá começar mostrando uma mensagem de apresentação, depois solicitar que o usuário entre com dois números reais (`a` e `b`) e finalmente ler os dois números reais digitados.  Logo após, o programa deverá solicitar ao usuário que escolha uma das seguintes opções: somar, subtrair, multiplicar ou dividir. Com base na escolha do usuário, exiba o resultado da operação escolhida envolvendo `a` e `b`.
-25. Considerando que o ano possui 12 meses, leia um número inteiro entre 1 e 12 e, com o uso da estrutura de controle escolha/caso, informe o nome do mês que corresponde a este número.
-26. Verificar a quantidade de combustível que será gasta em uma viagem é de grande importância para o condutor. Considerando que um carro do tipo A é capaz de percorrer 12 quilômetros a cada litro de combustível gasto, um do tipo B percorre 9 quilômetros a cada litro e um do tipo C, 8 quilômetros por litro, elabore um programa que leia a distância a ser viajada e o tipo de carro, e com base nestes dados informe quantos litros de combustível serão gastos.
+1. Elabore um programa que leia uma letra e informe se esta letra é uma vogal ou uma consoante.
+2. Elabore um programa que funcione como uma calculadora simples. Seu programa deverá começar mostrando uma mensagem de apresentação, depois solicitar que o usuário entre com dois números reais (`a` e `b`) e finalmente ler os dois números reais digitados.  Logo após, o programa deverá solicitar ao usuário que escolha uma das seguintes opções: somar, subtrair, multiplicar ou dividir. Com base na escolha do usuário, exiba o resultado da operação escolhida envolvendo `a` e `b`.
+3. Considerando que o ano possui 12 meses, leia um número inteiro entre 1 e 12 e, com o uso da estrutura de controle escolha/caso, informe o nome do mês que corresponde a este número.
+4. Verificar a quantidade de combustível que será gasta em uma viagem é de grande importância para o condutor. Considerando que um carro do tipo A é capaz de percorrer 12 quilômetros a cada litro de combustível gasto, um do tipo B percorre 9 quilômetros a cada litro e um do tipo C, 8 quilômetros por litro, elabore um programa que leia a distância a ser viajada e o tipo de carro, e com base nestes dados informe quantos litros de combustível serão gastos.
+5. Construa um programa que funcione como um menu para uma lanchonete. Seu programa deverá iniciar mostrando o nome da sua lanchonete. Em seguida, seu programa deverá pedir o nome do usuário e, após lê-lo, exibir uma mensagem de boas vindas. Após isso, seu programa deverá mostrar as opções de lanches disponíveis e seus preços: mostre pelo menos 6 opções de lanches diferentes. Permita que o usuário escolha uma das opções de lanches e, após a escolha, mostre a ele uma mensagem informando a opção que ele escolheu e quanto seu pedido irá custar. Lembre-se de avisar ao usuário caso ele escolha uma opção inexistente.
+6. Construa um programa que leia a primeira letra do mês de nascimento de uma pessoa e informe em quais meses essa pessoa pode ter nascido. Caso não exista um mês que comece com a letra lida, informe ao usuário que ele se enganou.
+
+![alt text](imagens/meses.png "Meses")
+
+## Lista 4 - Laços de Repetição: Enquanto
+
+1. Construa um programa que comece lendo um número inteiro qualquer. Este número será chamado de `piso`. Após isso, seu programa deverá ler um outro número inteiro, que poderá ser chamado de `proximo`, enquanto `proximo` for maior ou igual a `piso`.
+2. Elabore um algoritmo que escreva todos os números inteiros de 1 a 100.
+3. Elabore um algoritmo que escreva apenas os números pares de 1 a 100.
+4. Elabore um algoritmo que escreva apenas os números ímpares de 1 a 100.
+5. Elabore um algoritmo que escreva todos os números inteiros de 200 a 400.
+6. Elabore um algoritmo que escreva apenas os números pares de 300 a 600.
+7. Elabore um algoritmo que escreva apenas os números ímpares de 750 a 1500.
+8. Construa um programa que calcule as médias aritméticas de todos os alunos de uma turma. Seu programa deverá funcionar da seguinte maneira: leia o nome do aluno; leia as notas dos 4 bimestres; mostre a média aritmética do aluno; pergunte se o usuário deseja continuar; se o usuário desejar continuar, repita todo o processo, senão, pare.
+
+## Lista 5 - Laços de Repetição: Faça/Enquanto
+
+1. Construa um programa que comece lendo um número inteiro qualquer. Este número será chamado de `piso`. Após isso, seu programa deverá ler um outro número inteiro, que poderá ser chamado de `proximo`, enquanto `proximo` for maior ou igual a `piso`.
+2. Elabore um algoritmo que escreva todos os números inteiros de 1 a 100.
+3. Elabore um algoritmo que escreva apenas os números pares de 1 a 100.
+4. Elabore um algoritmo que escreva apenas os números ímpares de 1 a 100.
+5. Elabore um algoritmo que escreva todos os números inteiros de 200 a 400.
+6. Elabore um algoritmo que escreva apenas os números pares de 300 a 600.
+7. Elabore um algoritmo que escreva apenas os números ímpares de 750 a 1500.
+8. Construa um programa que calcule as médias aritméticas de todos os alunos de uma turma. Seu programa deverá funcionar da seguinte maneira: leia o nome do aluno; leia as notas dos 4 bimestres; mostre a média aritmética do aluno; pergunte se o usuário deseja continuar; se o usuário desejar continuar, repita todo o processo, senão, pare.
+
+## Lista 6 - Laços de Repetição: Para
+
+1. Elabore um algoritmo que escreva todos os números inteiros de 1 a 100.
+2. Elabore um algoritmo que escreva apenas os números pares de 1 a 100.
+3. Elabore um algoritmo que escreva apenas os números ímpares de 1 a 100.
+4. Elabore um algoritmo que escreva todos os números inteiros de 200 a 400.
+5. Elabore um algoritmo que escreva apenas os números pares de 300 a 600.
+6. Elabore um algoritmo que escreva apenas os números ímpares de 750 a 1500.
