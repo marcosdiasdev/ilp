@@ -289,17 +289,100 @@ Perceba que as últimas duas linhas do exemplo acima poderiam ser substituídas 
 escreva(a + b + c)
 ```
 
-## 7\. Problemas com caminhos diferentes
+## 7. Problemas com caminhos diferentes
 
 Em algumas situações precisamos fazer decisões, tomar rumos diferentes para situações diferentes. Isso se repete na programação, e é por isso que existem as **estruturas de decisão** (ou estruturas de controle).
 
-As duas principais estruturas de decisão e que estão presentes na maioria das linguagens de programação são o se/senao (if/else, em inglês) e o escolha/caso (switch/case, em inglês).
+As duas estruturas de decisão presentes na maioria das linguagens de programação são o se/senao (if/else, em inglês) e o escolha/caso (switch/case, em inglês).
 
-### 7.1. Se/Senão
+As estruturas de decisão são peça fundamental na estruturação dos algoritmos utilizados nos sistemas que utilizamos diariamente. Por exemplo, pense em quando você entra com seu e-mail e senha para realizar login naquela famosa rede social, cujo nome começa com F. Observe que no momento em que você clica no botão Entrar, duas situações são possíveis: seu login pode ser aceito e você entrará na rede social, ou a página indicará que seu e-mail e/ou senha estão incorretos; para decidir qual das duas ações realizar, o sistema certamente fez uso de uma estrutura de decisão.
+
+### 7.1. Se
+
+A estrutura `se` é utilizada na maioria dos casos em que se faz necessário decidir que ação será tomada.
+
+Para que você compreenda como funciona a estrutura `se`, imagine a seguinte situação: após lermos um número inteiro qualquer, se este número for par, deveremos exibir uma mensagem informando que ele é par. Ex.:
+
+```
+inteiro numero
+leia(numero)
+se(numero % 2 == 0) {
+    escreva("O número lido é par.")
+}
+```
+
+A partir da terceira linha do código acima, começamos a utilizar a estrutura de decisão `se`. Observe que ela é constituída da palavra "se" seguida de um par de parênteses. Dentro dos parênteses deve haver uma expressão lógica, ou seja, uma expressão que possa ser avaliada como `verdadeiro` ou `falso`. Quando a expressão entre parênteses é igual a `verdadeiro`, o código entre as chaves da estrutura é executado. Se o resultado da expressão for `falso`, o código entre as chaves é simplesmente ignorado.
+
+Neste exemplo, a expressão avaliada é `numero % 2 == 0`. Considerando que a variável `numero` contenha um número par, como 4, sabemos que o resultado da expressão `numero % 2` será igual a 0, pois ao se dividir 4 por 2, o resto é igual a 0, logo a expressão retornará o valor `verdadeiro`. Observe:
+
+```
+4 % 2 == 0
+0 == 0
+verdadeiro
+```
+
+Se o valor da variável `numero` for ímpar, o resto da sua divisão por 2 será 1, o mesmo acontecerá com qualquer outro número ímpar, logo a expressão retornará o valor `falso`. Observe:
+
+```
+3 % 2 == 0
+1 == 0
+falso
+```
+
+### 7.2. Se/Senão
+
+Nem sempre é suficiente apenas verificar se uma condição é atendida e executar determinada ação. Muitas vezes precisamos de uma segunda alternativa, um plano B.
+
+Ainda conforme o exemplo abordado anteriormente, imagine que caso o número lido não seja par tenhamos que mostrar uma mensagem também informando que o número é ímpar. Acompanhe o exemplo:
+
+```
+inteiro numero
+leia(numero)
+se(numero % 2 == 0) {
+    escreva("O número lido é par.")
+} senao {
+    escreva("O número lido é ímpar.")
+}
+```
+
+Observe que na quinta linha adicionamos a palavra `senao`, seguida de um par de chaves. Neste caso, o código entre as chaves só será executado se a expressão verificada no bloco `se` não for igual a `verdadeiro`, ou simplesmente for igual a `falso`.
+
+### 7.3. Se/Senão/Se
+
+Mas o que fazer quando temos mais de duas alternativas?
+
+Para responder a essa pergunta, vamos pensar no seguinte problema: após ler um número inteiro, precisamos informar ao usuário se este número é negativo, nulo (0) ou positivo. Podemos fazer isso da seguinte forma:
+
+```
+inteiro numero
+leia(numero)
+se(numero < 1) {
+    escreva("O número lido é negativo.")
+} senao se(numero > 1){
+    escreva("O número lido é positivo.")
+} senao {
+    escreva("O número lido é nulo.")
+}
+```
+
+Observe que neste caso foram testadas duas condições: `numero < 1` e `numero > 1`. A segunda condição segue acompanhando o primeiro `senao`, indicando que esta condição só deverá ser verificada caso a primeira não seja verdadeira. Por fim, considerando que nenhuma das duas condições seja verdadeira, o código após o segundo `senao` poderá ser executado.
+
+Mais uma vez:
+- Se `numero < 1` for `verdadeiro`, o código `escreva("O número lido é negativo.")` será executado.
+- Se `numero < 1` for `falso` e `numero > 1` for `verdadeiro`, o código `escreva("O número lido é positivo.")` será executado.
+- Se `numero < 1` for `falso` e `numero > 1` for `falso`, o código `escreva("O número lido é nulo.")` será executado.
+
+Tenha em mente que a quantidade de testes que podem ser realizados em sequência é basicamente ilimitada, mas não é comum vermos estruturas de decisão exageradamente longas.
+
+Para adquirir um maior domínio, teste os exemplos vistos, mas não pare por aí, crie seus próprios exemplos, teste condições compostas, como `idade > 18 e peso < 70`, estruturas com e sem um `senao`, com dois ou mais `senao se` até perceber que já está dominando o assunto.
 
 ### 7.2. Escolha/Caso
 
+Em construção.
+
 ## 8. Repetições
+
+Em construção.
 
 ## 9. Referências Bibliográficas
 
@@ -359,29 +442,25 @@ As duas principais estruturas de decisão e que estão presentes na maioria das 
 
 ![alt text](imagens/meses.png "Meses")
 
-## Lista 4 - Laços de Repetição: Enquanto
+## Lista 4 - Laços de Repetição: Enquanto e Faça/Enquanto
 
-1. Construa um programa que comece lendo um número inteiro qualquer. Este número será chamado de `piso`. Após isso, seu programa deverá ler um outro número inteiro, que poderá ser chamado de `proximo`, enquanto `proximo` for maior ou igual a `piso`.
-2. Elabore um algoritmo que escreva todos os números inteiros de 1 a 100.
-3. Elabore um algoritmo que escreva apenas os números pares de 1 a 100.
-4. Elabore um algoritmo que escreva apenas os números ímpares de 1 a 100.
-5. Elabore um algoritmo que escreva todos os números inteiros de 200 a 400.
-6. Elabore um algoritmo que escreva apenas os números pares de 300 a 600.
-7. Elabore um algoritmo que escreva apenas os números ímpares de 750 a 1500.
-8. Construa um programa que calcule as médias aritméticas de todos os alunos de uma turma. Seu programa deverá funcionar da seguinte maneira: leia o nome do aluno; leia as notas dos 4 bimestres; mostre a média aritmética do aluno; pergunte se o usuário deseja continuar; se o usuário desejar continuar, repita todo o processo, senão, pare.
+1. Elabore um algoritmo que escreva todos os números inteiros de 1 a 100.
+2. Elabore um algoritmo que escreva apenas os números pares de 1 a 100.
+3. Elabore um algoritmo que escreva apenas os números ímpares de 1 a 100.
+4. Elabore um algoritmo que escreva todos os números inteiros de 200 a 400.
+5. Elabore um algoritmo que escreva apenas os números pares de 300 a 600.
+6. Elabore um algoritmo que escreva apenas os números ímpares de 750 a 1500.
+7. Construa um programa que leia um número inteiro e escreva todos os números inteiros de 1 até o número lido.
+8. Construa um programa que leia um número inteiro, verifique se ele é par ou ímpar. Se o número for ímpar, escreva todos os números ímpares menores que ele em ordem crescente. Se o número for par, escreva todos os números pares menores que ele em ordem crescente.
+9. Repita a questão anterior, desta vez imprimindo os números em ordem decrescente, desde o número lido.
+10. Construa um programa que comece lendo um número inteiro qualquer. Este número será chamado de `piso`. Após isso, seu programa deverá ler um outro número inteiro (que poderá ser chamado de `proximo`) enquanto `proximo` for maior ou igual a `piso`.
+11. Elabore um algoritmo que leia dois números inteiros diferentes: `inicio` e `fim`, sendo que `inicio` deve ser menor que `fim`. Escreva em ordem crescente todos os números inteiros entre `inicio` e `fim`, inclusive eles mesmos.
+12. Repita a questão anterior, desta vez presumindo que `inicio` pode ou não ser maior que `fim`. Se `inicio` for maior que `fim`, siga a ordem decrescente.
+13. Construa um programa que repita a tarefa de ler um número inteiro, enquanto o número lido for maior que 1. Ao término das repetições, escreva o resultado da soma de todos os números lidos.
+14. Construa um algoritmo que leia dois números inteiros diferentes: `inicio` e `fim`, sendo que `inicio` deve ser menor que `fim`. Em seguida, escreva o resultado da soma de todos os números inteiros entre `inicio` e `fim`, contando com eles mesmos.
+15. Construa um programa que calcule as médias aritméticas de todos os alunos de uma turma. Seu programa deverá funcionar da seguinte maneira: leia o nome do aluno; leia as notas dos 4 bimestres; mostre a média aritmética do aluno; pergunte se o usuário deseja continuar; se o usuário desejar continuar, repita todo o processo, senão, pare.
 
-## Lista 5 - Laços de Repetição: Faça/Enquanto
-
-1. Construa um programa que comece lendo um número inteiro qualquer. Este número será chamado de `piso`. Após isso, seu programa deverá ler um outro número inteiro, que poderá ser chamado de `proximo`, enquanto `proximo` for maior ou igual a `piso`.
-2. Elabore um algoritmo que escreva todos os números inteiros de 1 a 100.
-3. Elabore um algoritmo que escreva apenas os números pares de 1 a 100.
-4. Elabore um algoritmo que escreva apenas os números ímpares de 1 a 100.
-5. Elabore um algoritmo que escreva todos os números inteiros de 200 a 400.
-6. Elabore um algoritmo que escreva apenas os números pares de 300 a 600.
-7. Elabore um algoritmo que escreva apenas os números ímpares de 750 a 1500.
-8. Construa um programa que calcule as médias aritméticas de todos os alunos de uma turma. Seu programa deverá funcionar da seguinte maneira: leia o nome do aluno; leia as notas dos 4 bimestres; mostre a média aritmética do aluno; pergunte se o usuário deseja continuar; se o usuário desejar continuar, repita todo o processo, senão, pare.
-
-## Lista 6 - Laços de Repetição: Para
+## Lista 5 - Laços de Repetição: Para
 
 1. Elabore um algoritmo que escreva todos os números inteiros de 1 a 100.
 2. Elabore um algoritmo que escreva apenas os números pares de 1 a 100.
