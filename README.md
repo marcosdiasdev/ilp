@@ -289,13 +289,13 @@ Perceba que as últimas duas linhas do exemplo acima poderiam ser substituídas 
 escreva(a + b + c)
 ```
 
-## 7. Problemas com caminhos diferentes
+## 7. Estruturas de decisão: escolha um caminho
 
-Em algumas situações precisamos fazer decisões, tomar rumos diferentes para situações diferentes. Isso se repete na programação, e é por isso que existem as **estruturas de decisão** (ou estruturas de controle).
+Na programação, há momentos em que precisamos fazer decisões, definir caminhos diferentes para situações diferentes, e é por isso que existem as **estruturas de decisão**.
 
 As duas estruturas de decisão presentes na maioria das linguagens de programação são o se/senao (if/else, em inglês) e o escolha/caso (switch/case, em inglês).
 
-As estruturas de decisão são peça fundamental na estruturação dos algoritmos utilizados nos sistemas que utilizamos diariamente. Por exemplo, pense em quando você entra com seu e-mail e senha para realizar login naquela famosa rede social, cujo nome começa com F. Observe que no momento em que você clica no botão Entrar, duas situações são possíveis: seu login pode ser aceito e você entrará na rede social, ou a página indicará que seu e-mail e/ou senha estão incorretos; para decidir qual das duas ações realizar, o sistema certamente fez uso de uma estrutura de decisão.
+As estruturas de decisão são peça fundamental na estruturação dos algoritmos utilizados nos sistemas que utilizamos diariamente. Por exemplo, pense em quando você entra com seu e-mail e senha para realizar login em uma rede social. Observe que no momento em que você clica no botão Entrar, duas situações são possíveis: seu login pode ser aceito e você entrará na rede social, ou a página indicará que seu e-mail e/ou senha estão incorretos. Para decidir qual das duas ações realizar, o sistema certamente fez uso de uma estrutura de decisão.
 
 ### 7.1. Se
 
@@ -313,7 +313,7 @@ se(numero % 2 == 0) {
 
 A partir da terceira linha do código acima, começamos a utilizar a estrutura de decisão `se`. Observe que ela é constituída da palavra "se" seguida de um par de parênteses. Dentro dos parênteses deve haver uma expressão lógica, ou seja, uma expressão que possa ser avaliada como `verdadeiro` ou `falso`. Quando a expressão entre parênteses é igual a `verdadeiro`, o código entre as chaves da estrutura é executado. Se o resultado da expressão for `falso`, o código entre as chaves é simplesmente ignorado.
 
-Neste exemplo, a expressão avaliada é `numero % 2 == 0`. Considerando que a variável `numero` contenha um número par, como 4, sabemos que o resultado da expressão `numero % 2` será igual a 0, pois ao se dividir 4 por 2, o resto é igual a 0, logo a expressão retornará o valor `verdadeiro`. Observe:
+Neste exemplo, a expressão avaliada é `numero % 2 == 0`. Considerando que a variável `numero` contenha mesmo um número par, como 4, sabemos que o resultado da expressão `numero % 2` será igual a 0, pois ao se dividir 4 por 2, o resto (ou módulo) é 0, logo a expressão retornará o valor `verdadeiro`. Observe:
 
 ```
 4 % 2 == 0
@@ -380,9 +380,104 @@ Para adquirir um maior domínio, teste os exemplos vistos, mas não pare por aí
 
 Em construção.
 
-## 8. Repetições
+## 8. Estruturas de repetição: como evitar a fadiga
 
-Em construção.
+Quando programamos, algumas tarefas podem exigir esforços absurdamente repetitivos. Imagine uma situação em que seja necessário exibir uma lista numerada com 50 itens. Será que precisaríamos mesmo repetir o comando `escreva()` por 50 vezes?
+
+A boa notícia é que alguém já pensou nisso antes. As linguagens de programação possuem estruturas que chamamos de **estruturas de repetição** ou de **laços de repetição**. Estas estruturas são utilizadas sempre que nos deparamos com tarefas que exijam que um procedimento se repita por várias vezes.
+
+As três estruturas de repetição que abordaremos são: enquanto (while, em inglês), faca/enquanto (do/while, em inglês) e para (for, em inglês). Cada uma dessas estruturas é mais adequada em uma situação específica, mas o propósito de automatizar tarefas repetitivas permanece em todas elas.
+
+Assim como nas estruturas de decisão, o funcionamento de uma estrutura de repetição é baseado em uma condição, que mais uma vez deverá ser representada através de uma expressão lógica.
+
+A seguir, conheceremos cada uma das estruturas de repetição mais a fundo.
+
+### 8.1. Enquanto
+
+Imagine uma situação em que você precise repetir determinada tarefa enquanto uma certa condição for verdadeira, por exemplo:
+
+>> Enquanto um for igual a um, escreva: um é igual a um.
+
+Essa mesma situação pode ser descrita em código, utilizando Portugol, da seguinte forma:
+
+```
+enquanto(1 == 1)
+{
+    escreva("um é igual a um.")
+}
+```
+
+Se você testou o código acima, deve ter percebido que ele gerou um **loop infinito**, que é como chamamos os laços de repetição intermináveis. O motivo de esse laço de repetição ser interminável é bastante óbvio, pois sabemos que 1 será sempre igual a 1.
+
+Em muitos dos casos em que utilizamos laços de repetição, nós trabalhos com números inteiros. Considere, por exemplo, uma situação em que seja necessário imprimir todos os números inteiros de 1 a 10. Em casos como este, utilizamos variáveis do tipo inteiro que possam ter seu valor alterado progressivamente. A estas variáveis damos o nome de **contadoras**:
+
+```
+inteiro x = 1
+enquanto(x <= 10)
+{
+    escreva(x)
+    x = x + 1
+}
+```
+
+No exemplo acima, a variável `x` assume o papel de contadora, pois é utilizada como condição do laço de repetição e seu valor é **incrementado** a cada repetição. A variável é inicializada com o valor `1` e definimos que enquanto o valor nela contido for menor ou igual a `10`, a seguinte tarefa deve ser executada: escreve-se o valor de `x` e adiciona-se `1` ao valor atual de `x`.
+
+Ao término desse programa, o valor de `x` será igual a `10` ou igual a `11`? Perceba que em algum momento nessa estrutura de repetição, o valor de `x` atingirá `10`, a condição entre parênteses será avaliada como verdadeira, o valor de `x` será mostrado e incrementado, ou seja, `x` passará a ser igual a `11`. A partir deste ponto, a condição `x <= 10` voltará a ser avaliada e, desta vez, seu resultado será `falso`, pois `x` é igual a `11`, logo não é nem menor nem igual a `10`. Com isto, o laço de repetição será interrompido e o valor de `x`, que agora é igual a `11`, não será mais mostrado.
+
+Se precisarmos realizar o caminho contrário, ou seja, imprimir todos os números inteiros de 10 a 1 (em ordem decrescente), o seguinte código seria suficiente:
+
+```
+inteiro x = 10
+enquanto(x >= 1)
+{
+    escreva(x)
+    x = x - 1
+}
+```
+
+Perceba que, neste exemplo, o valor de `x` é **decrementado**, ou seja, subtraímos `1` do valor de `x` a cada repetição. A condição verificada também é diferente: desta vez, verificamos a cada repetição se o valor de `x` é maior ou igual a `1`.
+
+De forma bastante resumida, podemos descrever a estrutura `enquanto() { }` da seguinte forma:
+
+1. A condição é testada
+2. Se a condição for avaliada como verdadeira, o código entre chaves é executado, retorna-se ao passo 1
+3. Se a condição for avaliada como falsa, segue-se ao passo 4
+2. A estrutura é finalizada
+
+### 8.2. Faça/Enquanto
+
+A segunda estrutura de repetição que iremos abordar funciona de forma muito semelhante à primeira, com uma pequena diferença: a condição só é verificada após a primeira execução do código. Observe o exemplo:
+
+>> Escreva: um é igual a um. Enquanto um for igual a um, repita.
+
+Essa mesma situação pode ser descrita em código, utilizando Portugol, da seguinte forma:
+
+```
+faca
+{
+    escreva("um é igual a um.")
+}
+enquanto(1 == 1)
+```
+
+De forma bastante resumida, podemos descrever a estrutura `faca { } enquanto()` da seguinte forma:
+
+1. O código entre chaves é executado
+2. A condição é testada
+3. Se a condição for avaliada como verdadeira, retorna-se ao passo 1
+4. Se a condição for avaliada como falsa, segue-se ao passo 5
+5. A estrutura é finalizada
+
+### 8.3. Para
+
+Para cada vez em que a condição for atendida, executa-se o código entre parênteses.
+
+```
+para(inteiro x = 1; x <= 10; x++)
+{
+    escreva(x)
+}
+```
 
 ## 9. Referências Bibliográficas
 
@@ -454,10 +549,10 @@ Em construção.
 8. Construa um programa que leia um número inteiro, verifique se ele é par ou ímpar. Se o número for ímpar, escreva todos os números ímpares menores que ele em ordem crescente. Se o número for par, escreva todos os números pares menores que ele em ordem crescente.
 9. Repita a questão anterior, desta vez imprimindo os números em ordem decrescente, desde o número lido.
 10. Construa um programa que comece lendo um número inteiro qualquer. Este número será chamado de `piso`. Após isso, seu programa deverá ler um outro número inteiro (que poderá ser chamado de `proximo`) enquanto `proximo` for maior ou igual a `piso`.
-11. Elabore um algoritmo que leia dois números inteiros diferentes: `inicio` e `fim`, sendo que `inicio` deve ser menor que `fim`. Escreva em ordem crescente todos os números inteiros entre `inicio` e `fim`, inclusive eles mesmos.
-12. Repita a questão anterior, desta vez presumindo que `inicio` pode ou não ser maior que `fim`. Se `inicio` for maior que `fim`, siga a ordem decrescente.
+11. Elabore um algoritmo que leia dois números inteiros diferentes: `ini` e `fim`, sendo que `ini` deve ser menor que `fim`. Escreva em ordem crescente todos os números inteiros entre `inicio` e `fim`, inclusive eles mesmos.
+12. Repita a questão anterior, desta vez presumindo que `ini` pode ou não ser maior que `fim`. Se `ini` for maior que `fim`, siga a ordem decrescente.
 13. Construa um programa que repita a tarefa de ler um número inteiro, enquanto o número lido for maior que 1. Ao término das repetições, escreva o resultado da soma de todos os números lidos.
-14. Construa um algoritmo que leia dois números inteiros diferentes: `inicio` e `fim`, sendo que `inicio` deve ser menor que `fim`. Em seguida, escreva o resultado da soma de todos os números inteiros entre `inicio` e `fim`, contando com eles mesmos.
+14. Construa um algoritmo que leia dois números inteiros diferentes: `ini` e `fim`, sendo que `ini` deve ser menor que `fim`. Em seguida, escreva o resultado da soma de todos os números inteiros entre `ini` e `fim`, contando com eles mesmos.
 15. Construa um programa que calcule as médias aritméticas de todos os alunos de uma turma. Seu programa deverá funcionar da seguinte maneira: leia o nome do aluno; leia as notas dos 4 bimestres; mostre a média aritmética do aluno; pergunte se o usuário deseja continuar; se o usuário desejar continuar, repita todo o processo, senão, pare.
 
 ## Lista 5 - Laços de Repetição: Para
