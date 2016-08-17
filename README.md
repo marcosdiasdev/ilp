@@ -289,6 +289,41 @@ Perceba que as últimas duas linhas do exemplo acima poderiam ser substituídas 
 escreva(a + b + c)
 ```
 
+#### * Bônus
+
+Pense numa situação em que você precise escrever um programa em dupla, juntamente com um de seus colegas de classe. Fica combinado que você escreverá a primeira parte do programa e seu colega completará a solução a partir daí. No entanto, devido ao pequeno prazo disponível, você não poderá explicar ao seu colega pessoalmente como fez para chegar até aquele ponto da solução.
+
+Podemos acreditar que, muito provavelmente, seu colega terá dificuldades em compreender seu código para, então, conseguir prosseguir com a solução do problema.
+
+Mas, e se você pudesse escrever algo mais dentro do seu código para orientar seu colega sem que isso atrapalhasse o funcionamento do seu programa? Isso é possível com o uso de **comentários**.
+
+Através de comentários, você pode escrever qualquer coisa dentro do seu código sem que isso afete o funcionamento do seu programa. Para escrever um comentário, apenas insira `//` e escreva seu comentário. Exemplo:
+
+```
+inteiro x = 50
+// Isto é um comentário de uma única linha
+escreva(x)
+```
+
+Às vezes utilizamos comentários também para **suprimir** uma ou mais linhas de código de um programa para que elas não sejam executadas:
+
+```
+inteiro x = 10, y = 20
+escreva(x)
+// escreva(y)
+// Veja que só a variável x será escrita, pois a linha que deveria escrever y foi marcada como um comentário
+```
+
+Alguns comentários podem ser mais longos e ocupar várias linhas de código. Neste caso, a primeira linha comentada deverá ser iniciada com `/*` e a última finalizada com `*/`. Exemplo:
+
+```
+inteiro z = 30
+/* Este comentário
+foi um pouco
+mais longe */
+escreva(z)
+```
+
 ## 7. Estruturas de decisão: escolha um caminho
 
 Na programação, há momentos em que precisamos fazer decisões, definir caminhos diferentes para situações diferentes, e é por isso que existem as **estruturas de decisão**.
@@ -407,7 +442,20 @@ enquanto(1 == 1)
 }
 ```
 
-Se você testou o código acima, deve ter percebido que ele gerou um **loop infinito**, que é como chamamos os laços de repetição intermináveis. O motivo de esse laço de repetição ser interminável é bastante óbvio, pois sabemos que 1 será sempre igual a 1.
+Neste exemplo, enquanto a condição `1 == 1` for avaliada como verdadeira, a expressão `escreva("um é igual a um.")` será executada. Pense nisso como um ciclo: avaliamos a condição, se ela for verdadeira, o código é executado, depois tudo se repete novamente.
+
+Se você testou o código acima, deve ter percebido que ele gerou um **loop infinito**, que é como chamamos os laços de repetição intermináveis. O motivo de esse laço de repetição ser interminável é bastante óbvio, pois sabemos que 1 será sempre igual a 1, logo a condição sempre será verdadeira.
+
+Quando a condição é avaliada como falsa, o código entre chaves não é executado e o programa segue para após a estrutura de repetição.
+
+```
+enquanto(esta condição for verdadeira)
+{
+    este código será executado
+    ...e a condição será verificada novamente
+}
+se a condição for falsa, o código continuará daqui
+```
 
 Em muitos dos casos em que utilizamos laços de repetição, nós trabalhos com números inteiros. Considere, por exemplo, uma situação em que seja necessário imprimir todos os números inteiros de 1 a 10. Em casos como este, utilizamos variáveis do tipo inteiro que possam ter seu valor alterado progressivamente. A estas variáveis damos o nome de **contadoras**:
 
@@ -442,7 +490,7 @@ De forma bastante resumida, podemos descrever a estrutura `enquanto() { }` da se
 1. A condição é testada
 2. Se a condição for avaliada como verdadeira, o código entre chaves é executado, retorna-se ao passo 1
 3. Se a condição for avaliada como falsa, segue-se ao passo 4
-2. A estrutura é finalizada
+4. A estrutura é finalizada
 
 ### 8.2. Faça/Enquanto
 
@@ -468,15 +516,75 @@ De forma bastante resumida, podemos descrever a estrutura `faca { } enquanto()` 
 4. Se a condição for avaliada como falsa, segue-se ao passo 5
 5. A estrutura é finalizada
 
+#### * Bônus
+
+Se você ainda não conseguiu compreender a diferença entre `enquanto` e `faca enquanto`, reflita nas seguintes situações:
+
+Enquanto:
+> Mariana pede a Felipe que vá ao mercado e lhe diz: Felipe, se os tomates estiverem bons, pegue um. Enquanto houver tomates bons, continue pegando tomates. Se não houver mais tomates bons, pare de pegar os tomates.
+
+Faça/Enquanto:
+> Mariana pede a Felipe que vá ao mercado e lhe diz: Felipe, pegue um tomate. Enquanto houver tomates bons, continue pegando tomates. Se não houver mais tomates bons, pare de pegar os tomates.
+
+![alt text](imagens/tomato.jpg "Tomate")
+
 ### 8.3. Para
 
-Para cada vez em que a condição for atendida, executa-se o código entre parênteses.
+A última estrutura de repetição que iremos abordar tem um comportamento bastante semelhante ao das anteriores, porém, tem uma finalidade muito específica: a estrutura de decisão `para` é a mais adequada em situações em que o número de repetições a serem executadas já é conhecido.
+
+Observe como faríamos para imprimir os números inteiros de 1 a 1000 utilizando `para`:
 
 ```
-para(inteiro x = 1; x <= 10; x++)
+para(inteiro x = 1; x <= 1000; x++)
 {
     escreva(x)
 }
+```
+
+Você pode ter a impressão de que a condição entre parênteses ficou maior, mas não é exatamente isso o que acontece. Ao utilizarmos a estrutura `para`, temos acesso a três regras, separadas por ponto e vírgula, que definirão como a estrutura será executada. A estas regras damos o nome de **parâmetros** ou **argumentos**.
+
+1. O primeiro parâmetro é um espaço disponibilizado para a declaração e inicialização de variáveis que serão utilizadas apenas dentro desta estrutura `para`. Observe que no exemplo acima, nós declaramos e inicializamos a variável `x` com o valor `1`. A variável `x` será nossa contadora e, por vezes, também poderá ser chamada de **variável de controle**.
+2. O segundo parâmetro é referente à condição que será verificada a cada repetição. Enquanto a expressão informada for avaliada como verdadeira, o código continuará a ser repetido. No exemplo acima, definimos que o código será repetido enquanto o valor de `x` for menor ou igual a `1000`.
+3. O terceiro e último parâmetro é destinado à definição da alteração que a variável de controle irá sofrer a cada repetição. Geralmente, definimos nesta posição uma expressão de incremento ou de decremento da variável de controle. Em nosso exemplo, a variável `x` é incrementada em `1` a cada repetição.
+
+De maneira resumida, podemos dizer que: considerando a(s) variável(eis) de controle definida(s), enquanto a condição informada for verdadeira, o valor da(s) variável(eis) de controle será alterado e o código entre chaves será executado.
+
+#### * Bônus
+
+Você deve ter notado em nossa estrutura de repetição `para` o uso da expressão `x++`. Os operadores `++` podem ser utilizados com qualquer variável numérica, seja inteira ou real, quando se deseja incrementar seu valor em `1`.
+
+Para decrementar o valor de `x` em `1`, poderíamos ter feito `x--`.
+
+Observe que isto pode ser utilizado em qualquer momento no código, tanto na estrutura `para` quanto em qualquer outra estrutura de repetição ou mesmo fora de uma estrutura de repetição.
+
+Os seguintes métodos de incremento são equivalentes:
+
+```
+x = x + 1
+x += 1
+x++
+```
+
+Qualquer um dos métodos acima fará com que o valor contido em `x` seja incrementado em `1`, ou seja: se o valor de `x` for `5`, por exemplo, `x++` fará com que `x` passe a valer `6`.
+
+O mesmo é válido para decremento:
+
+```
+x = x - 1
+x -= 1
+x--
+```
+
+Caso seja necessário incrementar ou decrementar o valor de uma variável em mais que `1`, os operadores `++` ou `--` não poderão ajudar. Em casos como estes, apenas os dois primeiros métodos mostrados irão funcionar. Exemplo:
+
+```
+// Incremento
+x = x + 3
+x += 3
+
+// Decremento
+y = y - 5
+y -= 5
 ```
 
 ## 9. Referências Bibliográficas
@@ -563,3 +671,4 @@ para(inteiro x = 1; x <= 10; x++)
 4. Elabore um algoritmo que escreva todos os números inteiros de 200 a 400.
 5. Elabore um algoritmo que escreva apenas os números pares de 300 a 600.
 6. Elabore um algoritmo que escreva apenas os números ímpares de 750 a 1500.
+7. Elabore um algoritmo que leia as quatro notas de um aluno e, ao fim, mostre sua média aritmética.
