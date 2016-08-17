@@ -271,7 +271,7 @@ escreva(“Olá, mundo!”)
 
 Neste exemplo, o comando `escreva()` irá exibir na tela o texto `Olá, mundo!`.
 
-### 6.4\. Um básico exemplo de entrada, processamento e saída
+### 6.4. Um básico exemplo de entrada, processamento e saída
 
 Neste exemplo, iremos declarar três variáveis: `a`, `b` e `c`, todas do tipo `inteiro`. Faremos a leitura de dois valores e os armazenaremos nas variáveis `a` e `b`. A variável `c` receberá a soma de `a` e `b`. Por fim, escreveremos o valor contido em `c`.
 
@@ -289,7 +289,7 @@ Perceba que as últimas duas linhas do exemplo acima poderiam ser substituídas 
 escreva(a + b + c)
 ```
 
-#### * Bônus
+### 6.5. Dando mais sentido ao seu código
 
 Pense numa situação em que você precise escrever um programa em dupla, juntamente com um de seus colegas de classe. Fica combinado que você escreverá a primeira parte do programa e seu colega completará a solução a partir daí. No entanto, devido ao pequeno prazo disponível, você não poderá explicar ao seu colega pessoalmente como fez para chegar até aquele ponto da solução.
 
