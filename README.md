@@ -516,8 +516,6 @@ De forma bastante resumida, podemos descrever a estrutura `faca { } enquanto()` 
 4. Se a condição for avaliada como falsa, segue-se ao passo 5
 5. A estrutura é finalizada
 
-#### * Bônus
-
 Se você ainda não conseguiu compreender a diferença entre `enquanto` e `faca enquanto`, reflita nas seguintes situações:
 
 Enquanto:
@@ -549,7 +547,7 @@ Você pode ter a impressão de que a condição entre parênteses ficou maior, m
 
 De maneira resumida, podemos dizer que: considerando a(s) variável(eis) de controle definida(s), enquanto a condição informada for verdadeira, o valor da(s) variável(eis) de controle será alterado e o código entre chaves será executado.
 
-#### * Bônus
+#### Expressões de incremento e decremento
 
 Você deve ter notado em nossa estrutura de repetição `para` o uso da expressão `x++`. Os operadores `++` podem ser utilizados com qualquer variável numérica, seja inteira ou real, quando se deseja incrementar seu valor em `1`.
 
@@ -671,4 +669,10 @@ y -= 5
 4. Elabore um algoritmo que escreva todos os números inteiros de 200 a 400.
 5. Elabore um algoritmo que escreva apenas os números pares de 300 a 600.
 6. Elabore um algoritmo que escreva apenas os números ímpares de 750 a 1500.
-7. Elabore um algoritmo que leia as quatro notas de um aluno e, ao fim, mostre sua média aritmética.
+
+## Lista 6 - Problemas com Laços de Repetição
+
+1. Você recebeu a tarefa de elaborar um programa que calcule o IMC médio da sua turma. Sabendo que o IMC é dado pela fórmula `imc = peso / altura * altura`, elabore um programa que seja capaz de calcular o IMC de quantos alunos for necessário. A cada IMC calculado, o usuário deverá confirmar se deseja continuar. Quando o usuário optar por não continuar mais, exiba a média aritmética dos IMCs calculados.
+2. Na matemática, o fatorial de um número inteiro `a`, representado por `a!`, é o produto de todos os inteiros positivos menores ou iguais a `a`. Por exemplo, `3!` ou `3 fatorial` é dado por `3 * 2 * 1`, que é igual a `6`. Construa um programa que seja capaz de ler um número inteiro e apresentar seu fatorial.
+3. Construa um algoritmo que leia a idade de várias pessoas e, ao fim da execução, escreva o total de pessoas com menos de 18 anos e o total de pessoas com mais de 65 anos. Seu algoritmo deve parar de ler idades quando o usuário digitar uma idade menor que 1.
+4.
