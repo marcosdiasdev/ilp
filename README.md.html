@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <meta charset="utf-8" />
+      <title>README</title>
+      <style>.markdown-preview:not([data-use-github-style]) { padding: 2em; font-size: 1.2em; color: rgb(56, 58, 66); overflow: auto; background-color: rgb(250, 250, 250); }
+.markdown-preview:not([data-use-github-style]) > :first-child { margin-top: 0px; }
+.markdown-preview:not([data-use-github-style]) h1, .markdown-preview:not([data-use-github-style]) h2, .markdown-preview:not([data-use-github-style]) h3, .markdown-preview:not([data-use-github-style]) h4, .markdown-preview:not([data-use-github-style]) h5, .markdown-preview:not([data-use-github-style]) h6 { line-height: 1.2; margin-top: 1.5em; margin-bottom: 0.5em; color: rgb(0, 0, 0); }
+.markdown-preview:not([data-use-github-style]) h1 { font-size: 2.4em; font-weight: 300; }
+.markdown-preview:not([data-use-github-style]) h2 { font-size: 1.8em; font-weight: 400; }
+.markdown-preview:not([data-use-github-style]) h3 { font-size: 1.5em; font-weight: 500; }
+.markdown-preview:not([data-use-github-style]) h4 { font-size: 1.2em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h5 { font-size: 1.1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) h6 { font-size: 1em; font-weight: 600; }
+.markdown-preview:not([data-use-github-style]) strong { color: rgb(0, 0, 0); }
+.markdown-preview:not([data-use-github-style]) del { color: rgb(94, 97, 110); }
+.markdown-preview:not([data-use-github-style]) a, .markdown-preview:not([data-use-github-style]) a code { color: rgb(82, 111, 255); }
+.markdown-preview:not([data-use-github-style]) img { max-width: 100%; }
+.markdown-preview:not([data-use-github-style]) > p { margin-top: 0px; margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) > ul, .markdown-preview:not([data-use-github-style]) > ol { margin-bottom: 1.5em; }
+.markdown-preview:not([data-use-github-style]) blockquote { margin: 1.5em 0px; font-size: inherit; color: rgb(94, 97, 110); border-color: rgb(209, 209, 210); border-width: 4px; }
+.markdown-preview:not([data-use-github-style]) hr { margin: 3em 0px; border-top-width: 2px; border-top-style: dashed; border-top-color: rgb(209, 209, 210); background: none; }
+.markdown-preview:not([data-use-github-style]) table { margin: 1.5em 0px; }
+.markdown-preview:not([data-use-github-style]) th { color: rgb(0, 0, 0); }
+.markdown-preview:not([data-use-github-style]) th, .markdown-preview:not([data-use-github-style]) td { padding: 0.66em 1em; border: 1px solid rgb(209, 209, 210); }
+.markdown-preview:not([data-use-github-style]) code { color: rgb(0, 0, 0); background-color: rgb(234, 234, 235); }
+.markdown-preview:not([data-use-github-style]) pre.editor-colors { margin: 1.5em 0px; padding: 1em; font-size: 0.92em; border-radius: 3px; background-color: rgb(240, 240, 240); }
+.markdown-preview:not([data-use-github-style]) kbd { color: rgb(0, 0, 0); border-width: 1px 1px 2px; border-style: solid; border-color: rgb(209, 209, 210) rgb(209, 209, 210) rgb(193, 193, 194); background-color: rgb(234, 234, 235); }
+.markdown-preview[data-use-github-style] { font-family: 'Helvetica Neue', Helvetica, 'Segoe UI', Arial, freesans, sans-serif; line-height: 1.6; word-wrap: break-word; padding: 30px; font-size: 16px; color: rgb(51, 51, 51); overflow: scroll; background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] > :first-child { margin-top: 0px !important; }
+.markdown-preview[data-use-github-style] > :last-child { margin-bottom: 0px !important; }
+.markdown-preview[data-use-github-style] a:not([href]) { color: inherit; text-decoration: none; }
+.markdown-preview[data-use-github-style] .absent { color: rgb(204, 0, 0); }
+.markdown-preview[data-use-github-style] .anchor { position: absolute; top: 0px; left: 0px; display: block; padding-right: 6px; padding-left: 30px; margin-left: -30px; }
+.markdown-preview[data-use-github-style] .anchor:focus { outline: none; }
+.markdown-preview[data-use-github-style] h1, .markdown-preview[data-use-github-style] h2, .markdown-preview[data-use-github-style] h3, .markdown-preview[data-use-github-style] h4, .markdown-preview[data-use-github-style] h5, .markdown-preview[data-use-github-style] h6 { position: relative; margin-top: 1em; margin-bottom: 16px; font-weight: bold; line-height: 1.4; }
+.markdown-preview[data-use-github-style] h1 .octicon-link, .markdown-preview[data-use-github-style] h2 .octicon-link, .markdown-preview[data-use-github-style] h3 .octicon-link, .markdown-preview[data-use-github-style] h4 .octicon-link, .markdown-preview[data-use-github-style] h5 .octicon-link, .markdown-preview[data-use-github-style] h6 .octicon-link { display: none; color: rgb(0, 0, 0); vertical-align: middle; }
+.markdown-preview[data-use-github-style] h1:hover .anchor, .markdown-preview[data-use-github-style] h2:hover .anchor, .markdown-preview[data-use-github-style] h3:hover .anchor, .markdown-preview[data-use-github-style] h4:hover .anchor, .markdown-preview[data-use-github-style] h5:hover .anchor, .markdown-preview[data-use-github-style] h6:hover .anchor { padding-left: 8px; margin-left: -30px; text-decoration: none; }
+.markdown-preview[data-use-github-style] h1:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h2:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h3:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h4:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h5:hover .anchor .octicon-link, .markdown-preview[data-use-github-style] h6:hover .anchor .octicon-link { display: inline-block; }
+.markdown-preview[data-use-github-style] h1 tt, .markdown-preview[data-use-github-style] h2 tt, .markdown-preview[data-use-github-style] h3 tt, .markdown-preview[data-use-github-style] h4 tt, .markdown-preview[data-use-github-style] h5 tt, .markdown-preview[data-use-github-style] h6 tt, .markdown-preview[data-use-github-style] h1 code, .markdown-preview[data-use-github-style] h2 code, .markdown-preview[data-use-github-style] h3 code, .markdown-preview[data-use-github-style] h4 code, .markdown-preview[data-use-github-style] h5 code, .markdown-preview[data-use-github-style] h6 code { font-size: inherit; }
+.markdown-preview[data-use-github-style] h1 { padding-bottom: 0.3em; font-size: 2.25em; line-height: 1.2; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h1 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h2 { padding-bottom: 0.3em; font-size: 1.75em; line-height: 1.225; border-bottom-width: 1px; border-bottom-style: solid; border-bottom-color: rgb(238, 238, 238); }
+.markdown-preview[data-use-github-style] h2 .anchor { line-height: 1; }
+.markdown-preview[data-use-github-style] h3 { font-size: 1.5em; line-height: 1.43; }
+.markdown-preview[data-use-github-style] h3 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h4 { font-size: 1.25em; }
+.markdown-preview[data-use-github-style] h4 .anchor { line-height: 1.2; }
+.markdown-preview[data-use-github-style] h5 { font-size: 1em; }
+.markdown-preview[data-use-github-style] h5 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] h6 { font-size: 1em; color: rgb(119, 119, 119); }
+.markdown-preview[data-use-github-style] h6 .anchor { line-height: 1.1; }
+.markdown-preview[data-use-github-style] p, .markdown-preview[data-use-github-style] blockquote, .markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol, .markdown-preview[data-use-github-style] dl, .markdown-preview[data-use-github-style] table, .markdown-preview[data-use-github-style] pre { margin-top: 0px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] hr { height: 4px; padding: 0px; margin: 16px 0px; border: 0px none; background-color: rgb(231, 231, 231); }
+.markdown-preview[data-use-github-style] ul, .markdown-preview[data-use-github-style] ol { padding-left: 2em; }
+.markdown-preview[data-use-github-style] ul.no-list, .markdown-preview[data-use-github-style] ol.no-list { padding: 0px; list-style-type: none; }
+.markdown-preview[data-use-github-style] ul ul, .markdown-preview[data-use-github-style] ul ol, .markdown-preview[data-use-github-style] ol ol, .markdown-preview[data-use-github-style] ol ul { margin-top: 0px; margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] li > p { margin-top: 16px; }
+.markdown-preview[data-use-github-style] dl { padding: 0px; }
+.markdown-preview[data-use-github-style] dl dt { padding: 0px; margin-top: 16px; font-size: 1em; font-style: italic; font-weight: bold; }
+.markdown-preview[data-use-github-style] dl dd { padding: 0px 16px; margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] blockquote { padding: 0px 15px; color: rgb(119, 119, 119); border-left-width: 4px; border-left-style: solid; border-left-color: rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] blockquote > :first-child { margin-top: 0px; }
+.markdown-preview[data-use-github-style] blockquote > :last-child { margin-bottom: 0px; }
+.markdown-preview[data-use-github-style] table { display: block; width: 100%; overflow: auto; word-break: keep-all; }
+.markdown-preview[data-use-github-style] table th { font-weight: bold; }
+.markdown-preview[data-use-github-style] table th, .markdown-preview[data-use-github-style] table td { padding: 6px 13px; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] table tr { border-top-width: 1px; border-top-style: solid; border-top-color: rgb(204, 204, 204); background-color: rgb(255, 255, 255); }
+.markdown-preview[data-use-github-style] table tr:nth-child(2n) { background-color: rgb(248, 248, 248); }
+.markdown-preview[data-use-github-style] img { max-width: 100%; box-sizing: border-box; }
+.markdown-preview[data-use-github-style] .emoji { max-width: none; }
+.markdown-preview[data-use-github-style] span.frame { display: block; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.frame > span { display: block; float: left; width: auto; padding: 7px; margin: 13px 0px 0px; overflow: hidden; border: 1px solid rgb(221, 221, 221); }
+.markdown-preview[data-use-github-style] span.frame span img { display: block; float: left; }
+.markdown-preview[data-use-github-style] span.frame span span { display: block; padding: 5px 0px 0px; clear: both; color: rgb(51, 51, 51); }
+.markdown-preview[data-use-github-style] span.align-center { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-center > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-center span img { margin: 0px auto; text-align: center; }
+.markdown-preview[data-use-github-style] span.align-right { display: block; overflow: hidden; clear: both; }
+.markdown-preview[data-use-github-style] span.align-right > span { display: block; margin: 13px 0px 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] span.align-right span img { margin: 0px; text-align: right; }
+.markdown-preview[data-use-github-style] span.float-left { display: block; float: left; margin-right: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-left span { margin: 13px 0px 0px; }
+.markdown-preview[data-use-github-style] span.float-right { display: block; float: right; margin-left: 13px; overflow: hidden; }
+.markdown-preview[data-use-github-style] span.float-right > span { display: block; margin: 13px auto 0px; overflow: hidden; text-align: right; }
+.markdown-preview[data-use-github-style] code, .markdown-preview[data-use-github-style] tt { padding: 0.2em 0px; margin: 0px; font-size: 85%; border-radius: 3px; background-color: rgba(0, 0, 0, 0.0392157); }
+.markdown-preview[data-use-github-style] code::before, .markdown-preview[data-use-github-style] tt::before, .markdown-preview[data-use-github-style] code::after, .markdown-preview[data-use-github-style] tt::after { letter-spacing: -0.2em; content: " "; }
+.markdown-preview[data-use-github-style] code br, .markdown-preview[data-use-github-style] tt br { display: none; }
+.markdown-preview[data-use-github-style] del code { text-decoration: inherit; }
+.markdown-preview[data-use-github-style] pre > code { padding: 0px; margin: 0px; font-size: 100%; word-break: normal; white-space: pre; border: 0px; background: transparent; }
+.markdown-preview[data-use-github-style] .highlight { margin-bottom: 16px; }
+.markdown-preview[data-use-github-style] .highlight pre, .markdown-preview[data-use-github-style] pre { padding: 16px; overflow: auto; font-size: 85%; line-height: 1.45; border-radius: 3px; background-color: rgb(247, 247, 247); }
+.markdown-preview[data-use-github-style] .highlight pre { margin-bottom: 0px; word-break: normal; }
+.markdown-preview[data-use-github-style] pre { word-wrap: normal; }
+.markdown-preview[data-use-github-style] pre code, .markdown-preview[data-use-github-style] pre tt { display: inline; max-width: initial; padding: 0px; margin: 0px; overflow: initial; line-height: inherit; word-wrap: normal; border: 0px; background-color: transparent; }
+.markdown-preview[data-use-github-style] pre code::before, .markdown-preview[data-use-github-style] pre tt::before, .markdown-preview[data-use-github-style] pre code::after, .markdown-preview[data-use-github-style] pre tt::after { content: normal; }
+.markdown-preview[data-use-github-style] kbd { display: inline-block; padding: 3px 5px; font-size: 11px; line-height: 10px; color: rgb(85, 85, 85); vertical-align: middle; border-style: solid; border-width: 1px; border-color: rgb(204, 204, 204) rgb(204, 204, 204) rgb(187, 187, 187); border-radius: 3px; box-shadow: rgb(187, 187, 187) 0px -1px 0px inset; background-color: rgb(252, 252, 252); }
+.markdown-preview[data-use-github-style] a { color: rgb(51, 122, 183); }
+.markdown-preview[data-use-github-style] code { color: inherit; }
+.markdown-preview[data-use-github-style] pre.editor-colors { padding: 0.8em 1em; margin-bottom: 1em; font-size: 0.85em; border-radius: 4px; overflow: auto; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors::shadow .horizontal-scrollbar { visibility: hidden; }
+.scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .vertical-scrollbar, .scrollbars-visible-always .markdown-preview pre.editor-colors:hover::shadow .horizontal-scrollbar { visibility: visible; }
+.markdown-themeable-pdf-page-break {
+  border-top: 2px dotted #0098ff;
+}
+.markdown-themeable-pdf-page-break span {
+  opacity: .35;
+}
+
+.bracket-matcher .region {
+  border-bottom: 1px dotted lime;
+  position: absolute;
+}
+
+.spell-check-misspelling .region {
+  border-bottom: 2px dotted rgba(255, 51, 51, 0.75);
+}
+.spell-check-corrections {
+  width: 25em !important;
+}
+
+pre.editor-colors,
+.host {
+  background-color: #fafafa;
+  color: #383a42;
+}
+pre.editor-colors .line.cursor-line,
+.host .line.cursor-line {
+  background-color: rgba(56, 58, 66, 0.05);
+}
+pre.editor-colors .invisible,
+.host .invisible {
+  color: #383a42;
+}
+pre.editor-colors .cursor,
+.host .cursor {
+  border-left: 2px solid #526fff;
+}
+pre.editor-colors .selection .region,
+.host .selection .region {
+  background-color: #e5e5e6;
+}
+pre.editor-colors .bracket-matcher .region,
+.host .bracket-matcher .region {
+  border-bottom: 1px solid #526fff;
+  box-sizing: border-box;
+}
+pre.editor-colors .invisible-character,
+.host .invisible-character {
+  color: rgba(56, 58, 66, 0.2);
+}
+pre.editor-colors .indent-guide,
+.host .indent-guide {
+  color: rgba(56, 58, 66, 0.2);
+}
+pre.editor-colors .wrap-guide,
+.host .wrap-guide {
+  background-color: rgba(56, 58, 66, 0.2);
+}
+pre.editor-colors .find-result .region.region.region,
+.host .find-result .region.region.region,
+pre.editor-colors .current-result .region.region.region,
+.host .current-result .region.region.region {
+  border-radius: 0px;
+  background-color: rgba(82, 111, 255, 0.2);
+  transition: border-color 0.4s;
+}
+pre.editor-colors .find-result .region.region.region,
+.host .find-result .region.region.region {
+  border: 2px solid transparent;
+}
+pre.editor-colors .current-result .region.region.region,
+.host .current-result .region.region.region {
+  border: 2px solid #526fff;
+  transition-duration: .1s;
+}
+pre.editor-colors .gutter .line-number,
+.host .gutter .line-number {
+  color: #9d9d9f;
+  -webkit-font-smoothing: antialiased;
+}
+pre.editor-colors .gutter .line-number.cursor-line,
+.host .gutter .line-number.cursor-line {
+  color: #383a42;
+  background-color: #f2f2f2;
+}
+pre.editor-colors .gutter .line-number.cursor-line-no-selection,
+.host .gutter .line-number.cursor-line-no-selection {
+  background-color: transparent;
+}
+pre.editor-colors .gutter .line-number .icon-right,
+.host .gutter .line-number .icon-right {
+  color: #383a42;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before,
+.host .gutter:not(.git-diff-icon) .line-number.git-line-removed.git-line-removed::before {
+  bottom: -3px;
+}
+pre.editor-colors .gutter:not(.git-diff-icon) .line-number.git-line-removed::after,
+.host .gutter:not(.git-diff-icon) .line-number.git-line-removed::after {
+  content: "";
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  width: 25px;
+  border-bottom: 1px dotted rgba(255, 20, 20, 0.5);
+  pointer-events: none;
+}
+pre.editor-colors .gutter .line-number.folded,
+.host .gutter .line-number.folded,
+pre.editor-colors .gutter .line-number:after,
+.host .gutter .line-number:after,
+pre.editor-colors .fold-marker:after,
+.host .fold-marker:after {
+  color: #383a42;
+}
+.comment {
+  color: #a0a1a7;
+  font-style: italic;
+}
+.comment .markup.link {
+  color: #a0a1a7;
+}
+.entity.name.type {
+  color: #c18401;
+}
+.entity.other.inherited-class {
+  color: #50a14f;
+}
+.keyword {
+  color: #a626a4;
+}
+.keyword.control {
+  color: #a626a4;
+}
+.keyword.operator {
+  color: #383a42;
+}
+.keyword.other.special-method {
+  color: #4078f2;
+}
+.keyword.other.unit {
+  color: #986801;
+}
+.storage {
+  color: #a626a4;
+}
+.storage.type.annotation,
+.storage.type.primitive {
+  color: #a626a4;
+}
+.storage.modifier.package,
+.storage.modifier.import {
+  color: #383a42;
+}
+.constant {
+  color: #986801;
+}
+.constant.variable {
+  color: #986801;
+}
+.constant.character.escape {
+  color: #0184bc;
+}
+.constant.numeric {
+  color: #986801;
+}
+.constant.other.color {
+  color: #0184bc;
+}
+.constant.other.symbol {
+  color: #0184bc;
+}
+.variable {
+  color: #e45649;
+}
+.variable.interpolation {
+  color: #ca1243;
+}
+.variable.parameter {
+  color: #383a42;
+}
+.string {
+  color: #50a14f;
+}
+.string.regexp {
+  color: #0184bc;
+}
+.string.regexp .source.ruby.embedded {
+  color: #c18401;
+}
+.string.other.link {
+  color: #e45649;
+}
+.punctuation.definition.comment {
+  color: #a0a1a7;
+}
+.punctuation.definition.method-parameters,
+.punctuation.definition.function-parameters,
+.punctuation.definition.parameters,
+.punctuation.definition.separator,
+.punctuation.definition.seperator,
+.punctuation.definition.array {
+  color: #383a42;
+}
+.punctuation.definition.heading,
+.punctuation.definition.identity {
+  color: #4078f2;
+}
+.punctuation.definition.bold {
+  color: #c18401;
+  font-weight: bold;
+}
+.punctuation.definition.italic {
+  color: #a626a4;
+  font-style: italic;
+}
+.punctuation.section.embedded {
+  color: #ca1243;
+}
+.punctuation.section.method,
+.punctuation.section.class,
+.punctuation.section.inner-class {
+  color: #383a42;
+}
+.support.class {
+  color: #c18401;
+}
+.support.type {
+  color: #0184bc;
+}
+.support.function {
+  color: #0184bc;
+}
+.support.function.any-method {
+  color: #4078f2;
+}
+.entity.name.function {
+  color: #4078f2;
+}
+.entity.name.class,
+.entity.name.type.class {
+  color: #c18401;
+}
+.entity.name.section {
+  color: #4078f2;
+}
+.entity.name.tag {
+  color: #e45649;
+}
+.entity.other.attribute-name {
+  color: #986801;
+}
+.entity.other.attribute-name.id {
+  color: #4078f2;
+}
+.meta.class {
+  color: #c18401;
+}
+.meta.class.body {
+  color: #383a42;
+}
+.meta.method-call,
+.meta.method {
+  color: #383a42;
+}
+.meta.definition.variable {
+  color: #e45649;
+}
+.meta.link {
+  color: #986801;
+}
+.meta.require {
+  color: #4078f2;
+}
+.meta.selector {
+  color: #a626a4;
+}
+.meta.separator {
+  background-color: #373b41;
+  color: #383a42;
+}
+.meta.tag {
+  color: #383a42;
+}
+.underline {
+  text-decoration: underline;
+}
+.none {
+  color: #383a42;
+}
+.invalid.deprecated {
+  color: #000000 !important;
+  background-color: #f2a60d !important;
+}
+.invalid.illegal {
+  color: #ffffff !important;
+  background-color: #ff1414 !important;
+}
+.markup.bold {
+  color: #986801;
+  font-weight: bold;
+}
+.markup.changed {
+  color: #a626a4;
+}
+.markup.deleted {
+  color: #e45649;
+}
+.markup.italic {
+  color: #a626a4;
+  font-style: italic;
+}
+.markup.heading {
+  color: #e45649;
+}
+.markup.heading .punctuation.definition.heading {
+  color: #4078f2;
+}
+.markup.link {
+  color: #a626a4;
+}
+.markup.inserted {
+  color: #50a14f;
+}
+.markup.quote {
+  color: #986801;
+}
+.markup.raw {
+  color: #50a14f;
+}
+.source.cs .keyword.operator {
+  color: #a626a4;
+}
+.source.css .property-name,
+.source.css .property-value {
+  color: #696c77;
+}
+.source.css .property-name.support,
+.source.css .property-value.support {
+  color: #383a42;
+}
+.source.gfm .markup {
+  -webkit-font-smoothing: auto;
+}
+.source.gfm .link .entity {
+  color: #4078f2;
+}
+.source.go .storage.type.string {
+  color: #a626a4;
+}
+.source.ini .keyword.other.definition.ini {
+  color: #e45649;
+}
+.source.java .storage.modifier.import {
+  color: #c18401;
+}
+.source.java .storage.type {
+  color: #c18401;
+}
+.source.java .keyword.operator.instanceof {
+  color: #a626a4;
+}
+.source.java-properties .meta.key-pair {
+  color: #e45649;
+}
+.source.java-properties .meta.key-pair > .punctuation {
+  color: #383a42;
+}
+.source.js .keyword.operator {
+  color: #0184bc;
+}
+.source.js .keyword.operator.delete,
+.source.js .keyword.operator.in,
+.source.js .keyword.operator.of,
+.source.js .keyword.operator.instanceof,
+.source.js .keyword.operator.new,
+.source.js .keyword.operator.typeof,
+.source.js .keyword.operator.void {
+  color: #a626a4;
+}
+.source.json .meta.structure.dictionary.json > .string.quoted.json {
+  color: #e45649;
+}
+.source.json .meta.structure.dictionary.json > .string.quoted.json > .punctuation.string {
+  color: #e45649;
+}
+.source.json .meta.structure.dictionary.json > .value.json > .string.quoted.json,
+.source.json .meta.structure.array.json > .value.json > .string.quoted.json,
+.source.json .meta.structure.dictionary.json > .value.json > .string.quoted.json > .punctuation,
+.source.json .meta.structure.array.json > .value.json > .string.quoted.json > .punctuation {
+  color: #50a14f;
+}
+.source.json .meta.structure.dictionary.json > .constant.language.json,
+.source.json .meta.structure.array.json > .constant.language.json {
+  color: #0184bc;
+}
+.source.ruby .constant.other.symbol > .punctuation {
+  color: inherit;
+}
+.source.python .keyword.operator.logical.python {
+  color: #a626a4;
+}
+.source.python .variable.parameter {
+  color: #986801;
+}
+</style>
+  </head>
+  <body class='markdown-preview' data-use-github-style><h1 id="apostila-de-introdu-o-l-gica-de-programa-o">Apostila de Introdução à Lógica de Programação</h1>
+<p>A <strong>Lógica de Programação</strong> é a técnica de encadear pensamentos para atingir determinado objetivo por meio de um computador ou outro sistema programável.</p>
+<p>Antes de começarmos a programar, é necessário compreender novos conceitos e até rever alguns dos já vistos nas aulas de Matemática.</p>
+<blockquote>
+<p>Você pode acessar a versão mais atualizada deste material entrando em <a href="https://github.com/timarcosdias/ilp">github.com/timarcosdias/ilp</a>.</p>
+<p>Se encontrar erros ou tiver sugestões, por favor, envie-os para <a href="mailto:ti.marcosdias@gmail.com?Subject=Apostila de L&#xF3;gica de Programa&#xE7;&#xE3;o">ti.marcosdias@gmail.com</a>.</p>
+<p>Os exemplos contidos neste material adotam a sintaxe de uma variante da linguagem Portugol desenvolvida para a ferramenta <a href="http://lite.acad.univali.br/portugol/">Portugol Studio</a>, mantida pela UNIVALI - Universidade do Vale do Itajaí.</p>
+</blockquote>
+<h2 id="1-algoritmo">1. Algoritmo</h2>
+<p>Podemos definir algoritmo como uma sequência finita e ordenada de passos para a resolução de um problema específico.</p>
+<p>Para exemplificar, vamos começar com um algoritmo descritivo para um problema clássico do cotidiano: como fritar ovos?</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>/*</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>Algoritmo&nbsp;para&nbsp;fritar&nbsp;ovos</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>1.&nbsp;&nbsp;&nbsp;&nbsp;pegar&nbsp;frigideira,&nbsp;ovo,&nbsp;óleo&nbsp;e&nbsp;sal</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>2.&nbsp;&nbsp;&nbsp;&nbsp;colocar&nbsp;óleo&nbsp;na&nbsp;frigideira</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>3.&nbsp;&nbsp;&nbsp;&nbsp;acender&nbsp;o&nbsp;fogo</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>4.&nbsp;&nbsp;&nbsp;&nbsp;levar&nbsp;a&nbsp;frigideira&nbsp;ao&nbsp;fogo</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>5.&nbsp;&nbsp;&nbsp;&nbsp;esperar&nbsp;o&nbsp;óleo&nbsp;esquentar</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>6.&nbsp;&nbsp;&nbsp;&nbsp;colocar&nbsp;o&nbsp;ovo</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>7.&nbsp;&nbsp;&nbsp;&nbsp;colocar&nbsp;sal&nbsp;no&nbsp;ovo</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>8.&nbsp;&nbsp;&nbsp;&nbsp;retirar&nbsp;quando&nbsp;pronto</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>*/</span></span></span></div></pre><p>Percebe que o algoritmo acima é basicamente uma receita? Algoritmos são exatamente como receitas.</p>
+<p>Uma boa recomendação para a construção de algoritmos descritivos é sempre utilizar apenas um verbo por linha, já que cada verbo geralmente indicará uma ação diferente a ser tomada.</p>
+<blockquote>
+<p>O nosso principal objetivo ao estudar Lógica de Programação é compreender como criar programas de computador. Um Programa de Computador nada mais é que um algoritmo escrito com o uso de uma linguagem de computador, ou linguagem de programação, como C, Pascal, Java, JavaScript, PHP etc. Há uma infinidade de linguanges de programação disponíveis mundo afora. Futuramente veremos como elas funcionam.</p>
+</blockquote>
+<h2 id="2-vari-vel">2. Variável</h2>
+<p>Na Matemática, variável é o nome que se dá ao termo que substitui um outro desconhecido, como numa equação: <code style="font-family: Monaco;">y = 2x + 1</code>. Em Lógica de Programação, o valor de uma variável pode ser conhecido ou não.</p>
+<p>De forma genérica, uma variável é uma referência a um local na memória do computador, onde um valor pode estar armazenado, por exemplo: em um programa de computador, podemos ter uma variável chamada <code style="font-family: Monaco;">idade</code>, que armazena o valor <code style="font-family: Monaco;">18</code>.</p>
+<h3 id="2-1-nomenclatura-de-vari-veis">2.1. Nomenclatura de variáveis</h3>
+<p>Há algumas regras a serem seguidas ao nomear variáveis. Algumas linguanges de programação poderão apresentar padrões diferentes, mas há algumas convenções que devem ser sempre seguidas para manter o código legível e livre de erros:</p>
+<ul>
+<li>O nome de uma variável não deve conter espaços ou acentos</li>
+<li>O nome de uma variável não deve conter operadores</li>
+<li>O nome de uma variável não deve ser só um número</li>
+<li>Algumas linguagens de programação diferenciam letras maiúsculas de letras minúsculas, logo: <code style="font-family: Monaco;">Nome</code> pode ser diferente de <code style="font-family: Monaco;">nome</code></li>
+<li>Variáveis cujo nome seja um substantivo composto, como &quot;data de nascimento&quot;, <strong>podem</strong> ser nomeadas com o padrão camelCase: <code style="font-family: Monaco;">dataDeNascimento</code>. Este padrão define que todas as palavras após a primeira devem começar com letra maiúscula. Outra alternativa é utilizar um traço inferior (<code style="font-family: Monaco;">_</code>), ou underline, entre cada palavra: <code style="font-family: Monaco;">data_de_nascimento</code>.</li>
+</ul>
+<h3 id="2-2-atribui-o-de-valores">2.2. Atribuição de valores</h3>
+<p>Atribuir um valor a uma variável é dar um valor a uma variável. É o mesmo que guardar um valor em um espaço da memória.</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>a&nbsp;=&nbsp;4</span></span></span></div></pre><p>Pode ser lido como: variável <code style="font-family: Monaco;">a</code> recebe <code style="font-family: Monaco;">4</code>.</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>nome&nbsp;=&nbsp;“José”</span></span></span></div></pre><p>Pode ser lido como: variável <code style="font-family: Monaco;">nome</code> recebe <code style="font-family: Monaco;">José</code>.</p>
+<p>Observe que o símbolo de igualdade, <code style="font-family: Monaco;">=</code>, aqui é utilizado como operador de atribuição. Para igualdade, utilize <code style="font-family: Monaco;">==</code>.</p>
+<h3 id="2-3-tipos-de-vari-veis">2.3. Tipos de variáveis</h3>
+<p>O tipo de uma variável define o tipo de valor que ela poderá armazenar. Por exemplo, se precisamos armazenar um número inteiro, podemos criar uma variável do tipo <strong>inteiro</strong>; para armazenar nomes, utilizamos <strong>cadeias de caracteres</strong>.</p>
+<ul>
+<li><strong>Inteiro ou (int):</strong> número inteiro. Ex.: 10 ou 50.</li>
+<li><strong>Real (float):</strong> número real. Ex.: 10.5 ou 0.8.</li>
+<li><strong>Caracter ou Cadeia (string ou char):</strong> número, letras, palavras e/ou outros símbolos. Ex.: &quot;A&quot; ou &quot;abc123&quot; ou &quot;* é um asterisco.&quot;. Tenha sempre em mente que valores do tipo caractere ou cadeia de caracteres são representados entre aspas.</li>
+<li><strong>Lógico (bool):</strong> verdadeiro ou falso, sim ou não, 1 ou 0, true ou false.</li>
+</ul>
+<h3 id="2-4-exerc-cios-com-tipos-de-vari-veis">2.4. Exercícios com tipos de variáveis</h3>
+<p><strong>1. Informe o tipo de variável adequado para cada item abaixo:</strong></p>
+<ul>
+<li>a) Idade de uma pessoa</li>
+<li>b) Valor de uma conta de luz</li>
+<li>c) Nome de um cliente</li>
+<li>d) Estado de uma lâmpada (acesa/apagada)</li>
+<li>e) Senha de acesso ao Facebook</li>
+<li>f) Quantidade de litros de combustível abastecidos em um posto</li>
+<li>g) Situação de uma determinada fatura (paga/não paga)</li>
+<li>h) Média final de um aluno</li>
+</ul>
+<h2 id="3-operadores">3. Operadores</h2>
+<p>Um operador é um símbolo que, como seu próprio nome diz, é utilizado para representar operações lógico-matemáticas. Os operadores que iremos utilizar são os operadores aritméticos, os operadores relacionais e os operadores lógicos. Observe que alguns deles, já utilizados na Matemática, terão seu símbolo substituído por outro na Programação.</p>
+<h3 id="3-1-operadores-aritm-ticos">3.1. Operadores Aritméticos</h3>
+<ul>
+<li><strong>Soma (+):</strong> <code style="font-family: Monaco;">1 + 3</code></li>
+<li><strong>Subtração (-):</strong> <code style="font-family: Monaco;">5 – 4</code></li>
+<li><strong>Multiplicação (*):</strong> <code style="font-family: Monaco;">8 * 8</code></li>
+<li><strong>Divisão (/):</strong> <code style="font-family: Monaco;">40 / 5</code></li>
+<li><strong>Resto/Módulo (%):</strong> <code style="font-family: Monaco;">20 % 3</code></li>
+<li><strong>Potenciação (^):</strong> <code style="font-family: Monaco;">2 ^ 2</code></li>
+</ul>
+<h3 id="3-2-operadores-relacionais">3.2. Operadores Relacionais</h3>
+<ul>
+<li><strong>Igual (==):</strong> <code style="font-family: Monaco;">5 == 5</code></li>
+<li><strong>Diferente (!=):</strong> <code style="font-family: Monaco;">8 != 80</code></li>
+<li><strong>Maior que (&gt;):</strong> <code style="font-family: Monaco;">12 &gt; 11</code></li>
+<li><strong>Menor que (&lt;):</strong> <code style="font-family: Monaco;">11 &lt; 12</code></li>
+<li><strong>Maior ou igual (&gt;=):</strong> <code style="font-family: Monaco;">18 &gt;= 17</code></li>
+<li><strong>Menor ou igual (&lt;=):</strong> <code style="font-family: Monaco;">16 &lt;= 16</code></li>
+</ul>
+<h3 id="3-3-operadores-l-gicos">3.3. Operadores Lógicos</h3>
+<ul>
+<li><strong>E/Conjunção (e; &amp;&amp;; and):</strong> <code style="font-family: Monaco;">5 == 5 e 9 &gt; 7</code></li>
+<li><strong>OU/Disjunção (ou; ||; or):</strong> <code style="font-family: Monaco;">5 &gt; 3 ou 7 &gt;= 1</code></li>
+<li><strong>NÃO/Negação (nao; !; not):</strong> <code style="font-family: Monaco;">nao(3 &gt; 2) == falso</code></li>
+</ul>
+<h2 id="4-tabela-verdade">4. Tabela verdade</h2>
+<p>Uma tabela verdade é uma tabela utilizada em Lógica para verificar se uma expressão é verdadeira ou falsa.</p>
+<h3 id="4-1-operadores-e-e-ou-">4.1. Operadores &quot;e&quot; e &quot;ou&quot;</h3>
+<p>No exemplo a seguir, temos a tabela verdade dos operadores lógicos <code style="font-family: Monaco;">e</code> e <code style="font-family: Monaco;">ou</code>. Observe que as variáveis <code style="font-family: Monaco;">X</code> e <code style="font-family: Monaco;">Y</code> representam expressões que podem ser verdadeiras ou falsas de forma independente.</p>
+<p><img src="D:\Documents\GitHub\ilp\imagens\tabela-verdade1.png" alt="alt text" title="Tabela Verdade 1"></p>
+<p>Para compreender como se dá a construção dessa tabela verdade, podemos nos fazer estas duas perguntas:</p>
+<ul>
+<li><code style="font-family: Monaco;">X</code> e <code style="font-family: Monaco;">Y</code> são verdadeiros?</li>
+<li><code style="font-family: Monaco;">X</code> ou <code style="font-family: Monaco;">Y</code> são verdadeiros?</li>
+</ul>
+<p>Ao questionar se <code style="font-family: Monaco;">X</code> e <code style="font-family: Monaco;">Y</code> são verdadeiros, questionamos se ambos são verdadeiros. Ou seja: a expressão <code style="font-family: Monaco;">X e Y</code> só é verdadeira quando <code style="font-family: Monaco;">X == verdadeiro</code> e <code style="font-family: Monaco;">Y == verdadeiro</code>.</p>
+<p>O operador <code style="font-family: Monaco;">ou</code> já funciona de maneira diferente. Ao questionarmos se <code style="font-family: Monaco;">X</code> ou <code style="font-family: Monaco;">Y</code> são verdadeiros, questionamos se pelo menos um deles é verdadeiro. Ou seja: a expressão <code style="font-family: Monaco;">X ou Y</code> é verdadeira quando <code style="font-family: Monaco;">X == verdadeiro</code> e <code style="font-family: Monaco;">Y == falso</code>, ou <code style="font-family: Monaco;">X == falso</code> e <code style="font-family: Monaco;">Y == verdadeiro</code>, ou <code style="font-family: Monaco;">X == verdadeiro</code> e <code style="font-family: Monaco;">Y == verdadeiro</code>.</p>
+<h3 id="4-2-operador-n-o-">4.2. Operador &quot;não&quot;</h3>
+<p>O operador <code style="font-family: Monaco;">não</code> é utilizado para negar uma determinada expressão. Ex.: se <code style="font-family: Monaco;">X == verdadeiro</code>, então <code style="font-family: Monaco;">não X == falso</code>; se <code style="font-family: Monaco;">X == falso</code>, então <code style="font-family: Monaco;">não X == verdadeiro</code>.</p>
+<p><img src="D:\Documents\GitHub\ilp\imagens\tabela-verdade2.png" alt="alt text" title="Tabela Verdade 2"></p>
+<h3 id="4-3-exerc-cios-com-tabela-verdade">4.3. Exercícios com tabela verdade</h3>
+<p><strong>1. Complete a seguinte tabela verdade:</strong></p>
+<p><img src="D:\Documents\GitHub\ilp\imagens\tabela-verdade-exercicios.png" alt="alt text" title="Tabela Verdade - Exerc&#xED;cios"></p>
+<h2 id="5-preced-ncia-de-operadores">5. Precedência de operadores</h2>
+<p>A precedência, ou ordem, de operadores é a convenção que indica a ordem em que as operações devem ser realizadas em uma expressão. A lista abaixo descreve a ordem em que os operadores devem ser considerados:</p>
+<ol>
+<li>Parênteses e funções</li>
+<li>Potência e resto</li>
+<li>Multiplicação e divisão</li>
+<li>Adição e subtração</li>
+<li>Operadores relacionais</li>
+<li>Operadores lógicos</li>
+</ol>
+<p>No exemplo abaixo, a multiplicação deve ser resolvida antes da soma.</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>3&nbsp;+&nbsp;4&nbsp;*&nbsp;9</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>3&nbsp;+&nbsp;36</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>39</span></span></span></div></pre><p>Neste exemplo, a parte da expressão entre parênteses é resolvida antes da multiplicação.</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>(3&nbsp;+&nbsp;4)&nbsp;*&nbsp;9</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>7&nbsp;*&nbsp;9</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>63</span></span></span></div></pre><p>Quando operadores de mesma prioridade se chocam, a operação mais à esquerda prevalece sobre as demais. Ex.:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>3&nbsp;*&nbsp;4&nbsp;/&nbsp;3</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>12&nbsp;/&nbsp;3</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>4</span></span></span></div></pre><p>Neste exemplo, o operador de soma tem prioridade sobre os operadores relacionais, e os operadores relacionais têm prioridade sobre o operador lógico.</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>10&nbsp;&lt;&nbsp;9&nbsp;e&nbsp;6&nbsp;+&nbsp;3&nbsp;&gt;&nbsp;10</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>10&nbsp;&lt;&nbsp;9&nbsp;e&nbsp;9&nbsp;&gt;&nbsp;10</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>F&nbsp;e&nbsp;F</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>F</span></span></span></div></pre><p>Para facilitar, isole as expressões que estão antes e após o operador lógico, resolva-as e só então compare seus resultados através do operador lógico.</p>
+<h3 id="5-1-exerc-cios-com-express-es">5.1. Exercícios com expressões</h3>
+<p><strong>1. Indique o resultado das expressões seguindo as regras de precedência dos operadores.</strong></p>
+<ul>
+<li>a) <code style="font-family: Monaco;">2 + 3 - 5 * 8 / 4</code></li>
+<li>b) <code style="font-family: Monaco;">7 * 4 / 2 + 9 - 6</code></li>
+<li>c) <code style="font-family: Monaco;">(4 + 2) * 3 / 4</code></li>
+<li>d) <code style="font-family: Monaco;">7 &gt; 2 e 3 -5 &lt; 8</code></li>
+<li>e) <code style="font-family: Monaco;">8 &gt; 12 e 5 &lt; 3 + 4</code></li>
+</ul>
+<h2 id="6-primeiros-passos-em-programa-o">6. Primeiros passos em programação</h2>
+<p>Você deve ter notado no início deste material que mencionamos que a sintaxe utilizada em nossos exemplos seria a mesma de uma variante da linguagem Portugol.</p>
+<p>Em Lógica de Programação, a <strong>sintaxe</strong> está ligada à <strong>estrutura</strong> da linguagem de programação. Ela é o conjunto de regras que definem a forma correta de composição das estruturas básicas de uma linguagem. É o que deve responder à pergunta: como construir tal estrutura corretamente?</p>
+<p>Outro conceito que precisamos compreender é o de <strong>semântica</strong>. Em Lógica de Programação, a semântica está ligada ao <strong>significado</strong> de um determinado código. A semântica deve responder à pergunta: tal código faz realmente o que se espera que ele faça?</p>
+<p>A seguir, são abordados alguns comandos básicos para que possamos finalmente começar a programar.</p>
+<h3 id="6-1-declara-o-de-vari-veis">6.1. Declaração de variáveis</h3>
+<p>Antes que uma variável possa ser utilizada para armazenamento de um valor qualquer, ela deve ser declarada, ou seja: precisamos reservar aquele pequeno espaço na memória do computador e nomeá-lo para uso futuro:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>inteiro&nbsp;idade</span></span></span></div></pre><p>No exemplo acima, declaramos a variável <code style="font-family: Monaco;">idade</code> como do tipo <code style="font-family: Monaco;">inteiro</code>.</p>
+<p>Até que a variável <code style="font-family: Monaco;">idade</code> seja inicializada, ou seja, até que ela receba algum valor, seu conteúdo será nulo ou vazio. É possível inicializar uma variável juntamente à sua declaração:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>cadeia&nbsp;nome&nbsp;=&nbsp;&quot;Fulano&quot;</span></span></span></div></pre><p>Mas podemos também declarar uma variável e inicializá-la com um valor lido:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>real&nbsp;preco</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>leia(preco)</span></span></span></div></pre><p>O comando <code style="font-family: Monaco;">leia()</code> utilizado no exemplo acima será abordado na próxima seção.</p>
+<p>Antes de prosseguirmos, lembre-se que você pode declarar quantas variáveis quiser e de diversos tipos diferentes em um mesmo programa, por exemplo:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>cadeia&nbsp;nome,&nbsp;sobrenome,&nbsp;apelido</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>real&nbsp;peso,&nbsp;altura</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>inteiro&nbsp;idade</span></span></span></div></pre><h3 id="6-2-comandos-de-entrada">6.2. Comandos de entrada</h3>
+<p>Comandos de entrada são os responsáveis por receber uma informação do usuário. Ex.: leia, escute, ouça, receba.</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>leia(nome)</span></span></span></div></pre><p>Quando se trata de linguagens de programação, os comandos costumam ter um par de parênteses logo após seu nome, onde serão informadas opções para sua execução. Neste exemplo, o valor lido pelo comando <code style="font-family: Monaco;">leia()</code> é armazenado na variável <code style="font-family: Monaco;">nome</code>.</p>
+<h3 id="6-3-comandos-de-sa-da">6.3. Comandos de saída</h3>
+<p>Comandos de saída são os responsáveis por enviar uma informação ao usuário. Ex.: escreva, imprima, mostre, exiba.</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>escreva(“Olá,&nbsp;mundo!”)</span></span></span></div></pre><p>Neste exemplo, o comando <code style="font-family: Monaco;">escreva()</code> irá exibir na tela o texto <code style="font-family: Monaco;">Olá, mundo!</code>.</p>
+<h3 id="6-4-um-b-sico-exemplo-de-entrada-processamento-e-sa-da">6.4. Um básico exemplo de entrada, processamento e saída</h3>
+<p>Neste exemplo, iremos declarar três variáveis: <code style="font-family: Monaco;">a</code>, <code style="font-family: Monaco;">b</code> e <code style="font-family: Monaco;">c</code>, todas do tipo <code style="font-family: Monaco;">inteiro</code>. Faremos a leitura de dois valores e os armazenaremos nas variáveis <code style="font-family: Monaco;">a</code> e <code style="font-family: Monaco;">b</code>. A variável <code style="font-family: Monaco;">c</code> receberá a soma de <code style="font-family: Monaco;">a</code> e <code style="font-family: Monaco;">b</code>. Por fim, escreveremos o valor contido em <code style="font-family: Monaco;">c</code>.</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>inteiro&nbsp;a,&nbsp;b,&nbsp;c</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>leia(a)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>leia(b)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>c&nbsp;=&nbsp;a&nbsp;+&nbsp;b</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>escreva(c)</span></span></span></div></pre><p>Perceba que as últimas duas linhas do exemplo acima poderiam ser substituídas por:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>escreva(a&nbsp;+&nbsp;b&nbsp;+&nbsp;c)</span></span></span></div></pre><h3 id="6-5-dando-mais-sentido-ao-seu-c-digo">6.5. Dando mais sentido ao seu código</h3>
+<p>Pense numa situação em que você precise escrever um programa em dupla, juntamente com um de seus colegas de classe. Fica combinado que você escreverá a primeira parte do programa e seu colega completará a solução a partir daí. No entanto, devido ao pequeno prazo disponível, você não poderá explicar ao seu colega pessoalmente como fez para chegar até aquele ponto da solução.</p>
+<p>Podemos acreditar que, muito provavelmente, seu colega terá dificuldades em compreender seu código para, então, conseguir prosseguir com a solução do problema.</p>
+<p>Mas, e se você pudesse escrever algo mais dentro do seu código para orientar seu colega sem que isso atrapalhasse o funcionamento do seu programa? Isso é possível com o uso de <strong>comentários</strong>.</p>
+<p>Através de comentários, você pode escrever qualquer coisa dentro do seu código sem que isso afete o funcionamento do seu programa. Para escrever um comentário, apenas insira <code style="font-family: Monaco;">//</code> e escreva seu comentário. Exemplo:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>inteiro&nbsp;x&nbsp;=&nbsp;50</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>//&nbsp;Isto&nbsp;é&nbsp;um&nbsp;comentário&nbsp;de&nbsp;uma&nbsp;única&nbsp;linha</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>escreva(x)</span></span></span></div></pre><p>Às vezes utilizamos comentários também para <strong>suprimir</strong> uma ou mais linhas de código de um programa para que elas não sejam executadas:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>inteiro&nbsp;x&nbsp;=&nbsp;10,&nbsp;y&nbsp;=&nbsp;20</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>escreva(x)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>//&nbsp;escreva(y)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>//&nbsp;Veja&nbsp;que&nbsp;só&nbsp;a&nbsp;variável&nbsp;x&nbsp;será&nbsp;escrita,&nbsp;pois&nbsp;a&nbsp;linha&nbsp;que&nbsp;deveria&nbsp;escrever&nbsp;y&nbsp;foi&nbsp;marcada&nbsp;como&nbsp;um&nbsp;comentário</span></span></span></div></pre><p>Alguns comentários podem ser mais longos e ocupar várias linhas de código. Neste caso, a primeira linha comentada deverá ser iniciada com <code style="font-family: Monaco;">/*</code> e a última finalizada com <code style="font-family: Monaco;">*/</code>. Exemplo:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>inteiro&nbsp;z&nbsp;=&nbsp;30</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>/*&nbsp;Este&nbsp;comentário</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>foi&nbsp;um&nbsp;pouco</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>mais&nbsp;longe&nbsp;*/</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>escreva(z)</span></span></span></div></pre><h2 id="7-estruturas-de-decis-o-escolha-um-caminho">7. Estruturas de decisão: escolha um caminho</h2>
+<p>Na programação, há momentos em que precisamos fazer decisões, definir caminhos diferentes para situações diferentes, e é por isso que existem as <strong>estruturas de decisão</strong>.</p>
+<p>As duas estruturas de decisão presentes na maioria das linguagens de programação são o se/senao (if/else, em inglês) e o escolha/caso (switch/case, em inglês).</p>
+<p>As estruturas de decisão são peça fundamental na estruturação dos algoritmos utilizados nos sistemas que utilizamos diariamente. Por exemplo, pense em quando você entra com seu e-mail e senha para realizar login em uma rede social. Observe que no momento em que você clica no botão Entrar, duas situações são possíveis: seu login pode ser aceito e você entrará na rede social, ou a página indicará que seu e-mail e/ou senha estão incorretos. Para decidir qual das duas ações realizar, o sistema certamente fez uso de uma estrutura de decisão.</p>
+<h3 id="7-1-se">7.1. Se</h3>
+<p>A estrutura <code style="font-family: Monaco;">se</code> é utilizada na maioria dos casos em que se faz necessário decidir que ação será tomada.</p>
+<p>Para que você compreenda como funciona a estrutura <code style="font-family: Monaco;">se</code>, imagine a seguinte situação: após lermos um número inteiro qualquer, se este número for par, deveremos exibir uma mensagem informando que ele é par. Ex.:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>inteiro&nbsp;numero</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>leia(numero)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>se(numero&nbsp;%&nbsp;2&nbsp;==&nbsp;0)&nbsp;{</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>escreva(&quot;O&nbsp;número&nbsp;lido&nbsp;é&nbsp;par.&quot;)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>}</span></span></span></div></pre><p>A partir da terceira linha do código acima, começamos a utilizar a estrutura de decisão <code style="font-family: Monaco;">se</code>. Observe que ela é constituída da palavra &quot;se&quot; seguida de um par de parênteses. Dentro dos parênteses deve haver uma expressão lógica, ou seja, uma expressão que possa ser avaliada como <code style="font-family: Monaco;">verdadeiro</code> ou <code style="font-family: Monaco;">falso</code>. Quando a expressão entre parênteses é igual a <code style="font-family: Monaco;">verdadeiro</code>, o código entre as chaves da estrutura é executado. Se o resultado da expressão for <code style="font-family: Monaco;">falso</code>, o código entre as chaves é simplesmente ignorado.</p>
+<p>Neste exemplo, a expressão avaliada é <code style="font-family: Monaco;">numero % 2 == 0</code>. Considerando que a variável <code style="font-family: Monaco;">numero</code> contenha mesmo um número par, como 4, sabemos que o resultado da expressão <code style="font-family: Monaco;">numero % 2</code> será igual a 0, pois ao se dividir 4 por 2, o resto (ou módulo) é 0, logo a expressão retornará o valor <code style="font-family: Monaco;">verdadeiro</code>. Observe:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>4&nbsp;%&nbsp;2&nbsp;==&nbsp;0</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>0&nbsp;==&nbsp;0</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>verdadeiro</span></span></span></div></pre><p>Se o valor da variável <code style="font-family: Monaco;">numero</code> for ímpar, o resto da sua divisão por 2 será 1, o mesmo acontecerá com qualquer outro número ímpar, logo a expressão retornará o valor <code style="font-family: Monaco;">falso</code>. Observe:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>3&nbsp;%&nbsp;2&nbsp;==&nbsp;0</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>1&nbsp;==&nbsp;0</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>falso</span></span></span></div></pre><h3 id="7-2-se-sen-o">7.2. Se/Senão</h3>
+<p>Nem sempre é suficiente apenas verificar se uma condição é atendida e executar determinada ação. Muitas vezes precisamos de uma segunda alternativa, um plano B.</p>
+<p>Ainda conforme o exemplo abordado anteriormente, imagine que caso o número lido não seja par tenhamos que mostrar uma mensagem também informando que o número é ímpar. Acompanhe o exemplo:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>inteiro&nbsp;numero</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>leia(numero)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>se(numero&nbsp;%&nbsp;2&nbsp;==&nbsp;0)&nbsp;{</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>escreva(&quot;O&nbsp;número&nbsp;lido&nbsp;é&nbsp;par.&quot;)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>}&nbsp;senao&nbsp;{</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>escreva(&quot;O&nbsp;número&nbsp;lido&nbsp;é&nbsp;ímpar.&quot;)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>}</span></span></span></div></pre><p>Observe que na quinta linha adicionamos a palavra <code style="font-family: Monaco;">senao</code>, seguida de um par de chaves. Neste caso, o código entre as chaves só será executado se a expressão verificada no bloco <code style="font-family: Monaco;">se</code> não for igual a <code style="font-family: Monaco;">verdadeiro</code>, ou simplesmente for igual a <code style="font-family: Monaco;">falso</code>.</p>
+<h3 id="7-3-se-sen-o-se">7.3. Se/Senão/Se</h3>
+<p>Mas o que fazer quando temos mais de duas alternativas?</p>
+<p>Para responder a essa pergunta, vamos pensar no seguinte problema: após ler um número inteiro, precisamos informar ao usuário se este número é negativo, nulo (0) ou positivo. Podemos fazer isso da seguinte forma:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>inteiro&nbsp;numero</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>leia(numero)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>se(numero&nbsp;&lt;&nbsp;1)&nbsp;{</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>escreva(&quot;O&nbsp;número&nbsp;lido&nbsp;é&nbsp;negativo.&quot;)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>}&nbsp;senao&nbsp;se(numero&nbsp;&gt;&nbsp;1){</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>escreva(&quot;O&nbsp;número&nbsp;lido&nbsp;é&nbsp;positivo.&quot;)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>}&nbsp;senao&nbsp;{</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>escreva(&quot;O&nbsp;número&nbsp;lido&nbsp;é&nbsp;nulo.&quot;)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>}</span></span></span></div></pre><p>Observe que neste caso foram testadas duas condições: <code style="font-family: Monaco;">numero &lt; 1</code> e <code style="font-family: Monaco;">numero &gt; 1</code>. A segunda condição segue acompanhando o primeiro <code style="font-family: Monaco;">senao</code>, indicando que esta condição só deverá ser verificada caso a primeira não seja verdadeira. Por fim, considerando que nenhuma das duas condições seja verdadeira, o código após o segundo <code style="font-family: Monaco;">senao</code> poderá ser executado.</p>
+<p>Mais uma vez:</p>
+<ul>
+<li>Se <code style="font-family: Monaco;">numero &lt; 1</code> for <code style="font-family: Monaco;">verdadeiro</code>, o código <code style="font-family: Monaco;">escreva(&quot;O número lido é negativo.&quot;)</code> será executado.</li>
+<li>Se <code style="font-family: Monaco;">numero &lt; 1</code> for <code style="font-family: Monaco;">falso</code> e <code style="font-family: Monaco;">numero &gt; 1</code> for <code style="font-family: Monaco;">verdadeiro</code>, o código <code style="font-family: Monaco;">escreva(&quot;O número lido é positivo.&quot;)</code> será executado.</li>
+<li>Se <code style="font-family: Monaco;">numero &lt; 1</code> for <code style="font-family: Monaco;">falso</code> e <code style="font-family: Monaco;">numero &gt; 1</code> for <code style="font-family: Monaco;">falso</code>, o código <code style="font-family: Monaco;">escreva(&quot;O número lido é nulo.&quot;)</code> será executado.</li>
+</ul>
+<p>Tenha em mente que a quantidade de testes que podem ser realizados em sequência é basicamente ilimitada, mas não é comum vermos estruturas de decisão exageradamente longas.</p>
+<p>Para adquirir um maior domínio, teste os exemplos vistos, mas não pare por aí, crie seus próprios exemplos, teste condições compostas, como <code style="font-family: Monaco;">idade &gt; 18 e peso &lt; 70</code>, estruturas com e sem um <code style="font-family: Monaco;">senao</code>, com dois ou mais <code style="font-family: Monaco;">senao se</code> até perceber que já está dominando o assunto.</p>
+<h3 id="7-2-escolha-caso">7.2. Escolha/Caso</h3>
+<p>Em construção.</p>
+<h2 id="8-estruturas-de-repeti-o-como-evitar-a-fadiga">8. Estruturas de repetição: como evitar a fadiga</h2>
+<p>Quando programamos, algumas tarefas podem exigir esforços absurdamente repetitivos. Imagine uma situação em que seja necessário exibir uma lista numerada com 50 itens. Será que precisaríamos mesmo repetir o comando <code style="font-family: Monaco;">escreva()</code> por 50 vezes?</p>
+<p>A boa notícia é que alguém já pensou nisso antes. As linguagens de programação possuem estruturas que chamamos de <strong>estruturas de repetição</strong> ou de <strong>laços de repetição</strong>. Estas estruturas são utilizadas sempre que nos deparamos com tarefas que exijam que um procedimento se repita por várias vezes.</p>
+<p>As três estruturas de repetição que abordaremos são: enquanto (while, em inglês), faca/enquanto (do/while, em inglês) e para (for, em inglês). Cada uma dessas estruturas é mais adequada em uma situação específica, mas o propósito de automatizar tarefas repetitivas permanece em todas elas.</p>
+<p>Assim como nas estruturas de decisão, o funcionamento de uma estrutura de repetição é baseado em uma condição, que mais uma vez deverá ser representada através de uma expressão lógica.</p>
+<p>A seguir, conheceremos cada uma das estruturas de repetição mais a fundo.</p>
+<h3 id="8-1-enquanto">8.1. Enquanto</h3>
+<p>Imagine uma situação em que você precise repetir determinada tarefa enquanto uma certa condição for verdadeira, por exemplo:</p>
+<blockquote>
+<blockquote>
+<p>Enquanto um for igual a um, escreva: um é igual a um.</p>
+</blockquote>
+</blockquote>
+<p>Essa mesma situação pode ser descrita em código, utilizando Portugol, da seguinte forma:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>enquanto(1&nbsp;==&nbsp;1)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>{</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>escreva(&quot;um&nbsp;é&nbsp;igual&nbsp;a&nbsp;um.&quot;)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>}</span></span></span></div></pre><p>Neste exemplo, enquanto a condição <code style="font-family: Monaco;">1 == 1</code> for avaliada como verdadeira, a expressão <code style="font-family: Monaco;">escreva(&quot;um é igual a um.&quot;)</code> será executada. Pense nisso como um ciclo: avaliamos a condição, se ela for verdadeira, o código é executado, depois tudo se repete novamente.</p>
+<p>Se você testou o código acima, deve ter percebido que ele gerou um <strong>loop infinito</strong>, que é como chamamos os laços de repetição intermináveis. O motivo de esse laço de repetição ser interminável é bastante óbvio, pois sabemos que 1 será sempre igual a 1, logo a condição sempre será verdadeira.</p>
+<p>Quando a condição é avaliada como falsa, o código entre chaves não é executado e o programa segue para após a estrutura de repetição.</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>enquanto(esta&nbsp;condição&nbsp;for&nbsp;verdadeira)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>{</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>este&nbsp;código&nbsp;será&nbsp;executado</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>&nbsp;&nbsp;&nbsp;&nbsp;...e&nbsp;a&nbsp;condição&nbsp;será&nbsp;verificada&nbsp;novamente</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>}</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>se&nbsp;a&nbsp;condição&nbsp;for&nbsp;falsa,&nbsp;o&nbsp;código&nbsp;continuará&nbsp;daqui</span></span></span></div></pre><p>Em muitos dos casos em que utilizamos laços de repetição, nós trabalhos com números inteiros. Considere, por exemplo, uma situação em que seja necessário imprimir todos os números inteiros de 1 a 10. Em casos como este, utilizamos variáveis do tipo inteiro que possam ter seu valor alterado progressivamente. A estas variáveis damos o nome de <strong>contadoras</strong>:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>inteiro&nbsp;x&nbsp;=&nbsp;1</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>enquanto(x&nbsp;&lt;=&nbsp;10)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>{</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>escreva(x)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;=&nbsp;x&nbsp;+&nbsp;1</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>}</span></span></span></div></pre><p>No exemplo acima, a variável <code style="font-family: Monaco;">x</code> assume o papel de contadora, pois é utilizada como condição do laço de repetição e seu valor é <strong>incrementado</strong> a cada repetição. A variável é inicializada com o valor <code style="font-family: Monaco;">1</code> e definimos que enquanto o valor nela contido for menor ou igual a <code style="font-family: Monaco;">10</code>, a seguinte tarefa deve ser executada: escreve-se o valor de <code style="font-family: Monaco;">x</code> e adiciona-se <code style="font-family: Monaco;">1</code> ao valor atual de <code style="font-family: Monaco;">x</code>.</p>
+<p>Ao término desse programa, o valor de <code style="font-family: Monaco;">x</code> será igual a <code style="font-family: Monaco;">10</code> ou igual a <code style="font-family: Monaco;">11</code>? Perceba que em algum momento nessa estrutura de repetição, o valor de <code style="font-family: Monaco;">x</code> atingirá <code style="font-family: Monaco;">10</code>, a condição entre parênteses será avaliada como verdadeira, o valor de <code style="font-family: Monaco;">x</code> será mostrado e incrementado, ou seja, <code style="font-family: Monaco;">x</code> passará a ser igual a <code style="font-family: Monaco;">11</code>. A partir deste ponto, a condição <code style="font-family: Monaco;">x &lt;= 10</code> voltará a ser avaliada e, desta vez, seu resultado será <code style="font-family: Monaco;">falso</code>, pois <code style="font-family: Monaco;">x</code> é igual a <code style="font-family: Monaco;">11</code>, logo não é nem menor nem igual a <code style="font-family: Monaco;">10</code>. Com isto, o laço de repetição será interrompido e o valor de <code style="font-family: Monaco;">x</code>, que agora é igual a <code style="font-family: Monaco;">11</code>, não será mais mostrado.</p>
+<p>Se precisarmos realizar o caminho contrário, ou seja, imprimir todos os números inteiros de 10 a 1 (em ordem decrescente), o seguinte código seria suficiente:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>inteiro&nbsp;x&nbsp;=&nbsp;10</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>enquanto(x&nbsp;&gt;=&nbsp;1)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>{</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>escreva(x)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>&nbsp;&nbsp;&nbsp;&nbsp;x&nbsp;=&nbsp;x&nbsp;-&nbsp;1</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>}</span></span></span></div></pre><p>Perceba que, neste exemplo, o valor de <code style="font-family: Monaco;">x</code> é <strong>decrementado</strong>, ou seja, subtraímos <code style="font-family: Monaco;">1</code> do valor de <code style="font-family: Monaco;">x</code> a cada repetição. A condição verificada também é diferente: desta vez, verificamos a cada repetição se o valor de <code style="font-family: Monaco;">x</code> é maior ou igual a <code style="font-family: Monaco;">1</code>.</p>
+<p>De forma bastante resumida, podemos descrever a estrutura <code style="font-family: Monaco;">enquanto() { }</code> da seguinte forma:</p>
+<ol>
+<li>A condição é testada</li>
+<li>Se a condição for avaliada como verdadeira, o código entre chaves é executado, retorna-se ao passo 1</li>
+<li>Se a condição for avaliada como falsa, segue-se ao passo 4</li>
+<li>A estrutura é finalizada</li>
+</ol>
+<h3 id="8-2-fa-a-enquanto">8.2. Faça/Enquanto</h3>
+<p>A segunda estrutura de repetição que iremos abordar funciona de forma muito semelhante à primeira, com uma pequena diferença: a condição só é verificada após a primeira execução do código. Observe o exemplo:</p>
+<blockquote>
+<blockquote>
+<p>Escreva: um é igual a um. Enquanto um for igual a um, repita.</p>
+</blockquote>
+</blockquote>
+<p>Essa mesma situação pode ser descrita em código, utilizando Portugol, da seguinte forma:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>faca</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>{</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>escreva(&quot;um&nbsp;é&nbsp;igual&nbsp;a&nbsp;um.&quot;)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>}</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>enquanto(1&nbsp;==&nbsp;1)</span></span></span></div></pre><p>De forma bastante resumida, podemos descrever a estrutura <code style="font-family: Monaco;">faca { } enquanto()</code> da seguinte forma:</p>
+<ol>
+<li>O código entre chaves é executado</li>
+<li>A condição é testada</li>
+<li>Se a condição for avaliada como verdadeira, retorna-se ao passo 1</li>
+<li>Se a condição for avaliada como falsa, segue-se ao passo 5</li>
+<li>A estrutura é finalizada</li>
+</ol>
+<p>Se você ainda não conseguiu compreender a diferença entre <code style="font-family: Monaco;">enquanto</code> e <code style="font-family: Monaco;">faca enquanto</code>, reflita nas seguintes situações:</p>
+<p>Enquanto:</p>
+<blockquote>
+<p>Mariana pede a Felipe que vá ao mercado e lhe diz: Felipe, se os tomates estiverem bons, pegue um. Enquanto houver tomates bons, continue pegando tomates. Se não houver mais tomates bons, pare de pegar os tomates.</p>
+</blockquote>
+<p>Faça/Enquanto:</p>
+<blockquote>
+<p>Mariana pede a Felipe que vá ao mercado e lhe diz: Felipe, pegue um tomate. Enquanto houver tomates bons, continue pegando tomates. Se não houver mais tomates bons, pare de pegar os tomates.</p>
+</blockquote>
+<p><img src="D:\Documents\GitHub\ilp\imagens\tomato.jpg" alt="alt text" title="Tomate"></p>
+<h3 id="8-3-para">8.3. Para</h3>
+<p>A última estrutura de repetição que iremos abordar tem um comportamento bastante semelhante ao das anteriores, porém, tem uma finalidade muito específica: a estrutura de decisão <code style="font-family: Monaco;">para</code> é a mais adequada em situações em que o número de repetições a serem executadas já é conhecido.</p>
+<p>Observe como faríamos para imprimir os números inteiros de 1 a 1000 utilizando <code style="font-family: Monaco;">para</code>:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>para(inteiro&nbsp;x&nbsp;=&nbsp;1;&nbsp;x&nbsp;&lt;=&nbsp;1000;&nbsp;x++)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>{</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>escreva(x)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>}</span></span></span></div></pre><p>Você pode ter a impressão de que a condição entre parênteses ficou maior, mas não é exatamente isso o que acontece. Ao utilizarmos a estrutura <code style="font-family: Monaco;">para</code>, temos acesso a três regras, separadas por ponto e vírgula, que definirão como a estrutura será executada. A estas regras damos o nome de <strong>parâmetros</strong> ou <strong>argumentos</strong>.</p>
+<ol>
+<li>O primeiro parâmetro é um espaço disponibilizado para a declaração e inicialização de variáveis que serão utilizadas apenas dentro desta estrutura <code style="font-family: Monaco;">para</code>. Observe que no exemplo acima, nós declaramos e inicializamos a variável <code style="font-family: Monaco;">x</code> com o valor <code style="font-family: Monaco;">1</code>. A variável <code style="font-family: Monaco;">x</code> será nossa contadora e, por vezes, também poderá ser chamada de <strong>variável de controle</strong>.</li>
+<li>O segundo parâmetro é referente à condição que será verificada a cada repetição. Enquanto a expressão informada for avaliada como verdadeira, o código continuará a ser repetido. No exemplo acima, definimos que o código será repetido enquanto o valor de <code style="font-family: Monaco;">x</code> for menor ou igual a <code style="font-family: Monaco;">1000</code>.</li>
+<li>O terceiro e último parâmetro é destinado à definição da alteração que a variável de controle irá sofrer a cada repetição. Geralmente, definimos nesta posição uma expressão de incremento ou de decremento da variável de controle. Em nosso exemplo, a variável <code style="font-family: Monaco;">x</code> é incrementada em <code style="font-family: Monaco;">1</code> a cada repetição.</li>
+</ol>
+<p>De maneira resumida, podemos dizer que: considerando a(s) variável(eis) de controle definida(s), enquanto a condição informada for verdadeira, o valor da(s) variável(eis) de controle será alterado e o código entre chaves será executado.</p>
+<h4 id="express-es-de-incremento-e-decremento">Expressões de incremento e decremento</h4>
+<p>Você deve ter notado em nossa estrutura de repetição <code style="font-family: Monaco;">para</code> o uso da expressão <code style="font-family: Monaco;">x++</code>. Os operadores <code style="font-family: Monaco;">++</code> podem ser utilizados com qualquer variável numérica, seja inteira ou real, quando se deseja incrementar seu valor em <code style="font-family: Monaco;">1</code>.</p>
+<p>Para decrementar o valor de <code style="font-family: Monaco;">x</code> em <code style="font-family: Monaco;">1</code>, poderíamos ter feito <code style="font-family: Monaco;">x--</code>.</p>
+<p>Observe que isto pode ser utilizado em qualquer momento no código, tanto na estrutura <code style="font-family: Monaco;">para</code> quanto em qualquer outra estrutura de repetição ou mesmo fora de uma estrutura de repetição.</p>
+<p>Os seguintes métodos de incremento são equivalentes:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>x&nbsp;=&nbsp;x&nbsp;+&nbsp;1</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>x&nbsp;+=&nbsp;1</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>x++</span></span></span></div></pre><p>Qualquer um dos métodos acima fará com que o valor contido em <code style="font-family: Monaco;">x</code> seja incrementado em <code style="font-family: Monaco;">1</code>, ou seja: se o valor de <code style="font-family: Monaco;">x</code> for <code style="font-family: Monaco;">5</code>, por exemplo, <code style="font-family: Monaco;">x++</code> fará com que <code style="font-family: Monaco;">x</code> passe a valer <code style="font-family: Monaco;">6</code>.</p>
+<p>O mesmo é válido para decremento:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>x&nbsp;=&nbsp;x&nbsp;-&nbsp;1</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>x&nbsp;-=&nbsp;1</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>x--</span></span></span></div></pre><p>Caso seja necessário incrementar ou decrementar o valor de uma variável em mais que <code style="font-family: Monaco;">1</code>, os operadores <code style="font-family: Monaco;">++</code> ou <code style="font-family: Monaco;">--</code> não poderão ajudar. Em casos como estes, apenas os dois primeiros métodos mostrados irão funcionar. Exemplo:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>//&nbsp;Incremento</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>x&nbsp;=&nbsp;x&nbsp;+&nbsp;3</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>x&nbsp;+=&nbsp;3</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>//&nbsp;Decremento</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>y&nbsp;=&nbsp;y&nbsp;-&nbsp;5</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>y&nbsp;-=&nbsp;5</span></span></span></div></pre><h2 id="9-vetores-e-matrizes-expandindo-as-possibilidades">9. Vetores e matrizes: expandindo as possibilidades</h2>
+<p>Imagine o seguinte problema:</p>
+<blockquote>
+<p>Crie um algoritmo que leia o nome e as 4 notas de 50 alunos, calcule a média de cada aluno e informe quais foram aprovados e quais foram reprovados.</p>
+</blockquote>
+<p>Certamente, você, começou a pensar em uma solução semalhante à seguinte:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>real&nbsp;n1,&nbsp;n2,&nbsp;n3,&nbsp;n4,&nbsp;media</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>para(inteiro&nbsp;x&nbsp;=&nbsp;1;&nbsp;x&nbsp;&lt;=&nbsp;50;&nbsp;x++)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>{</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>leia(n1,&nbsp;n2,&nbsp;n3,&nbsp;n4)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>&nbsp;&nbsp;&nbsp;&nbsp;media&nbsp;=&nbsp;(n1&nbsp;+&nbsp;n2&nbsp;+&nbsp;n3&nbsp;+&nbsp;n4)/4</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>&nbsp;&nbsp;&nbsp;&nbsp;...</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>}</span></span></span></div></pre><p>Como você faria se precisasse armazenar as 4 notas de cada um desses 50 alunos para mostrá-las no fim do seu programa? Provavelmente, teria que declarar, no mínimo, 200 variáveis, certo?!</p>
+<p>Com vetores, é possível armazenar inúmeros valores em uma única variável. Assim, você poderia ter algo semelhante a:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>real&nbsp;n1[50],&nbsp;n2[50],&nbsp;n3[50],&nbsp;n4[50],&nbsp;media[50]</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>para(inteiro&nbsp;n&nbsp;=&nbsp;0;&nbsp;n&nbsp;&lt;=&nbsp;49;&nbsp;n++)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>{</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>leia(n1[n],&nbsp;n2[n],&nbsp;n3[n],&nbsp;n4[n])</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>&nbsp;&nbsp;&nbsp;&nbsp;media[n]&nbsp;=&nbsp;(n1[n]&nbsp;+&nbsp;n2[n]&nbsp;+&nbsp;n3[n]&nbsp;+&nbsp;n4[n])/4</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>&nbsp;&nbsp;&nbsp;&nbsp;...</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>}</span></span></span></div></pre><p>Você pode pensar em vetores como &quot;variáveis que armazenam variáveis&quot;.</p>
+<p>Por definição, vetores são estruturas unidimensionais, geralmente homogêneas, com <code style="font-family: Monaco;">n</code> posições. Cada posição é representada por um número inteiro, o qual chamamos de <strong>índice</strong>.</p>
+<p>Contamos as posições de um vetor sempre a partir de <code style="font-family: Monaco;">0</code>. A última posição de um vetor sempre deverá ser igual a <code style="font-family: Monaco;">n-1</code>, onde <code style="font-family: Monaco;">n</code> é o tamanho do vetor.</p>
+<p>Em cada posição de um vetor há um único valor. Ou seja: em cada posição de um vetor do tipo inteiro há um valor do tipo inteiro, como na figura a seguir.</p>
+<p><img src="D:\Documents\GitHub\ilp\imagens\vetor.png" alt="alt text" title="Vetor"></p>
+<p>Este mesmo vetor poderia ser construído em Portugol da seguinte maneira:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>inteiro&nbsp;numeros[8]&nbsp;=&nbsp;{&nbsp;54,&nbsp;21,&nbsp;100,&nbsp;89,&nbsp;90,&nbsp;32,&nbsp;23,&nbsp;74&nbsp;}</span></span></span></div></pre><p>Neste caso, utilizamos um par de chaves (<code style="font-family: Monaco;">{ }</code>) para criar uma lista de valores que seriam atribuídos ao vetor. Mas nem sempre é necessário atribuir valores ao vetor logo em sua inicialização.</p>
+<p>Tenha em mente também que a definição do tamanho do vetor, representada pelo valor <code style="font-family: Monaco;">8</code> neste exemplo, não é obrigatória quando a este vetor for atribuída uma lista de valores. Se tivéssemos feito isso, o resultado seria o mesmo:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>inteiro&nbsp;numeros[]&nbsp;=&nbsp;{&nbsp;54,&nbsp;21,&nbsp;100,&nbsp;89,&nbsp;90,&nbsp;32,&nbsp;23,&nbsp;74&nbsp;}</span></span></span></div></pre><p>Para simplificação do trabalho com vetores grandes, recomenda-se sempre o uso de estruturas de repetição. Geralmente, utiliza-se a estrutura de repetição <code style="font-family: Monaco;">para</code>, que oferece um mecanismo mais simples para se trabalhar com intervalos. Observe o exemplo a seguir:</p>
+<pre class="editor-colors lang-text"><div class="line"><span class="text plain"><span class="meta paragraph text"><span>cadeia&nbsp;listaDeNomes[100]</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>para(inteiro&nbsp;x&nbsp;=&nbsp;0;&nbsp;x&nbsp;&lt;=&nbsp;99;&nbsp;x++)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>{</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>leia(listaDeNomes[x])</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>}</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;</span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>para(inteiro&nbsp;x&nbsp;=&nbsp;0;&nbsp;x&nbsp;&lt;=&nbsp;99;&nbsp;x++)</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>{</span></span></span></div><div class="line"><span class="text plain"><span>&nbsp;&nbsp;&nbsp;&nbsp;</span><span class="meta paragraph text"><span>escreva(listaDeNomes[x])</span></span></span></div><div class="line"><span class="text plain"><span class="meta paragraph text"><span>}</span></span></span></div></pre><p>O algoritmo acima deverá ler 100 nomes e depois imprimí-los. Perceba que ao declarar a variável <code style="font-family: Monaco;">listaDeNomes</code>, foi necessário definir seu tamanho, que é igual a <code style="font-family: Monaco;">100</code>.</p>
+<p>Com uma estrutura de repetição <code style="font-family: Monaco;">para</code>, percorremos o vetor desde a posição 0 até a 99, armazenando cada nome lido em uma das posições.</p>
+<p>Novamente, com uma estrutura de repetição, percorremos cada uma das posições, imprimindo o nome armazenado em cada uma delas.</p>
+<h2 id="10-refer-ncias-bibliogr-ficas">10. Referências Bibliográficas</h2>
+<ul>
+<li>LOPES, Anita. GARCIA, Guto. <strong>Introdução à programação – 500 algoritmos resolvidos</strong>. Rio de Janeiro: Elsevier, 2002 - 15ª Tiragem.</li>
+</ul>
+<h2 id="lista-1-express-es-entrada-e-sa-da-de-dados">Lista 1 - Expressões, entrada e saída de dados</h2>
+<ol>
+<li>Leia dois números inteiros e escreva o resultado de sua soma.</li>
+<li>Leia dois números inteiros e escreva o resultado de sua subtração.</li>
+<li>Leia dois números inteiros e escreva o resultado de sua multiplicação.</li>
+<li>Leia dois números inteiros (<code style="font-family: Monaco;">a</code> e <code style="font-family: Monaco;">b</code>) e escreva o resultado da divisão <code style="font-family: Monaco;">a / b</code>.</li>
+<li>Leia dois números inteiros (<code style="font-family: Monaco;">a</code> e <code style="font-family: Monaco;">b</code>) e escreva o resultado do resto da divisão <code style="font-family: Monaco;">a % b</code>.</li>
+<li>Leia dois números reais e escreva o resultado de sua soma.</li>
+<li>Leia o nome de uma pessoa e escreva uma frase de saudação, como: <code style="font-family: Monaco;">Olá, Fulano</code>.</li>
+<li>A média aritmética de dois ou mais termos é o quociente do resultado da divisão da soma dos números dados pela quantidade de números somados. Elabore um algoritmo que leia as 4 notas de um aluno e escreva sua média aritmética.</li>
+<li>A autonomia de um veículo é baseada em quantos quilômetros ele consegue percorrer a cada litro de combustível consumido. Por exemplo, é comum afirmar que tal carro é capaz de fazer 15 quilômetros por litro de combustível. Com base nisso, elabore um algoritmo que leia uma distância percorrida em quilômetros e uma quantidade de litros de combustível consumidos, e informe quantos quilômetros este veículo pode percorrer com cada litro.</li>
+<li>A velocidade média de um veículo pode ser calculada se tivermos os seguintes valores: a distância percorrida e o tempo gasto para percorrer esta distância. Com base nisso, elabore um algoritmo que leia uma distância percorrida em quilômetros e o tempo gasto em horas, e informe a velocidade média desse veículo.</li>
+<li>Alguns países de língua inglesa, como os EUA, utilizam da unidade de medida grau Fahrenheit como escala de temperatura. Para converter uma temperatura de Celsius para Fahrenheit, podemos aplicar a fórmula <code style="font-family: Monaco;">F=(9*C+160)/5</code> ou a fórmula <code style="font-family: Monaco;">F=C*1.8+32</code>, onde F é a temperatura em Fahrenheit e C a temperatura em Celsius. Elabore um algoritmo que leia uma temperatura em graus Celsius e a escreva convertida em graus Fahrenheit.</li>
+<li>Para auxiliar uma loja que deseja parcelar o valor das compras de seus clientes, elabore um algoritmo que leia o valor de uma compra e o número de prestações desejadas, e escreva o valor das prestações.</li>
+<li>No comércio, os preços dos produtos geralmente são definidos com base em uma margem percentual de lucro. Considere um produto adquirido por uma loja pelo valor de R$ 100,00. Se esta loja aplicar a este produto um percentual de 15% de lucro, o produto será revendido pelo valor de R$ 115,00. Elabore um algoritmo que leia o valor de compra de um produto e o percentual de lucro desejado, e escreva o valor de revenda deste produto.</li>
+<li>Você foi encarregado de realizar uma pesquisa sobre Inclusão Digital. A sua pesquisa deverá apresentar o percentual de alunos da sua escola que possuem acesso à internet. Para isso, elabore um algoritmo que leia o número total de alunos da sua escola e o número de alunos que possuem acesso à internet, por fim, com base nestes dados, escreva o percentual de alunos com acesso à internet. Ex.: Em uma escola com 200 alunos, apenas 50 alunos possuem acesso à internet, o que equivale a 25% destes 200 alunos.</li>
+<li>Em uma pequena loja de eletrônica são vendidos <code style="font-family: Monaco;">resistores</code>, <code style="font-family: Monaco;">diodos</code> e <code style="font-family: Monaco;">transistores</code>. Seus preços são <code style="font-family: Monaco;">R$ 0.70</code>, <code style="font-family: Monaco;">R$ 0.80</code> e <code style="font-family: Monaco;">R$ 0.95</code>, respectivamente. Têm-se os preços unitários de cada tipo de peça e sabe-se que sobre estes preços incidem descontos de <code style="font-family: Monaco;">5%</code> para <code style="font-family: Monaco;">resistores</code>, <code style="font-family: Monaco;">6%</code> para <code style="font-family: Monaco;">diodos</code> e <code style="font-family: Monaco;">9%</code> para <code style="font-family: Monaco;">transistores</code>. Elabore um programa que leia o nome do cliente e as quantidades de cada item comprado; e escreva o valor total de desconto e o valor líquido a ser pago pela compra.</li>
+</ol>
+<h2 id="lista-2-estruturas-de-decis-o-se-sen-o">Lista 2 - Estruturas de decisão: Se/Senão</h2>
+<ol>
+<li>Leia um número inteiro e informe se este número é par ou ímpar.</li>
+<li>Leia a idade de uma pessoa e informe se ela já chegou à maioridade. Se ela ainda não chegou, informe quantos anos faltam para a maioridade.</li>
+<li>Construa um algoritmo que leia um número inteiro A e um número inteiro B. Verifique qual dos dois números é maior e o escreva.</li>
+<li>Considerando uma pista em que a velocidade máxima permitida é de 110 km/h, leia a velocidade de um veículo e informe se ele excedeu ou não a velocidade máxima permitida.</li>
+<li>Considerando que a temperatura média ideal do corpo humano varia entre 36° C e 36,7° C, elabore um algritmo que, dada uma temperatura lida, informe se esta pessoa está com febre.</li>
+<li>Complemente o algoritmo anterior, adicionando a ele a capacidade de informar se a pessoa está com hipotermia (abaixo da temperatura média ideal); dentro da temperatura média ideal ou com febre.</li>
+<li>Elabore um algoritmo que leia um número inteiro e informe se este número é um múltiplo de 7.</li>
+<li>Leia um número inteiro e informe se este número é par e também divisível por 3.</li>
+<li>Para auxiliar um cliente a escolher o produto mais barato em um conjunto de 3 produtos, crie um programa que leia os preços de 3 produtos e informe qual deles é o mais barato.</li>
+<li>Construa um programa que leia um caractere e informe se este caractere é uma vogal.</li>
+<li>Leia dois números inteiros <code style="font-family: Monaco;">x</code> e <code style="font-family: Monaco;">y</code>, e informe se <code style="font-family: Monaco;">x</code> é divisível por <code style="font-family: Monaco;">y</code>.</li>
+<li>Considerando que no Brasil é possível votar a partir dos 16 anos de idade, leia o ano de nascimento de uma pessoa e informe se ela poderá votar no ano atual. Ignore mês e dia de nascimento.</li>
+<li>Considerando que o ano possui 12 meses, leia um número inteiro de 1 a 12 e informe o mês que corresponde a este número.</li>
+<li>Leia dois números inteiros <code style="font-family: Monaco;">x</code> e <code style="font-family: Monaco;">y</code> e escreva dentre as seguintes hipóteses a verdadeira: 1. <code style="font-family: Monaco;">x</code> e <code style="font-family: Monaco;">y</code> são pares; 2. <code style="font-family: Monaco;">x</code> e <code style="font-family: Monaco;">y</code> são ímpares; 3. <code style="font-family: Monaco;">x</code> é par e <code style="font-family: Monaco;">y</code> é ímpar; 4. <code style="font-family: Monaco;">x</code> é ímpar e <code style="font-family: Monaco;">y</code> é par.</li>
+<li>Para auxiliar a definir os períodos mais quente e mais frio do dia, elabore um algortimo que leia a temperatura do período matutino, a temperatura do período vespertino e a temperatura do período noturno, ao fim escreva qual destes períodos foi o mais frio e qual foi o mais quente.</li>
+<li>Construa um algoritmo que leia as medidas dos lados de um triângulo e informe se este triângulo é equilátero, isósceles ou escaleno.</li>
+<li>Construa um algoritmo que leia um número real e, se ele for maior do que 5, então escreva a metade deste número. Ex.: se leio o número 12, 12 é maior que 5; a metade de 12 é 6; devo escrever 6.</li>
+<li>Construa um algoritmo que leia um número inteiro e, se ele for positivo, escreva uma mensagem que informe se este número é ou não divisível por 2.</li>
+<li>Construa um algoritmo que leia dois números inteiros diferentes e escreva-os em ordem crescente.</li>
+<li>Construa um algoritmo que leia três números inteiros e escreva-os em ordem decrescente.</li>
+<li>Crie um algoritmo que leia dois números inteiros e escreva uma mensagem dizendo se estes números são iguais ou diferentes.</li>
+<li>O IMC (Índice de Massa Corporal) é uma unidade de medida internacional usada para calcular se uma pessoa está no seu peso ideal. A fórmula mais genérica de cálculo de IMC é <code style="font-family: Monaco;">imc = peso / altura * altura</code>, onde o peso é dado em quilos e a altura em metros. Há uma tabela que define uma classificação para cada faixa de IMC. Segundo esta tabela, pessoas com IMC menor ou igual a 18.5 estão abaixo do peso; pessoas com IMC maior que 18.5 e menor que 25 estão no peso ideal; já as pessoas com IMC maior ou igual a 25 estão acima do peso. Elabore um algoritmo que leia peso e altura de uma pessoa, informe seu IMC e também se ela está abaixo do peso, no peso ideal ou acima do peso.</li>
+</ol>
+<h2 id="lista-3-estruturas-de-decis-o-escolha-caso">Lista 3 - Estruturas de decisão: Escolha/Caso</h2>
+<ol>
+<li>Elabore um programa que leia uma letra e informe se esta letra é uma vogal ou uma consoante.</li>
+<li>Elabore um programa que funcione como uma calculadora simples. Seu programa deverá começar mostrando uma mensagem de apresentação, depois solicitar que o usuário entre com dois números reais (<code style="font-family: Monaco;">a</code> e <code style="font-family: Monaco;">b</code>) e finalmente ler os dois números reais digitados.  Logo após, o programa deverá solicitar ao usuário que escolha uma das seguintes opções: somar, subtrair, multiplicar ou dividir. Com base na escolha do usuário, exiba o resultado da operação escolhida envolvendo <code style="font-family: Monaco;">a</code> e <code style="font-family: Monaco;">b</code>.</li>
+<li>Considerando que o ano possui 12 meses, leia um número inteiro entre 1 e 12 e, com o uso da estrutura de controle escolha/caso, informe o nome do mês que corresponde a este número.</li>
+<li>Verificar a quantidade de combustível que será gasta em uma viagem é de grande importância para o condutor. Considerando que um carro do tipo A é capaz de percorrer 12 quilômetros a cada litro de combustível gasto, um do tipo B percorre 9 quilômetros a cada litro e um do tipo C, 8 quilômetros por litro, elabore um programa que leia a distância a ser viajada e o tipo de carro, e com base nestes dados informe quantos litros de combustível serão gastos.</li>
+<li>Construa um programa que funcione como um menu para uma lanchonete. Seu programa deverá iniciar mostrando o nome da sua lanchonete. Em seguida, seu programa deverá pedir o nome do usuário e, após lê-lo, exibir uma mensagem de boas vindas. Após isso, seu programa deverá mostrar as opções de lanches disponíveis e seus preços: mostre pelo menos 6 opções de lanches diferentes. Permita que o usuário escolha uma das opções de lanches e, após a escolha, mostre a ele uma mensagem informando a opção que ele escolheu e quanto seu pedido irá custar. Lembre-se de avisar ao usuário caso ele escolha uma opção inexistente.</li>
+<li>Construa um programa que leia a primeira letra do mês de nascimento de uma pessoa e informe em quais meses essa pessoa pode ter nascido. Caso não exista um mês que comece com a letra lida, informe ao usuário que ele se enganou.</li>
+</ol>
+<p><img src="D:\Documents\GitHub\ilp\imagens\meses.png" alt="alt text" title="Meses"></p>
+<h2 id="lista-4-la-os-de-repeti-o-enquanto-e-fa-a-enquanto">Lista 4 - Laços de Repetição: Enquanto e Faça/Enquanto</h2>
+<ol>
+<li>Elabore um algoritmo que escreva todos os números inteiros de 1 a 100.</li>
+<li>Elabore um algoritmo que escreva apenas os números pares de 1 a 100.</li>
+<li>Elabore um algoritmo que escreva apenas os números ímpares de 1 a 100.</li>
+<li>Elabore um algoritmo que escreva todos os números inteiros de 200 a 400.</li>
+<li>Elabore um algoritmo que escreva apenas os números pares de 300 a 600.</li>
+<li>Elabore um algoritmo que escreva apenas os números ímpares de 750 a 1500.</li>
+<li>Construa um programa que leia um número inteiro e escreva todos os números inteiros de 1 até o número lido.</li>
+<li>Construa um programa que leia um número inteiro, verifique se ele é par ou ímpar. Se o número for ímpar, escreva todos os números ímpares menores que ele em ordem crescente. Se o número for par, escreva todos os números pares menores que ele em ordem crescente.</li>
+<li>Repita a questão anterior, desta vez imprimindo os números em ordem decrescente, desde o número lido.</li>
+<li>Construa um programa que comece lendo um número inteiro qualquer. Este número será chamado de <code style="font-family: Monaco;">piso</code>. Após isso, seu programa deverá ler um outro número inteiro (que poderá ser chamado de <code style="font-family: Monaco;">proximo</code>) enquanto <code style="font-family: Monaco;">proximo</code> for maior ou igual a <code style="font-family: Monaco;">piso</code>.</li>
+<li>Elabore um algoritmo que leia dois números inteiros diferentes: <code style="font-family: Monaco;">ini</code> e <code style="font-family: Monaco;">fim</code>, sendo que <code style="font-family: Monaco;">ini</code> deve ser menor que <code style="font-family: Monaco;">fim</code>. Escreva em ordem crescente todos os números inteiros entre <code style="font-family: Monaco;">ini</code> e <code style="font-family: Monaco;">fim</code>, inclusive eles mesmos.</li>
+<li>Repita a questão anterior, desta vez presumindo que <code style="font-family: Monaco;">ini</code> pode ou não ser maior que <code style="font-family: Monaco;">fim</code>. Se <code style="font-family: Monaco;">ini</code> for maior que <code style="font-family: Monaco;">fim</code>, siga a ordem decrescente.</li>
+<li>Construa um programa que repita a tarefa de ler um número inteiro, enquanto o número lido for maior que 1. Ao término das repetições, escreva o resultado da soma de todos os números lidos.</li>
+<li>Construa um algoritmo que leia dois números inteiros diferentes: <code style="font-family: Monaco;">ini</code> e <code style="font-family: Monaco;">fim</code>, sendo que <code style="font-family: Monaco;">ini</code> deve ser menor que <code style="font-family: Monaco;">fim</code>. Em seguida, escreva o resultado da soma de todos os números inteiros entre <code style="font-family: Monaco;">ini</code> e <code style="font-family: Monaco;">fim</code>, contando com eles mesmos.</li>
+<li>Construa um programa que calcule as médias aritméticas de todos os alunos de uma turma. Seu programa deverá funcionar da seguinte maneira: leia o nome do aluno; leia as notas dos 4 bimestres; mostre a média aritmética do aluno; pergunte se o usuário deseja continuar; se o usuário desejar continuar, repita todo o processo, senão, pare.</li>
+</ol>
+<h2 id="lista-5-la-os-de-repeti-o-para">Lista 5 - Laços de Repetição: Para</h2>
+<ol>
+<li>Elabore um algoritmo que escreva todos os números inteiros de 1 a 100.</li>
+<li>Elabore um algoritmo que escreva apenas os números pares de 1 a 100.</li>
+<li>Elabore um algoritmo que escreva apenas os números ímpares de 1 a 100.</li>
+<li>Elabore um algoritmo que escreva todos os números inteiros de 200 a 400.</li>
+<li>Elabore um algoritmo que escreva apenas os números pares de 300 a 600.</li>
+<li>Elabore um algoritmo que escreva apenas os números ímpares de 750 a 1500.</li>
+</ol>
+<h2 id="lista-6-problemas-com-la-os-de-repeti-o">Lista 6 - Problemas com Laços de Repetição</h2>
+<ol>
+<li>Você recebeu a tarefa de elaborar um programa que calcule o IMC médio da sua turma. Sabendo que o IMC é dado pela fórmula <code style="font-family: Monaco;">imc = peso / altura * altura</code>, elabore um programa que seja capaz de calcular o IMC de quantos alunos for necessário. A cada IMC calculado, o usuário deverá confirmar se deseja continuar. Quando o usuário optar por não continuar mais, exiba a média aritmética dos IMCs calculados.</li>
+<li>Na matemática, o fatorial de um número inteiro <code style="font-family: Monaco;">a</code>, representado por <code style="font-family: Monaco;">a!</code>, é o produto de todos os inteiros positivos menores ou iguais a <code style="font-family: Monaco;">a</code>. Por exemplo, <code style="font-family: Monaco;">3!</code> ou <code style="font-family: Monaco;">3 fatorial</code> é dado por <code style="font-family: Monaco;">3 * 2 * 1</code>, que é igual a <code style="font-family: Monaco;">6</code>. Construa um programa que seja capaz de ler um número inteiro e apresentar seu fatorial.</li>
+<li>Construa um algoritmo que leia a idade de várias pessoas e, ao fim da execução, escreva o total de pessoas com menos de 18 anos e o total de pessoas com mais de 65 anos. Seu algoritmo deve parar de ler idades quando o usuário digitar uma idade menor que 1.
+4.</li>
+</ol>
+<h2 id="lista-7-vetores">Lista 7 - Vetores</h2>
+<ol>
+<li>Com um vetor, leia 5 números inteiros e imprima-os.</li>
+<li>Com um vetor, leia 5 nomes e imprima-os.</li>
+<li>Com um vetor, leia 5 números inteiros e imprima-os em ordem inversa. Ex.: 5,1,4,8,0 – 0,8,4,1,5.</li>
+<li>Com um vetor, leia 10 números reais. Imprima os números lidos, multiplicando os números de posições ímpares por 1.05, e os de posições pares por 1.02.</li>
+<li>Com um vetor, leia 5 números reais, imprima-os na ordem lida e na ordem inversa.</li>
+<li>Declare dois vetores de 10 posições do tipo inteiro. Preencha o primeiro lendo entradas do usuário. Copie o conteúdo do primeiro para o segundo. Imprima os dois vetores lado a lado.</li>
+<li>Em um vetor que contém as médias de uma turma de 10 alunos, calcule a média da turma e conte quantos alunos obtiveram nota acima da média da turma. Escreva a média da turma e o total de alunos acima da média.</li>
+<li>Declare dois vetores de 5 posições do tipo inteiro e um vetor de 10 posições do tipo inteiro. Preencha os dois vetores menores, depois copie os valores dos dois para o maior vetor.</li>
+<li>Declare um vetor de 5 posições do tipo cadeia. Preencha-o com 5 nomes diferentes. A seguir, permita que o usuário digite um nome. Se este nome estiver no vetor, informe que tal pessoa foi encontrada. Senão, informe que tal pessoa não foi encontrada.</li>
+<li>Declare três vetores de 5 posições. Preencha o primeiro e depois o segundo. Por fim, percorra os três vetores simultaneamente, preenchendo o terceiro com as somas dos outros dois. Imprima os três lado a lado.</li>
+</ol>
+<p><img src="D:\Documents\GitHub\ilp\imagens\vetor1.png" alt="alt text" title="Vetores"></p></body>
+</html>

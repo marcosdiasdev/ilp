@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>README.html</title>
+<style>
+* {
+    overflow: visible !important;
+    -webkit-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    box-decoration-break: clone;
+}
+
+html, body {
+    background: #FFF;
+    font-family: "Segoe UI", Arial, freesans, sans-serif;
+    font-size: 10px;
+    line-height: 1.4;
+    color: #333;
+    word-wrap: break-word;
+	hyphens: auto;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 4px solid #EEE;
+}
+
+code {
+    padding: .1em .4em;
+    display: inline-block;
+    background-color: #f9f2f4;
+    color: #c7254e;
+    border-radius: 3px;
+    border: 0 none;
+    font: 9px Consolas, "Liberation Mono", Menlo, "Courier New", Courier, monospace;
+    hyphens: manual;
+}
+
+pre code {
+    padding: 15px;
+    display: block;
+    background-color: #F9F9F9;
+    color: #555;
+    font-size: 10px;
+    box-shadow: inset -1px -1px 0 rgba(0, 0, 0, .08);
+    word-wrap: normal;
+}
+
+/* replace light background for some hljs themes */
+code.github-css,
+code.github-gist-css,
+code.tomorrow-css,
+code.default-css,
+code.googlecode-css,
+code.ascetic-css,
+code.color-brewer-css,
+code.grayscale-css,
+code.idea-css,
+code.vs-css,
+code.xcode-css {
+    background-color: #F9F9F9 !important;
+}
+
+blockquote {
+    padding: 10px;
+    margin-left: 0;
+    color: #666;
+    border: 0 none;
+    border-left: 4px solid #EEE;
+}
+
+blockquote p:last-child,
+blockquote ul:last-child,
+blockquote ol:last-child {
+    margin-bottom: 0;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    background-color: #FFF;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #DDD;
+}
+
+table div {
+    page-break-inside: avoid;
+}
+
+th, td {
+    text-align: left;
+}
+
+table > thead > tr > th,
+table > tbody > tr > th,
+table > tfoot > tr > th,
+table > thead > tr > td,
+table > tbody > tr > td,
+table > tfoot > tr > td {
+    padding: 8px 14px;
+    vertical-align: top;
+    border-top: 1px solid #DDD;
+}
+
+table > caption + thead > tr:first-child > th,
+table > colgroup + thead > tr:first-child > th,
+table > thead:first-child > tr:first-child > th,
+table > caption + thead > tr:first-child > td,
+table > colgroup + thead > tr:first-child > td,
+table > thead:first-child > tr:first-child > td {
+    border-top: 0;
+}
+
+table > tbody + tbody {
+    border-top: 2px solid #DDD;
+}
+
+table table {
+    background-color: #FFF;
+}
+
+table > thead > tr > th,
+table > tbody > tr > th,
+table > tfoot > tr > th,
+table > thead > tr > td,
+table > tbody > tr > td,
+table > tfoot > tr > td {
+    border: 1px solid #DDD;
+}
+
+table > thead > tr > th,
+table > thead > tr > td {
+    border-bottom-width: 2px;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bold;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    font-size: 90%;
+}
+
+table > tbody > tr:nth-of-type(odd) {
+    background-color: #F9F9F9;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: inherit;
+    font-weight: normal;
+    line-height: 1.1;
+    color: #111;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding: 0;
+    page-break-after: avoid;
+}
+
+h1, h2 {
+    border-bottom: 1px solid #EEE;
+    padding-bottom: 7px;
+    margin-top: 10px;
+    margin-bottom: 12px;
+}
+
+h1 {
+    font-size: 22px;
+}
+
+h2 {
+    font-size: 17px;
+}
+
+h3 {
+    font-size: 15px;
+}
+
+h4 {
+    font-size: 11px;
+}
+
+h5, h6 {
+    font-size: 10px;
+    font-weight: bold;
+    color: #666;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+input[type="checkbox"] {
+    margin-right: 6px;
+    position: relative;
+    bottom: 1px;
+}
+
+ul,
+ol {
+    margin-top: 0;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+ul li,
+ol li {
+    margin-bottom: 2px;
+}
+
+dl {
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-left: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+    color: #4078C0;
+}
+
+.new-page,
+.page-break,
+.next-page,
+.page-end {
+    page-break-before: always;
+}
+
+#pageHeader,
+#pageHeader a,
+#pageHeader a:visited {
+    color: #777;
+}
+
+#pageHeader span {
+    vertical-align: middle;
+}
+
+#pageFooter {
+    border-top: 1px solid #EEE;
+    padding-top: 5px;
+    color: #777;
+    font-size: 80%;
+}
+#pageFooter a,
+#pageFooter a:visited {
+    color: #777;
+}
+
+/**
+ * Your markdown-themeable-pdf custom styles
+ *
+ * The default file can be found in the folder ~/.atom/packages/markdown-themeable-pdf/templates
+ * The base css file can be found in the folder ~/.atom/packages/markdown-themeable-pdf/css
+ * The current highlight.js css file can be found in the folder ~/.atom/packages/markdown-themeable-pdf/node_modules/highlight.js/styles
+ */
+
+/*
+html, body {
+	color: red;
+}
+*/
+
+/**
+ * GitHub Gist Theme
+ * Author : Louis Barranqueiro - https://github.com/LouisBarranqueiro
+ */
+
+.hljs {
+  display: block;
+  background: white;
+  padding: 0.5em;
+  color: #333333;
+  overflow-x: auto;
+}
+
+.hljs-comment,
+.hljs-meta {
+  color: #969896;
+}
+
+.hljs-string,
+.hljs-variable,
+.hljs-template-variable,
+.hljs-strong,
+.hljs-emphasis,
+.hljs-quote {
+  color: #df5000;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-type {
+  color: #a71d5d;
+}
+
+.hljs-literal,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-attribute {
+  color: #0086b3;
+}
+
+.hljs-section,
+.hljs-name {
+  color: #63a35c;
+}
+
+.hljs-tag {
+  color: #333333;
+}
+
+.hljs-title,
+.hljs-attr,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-selector-attr,
+.hljs-selector-pseudo {
+  color: #795da3;
+}
+
+.hljs-addition {
+  color: #55a532;
+  background-color: #eaffea;
+}
+
+.hljs-deletion {
+  color: #bd2c00;
+  background-color: #ffecec;
+}
+
+.hljs-link {
+  text-decoration: underline;
+}
+
+pre { white-space: pre-wrap !important; word-break: break-word !important; overflow: hidden !important;}
+</style>
+</head>
+<body>
+<div id="pageContent">
+<h1 id="apostila-de-introducao-a-logica-de-programacao">Apostila de Introdução à Lógica de Programação</h1>
+<p>A <strong>Lógica de Programação</strong> é a técnica de encadear pensamentos para atingir determinado objetivo por meio de um computador ou outro sistema programável.</p>
+<p>Antes de começarmos a programar, é necessário compreender novos conceitos e até rever alguns dos já vistos nas aulas de Matemática.</p>
+<blockquote>
+<p>Você pode acessar a versão mais atualizada deste material entrando em <a href="https://github.com/timarcosdias/ilp">github.com/timarcosdias/ilp</a>.</p>
+</blockquote>
+<blockquote>
+<p>Se encontrar erros ou tiver sugestões, por favor, envie-os para [ti.marcosdias@gmail.com](mailto:ti.marcosdias@gmail.com?Subject=Apostila de Lógica de Programação).</p>
+</blockquote>
+<blockquote>
+<p>Os exemplos contidos neste material adotam a sintaxe de uma variante da linguagem Portugol desenvolvida para a ferramenta <a href="http://lite.acad.univali.br/portugol/">Portugol Studio</a>, mantida pela UNIVALI - Universidade do Vale do Itajaí.</p>
+</blockquote>
+<h2 id="1-algoritmo">1. Algoritmo</h2>
+<p>Podemos definir algoritmo como uma sequência finita e ordenada de passos para a resolução de um problema específico.</p>
+<p>Para exemplificar, vamos começar com um algoritmo descritivo para um problema clássico do cotidiano: como fritar ovos?</p>
+<pre><code>/*
+Algoritmo para fritar ovos
+
+1.    pegar frigideira, ovo, óleo e sal
+2.    colocar óleo na frigideira
+3.    acender o fogo
+4.    levar a frigideira ao fogo
+5.    esperar o óleo esquentar
+6.    colocar o ovo
+7.    colocar sal no ovo
+8.    retirar quando pronto
+*/
+</code></pre>
+<p>Percebe que o algoritmo acima é basicamente uma receita? Algoritmos são exatamente como receitas.</p>
+<p>Uma boa recomendação para a construção de algoritmos descritivos é sempre utilizar apenas um verbo por linha, já que cada verbo geralmente indicará uma ação diferente a ser tomada.</p>
+<blockquote>
+<p>O nosso principal objetivo ao estudar Lógica de Programação é compreender como criar programas de computador. Um Programa de Computador nada mais é que um algoritmo escrito com o uso de uma linguagem de computador, ou linguagem de programação, como C, Pascal, Java, JavaScript, PHP etc. Há uma infinidade de linguanges de programação disponíveis mundo afora. Futuramente veremos como elas funcionam.</p>
+</blockquote>
+<h2 id="2-variavel">2. Variável</h2>
+<p>Na Matemática, variável é o nome que se dá ao termo que substitui um outro desconhecido, como numa equação: <code>y = 2x + 1</code>. Em Lógica de Programação, o valor de uma variável pode ser conhecido ou não.</p>
+<p>De forma genérica, uma variável é uma referência a um local na memória do computador, onde um valor pode estar armazenado, por exemplo: em um programa de computador, podemos ter uma variável chamada <code>idade</code>, que armazena o valor <code>18</code>.</p>
+<h3 id="21-nomenclatura-de-variaveis">2.1. Nomenclatura de variáveis</h3>
+<p>Há algumas regras a serem seguidas ao nomear variáveis. Algumas linguanges de programação poderão apresentar padrões diferentes, mas há algumas convenções que devem ser sempre seguidas para manter o código legível e livre de erros:</p>
+<ul>
+<li>O nome de uma variável não deve conter espaços ou acentos</li>
+<li>O nome de uma variável não deve conter operadores</li>
+<li>O nome de uma variável não deve ser só um número</li>
+<li>Algumas linguagens de programação diferenciam letras maiúsculas de letras minúsculas, logo: <code>Nome</code> pode ser diferente de <code>nome</code></li>
+<li>Variáveis cujo nome seja um substantivo composto, como &quot;data de nascimento&quot;, <strong>podem</strong> ser nomeadas com o padrão camelCase: <code>dataDeNascimento</code>. Este padrão define que todas as palavras após a primeira devem começar com letra maiúscula. Outra alternativa é utilizar um traço inferior (<code>_</code>), ou underline, entre cada palavra: <code>data_de_nascimento</code>.</li>
+</ul>
+<h3 id="22-atribuicao-de-valores">2.2. Atribuição de valores</h3>
+<p>Atribuir um valor a uma variável é dar um valor a uma variável. É o mesmo que guardar um valor em um espaço da memória.</p>
+<pre><code>a = 4
+</code></pre>
+<p>Pode ser lido como: variável <code>a</code> recebe <code>4</code>.</p>
+<pre><code>nome = “José”
+</code></pre>
+<p>Pode ser lido como: variável <code>nome</code> recebe <code>José</code>.</p>
+<p>Observe que o símbolo de igualdade, <code>=</code>, aqui é utilizado como operador de atribuição. Para igualdade, utilize <code>==</code>.</p>
+<h3 id="23-tipos-de-variaveis">2.3. Tipos de variáveis</h3>
+<p>O tipo de uma variável define o tipo de valor que ela poderá armazenar. Por exemplo, se precisamos armazenar um número inteiro, podemos criar uma variável do tipo <strong>inteiro</strong>; para armazenar nomes, utilizamos <strong>cadeias de caracteres</strong>.</p>
+<ul>
+<li><strong>Inteiro ou (int):</strong> número inteiro. Ex.: 10 ou 50.</li>
+<li><strong>Real (float):</strong> número real. Ex.: 10.5 ou 0.8.</li>
+<li><strong>Caracter ou Cadeia (string ou char):</strong> número, letras, palavras e/ou outros símbolos. Ex.: &quot;A&quot; ou &quot;abc123&quot; ou &quot;* é um asterisco.&quot;. Tenha sempre em mente que valores do tipo caractere ou cadeia de caracteres são representados entre aspas.</li>
+<li><strong>Lógico (bool):</strong> verdadeiro ou falso, sim ou não, 1 ou 0, true ou false.</li>
+</ul>
+<h3 id="24-exercicios-com-tipos-de-variaveis">2.4. Exercícios com tipos de variáveis</h3>
+<p><strong>1. Informe o tipo de variável adequado para cada item abaixo:</strong></p>
+<ul>
+<li>a) Idade de uma pessoa</li>
+<li>b) Valor de uma conta de luz</li>
+<li>c) Nome de um cliente</li>
+<li>d) Estado de uma lâmpada (acesa/apagada)</li>
+<li>e) Senha de acesso ao Facebook</li>
+<li>f) Quantidade de litros de combustível abastecidos em um posto</li>
+<li>g) Situação de uma determinada fatura (paga/não paga)</li>
+<li>h) Média final de um aluno</li>
+</ul>
+<h2 id="3-operadores">3. Operadores</h2>
+<p>Um operador é um símbolo que, como seu próprio nome diz, é utilizado para representar operações lógico-matemáticas. Os operadores que iremos utilizar são os operadores aritméticos, os operadores relacionais e os operadores lógicos. Observe que alguns deles, já utilizados na Matemática, terão seu símbolo substituído por outro na Programação.</p>
+<h3 id="31-operadores-aritmeticos">3.1. Operadores Aritméticos</h3>
+<ul>
+<li><strong>Soma (+):</strong> <code>1 + 3</code></li>
+<li><strong>Subtração (-):</strong> <code>5 – 4</code></li>
+<li><em><em>Multiplicação (</em>):</em>* <code>8 * 8</code></li>
+<li><strong>Divisão (/):</strong> <code>40 / 5</code></li>
+<li><strong>Resto/Módulo (%):</strong> <code>20 % 3</code></li>
+<li><strong>Potenciação (^):</strong> <code>2 ^ 2</code></li>
+</ul>
+<h3 id="32-operadores-relacionais">3.2. Operadores Relacionais</h3>
+<ul>
+<li><strong>Igual (==):</strong> <code>5 == 5</code></li>
+<li><strong>Diferente (!=):</strong> <code>8 != 80</code></li>
+<li><strong>Maior que (&gt;):</strong> <code>12 &gt; 11</code></li>
+<li><strong>Menor que (&lt;):</strong> <code>11 &lt; 12</code></li>
+<li><strong>Maior ou igual (&gt;=):</strong> <code>18 &gt;= 17</code></li>
+<li><strong>Menor ou igual (&lt;=):</strong> <code>16 &lt;= 16</code></li>
+</ul>
+<h3 id="33-operadores-logicos">3.3. Operadores Lógicos</h3>
+<ul>
+<li><strong>E/Conjunção (e; &amp;&amp;; and):</strong> <code>5 == 5 e 9 &gt; 7</code></li>
+<li><strong>OU/Disjunção (ou; ||; or):</strong> <code>5 &gt; 3 ou 7 &gt;= 1</code></li>
+<li><strong>NÃO/Negação (nao; !; not):</strong> <code>nao(3 &gt; 2) == falso</code></li>
+</ul>
+<h2 id="4-tabela-verdade">4. Tabela verdade</h2>
+<p>Uma tabela verdade é uma tabela utilizada em Lógica para verificar se uma expressão é verdadeira ou falsa.</p>
+<h3 id="41-operadores-e-e-ou">4.1. Operadores &quot;e&quot; e &quot;ou&quot;</h3>
+<p>No exemplo a seguir, temos a tabela verdade dos operadores lógicos <code>e</code> e <code>ou</code>. Observe que as variáveis <code>X</code> e <code>Y</code> representam expressões que podem ser verdadeiras ou falsas de forma independente.</p>
+<p><img src="imagens/tabela-verdade1.png" alt="alt text" title="Tabela Verdade 1"></p>
+<p>Para compreender como se dá a construção dessa tabela verdade, podemos nos fazer estas duas perguntas:</p>
+<ul>
+<li><code>X</code> e <code>Y</code> são verdadeiros?</li>
+<li><code>X</code> ou <code>Y</code> são verdadeiros?</li>
+</ul>
+<p>Ao questionar se <code>X</code> e <code>Y</code> são verdadeiros, questionamos se ambos são verdadeiros. Ou seja: a expressão <code>X e Y</code> só é verdadeira quando <code>X == verdadeiro</code> e <code>Y == verdadeiro</code>.</p>
+<p>O operador <code>ou</code> já funciona de maneira diferente. Ao questionarmos se <code>X</code> ou <code>Y</code> são verdadeiros, questionamos se pelo menos um deles é verdadeiro. Ou seja: a expressão <code>X ou Y</code> é verdadeira quando <code>X == verdadeiro</code> e <code>Y == falso</code>, ou <code>X == falso</code> e <code>Y == verdadeiro</code>, ou <code>X == verdadeiro</code> e <code>Y == verdadeiro</code>.</p>
+<h3 id="42-operador-nao">4.2. Operador &quot;não&quot;</h3>
+<p>O operador <code>não</code> é utilizado para negar uma determinada expressão. Ex.: se <code>X == verdadeiro</code>, então <code>não X == falso</code>; se <code>X == falso</code>, então <code>não X == verdadeiro</code>.</p>
+<p><img src="imagens/tabela-verdade2.png" alt="alt text" title="Tabela Verdade 2"></p>
+<h3 id="43-exercicios-com-tabela-verdade">4.3. Exercícios com tabela verdade</h3>
+<p><strong>1. Complete a seguinte tabela verdade:</strong></p>
+<p><img src="imagens/tabela-verdade-exercicios.png" alt="alt text" title="Tabela Verdade - Exercícios"></p>
+<h2 id="5-precedencia-de-operadores">5. Precedência de operadores</h2>
+<p>A precedência, ou ordem, de operadores é a convenção que indica a ordem em que as operações devem ser realizadas em uma expressão. A lista abaixo descreve a ordem em que os operadores devem ser considerados:</p>
+<ol>
+<li>Parênteses e funções</li>
+<li>Potência e resto</li>
+<li>Multiplicação e divisão</li>
+<li>Adição e subtração</li>
+<li>Operadores relacionais</li>
+<li>Operadores lógicos</li>
+</ol>
+<p>No exemplo abaixo, a multiplicação deve ser resolvida antes da soma.</p>
+<pre><code>3 + 4 * 9
+3 + 36
+39
+</code></pre>
+<p>Neste exemplo, a parte da expressão entre parênteses é resolvida antes da multiplicação.</p>
+<pre><code>(3 + 4) * 9
+7 * 9
+63
+</code></pre>
+<p>Quando operadores de mesma prioridade se chocam, a operação mais à esquerda prevalece sobre as demais. Ex.:</p>
+<pre><code>3 * 4 / 3
+12 / 3
+4
+</code></pre>
+<p>Neste exemplo, o operador de soma tem prioridade sobre os operadores relacionais, e os operadores relacionais têm prioridade sobre o operador lógico.</p>
+<pre><code>10 &lt; 9 e 6 + 3 &gt; 10
+10 &lt; 9 e 9 &gt; 10
+F e F
+F
+</code></pre>
+<p>Para facilitar, isole as expressões que estão antes e após o operador lógico, resolva-as e só então compare seus resultados através do operador lógico.</p>
+<h3 id="51-exercicios-com-expressoes">5.1. Exercícios com expressões</h3>
+<p><strong>1. Indique o resultado das expressões seguindo as regras de precedência dos operadores.</strong></p>
+<ul>
+<li>a) <code>2 + 3 - 5 * 8 / 4</code></li>
+<li>b) <code>7 * 4 / 2 + 9 - 6</code></li>
+<li>c) <code>(4 + 2) * 3 / 4</code></li>
+<li>d) <code>7 &gt; 2 e 3 -5 &lt; 8</code></li>
+<li>e) <code>8 &gt; 12 e 5 &lt; 3 + 4</code></li>
+</ul>
+<h2 id="6-primeiros-passos-em-programacao">6. Primeiros passos em programação</h2>
+<p>Você deve ter notado no início deste material que mencionamos que a sintaxe utilizada em nossos exemplos seria a mesma de uma variante da linguagem Portugol.</p>
+<p>Em Lógica de Programação, a <strong>sintaxe</strong> está ligada à <strong>estrutura</strong> da linguagem de programação. Ela é o conjunto de regras que definem a forma correta de composição das estruturas básicas de uma linguagem. É o que deve responder à pergunta: como construir tal estrutura corretamente?</p>
+<p>Outro conceito que precisamos compreender é o de <strong>semântica</strong>. Em Lógica de Programação, a semântica está ligada ao <strong>significado</strong> de um determinado código. A semântica deve responder à pergunta: tal código faz realmente o que se espera que ele faça?</p>
+<p>A seguir, são abordados alguns comandos básicos para que possamos finalmente começar a programar.</p>
+<h3 id="61-declaracao-de-variaveis">6.1. Declaração de variáveis</h3>
+<p>Antes que uma variável possa ser utilizada para armazenamento de um valor qualquer, ela deve ser declarada, ou seja: precisamos reservar aquele pequeno espaço na memória do computador e nomeá-lo para uso futuro:</p>
+<pre><code>inteiro idade
+</code></pre>
+<p>No exemplo acima, declaramos a variável <code>idade</code> como do tipo <code>inteiro</code>.</p>
+<p>Até que a variável <code>idade</code> seja inicializada, ou seja, até que ela receba algum valor, seu conteúdo será nulo ou vazio. É possível inicializar uma variável juntamente à sua declaração:</p>
+<pre><code>cadeia nome = &quot;Fulano&quot;
+</code></pre>
+<p>Mas podemos também declarar uma variável e inicializá-la com um valor lido:</p>
+<pre><code>real preco
+leia(preco)
+</code></pre>
+<p>O comando <code>leia()</code> utilizado no exemplo acima será abordado na próxima seção.</p>
+<p>Antes de prosseguirmos, lembre-se que você pode declarar quantas variáveis quiser e de diversos tipos diferentes em um mesmo programa, por exemplo:</p>
+<pre><code>cadeia nome, sobrenome, apelido
+real peso, altura
+inteiro idade
+</code></pre>
+<h3 id="62-comandos-de-entrada">6.2. Comandos de entrada</h3>
+<p>Comandos de entrada são os responsáveis por receber uma informação do usuário. Ex.: leia, escute, ouça, receba.</p>
+<pre><code>leia(nome)
+</code></pre>
+<p>Quando se trata de linguagens de programação, os comandos costumam ter um par de parênteses logo após seu nome, onde serão informadas opções para sua execução. Neste exemplo, o valor lido pelo comando <code>leia()</code> é armazenado na variável <code>nome</code>.</p>
+<h3 id="63-comandos-de-saida">6.3. Comandos de saída</h3>
+<p>Comandos de saída são os responsáveis por enviar uma informação ao usuário. Ex.: escreva, imprima, mostre, exiba.</p>
+<pre><code>escreva(“Olá, mundo!”)
+</code></pre>
+<p>Neste exemplo, o comando <code>escreva()</code> irá exibir na tela o texto <code>Olá, mundo!</code>.</p>
+<h3 id="64-um-basico-exemplo-de-entrada-processamento-e-saida">6.4. Um básico exemplo de entrada, processamento e saída</h3>
+<p>Neste exemplo, iremos declarar três variáveis: <code>a</code>, <code>b</code> e <code>c</code>, todas do tipo <code>inteiro</code>. Faremos a leitura de dois valores e os armazenaremos nas variáveis <code>a</code> e <code>b</code>. A variável <code>c</code> receberá a soma de <code>a</code> e <code>b</code>. Por fim, escreveremos o valor contido em <code>c</code>.</p>
+<pre><code>inteiro a, b, c
+leia(a)
+leia(b)
+c = a + b
+escreva(c)
+</code></pre>
+<p>Perceba que as últimas duas linhas do exemplo acima poderiam ser substituídas por:</p>
+<pre><code>escreva(a + b + c)
+</code></pre>
+<h3 id="65-dando-mais-sentido-ao-seu-codigo">6.5. Dando mais sentido ao seu código</h3>
+<p>Pense numa situação em que você precise escrever um programa em dupla, juntamente com um de seus colegas de classe. Fica combinado que você escreverá a primeira parte do programa e seu colega completará a solução a partir daí. No entanto, devido ao pequeno prazo disponível, você não poderá explicar ao seu colega pessoalmente como fez para chegar até aquele ponto da solução.</p>
+<p>Podemos acreditar que, muito provavelmente, seu colega terá dificuldades em compreender seu código para, então, conseguir prosseguir com a solução do problema.</p>
+<p>Mas, e se você pudesse escrever algo mais dentro do seu código para orientar seu colega sem que isso atrapalhasse o funcionamento do seu programa? Isso é possível com o uso de <strong>comentários</strong>.</p>
+<p>Através de comentários, você pode escrever qualquer coisa dentro do seu código sem que isso afete o funcionamento do seu programa. Para escrever um comentário, apenas insira <code>//</code> e escreva seu comentário. Exemplo:</p>
+<pre><code>inteiro x = 50
+// Isto é um comentário de uma única linha
+escreva(x)
+</code></pre>
+<p>Às vezes utilizamos comentários também para <strong>suprimir</strong> uma ou mais linhas de código de um programa para que elas não sejam executadas:</p>
+<pre><code>inteiro x = 10, y = 20
+escreva(x)
+// escreva(y)
+// Veja que só a variável x será escrita, pois a linha que deveria escrever y foi marcada como um comentário
+</code></pre>
+<p>Alguns comentários podem ser mais longos e ocupar várias linhas de código. Neste caso, a primeira linha comentada deverá ser iniciada com <code>/*</code> e a última finalizada com <code>*/</code>. Exemplo:</p>
+<pre><code>inteiro z = 30
+/* Este comentário
+foi um pouco
+mais longe */
+escreva(z)
+</code></pre>
+<h2 id="7-estruturas-de-decisao-escolha-um-caminho">7. Estruturas de decisão: escolha um caminho</h2>
+<p>Na programação, há momentos em que precisamos fazer decisões, definir caminhos diferentes para situações diferentes, e é por isso que existem as <strong>estruturas de decisão</strong>.</p>
+<p>As duas estruturas de decisão presentes na maioria das linguagens de programação são o se/senao (if/else, em inglês) e o escolha/caso (switch/case, em inglês).</p>
+<p>As estruturas de decisão são peça fundamental na estruturação dos algoritmos utilizados nos sistemas que utilizamos diariamente. Por exemplo, pense em quando você entra com seu e-mail e senha para realizar login em uma rede social. Observe que no momento em que você clica no botão Entrar, duas situações são possíveis: seu login pode ser aceito e você entrará na rede social, ou a página indicará que seu e-mail e/ou senha estão incorretos. Para decidir qual das duas ações realizar, o sistema certamente fez uso de uma estrutura de decisão.</p>
+<h3 id="71-se">7.1. Se</h3>
+<p>A estrutura <code>se</code> é utilizada na maioria dos casos em que se faz necessário decidir que ação será tomada.</p>
+<p>Para que você compreenda como funciona a estrutura <code>se</code>, imagine a seguinte situação: após lermos um número inteiro qualquer, se este número for par, deveremos exibir uma mensagem informando que ele é par. Ex.:</p>
+<pre><code>inteiro numero
+leia(numero)
+se(numero % 2 == 0) {
+    escreva(&quot;O número lido é par.&quot;)
+}
+</code></pre>
+<p>A partir da terceira linha do código acima, começamos a utilizar a estrutura de decisão <code>se</code>. Observe que ela é constituída da palavra &quot;se&quot; seguida de um par de parênteses. Dentro dos parênteses deve haver uma expressão lógica, ou seja, uma expressão que possa ser avaliada como <code>verdadeiro</code> ou <code>falso</code>. Quando a expressão entre parênteses é igual a <code>verdadeiro</code>, o código entre as chaves da estrutura é executado. Se o resultado da expressão for <code>falso</code>, o código entre as chaves é simplesmente ignorado.</p>
+<p>Neste exemplo, a expressão avaliada é <code>numero % 2 == 0</code>. Considerando que a variável <code>numero</code> contenha mesmo um número par, como 4, sabemos que o resultado da expressão <code>numero % 2</code> será igual a 0, pois ao se dividir 4 por 2, o resto (ou módulo) é 0, logo a expressão retornará o valor <code>verdadeiro</code>. Observe:</p>
+<pre><code>4 % 2 == 0
+0 == 0
+verdadeiro
+</code></pre>
+<p>Se o valor da variável <code>numero</code> for ímpar, o resto da sua divisão por 2 será 1, o mesmo acontecerá com qualquer outro número ímpar, logo a expressão retornará o valor <code>falso</code>. Observe:</p>
+<pre><code>3 % 2 == 0
+1 == 0
+falso
+</code></pre>
+<h3 id="72-sesenao">7.2. Se/Senão</h3>
+<p>Nem sempre é suficiente apenas verificar se uma condição é atendida e executar determinada ação. Muitas vezes precisamos de uma segunda alternativa, um plano B.</p>
+<p>Ainda conforme o exemplo abordado anteriormente, imagine que caso o número lido não seja par tenhamos que mostrar uma mensagem também informando que o número é ímpar. Acompanhe o exemplo:</p>
+<pre><code>inteiro numero
+leia(numero)
+se(numero % 2 == 0) {
+    escreva(&quot;O número lido é par.&quot;)
+} senao {
+    escreva(&quot;O número lido é ímpar.&quot;)
+}
+</code></pre>
+<p>Observe que na quinta linha adicionamos a palavra <code>senao</code>, seguida de um par de chaves. Neste caso, o código entre as chaves só será executado se a expressão verificada no bloco <code>se</code> não for igual a <code>verdadeiro</code>, ou simplesmente for igual a <code>falso</code>.</p>
+<h3 id="73-sesenaose">7.3. Se/Senão/Se</h3>
+<p>Mas o que fazer quando temos mais de duas alternativas?</p>
+<p>Para responder a essa pergunta, vamos pensar no seguinte problema: após ler um número inteiro, precisamos informar ao usuário se este número é negativo, nulo (0) ou positivo. Podemos fazer isso da seguinte forma:</p>
+<pre><code>inteiro numero
+leia(numero)
+se(numero &lt; 1) {
+    escreva(&quot;O número lido é negativo.&quot;)
+} senao se(numero &gt; 1){
+    escreva(&quot;O número lido é positivo.&quot;)
+} senao {
+    escreva(&quot;O número lido é nulo.&quot;)
+}
+</code></pre>
+<p>Observe que neste caso foram testadas duas condições: <code>numero &lt; 1</code> e <code>numero &gt; 1</code>. A segunda condição segue acompanhando o primeiro <code>senao</code>, indicando que esta condição só deverá ser verificada caso a primeira não seja verdadeira. Por fim, considerando que nenhuma das duas condições seja verdadeira, o código após o segundo <code>senao</code> poderá ser executado.</p>
+<p>Mais uma vez:</p>
+<ul>
+<li>Se <code>numero &lt; 1</code> for <code>verdadeiro</code>, o código <code>escreva(&quot;O número lido é negativo.&quot;)</code> será executado.</li>
+<li>Se <code>numero &lt; 1</code> for <code>falso</code> e <code>numero &gt; 1</code> for <code>verdadeiro</code>, o código <code>escreva(&quot;O número lido é positivo.&quot;)</code> será executado.</li>
+<li>Se <code>numero &lt; 1</code> for <code>falso</code> e <code>numero &gt; 1</code> for <code>falso</code>, o código <code>escreva(&quot;O número lido é nulo.&quot;)</code> será executado.</li>
+</ul>
+<p>Tenha em mente que a quantidade de testes que podem ser realizados em sequência é basicamente ilimitada, mas não é comum vermos estruturas de decisão exageradamente longas.</p>
+<p>Para adquirir um maior domínio, teste os exemplos vistos, mas não pare por aí, crie seus próprios exemplos, teste condições compostas, como <code>idade &gt; 18 e peso &lt; 70</code>, estruturas com e sem um <code>senao</code>, com dois ou mais <code>senao se</code> até perceber que já está dominando o assunto.</p>
+<h3 id="72-escolhacaso">7.2. Escolha/Caso</h3>
+<p>Em construção.</p>
+<h2 id="8-estruturas-de-repeticao-como-evitar-a-fadiga">8. Estruturas de repetição: como evitar a fadiga</h2>
+<p>Quando programamos, algumas tarefas podem exigir esforços absurdamente repetitivos. Imagine uma situação em que seja necessário exibir uma lista numerada com 50 itens. Será que precisaríamos mesmo repetir o comando <code>escreva()</code> por 50 vezes?</p>
+<p>A boa notícia é que alguém já pensou nisso antes. As linguagens de programação possuem estruturas que chamamos de <strong>estruturas de repetição</strong> ou de <strong>laços de repetição</strong>. Estas estruturas são utilizadas sempre que nos deparamos com tarefas que exijam que um procedimento se repita por várias vezes.</p>
+<p>As três estruturas de repetição que abordaremos são: enquanto (while, em inglês), faca/enquanto (do/while, em inglês) e para (for, em inglês). Cada uma dessas estruturas é mais adequada em uma situação específica, mas o propósito de automatizar tarefas repetitivas permanece em todas elas.</p>
+<p>Assim como nas estruturas de decisão, o funcionamento de uma estrutura de repetição é baseado em uma condição, que mais uma vez deverá ser representada através de uma expressão lógica.</p>
+<p>A seguir, conheceremos cada uma das estruturas de repetição mais a fundo.</p>
+<h3 id="81-enquanto">8.1. Enquanto</h3>
+<p>Imagine uma situação em que você precise repetir determinada tarefa enquanto uma certa condição for verdadeira, por exemplo:</p>
+<blockquote>
+<blockquote>
+<p>Enquanto um for igual a um, escreva: um é igual a um.</p>
+</blockquote>
+</blockquote>
+<p>Essa mesma situação pode ser descrita em código, utilizando Portugol, da seguinte forma:</p>
+<pre><code>enquanto(1 == 1)
+{
+    escreva(&quot;um é igual a um.&quot;)
+}
+</code></pre>
+<p>Neste exemplo, enquanto a condição <code>1 == 1</code> for avaliada como verdadeira, a expressão <code>escreva(&quot;um é igual a um.&quot;)</code> será executada. Pense nisso como um ciclo: avaliamos a condição, se ela for verdadeira, o código é executado, depois tudo se repete novamente.</p>
+<p>Se você testou o código acima, deve ter percebido que ele gerou um <strong>loop infinito</strong>, que é como chamamos os laços de repetição intermináveis. O motivo de esse laço de repetição ser interminável é bastante óbvio, pois sabemos que 1 será sempre igual a 1, logo a condição sempre será verdadeira.</p>
+<p>Quando a condição é avaliada como falsa, o código entre chaves não é executado e o programa segue para após a estrutura de repetição.</p>
+<pre><code>enquanto(esta condição for verdadeira)
+{
+    este código será executado
+    ...e a condição será verificada novamente
+}
+se a condição for falsa, o código continuará daqui
+</code></pre>
+<p>Em muitos dos casos em que utilizamos laços de repetição, nós trabalhos com números inteiros. Considere, por exemplo, uma situação em que seja necessário imprimir todos os números inteiros de 1 a 10. Em casos como este, utilizamos variáveis do tipo inteiro que possam ter seu valor alterado progressivamente. A estas variáveis damos o nome de <strong>contadoras</strong>:</p>
+<pre><code>inteiro x = 1
+enquanto(x &lt;= 10)
+{
+    escreva(x)
+    x = x + 1
+}
+</code></pre>
+<p>No exemplo acima, a variável <code>x</code> assume o papel de contadora, pois é utilizada como condição do laço de repetição e seu valor é <strong>incrementado</strong> a cada repetição. A variável é inicializada com o valor <code>1</code> e definimos que enquanto o valor nela contido for menor ou igual a <code>10</code>, a seguinte tarefa deve ser executada: escreve-se o valor de <code>x</code> e adiciona-se <code>1</code> ao valor atual de <code>x</code>.</p>
+<p>Ao término desse programa, o valor de <code>x</code> será igual a <code>10</code> ou igual a <code>11</code>? Perceba que em algum momento nessa estrutura de repetição, o valor de <code>x</code> atingirá <code>10</code>, a condição entre parênteses será avaliada como verdadeira, o valor de <code>x</code> será mostrado e incrementado, ou seja, <code>x</code> passará a ser igual a <code>11</code>. A partir deste ponto, a condição <code>x &lt;= 10</code> voltará a ser avaliada e, desta vez, seu resultado será <code>falso</code>, pois <code>x</code> é igual a <code>11</code>, logo não é nem menor nem igual a <code>10</code>. Com isto, o laço de repetição será interrompido e o valor de <code>x</code>, que agora é igual a <code>11</code>, não será mais mostrado.</p>
+<p>Se precisarmos realizar o caminho contrário, ou seja, imprimir todos os números inteiros de 10 a 1 (em ordem decrescente), o seguinte código seria suficiente:</p>
+<pre><code>inteiro x = 10
+enquanto(x &gt;= 1)
+{
+    escreva(x)
+    x = x - 1
+}
+</code></pre>
+<p>Perceba que, neste exemplo, o valor de <code>x</code> é <strong>decrementado</strong>, ou seja, subtraímos <code>1</code> do valor de <code>x</code> a cada repetição. A condição verificada também é diferente: desta vez, verificamos a cada repetição se o valor de <code>x</code> é maior ou igual a <code>1</code>.</p>
+<p>De forma bastante resumida, podemos descrever a estrutura <code>enquanto() { }</code> da seguinte forma:</p>
+<ol>
+<li>A condição é testada</li>
+<li>Se a condição for avaliada como verdadeira, o código entre chaves é executado, retorna-se ao passo 1</li>
+<li>Se a condição for avaliada como falsa, segue-se ao passo 4</li>
+<li>A estrutura é finalizada</li>
+</ol>
+<h3 id="82-facaenquanto">8.2. Faça/Enquanto</h3>
+<p>A segunda estrutura de repetição que iremos abordar funciona de forma muito semelhante à primeira, com uma pequena diferença: a condição só é verificada após a primeira execução do código. Observe o exemplo:</p>
+<blockquote>
+<blockquote>
+<p>Escreva: um é igual a um. Enquanto um for igual a um, repita.</p>
+</blockquote>
+</blockquote>
+<p>Essa mesma situação pode ser descrita em código, utilizando Portugol, da seguinte forma:</p>
+<pre><code>faca
+{
+    escreva(&quot;um é igual a um.&quot;)
+}
+enquanto(1 == 1)
+</code></pre>
+<p>De forma bastante resumida, podemos descrever a estrutura <code>faca { } enquanto()</code> da seguinte forma:</p>
+<ol>
+<li>O código entre chaves é executado</li>
+<li>A condição é testada</li>
+<li>Se a condição for avaliada como verdadeira, retorna-se ao passo 1</li>
+<li>Se a condição for avaliada como falsa, segue-se ao passo 5</li>
+<li>A estrutura é finalizada</li>
+</ol>
+<p>Se você ainda não conseguiu compreender a diferença entre <code>enquanto</code> e <code>faca enquanto</code>, reflita nas seguintes situações:</p>
+<p>Enquanto:</p>
+<blockquote>
+<p>Mariana pede a Felipe que vá ao mercado e lhe diz: Felipe, se os tomates estiverem bons, pegue um. Enquanto houver tomates bons, continue pegando tomates. Se não houver mais tomates bons, pare de pegar os tomates.</p>
+</blockquote>
+<p>Faça/Enquanto:</p>
+<blockquote>
+<p>Mariana pede a Felipe que vá ao mercado e lhe diz: Felipe, pegue um tomate. Enquanto houver tomates bons, continue pegando tomates. Se não houver mais tomates bons, pare de pegar os tomates.</p>
+</blockquote>
+<p><img src="imagens/tomato.jpg" alt="alt text" title="Tomate"></p>
+<h3 id="83-para">8.3. Para</h3>
+<p>A última estrutura de repetição que iremos abordar tem um comportamento bastante semelhante ao das anteriores, porém, tem uma finalidade muito específica: a estrutura de decisão <code>para</code> é a mais adequada em situações em que o número de repetições a serem executadas já é conhecido.</p>
+<p>Observe como faríamos para imprimir os números inteiros de 1 a 1000 utilizando <code>para</code>:</p>
+<pre><code>para(inteiro x = 1; x &lt;= 1000; x++)
+{
+    escreva(x)
+}
+</code></pre>
+<p>Você pode ter a impressão de que a condição entre parênteses ficou maior, mas não é exatamente isso o que acontece. Ao utilizarmos a estrutura <code>para</code>, temos acesso a três regras, separadas por ponto e vírgula, que definirão como a estrutura será executada. A estas regras damos o nome de <strong>parâmetros</strong> ou <strong>argumentos</strong>.</p>
+<ol>
+<li>O primeiro parâmetro é um espaço disponibilizado para a declaração e inicialização de variáveis que serão utilizadas apenas dentro desta estrutura <code>para</code>. Observe que no exemplo acima, nós declaramos e inicializamos a variável <code>x</code> com o valor <code>1</code>. A variável <code>x</code> será nossa contadora e, por vezes, também poderá ser chamada de <strong>variável de controle</strong>.</li>
+<li>O segundo parâmetro é referente à condição que será verificada a cada repetição. Enquanto a expressão informada for avaliada como verdadeira, o código continuará a ser repetido. No exemplo acima, definimos que o código será repetido enquanto o valor de <code>x</code> for menor ou igual a <code>1000</code>.</li>
+<li>O terceiro e último parâmetro é destinado à definição da alteração que a variável de controle irá sofrer a cada repetição. Geralmente, definimos nesta posição uma expressão de incremento ou de decremento da variável de controle. Em nosso exemplo, a variável <code>x</code> é incrementada em <code>1</code> a cada repetição.</li>
+</ol>
+<p>De maneira resumida, podemos dizer que: considerando a(s) variável(eis) de controle definida(s), enquanto a condição informada for verdadeira, o valor da(s) variável(eis) de controle será alterado e o código entre chaves será executado.</p>
+<h4 id="expressoes-de-incremento-e-decremento">Expressões de incremento e decremento</h4>
+<p>Você deve ter notado em nossa estrutura de repetição <code>para</code> o uso da expressão <code>x++</code>. Os operadores <code>++</code> podem ser utilizados com qualquer variável numérica, seja inteira ou real, quando se deseja incrementar seu valor em <code>1</code>.</p>
+<p>Para decrementar o valor de <code>x</code> em <code>1</code>, poderíamos ter feito <code>x--</code>.</p>
+<p>Observe que isto pode ser utilizado em qualquer momento no código, tanto na estrutura <code>para</code> quanto em qualquer outra estrutura de repetição ou mesmo fora de uma estrutura de repetição.</p>
+<p>Os seguintes métodos de incremento são equivalentes:</p>
+<pre><code>x = x + 1
+x += 1
+x++
+</code></pre>
+<p>Qualquer um dos métodos acima fará com que o valor contido em <code>x</code> seja incrementado em <code>1</code>, ou seja: se o valor de <code>x</code> for <code>5</code>, por exemplo, <code>x++</code> fará com que <code>x</code> passe a valer <code>6</code>.</p>
+<p>O mesmo é válido para decremento:</p>
+<pre><code>x = x - 1
+x -= 1
+x--
+</code></pre>
+<p>Caso seja necessário incrementar ou decrementar o valor de uma variável em mais que <code>1</code>, os operadores <code>++</code> ou <code>--</code> não poderão ajudar. Em casos como estes, apenas os dois primeiros métodos mostrados irão funcionar. Exemplo:</p>
+<pre><code>// Incremento
+x = x + 3
+x += 3
+
+// Decremento
+y = y - 5
+y -= 5
+</code></pre>
+<h2 id="9-vetores-e-matrizes-expandindo-as-possibilidades">9. Vetores e matrizes: expandindo as possibilidades</h2>
+<h2 id="10-referencias-bibliograficas">10. Referências Bibliográficas</h2>
+<ul>
+<li>LOPES, Anita. GARCIA, Guto. <strong>Introdução à programação – 500 algoritmos resolvidos</strong>. Rio de Janeiro: Elsevier, 2002 - 15ª Tiragem.</li>
+</ul>
+<h2 id="lista-1-expressoes-entrada-e-saida-de-dados">Lista 1 - Expressões, entrada e saída de dados</h2>
+<ol>
+<li>Leia dois números inteiros e escreva o resultado de sua soma.</li>
+<li>Leia dois números inteiros e escreva o resultado de sua subtração.</li>
+<li>Leia dois números inteiros e escreva o resultado de sua multiplicação.</li>
+<li>Leia dois números inteiros (<code>a</code> e <code>b</code>) e escreva o resultado da divisão <code>a / b</code>.</li>
+<li>Leia dois números inteiros (<code>a</code> e <code>b</code>) e escreva o resultado do resto da divisão <code>a % b</code>.</li>
+<li>Leia dois números reais e escreva o resultado de sua soma.</li>
+<li>Leia o nome de uma pessoa e escreva uma frase de saudação, como: <code>Olá, Fulano</code>.</li>
+<li>A média aritmética de dois ou mais termos é o quociente do resultado da divisão da soma dos números dados pela quantidade de números somados. Elabore um algoritmo que leia as 4 notas de um aluno e escreva sua média aritmética.</li>
+<li>A autonomia de um veículo é baseada em quantos quilômetros ele consegue percorrer a cada litro de combustível consumido. Por exemplo, é comum afirmar que tal carro é capaz de fazer 15 quilômetros por litro de combustível. Com base nisso, elabore um algoritmo que leia uma distância percorrida em quilômetros e uma quantidade de litros de combustível consumidos, e informe quantos quilômetros este veículo pode percorrer com cada litro.</li>
+<li>A velocidade média de um veículo pode ser calculada se tivermos os seguintes valores: a distância percorrida e o tempo gasto para percorrer esta distância. Com base nisso, elabore um algoritmo que leia uma distância percorrida em quilômetros e o tempo gasto em horas, e informe a velocidade média desse veículo.</li>
+<li>Alguns países de língua inglesa, como os EUA, utilizam da unidade de medida grau Fahrenheit como escala de temperatura. Para converter uma temperatura de Celsius para Fahrenheit, podemos aplicar a fórmula <code>F=(9*C+160)/5</code> ou a fórmula <code>F=C*1.8+32</code>, onde F é a temperatura em Fahrenheit e C a temperatura em Celsius. Elabore um algoritmo que leia uma temperatura em graus Celsius e a escreva convertida em graus Fahrenheit.</li>
+<li>Para auxiliar uma loja que deseja parcelar o valor das compras de seus clientes, elabore um algoritmo que leia o valor de uma compra e o número de prestações desejadas, e escreva o valor das prestações.</li>
+<li>No comércio, os preços dos produtos geralmente são definidos com base em uma margem percentual de lucro. Considere um produto adquirido por uma loja pelo valor de R$ 100,00. Se esta loja aplicar a este produto um percentual de 15% de lucro, o produto será revendido pelo valor de R$ 115,00. Elabore um algoritmo que leia o valor de compra de um produto e o percentual de lucro desejado, e escreva o valor de revenda deste produto.</li>
+<li>Você foi encarregado de realizar uma pesquisa sobre Inclusão Digital. A sua pesquisa deverá apresentar o percentual de alunos da sua escola que possuem acesso à internet. Para isso, elabore um algoritmo que leia o número total de alunos da sua escola e o número de alunos que possuem acesso à internet, por fim, com base nestes dados, escreva o percentual de alunos com acesso à internet. Ex.: Em uma escola com 200 alunos, apenas 50 alunos possuem acesso à internet, o que equivale a 25% destes 200 alunos.</li>
+<li>Em uma pequena loja de eletrônica são vendidos <code>resistores</code>, <code>diodos</code> e <code>transistores</code>. Seus preços são <code>R$ 0.70</code>, <code>R$ 0.80</code> e <code>R$ 0.95</code>, respectivamente. Têm-se os preços unitários de cada tipo de peça e sabe-se que sobre estes preços incidem descontos de <code>5%</code> para <code>resistores</code>, <code>6%</code> para <code>diodos</code> e <code>9%</code> para <code>transistores</code>. Elabore um programa que leia o nome do cliente e as quantidades de cada item comprado; e escreva o valor total de desconto e o valor líquido a ser pago pela compra.</li>
+</ol>
+<h2 id="lista-2-estruturas-de-decisao-sesenao">Lista 2 - Estruturas de decisão: Se/Senão</h2>
+<ol>
+<li>Leia um número inteiro e informe se este número é par ou ímpar.</li>
+<li>Leia a idade de uma pessoa e informe se ela já chegou à maioridade. Se ela ainda não chegou, informe quantos anos faltam para a maioridade.</li>
+<li>Construa um algoritmo que leia um número inteiro A e um número inteiro B. Verifique qual dos dois números é maior e o escreva.</li>
+<li>Considerando uma pista em que a velocidade máxima permitida é de 110 km/h, leia a velocidade de um veículo e informe se ele excedeu ou não a velocidade máxima permitida.</li>
+<li>Considerando que a temperatura média ideal do corpo humano varia entre 36° C e 36,7° C, elabore um algritmo que, dada uma temperatura lida, informe se esta pessoa está com febre.</li>
+<li>Complemente o algoritmo anterior, adicionando a ele a capacidade de informar se a pessoa está com hipotermia (abaixo da temperatura média ideal); dentro da temperatura média ideal ou com febre.</li>
+<li>Elabore um algoritmo que leia um número inteiro e informe se este número é um múltiplo de 7.</li>
+<li>Leia um número inteiro e informe se este número é par e também divisível por 3.</li>
+<li>Para auxiliar um cliente a escolher o produto mais barato em um conjunto de 3 produtos, crie um programa que leia os preços de 3 produtos e informe qual deles é o mais barato.</li>
+<li>Construa um programa que leia um caractere e informe se este caractere é uma vogal.</li>
+<li>Leia dois números inteiros <code>x</code> e <code>y</code>, e informe se <code>x</code> é divisível por <code>y</code>.</li>
+<li>Considerando que no Brasil é possível votar a partir dos 16 anos de idade, leia o ano de nascimento de uma pessoa e informe se ela poderá votar no ano atual. Ignore mês e dia de nascimento.</li>
+<li>Considerando que o ano possui 12 meses, leia um número inteiro de 1 a 12 e informe o mês que corresponde a este número.</li>
+<li>Leia dois números inteiros <code>x</code> e <code>y</code> e escreva dentre as seguintes hipóteses a verdadeira: 1. <code>x</code> e <code>y</code> são pares; 2. <code>x</code> e <code>y</code> são ímpares; 3. <code>x</code> é par e <code>y</code> é ímpar; 4. <code>x</code> é ímpar e <code>y</code> é par.</li>
+<li>Para auxiliar a definir os períodos mais quente e mais frio do dia, elabore um algortimo que leia a temperatura do período matutino, a temperatura do período vespertino e a temperatura do período noturno, ao fim escreva qual destes períodos foi o mais frio e qual foi o mais quente.</li>
+<li>Construa um algoritmo que leia as medidas dos lados de um triângulo e informe se este triângulo é equilátero, isósceles ou escaleno.</li>
+<li>Construa um algoritmo que leia um número real e, se ele for maior do que 5, então escreva a metade deste número. Ex.: se leio o número 12, 12 é maior que 5; a metade de 12 é 6; devo escrever 6.</li>
+<li>Construa um algoritmo que leia um número inteiro e, se ele for positivo, escreva uma mensagem que informe se este número é ou não divisível por 2.</li>
+<li>Construa um algoritmo que leia dois números inteiros diferentes e escreva-os em ordem crescente.</li>
+<li>Construa um algoritmo que leia três números inteiros e escreva-os em ordem decrescente.</li>
+<li>Crie um algoritmo que leia dois números inteiros e escreva uma mensagem dizendo se estes números são iguais ou diferentes.</li>
+<li>O IMC (Índice de Massa Corporal) é uma unidade de medida internacional usada para calcular se uma pessoa está no seu peso ideal. A fórmula mais genérica de cálculo de IMC é <code>imc = peso / altura * altura</code>, onde o peso é dado em quilos e a altura em metros. Há uma tabela que define uma classificação para cada faixa de IMC. Segundo esta tabela, pessoas com IMC menor ou igual a 18.5 estão abaixo do peso; pessoas com IMC maior que 18.5 e menor que 25 estão no peso ideal; já as pessoas com IMC maior ou igual a 25 estão acima do peso. Elabore um algoritmo que leia peso e altura de uma pessoa, informe seu IMC e também se ela está abaixo do peso, no peso ideal ou acima do peso.</li>
+</ol>
+<h2 id="lista-3-estruturas-de-decisao-escolhacaso">Lista 3 - Estruturas de decisão: Escolha/Caso</h2>
+<ol>
+<li>Elabore um programa que leia uma letra e informe se esta letra é uma vogal ou uma consoante.</li>
+<li>Elabore um programa que funcione como uma calculadora simples. Seu programa deverá começar mostrando uma mensagem de apresentação, depois solicitar que o usuário entre com dois números reais (<code>a</code> e <code>b</code>) e finalmente ler os dois números reais digitados.  Logo após, o programa deverá solicitar ao usuário que escolha uma das seguintes opções: somar, subtrair, multiplicar ou dividir. Com base na escolha do usuário, exiba o resultado da operação escolhida envolvendo <code>a</code> e <code>b</code>.</li>
+<li>Considerando que o ano possui 12 meses, leia um número inteiro entre 1 e 12 e, com o uso da estrutura de controle escolha/caso, informe o nome do mês que corresponde a este número.</li>
+<li>Verificar a quantidade de combustível que será gasta em uma viagem é de grande importância para o condutor. Considerando que um carro do tipo A é capaz de percorrer 12 quilômetros a cada litro de combustível gasto, um do tipo B percorre 9 quilômetros a cada litro e um do tipo C, 8 quilômetros por litro, elabore um programa que leia a distância a ser viajada e o tipo de carro, e com base nestes dados informe quantos litros de combustível serão gastos.</li>
+<li>Construa um programa que funcione como um menu para uma lanchonete. Seu programa deverá iniciar mostrando o nome da sua lanchonete. Em seguida, seu programa deverá pedir o nome do usuário e, após lê-lo, exibir uma mensagem de boas vindas. Após isso, seu programa deverá mostrar as opções de lanches disponíveis e seus preços: mostre pelo menos 6 opções de lanches diferentes. Permita que o usuário escolha uma das opções de lanches e, após a escolha, mostre a ele uma mensagem informando a opção que ele escolheu e quanto seu pedido irá custar. Lembre-se de avisar ao usuário caso ele escolha uma opção inexistente.</li>
+<li>Construa um programa que leia a primeira letra do mês de nascimento de uma pessoa e informe em quais meses essa pessoa pode ter nascido. Caso não exista um mês que comece com a letra lida, informe ao usuário que ele se enganou.</li>
+</ol>
+<p><img src="imagens/meses.png" alt="alt text" title="Meses"></p>
+<h2 id="lista-4-lacos-de-repeticao-enquanto-e-facaenquanto">Lista 4 - Laços de Repetição: Enquanto e Faça/Enquanto</h2>
+<ol>
+<li>Elabore um algoritmo que escreva todos os números inteiros de 1 a 100.</li>
+<li>Elabore um algoritmo que escreva apenas os números pares de 1 a 100.</li>
+<li>Elabore um algoritmo que escreva apenas os números ímpares de 1 a 100.</li>
+<li>Elabore um algoritmo que escreva todos os números inteiros de 200 a 400.</li>
+<li>Elabore um algoritmo que escreva apenas os números pares de 300 a 600.</li>
+<li>Elabore um algoritmo que escreva apenas os números ímpares de 750 a 1500.</li>
+<li>Construa um programa que leia um número inteiro e escreva todos os números inteiros de 1 até o número lido.</li>
+<li>Construa um programa que leia um número inteiro, verifique se ele é par ou ímpar. Se o número for ímpar, escreva todos os números ímpares menores que ele em ordem crescente. Se o número for par, escreva todos os números pares menores que ele em ordem crescente.</li>
+<li>Repita a questão anterior, desta vez imprimindo os números em ordem decrescente, desde o número lido.</li>
+<li>Construa um programa que comece lendo um número inteiro qualquer. Este número será chamado de <code>piso</code>. Após isso, seu programa deverá ler um outro número inteiro (que poderá ser chamado de <code>proximo</code>) enquanto <code>proximo</code> for maior ou igual a <code>piso</code>.</li>
+<li>Elabore um algoritmo que leia dois números inteiros diferentes: <code>ini</code> e <code>fim</code>, sendo que <code>ini</code> deve ser menor que <code>fim</code>. Escreva em ordem crescente todos os números inteiros entre <code>ini</code> e <code>fim</code>, inclusive eles mesmos.</li>
+<li>Repita a questão anterior, desta vez presumindo que <code>ini</code> pode ou não ser maior que <code>fim</code>. Se <code>ini</code> for maior que <code>fim</code>, siga a ordem decrescente.</li>
+<li>Construa um programa que repita a tarefa de ler um número inteiro, enquanto o número lido for maior que 1. Ao término das repetições, escreva o resultado da soma de todos os números lidos.</li>
+<li>Construa um algoritmo que leia dois números inteiros diferentes: <code>ini</code> e <code>fim</code>, sendo que <code>ini</code> deve ser menor que <code>fim</code>. Em seguida, escreva o resultado da soma de todos os números inteiros entre <code>ini</code> e <code>fim</code>, contando com eles mesmos.</li>
+<li>Construa um programa que calcule as médias aritméticas de todos os alunos de uma turma. Seu programa deverá funcionar da seguinte maneira: leia o nome do aluno; leia as notas dos 4 bimestres; mostre a média aritmética do aluno; pergunte se o usuário deseja continuar; se o usuário desejar continuar, repita todo o processo, senão, pare.</li>
+</ol>
+<h2 id="lista-5-lacos-de-repeticao-para">Lista 5 - Laços de Repetição: Para</h2>
+<ol>
+<li>Elabore um algoritmo que escreva todos os números inteiros de 1 a 100.</li>
+<li>Elabore um algoritmo que escreva apenas os números pares de 1 a 100.</li>
+<li>Elabore um algoritmo que escreva apenas os números ímpares de 1 a 100.</li>
+<li>Elabore um algoritmo que escreva todos os números inteiros de 200 a 400.</li>
+<li>Elabore um algoritmo que escreva apenas os números pares de 300 a 600.</li>
+<li>Elabore um algoritmo que escreva apenas os números ímpares de 750 a 1500.</li>
+</ol>
+<h2 id="lista-6-problemas-com-lacos-de-repeticao">Lista 6 - Problemas com Laços de Repetição</h2>
+<ol>
+<li>Você recebeu a tarefa de elaborar um programa que calcule o IMC médio da sua turma. Sabendo que o IMC é dado pela fórmula <code>imc = peso / altura * altura</code>, elabore um programa que seja capaz de calcular o IMC de quantos alunos for necessário. A cada IMC calculado, o usuário deverá confirmar se deseja continuar. Quando o usuário optar por não continuar mais, exiba a média aritmética dos IMCs calculados.</li>
+<li>Na matemática, o fatorial de um número inteiro <code>a</code>, representado por <code>a!</code>, é o produto de todos os inteiros positivos menores ou iguais a <code>a</code>. Por exemplo, <code>3!</code> ou <code>3 fatorial</code> é dado por <code>3 * 2 * 1</code>, que é igual a <code>6</code>. Construa um programa que seja capaz de ler um número inteiro e apresentar seu fatorial.</li>
+<li>Construa um algoritmo que leia a idade de várias pessoas e, ao fim da execução, escreva o total de pessoas com menos de 18 anos e o total de pessoas com mais de 65 anos. Seu algoritmo deve parar de ler idades quando o usuário digitar uma idade menor que 1.</li>
+<li></li>
+</ol>
+<h2 id="lista-7-vetores">Lista 7 - Vetores</h2>
+<ol>
+<li>Com um vetor, leia 5 números inteiros e imprima-os.</li>
+<li>Com um vetor, leia 5 nomes e imprima-os.</li>
+<li>Com um vetor, leia 5 números inteiros e imprima-os em ordem inversa. Ex.: 5,1,4,8,0 – 0,8,4,1,5.</li>
+<li>Com um vetor, leia 10 números inteiros. Imprima os números lidos, multiplicando os números de posições ímpares por 1.05, e os de posições pares por 1.02.</li>
+<li>Com um vetor, leia 5 números reais, imprima-os na ordem lida e na ordem inversa.</li>
+<li>Declare três vetores de 5 posições. Preencha o primeiro e depois o segundo. Por fim, percorra os três vetores simultaneamente, preenchendo o terceiro com as somas dos outros dois. Imprima os três lado a lado.</li>
+</ol>
+<p><img src="imagens/vetor1.png" alt="alt text" title="Vetores"></p>
+<ol start="7">
+<li>Declare dois vetores de 10 posições do tipo inteiro. Preencha o primeiro lendo entradas do usuário. Copie o conteúdo do primeiro para o segundo. Imprima os dois vetores lado a lado.</li>
+<li>Em um vetor que contém as médias de uma turma de 10 alunos, calcule a média da turma e conte quantos alunos obtiveram nota acima da média da turma. Escreva a média da turma e o total de alunos acima da média.</li>
+<li>Declare dois vetores de 5 posições do tipo inteiro e um vetor de 10 posições do tipo inteiro. Preencha os dois vetores menores, depois copie os valores dos dois para o maior vetor.</li>
+<li>Declare um vetor de 5 posições do tipo caractere. Preencha-o com 5 nomes diferentes. A seguir, permita que o usuário digite um nome. Se este nome estiver no vetor, informe que tal pessoa foi encontrada. Senão, informe que tal pessoa não foi encontrada.</li>
+</ol>
+
+</div></body>
+</html>

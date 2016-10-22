@@ -585,7 +585,83 @@ y = y - 5
 y -= 5
 ```
 
-## 9. Referências Bibliográficas
+## 9. Vetores e matrizes: expandindo as possibilidades
+
+Imagine o seguinte problema:
+> Crie um algoritmo que leia o nome e as 4 notas de 50 alunos, calcule a média de cada aluno e informe quais foram aprovados e quais foram reprovados.
+
+Certamente, você, começou a pensar em uma solução semalhante à seguinte:
+
+```
+real n1, n2, n3, n4, media
+para(inteiro x = 1; x <= 50; x++)
+{
+    leia(n1, n2, n3, n4)
+    media = (n1 + n2 + n3 + n4)/4
+    ...
+}
+```
+
+Como você faria se precisasse armazenar as 4 notas de cada um desses 50 alunos para mostrá-las no fim do seu programa? Provavelmente, teria que declarar, no mínimo, 200 variáveis, certo?!
+
+Com vetores, é possível armazenar inúmeros valores em uma única variável. Assim, você poderia ter algo semelhante a:
+
+```
+real n1[50], n2[50], n3[50], n4[50], media[50]
+para(inteiro n = 0; n <= 49; n++)
+{
+    leia(n1[n], n2[n], n3[n], n4[n])
+    media[n] = (n1[n] + n2[n] + n3[n] + n4[n])/4
+    ...
+}
+```
+
+Você pode pensar em vetores como "variáveis que armazenam variáveis".
+
+Por definição, vetores são estruturas unidimensionais, geralmente homogêneas, com `n` posições. Cada posição é representada por um número inteiro, o qual chamamos de **índice**.
+
+Contamos as posições de um vetor sempre a partir de `0`. A última posição de um vetor sempre deverá ser igual a `n-1`, onde `n` é o tamanho do vetor.
+
+Em cada posição de um vetor há um único valor. Ou seja: em cada posição de um vetor do tipo inteiro há um valor do tipo inteiro, como na figura a seguir.
+
+![alt text](imagens/vetor.png "Vetor")
+
+Este mesmo vetor poderia ser construído em Portugol da seguinte maneira:
+
+```
+inteiro numeros[8] = { 54, 21, 100, 89, 90, 32, 23, 74 }
+```
+
+Neste caso, utilizamos um par de chaves (`{ }`) para criar uma lista de valores que seriam atribuídos ao vetor. Mas nem sempre é necessário atribuir valores ao vetor logo em sua inicialização.
+
+Tenha em mente também que a definição do tamanho do vetor, representada pelo valor `8` neste exemplo, não é obrigatória quando a este vetor for atribuída uma lista de valores. Se tivéssemos feito isso, o resultado seria o mesmo:
+
+```
+inteiro numeros[] = { 54, 21, 100, 89, 90, 32, 23, 74 }
+```
+
+Para simplificação do trabalho com vetores grandes, recomenda-se sempre o uso de estruturas de repetição. Geralmente, utiliza-se a estrutura de repetição `para`, que oferece um mecanismo mais simples para se trabalhar com intervalos. Observe o exemplo a seguir:
+
+```
+cadeia listaDeNomes[100]
+para(inteiro x = 0; x <= 99; x++)
+{
+    leia(listaDeNomes[x])
+}
+
+para(inteiro x = 0; x <= 99; x++)
+{
+    escreva(listaDeNomes[x])
+}
+```
+
+O algoritmo acima deverá ler 100 nomes e depois imprimí-los. Perceba que ao declarar a variável `listaDeNomes`, foi necessário definir seu tamanho, que é igual a `100`.
+
+Com uma estrutura de repetição `para`, percorremos o vetor desde a posição 0 até a 99, armazenando cada nome lido em uma das posições.
+
+Novamente, com uma estrutura de repetição, percorremos cada uma das posições, imprimindo o nome armazenado em cada uma delas.
+
+## 10. Referências Bibliográficas
 
 - LOPES, Anita. GARCIA, Guto. **Introdução à programação – 500 algoritmos resolvidos**. Rio de Janeiro: Elsevier, 2002 - 15ª Tiragem.
 
@@ -676,3 +752,19 @@ y -= 5
 2. Na matemática, o fatorial de um número inteiro `a`, representado por `a!`, é o produto de todos os inteiros positivos menores ou iguais a `a`. Por exemplo, `3!` ou `3 fatorial` é dado por `3 * 2 * 1`, que é igual a `6`. Construa um programa que seja capaz de ler um número inteiro e apresentar seu fatorial.
 3. Construa um algoritmo que leia a idade de várias pessoas e, ao fim da execução, escreva o total de pessoas com menos de 18 anos e o total de pessoas com mais de 65 anos. Seu algoritmo deve parar de ler idades quando o usuário digitar uma idade menor que 1.
 4.
+
+## Lista 7 - Vetores
+
+
+1. Com um vetor, leia 5 números inteiros e imprima-os.
+2. Com um vetor, leia 5 nomes e imprima-os.
+3. Com um vetor, leia 5 números inteiros e imprima-os em ordem inversa. Ex.: 5,1,4,8,0 – 0,8,4,1,5.
+4. Com um vetor, leia 10 números reais. Imprima os números lidos, multiplicando os números de posições ímpares por 1.05, e os de posições pares por 1.02.
+5. Com um vetor, leia 5 números reais, imprima-os na ordem lida e na ordem inversa.
+6. Declare dois vetores de 10 posições do tipo inteiro. Preencha o primeiro lendo entradas do usuário. Copie o conteúdo do primeiro para o segundo. Imprima os dois vetores lado a lado.
+7. Em um vetor que contém as médias de uma turma de 10 alunos, calcule a média da turma e conte quantos alunos obtiveram nota acima da média da turma. Escreva a média da turma e o total de alunos acima da média.
+8. Declare dois vetores de 5 posições do tipo inteiro e um vetor de 10 posições do tipo inteiro. Preencha os dois vetores menores, depois copie os valores dos dois para o maior vetor.
+9. Declare um vetor de 5 posições do tipo cadeia. Preencha-o com 5 nomes diferentes. A seguir, permita que o usuário digite um nome. Se este nome estiver no vetor, informe que tal pessoa foi encontrada. Senão, informe que tal pessoa não foi encontrada.
+10. Declare três vetores de 5 posições. Preencha o primeiro e depois o segundo. Por fim, percorra os três vetores simultaneamente, preenchendo o terceiro com as somas dos outros dois. Imprima os três lado a lado.
+
+![alt text](imagens/vetor1.png "Vetores")
