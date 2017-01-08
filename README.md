@@ -604,7 +604,7 @@ para(inteiro x = 1; x <= 50; x++)
 
 Como você faria se precisasse armazenar as 4 notas de cada um desses 50 alunos para mostrá-las no fim do seu programa? Provavelmente, teria que declarar, no mínimo, 200 variáveis, certo?!
 
-Com vetores, é possível armazenar inúmeros valores em uma única variável. Assim, você poderia ter algo semelhante a:
+Com vetores ou matrizes, é possível armazenar inúmeros valores em uma única variável. Assim, você poderia ter algo semelhante a:
 
 ```
 real n1[50], n2[50], n3[50], n4[50], media[50]
@@ -616,13 +616,15 @@ para(inteiro n = 0; n <= 49; n++)
 }
 ```
 
-Você pode pensar em vetores como "variáveis que armazenam variáveis".
+Você pode pensar em vetores e matrizes como "coleções de variáveis".
+
+### 9.1. Vetores
 
 Por definição, vetores são estruturas unidimensionais, geralmente homogêneas, com `n` posições. Cada posição é representada por um número inteiro, o qual chamamos de **índice**.
 
-Contamos as posições de um vetor sempre a partir de `0`. A última posição de um vetor sempre deverá ser igual a `n-1`, onde `n` é o tamanho do vetor.
+Contamos as posições de um vetor sempre a partir de `0`. A última posição de um vetor sempre poderá ser representada por `n-1`, onde `n` é o tamanho do vetor. Observe: em um vetor `vet` de tamanho `n == 8`, a última posição de `vet` será representada pelo índice `7`, que corresponde a `n-1`.
 
-Em cada posição de um vetor há um único valor. Ou seja: em cada posição de um vetor do tipo inteiro há um valor do tipo inteiro, como na figura a seguir.
+Em cada posição de um vetor há um único valor. Ou seja: em cada posição de um vetor do tipo inteiro há um único valor do tipo inteiro, como na figura a seguir.
 
 ![alt text](imagens/vetor.png "Vetor")
 
@@ -632,15 +634,32 @@ Este mesmo vetor poderia ser construído em Portugol da seguinte maneira:
 inteiro numeros[8] = { 54, 21, 100, 89, 90, 32, 23, 74 }
 ```
 
-Neste caso, utilizamos um par de chaves (`{ }`) para criar uma lista de valores que seriam atribuídos ao vetor. Mas nem sempre é necessário atribuir valores ao vetor logo em sua inicialização.
+Neste caso, utilizamos um par de chaves (`{ }`) para criar uma lista de valores que seriam atribuídos ao vetor `numeros`.
 
-Tenha em mente também que a definição do tamanho do vetor, representada pelo valor `8` neste exemplo, não é obrigatória quando a este vetor for atribuída uma lista de valores. Se tivéssemos feito isso, o resultado seria o mesmo:
+Tenha em mente também que a definição do tamanho do vetor, representada pelo valor `8` neste exemplo, não é obrigatória quando a este vetor for atribuída uma lista de valores. Se tivéssemos feito da seguinte forma, o resultado seria o mesmo:
 
 ```
 inteiro numeros[] = { 54, 21, 100, 89, 90, 32, 23, 74 }
 ```
 
-Para simplificação do trabalho com vetores grandes, recomenda-se sempre o uso de estruturas de repetição. Geralmente, utiliza-se a estrutura de repetição `para`, que oferece um mecanismo mais simples para se trabalhar com intervalos. Observe o exemplo a seguir:
+Apesar disto, nem sempre desejamos atribuir valores a um vetor logo em sua inicialização. Muitas vezes, queremos um vetor vazio que possa ter seus valores informados pelo usuário ou através de atribuições sucessivas ao longo do programa. Poderíamos ter declarado o vetor `numeros` sem nenhum valor e preenchido-o ao longo do código:
+
+```
+inteiro numeros[8]
+
+leia(numeros[0]) // Suponha que o usuário digitou 54
+leia(numeros[1]) // Suponha que o usuário digitou 21
+leia(numeros[2]) // Suponha que o usuário digitou 100
+leia(numeros[3]) // Suponha que o usuário digitou 89
+numeros[4] = 90
+numeros[5] = 32
+numeros[6] = 23
+numeros[7] = 74
+```
+
+Veja que cada valor lido ou atribuído foi armazenado em uma posição diferente do vetor, sempre representada por um índice numérico, neste caso, de `0` a `7`, contemplando as 8 posições existentes.
+
+Para simplificação do trabalho com vetores grandes, recomenda-se o uso de estruturas de repetição. Geralmente, utiliza-se a estrutura de repetição `para`, que oferece um mecanismo mais simples para se trabalhar com intervalos. Observe o exemplo a seguir:
 
 ```
 cadeia listaDeNomes[100]
@@ -660,6 +679,124 @@ O algoritmo acima deverá ler 100 nomes e depois imprimí-los. Perceba que ao de
 Com uma estrutura de repetição `para`, percorremos o vetor desde a posição 0 até a 99, armazenando cada nome lido em uma das posições.
 
 Novamente, com uma estrutura de repetição, percorremos cada uma das posições, imprimindo o nome armazenado em cada uma delas.
+
+Este mesmo algoritmo poderia ser construído com as estruturas de repetição `enquanto` e/ou `faca/enquanto` da seguinte maneira:
+
+```
+cadeia listaDeNomes[100]
+inteiro x = 0
+
+enquanto(x <= 99)
+{
+    leia(listaDeNomes[x])
+    x++
+}
+
+x = 0
+faca
+{
+    escreva(listaDeNomes[x])
+    x++
+}
+enquanto(x <= 99)
+```
+
+### 9.2. Matrizes
+
+Semelhante ao conceito encontrado na Matemática, em Lógica de Programação, matriz é o nome que damos a estruturas de dados bidimensionais. Enquanto que podemos representar visualmente um vetor como uma única linha ou coluna com diversos valores, uma matriz se parece mais com uma tabela em que há uma ou mais linhas e colunas.
+
+A matriz abaixo, por exemplo, é uma matriz de tamanho `3 X 3`, ou seja: 3 linhas e 3 colunas.
+
+![alt text](imagens/matriz.png "Matriz")
+
+Poderíamos declará-la em Portugol da seguinte maneira:
+
+```
+inteiro tabela[3][3] = {
+                        { 54, 21, 3 },
+                        { 29, 99, 306 },
+                        { 76, 5, 11 }
+                       }
+```
+
+Ou em uma única linha, caso não se preocupe com a formatação:
+
+```
+inteiro tabela[3][3] = { { 54, 21, 3 }, { 29, 99, 306 }, { 76, 5, 11 } }
+```
+
+Anteriormente, dissemos que vetores são como "coleções de variáveis". Se observarmos com atenção, cada par de chaves nesta matriz é um conjunto, uma coleção de valores, um vetor. Temos três conjuntos com três valores cada. Os três conjuntos estão dentro de um conjunto maior, por isso dizemos que matrizes são como "coleções de vetores".
+
+Todos os conceitos vistos anteriormente sobre vetores são completamente válidos ao se tratar de matrizes, adicionando-se apenas mais uma dimensão. Observe que, agora, para cada uma das `n` linhas temos `m` colunas. Desta forma, para nos referirmos a qualquer posição desta matriz, precisaremos especificar uma linha e uma coluna:
+
+```
+escreva(tabela[1][2]) // O valor impresso será 306
+escreva(tabela[2][1]) // O valor impresso será 5
+```
+
+Para percorrer matrizes, o método mais comumente utilizado é bastante semelhante ao utilizado para vetores. No entanto, como agora precisamos percorrer tanto linhas quanto colunas, muitas vezes torna-se necessário o uso de estruturas de repetição encadeadas:
+
+```
+inteiro tabela[3][3] = { { 54, 21, 3 }, { 29, 99, 306 }, { 76, 5, 11 } }
+
+para(inteiro x = 0; x <= 2; x++)
+{
+    para(inteiro y = 0; y <= 2; y++)
+    {
+        escreva(tabela[x][y])
+    }
+}
+```
+
+No exemplo acima temos duas estruturas de repetição: a mais externa para percorrer as linhas da matriz, e a mais interna para percorrer as colunas da matriz. A ideia é que, para cada linha, possamos percorrer todas as três colunas.
+
+Para deixar este exemplo mais didático, teste-o da seguinte maneira e observe o que acontece:
+
+```
+inteiro tabela[3][3] = { { 54, 21, 3 }, { 29, 99, 306 }, { 76, 5, 11 } }
+
+para(inteiro x = 0; x <= 2; x++)
+{
+    escreva("\n Repetição ", x , " do primeiro para.")
+    para(inteiro y = 0; y <= 2; y++)
+    {
+        escreva("\n Repetição ", y , " do segundo para.")
+        escreva("\n Linha " , x , " / Coluna " , y ,": ", tabela[x][y])
+    }
+}
+```
+
+#### Diagonais de uma matriz
+
+Para que uma matriz possua uma diagonal, esta matriz deve obrigatoriamente ser uma matriz quadrada, ou seja, uma matriz que possua o mesmo número de linhas e colunas.
+
+![alt text](imagens/diagonal.png "Diagonais")
+
+No exemplo acima, pode-se ver as diagonais primária e secundária de uma matriz de tamanho `3 X 3`.
+
+Se observarmos com calma, há padrões bastante simples pelos quais podemos identificar os elementos das diagonais de uma matriz quadrada apenas com lógica de programação.
+
+Os elementos da diagonal primária sempre estarão em posições em que o número da linha é igual ao número da coluna. Se desejarmos percorrer os elementos da diagonal principal de uma determinada matriz de tamanho `n`, podemos contar de `0` a `n-1` utilizando um único contador para linhas e colunas:
+
+```
+inteiro matriz[3][3] = { {-1, 2, -5}, {3, 0, -3}, {5, 7, -6} }
+inteiro n = 3
+para(inteiro x = 0; x < n; x++)
+{
+        escreva("\n", matriz[x][x])
+}
+```
+
+Já os elementos da diagonal secundária de uma matriz de tamanho `n` podem ser identificados se começarmos contando de `0` nas linhas e de `n-1` nas colunas. O elemento seguinte da diagonal secundária sempre estará uma linha "após" e uma coluna "antes" da atual:
+
+```
+inteiro matriz[3][3] = { {-1, 2, -5}, {3, 0, -3}, {5, 7, -6} }
+inteiro n = 3
+para(inteiro x = 0; x < n; x++)
+{
+        escreva("\n", matriz[x][n-1-x])
+}
+```
 
 ## 10. Referências Bibliográficas
 
@@ -755,7 +892,6 @@ Novamente, com uma estrutura de repetição, percorremos cada uma das posições
 
 ## Lista 7 - Vetores
 
-
 1. Com um vetor, leia 5 números inteiros e imprima-os.
 2. Com um vetor, leia 5 nomes e imprima-os.
 3. Com um vetor, leia 5 números inteiros e imprima-os em ordem inversa. Ex.: 5,1,4,8,0 – 0,8,4,1,5.
@@ -768,3 +904,17 @@ Novamente, com uma estrutura de repetição, percorremos cada uma das posições
 10. Declare três vetores de 5 posições. Preencha o primeiro e depois o segundo. Por fim, percorra os três vetores simultaneamente, preenchendo o terceiro com as somas dos outros dois. Imprima os três lado a lado.
 
 ![alt text](imagens/vetor1.png "Vetores")
+
+## Lista 8 - Matrizes
+
+1. Utilizando uma matriz leia e armazene nome, idade e salário de 5 pessoas.
+2. Leia e armazene valores para uma matriz de 3 x 3 e escreva o elemento do centro.
+3. Preencha uma matriz de 4 x 4 e escreva os elementos dos cantos.
+4. Preencha uma matriz de 3 x 3 e escreva o resultado da soma dos elementos da diagonal principal.
+5. Preencha uma matriz de 3 x 3 e escreva o resultado da soma dos elementos da diagonal secundária.
+6. Preencha uma matriz de 5 x 5 e escreva os elementos de sua diagonal principal.
+7. Preencha uma matriz de 5 x 5 e escreva os elementos de sua diagonal secundária.
+8. Preencha uma matriz de 3 x 3 com números inteiros, e escreva primeiro os números pares, depois os números ímpares. Ex.: Pares: 8, 12, 20, 64... Ímpares: 7, 13, 21, 45...
+9. Preencha uma matriz de 4 x 3 com números inteiros. Ao fim, leia um número inteiro e escreva apenas os valores dessa matriz que forem divisíveis pelo número lido.
+10. Com uma matriz de 5 x 2, leia os nomes e idades de 5 pessoas. Ao fim, informe quantas destas pessoas são menores de 18 anos e quantas são maiores.
+11. Preencha duas matrizes de 4 x 2 e gere uma matriz soma. Ex.: soma[1,1] <- a[1,1] + b[1,1].
