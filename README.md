@@ -626,7 +626,7 @@ Contamos as posições de um vetor sempre a partir de `0`. A última posição d
 
 Em cada posição de um vetor há um único valor. Ou seja: em cada posição de um vetor do tipo inteiro há um único valor do tipo inteiro, como na figura a seguir.
 
-![alt text](imagens/vetor.png "Vetor")
+![Vetor](imagens/vetor0.png "Vetor")
 
 Este mesmo vetor poderia ser construído em Portugol da seguinte maneira:
 
