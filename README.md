@@ -836,7 +836,7 @@ para(inteiro x = 0; x < n; x++)
 12. Considerando que no Brasil é possível votar a partir dos 16 anos de idade, leia o ano de nascimento de uma pessoa e informe se ela poderá votar no ano atual. Ignore mês e dia de nascimento.
 13. Considerando que o ano possui 12 meses, leia um número inteiro de 1 a 12 e informe o mês que corresponde a este número.
 14. Leia dois números inteiros `x` e `y` e escreva dentre as seguintes hipóteses a verdadeira: 1\. `x` e `y` são pares; 2\. `x` e `y` são ímpares; 3\. `x` é par e `y` é ímpar; 4\. `x` é ímpar e `y` é par.
-15. Para auxiliar a definir os períodos mais quente e mais frio do dia, elabore um algortimo que leia a temperatura do período matutino, a temperatura do período vespertino e a temperatura do período noturno, ao fim escreva qual destes períodos foi o mais frio e qual foi o mais quente.
+15. Para auxiliar a definir os períodos mais quente e mais frio do dia, elabore um algoritmo que leia a temperatura do período matutino, a temperatura do período vespertino e a temperatura do período noturno, ao fim escreva qual destes períodos foi o mais frio e qual foi o mais quente.
 16. Construa um algoritmo que leia as medidas dos lados de um triângulo e informe se este triângulo é equilátero, isósceles ou escaleno.
 17. Construa um algoritmo que leia um número real e, se ele for maior do que 5, então escreva a metade deste número. Ex.: se leio o número 12, 12 é maior que 5; a metade de 12 é 6; devo escrever 6.
 18. Construa um algoritmo que leia um número inteiro e, se ele for positivo, escreva uma mensagem que informe se este número é ou não divisível por 2.
@@ -888,7 +888,6 @@ para(inteiro x = 0; x < n; x++)
 1. Você recebeu a tarefa de elaborar um programa que calcule o IMC médio da sua turma. Sabendo que o IMC é dado pela fórmula `imc = peso / altura * altura`, elabore um programa que seja capaz de calcular o IMC de quantos alunos for necessário. A cada IMC calculado, o usuário deverá confirmar se deseja continuar. Quando o usuário optar por não continuar mais, exiba a média aritmética dos IMCs calculados.
 2. Na matemática, o fatorial de um número inteiro `a`, representado por `a!`, é o produto de todos os inteiros positivos menores ou iguais a `a`. Por exemplo, `3!` ou `3 fatorial` é dado por `3 * 2 * 1`, que é igual a `6`. Construa um programa que seja capaz de ler um número inteiro e apresentar seu fatorial.
 3. Construa um algoritmo que leia a idade de várias pessoas e, ao fim da execução, escreva o total de pessoas com menos de 18 anos e o total de pessoas com mais de 65 anos. Seu algoritmo deve parar de ler idades quando o usuário digitar uma idade menor que 1.
-4.
 
 ## Lista 7 - Vetores
 
@@ -917,4 +916,9 @@ para(inteiro x = 0; x < n; x++)
 8. Preencha uma matriz de 3 x 3 com números inteiros, e escreva primeiro os números pares, depois os números ímpares. Ex.: Pares: 8, 12, 20, 64... Ímpares: 7, 13, 21, 45...
 9. Preencha uma matriz de 4 x 3 com números inteiros. Ao fim, leia um número inteiro e escreva apenas os valores dessa matriz que forem divisíveis pelo número lido.
 10. Com uma matriz de 5 x 2, leia os nomes e idades de 5 pessoas. Ao fim, informe quantas destas pessoas são menores de 18 anos e quantas são maiores.
-11. Preencha duas matrizes de 4 x 2 e gere uma matriz soma. Ex.: soma[1,1] <- a[1,1] + b[1,1].
+11. Preencha duas matrizes de 4 x 2 e gere uma matriz soma. Ex.: soma[1][1] = a[1][1] + b[1][1].
+
+## Lista 9 - Desafios com matrizes
+
+1. Utilizando uma matriz de 3 x 3, construa um Jogo da Velha que possa ser jogado por duas pessoas. Ao fim do jogo, informe se há um vencedor.
+2.
