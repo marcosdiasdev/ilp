@@ -25,9 +25,11 @@ Algoritmo para fritar ovos
 3.    acender o fogo
 4.    levar a frigideira ao fogo
 5.    esperar o óleo esquentar
-6.    colocar o ovo
-7.    colocar sal no ovo
-8.    retirar quando pronto
+6.    quebrar o ovo
+7.    colocar o ovo
+8.    colocar sal no ovo
+9.    retirar quando pronto
+10.   apagar o fogo
 */
 ```
 
@@ -289,7 +291,30 @@ Perceba que as últimas duas linhas do exemplo acima poderiam ser substituídas 
 escreva(a + b + c)
 ```
 
-### 6.5. Dando mais sentido ao seu código
+#### Limpando a bagunça
+
+Alguns programas precisam escrever grandes quantidades de informações e, por vezes, precisamos limpar parte delas antes de exibir outras. Para limpar todas as informações exibidas na tela, utilize o comando `limpa()`.
+
+```
+escreva("Esta linha será mostrada e logo depois apagada.")
+escreva("Esta também.")
+limpa()
+```
+
+Ao testar o exemplo acima, você perceberá que as duas linhas serão apagadas antes mesmo de você conseguir visualizá-las. Verifique o que acontece quando fazemos o seguinte:
+
+```
+cadeia resposta
+escreva("\nEsta linha será mostrada e logo depois apagada.")
+escreva("\nEsta também.")
+escreva("\nA tela será apagada. Pressione ENTER para continuar.")
+leia(resposta)
+limpa()
+```
+
+Veja que o comando `limpa()` só é executado após a finalização do comando `leia()`. Enquanto isso, podemos visualizar os valores escritos anteriormente. Ao pressionarmos `ENTER`, o comando `leia()` é finalizado e logo o comando `limpa()` é executado.
+
+### 6.5. Comentários: como dar mais sentido ao seu código
 
 Pense numa situação em que você precise escrever um programa em dupla, juntamente com um de seus colegas de classe. Fica combinado que você escreverá a primeira parte do programa e seu colega completará a solução a partir daí. No entanto, devido ao pequeno prazo disponível, você não poderá explicar ao seu colega pessoalmente como fez para chegar até aquele ponto da solução.
 
@@ -413,7 +438,78 @@ Para adquirir um maior domínio, teste os exemplos vistos, mas não pare por aí
 
 ### 7.2. Escolha/Caso
 
-Em construção.
+Seguindo a mesma linha das estruturas se/senão, o escolha/caso oferece uma maneira mais prática de resolver problemas onde há muitos valores possíveis para uma variável.
+
+Para que você possa entender melhor, imagine que precisemos construir uma calculadora que realize as quatro operações básicas: soma, subtração, divisão e multiplicação. Poderíamos solicitar que o usuário informasse a operação desejada e, logo após, os números a serem operados. Para soma, o usuário digitaria `+`, para subtração `-` e assim por diante.
+
+Utilizando a estrutura se/senão, poderíamos verificar a opção escolhida da seguinte forma:
+
+```
+se(opcao == '+')
+{
+    // realiza a soma
+}
+senao se(opcao == '-')
+{
+    // realiza a subtração
+}
+senao se(opcao == '/')
+{
+    // realiza a divisão
+}
+senao se(opcao == '*')
+{
+    // realiza a multiplicação
+}
+```
+
+Você deve ter percebido que não declaramos nem lemos a variável `opcao`, tampouco descrevemos as operações, apenas comentamos. Não se preocupe com isto. O importante neste exemplo é entendermos como se dá a seleção de uma das opções.
+
+Com a estrutura escolha/caso, o exemplo anterior poderia ser construído da seguinte forma:
+
+```
+escolha(opcao)
+{
+    caso '+':
+        // realiza a soma
+    pare
+
+    caso '-':
+        // realiza a subtração
+    pare
+
+    caso '/':
+        // realiza divisão
+    pare
+
+    caso '*':
+        // realiza multiplicação
+}
+```
+
+Com o comando `escolha`, selecionamos a variável a ser verificada, neste caso, `opcao`. Em seguida, definimos cada um dos possíveis valores para a variável escolhida com a palavra `caso`. A cada caso verificado, se este for verdadeiro, realizamos a operação selecionada. Em seguida, o comando `pare` é utilizado para impedir que as opções seguintes sejam verificadas mesmo após um caso verdadeiro. Falaremos mais sobre este comando no capítulo sobre **estruturas de repetição**.
+
+Perceba que não são utilizados operadores relacionais para verificar, por exemplo, se o valor da variável `opcao` é igual a `+` ou `-`, apenas informamos a variável a ser comparada e quais são seus possíveis valores, neste caso: `+`, `-`, `/` e `*`.
+
+É importante termos em mente que a estrutura escolha/caso só pode ser utilizada para verificar variáveis dos tipos **inteiro** e **caracter**. Além disso, não é possível o uso de operadores relacionais para verificar se, por exemplo, a variável escolhida é maior ou menor que um valor qualquer.
+
+Ainda sobre o exemplo anterior, o que fazer caso o usuário não digite uma opção válida? E se o usuário simplesmente digitasse um ponto (`.`) ou qualquer outra coisa que não estamos esperando? Para situações assim, utilizamos o `caso contrario`. O `caso contrario` nos dá a possibilidade de definir o que fazer quando nenhum dos casos previstos é verdadeiro. De forma resumida, poderíamos aplicá-lo em nosso exemplo da seguinte maneira:
+
+```
+escolha(opcao)
+{
+    caso '+':
+        // realiza a soma
+    pare
+
+    caso '-':
+        // realiza a subtração
+    pare
+
+    caso contrario:
+        // informa ao usuário que a opção é inválida
+}
+```
 
 ## 8. Estruturas de repetição: como evitar a fadiga
 
@@ -584,6 +680,54 @@ x += 3
 y = y - 5
 y -= 5
 ```
+
+#### O comando pare
+
+O mesmo comando `pare` que utilizamos anteriormente com a estrutura `escolha/caso` volta a ser muito útil com estruturas de repetição. O comando `pare` pode ser utilizado para interromper uma estrutura de repetição antes que ela atinja sua condição de parada.
+
+Um caso bastante típico acontece em programas que "perguntam ao usuário" quando parar. Imagine um programa que, infinitamente, leia um nome e responda com uma saudação. A cada repetição, este programa questiona ao usuário se ele deseja continuar.
+
+```
+cadeia nome
+caracter resposta
+
+enquanto(verdadeiro)
+{
+    leia(nome)
+    escreva("Olá, ", nome, "! Tenha um bom dia.")
+
+    escreva("Deseja continuar? (s/n)")
+    leia(resposta)
+
+    se(resposta == 'n')
+    {
+        pare
+    }
+}
+```
+
+Perceba que, a estrutura de repetição `enquanto` deverá ser executada infinitamente, já que a expressão entre parênteses é sempre `verdadeiro`. Após mostrar visualizar a saudação, o usuário deverá digitar `n` caso deseje parar o programa. Desta forma, enquanto a resposta não for `n`, o programa continuará a ser executado.
+
+Saiba que o comando `pare` pode ser utilizado com qualquer uma das três estruturas de repetição.
+
+Em algumas situações, estruturas de repetição dentro de outras estruturas de repetição. Em casos assim, saiba que o comando `pare` irá parar apenas a estrutura de repetição mais próxima. Exemplo:
+
+```
+para(inteiro x = 1; x <= 10; x++)
+{
+    para(inteiro y = 1; y <= 5; y++)
+    {
+        escreva("\nX: ", x, "\nY: ", y)
+        se((x + y) % 3 == 0)
+        {
+            escreva("\nÉ MÚLTIPLO DE 3. PAROU!")
+            pare
+        }
+    }    
+}
+```
+
+Neste caso, apenas o segundo para, o que utiliza a variável `y` como variável de controle, será parado. A estrutura anterior deverá seguir para o próximo valor e dar continuidade ao código. Teste este exemplo e veja como ele se comporta.
 
 ## 9. Vetores e matrizes: expandindo as possibilidades
 
@@ -883,7 +1027,7 @@ para(inteiro x = 0; x < n; x++)
 5. Elabore um algoritmo que escreva apenas os números pares de 300 a 600.
 6. Elabore um algoritmo que escreva apenas os números ímpares de 750 a 1500.
 
-## Lista 6 - Problemas com Laços de Repetição
+## Lista 6 - Desafios com Laços de Repetição
 
 1. Você recebeu a tarefa de elaborar um programa que calcule o IMC médio da sua turma. Sabendo que o IMC é dado pela fórmula `imc = peso / altura * altura`, elabore um programa que seja capaz de calcular o IMC de quantos alunos for necessário. A cada IMC calculado, o usuário deverá confirmar se deseja continuar. Quando o usuário optar por não continuar mais, exiba a média aritmética dos IMCs calculados.
 2. Na matemática, o fatorial de um número inteiro `a`, representado por `a!`, é o produto de todos os inteiros positivos menores ou iguais a `a`. Por exemplo, `3!` ou `3 fatorial` é dado por `3 * 2 * 1`, que é igual a `6`. Construa um programa que seja capaz de ler um número inteiro e apresentar seu fatorial.
@@ -913,12 +1057,11 @@ para(inteiro x = 0; x < n; x++)
 5. Preencha uma matriz de 3 x 3 e escreva o resultado da soma dos elementos da diagonal secundária.
 6. Preencha uma matriz de 5 x 5 e escreva os elementos de sua diagonal principal.
 7. Preencha uma matriz de 5 x 5 e escreva os elementos de sua diagonal secundária.
-8. Preencha uma matriz de 3 x 3 com números inteiros, e escreva primeiro os números pares, depois os números ímpares. Ex.: Pares: 8, 12, 20, 64... Ímpares: 7, 13, 21, 45...
+8. Preencha uma matriz de 3 x 3 com números inteiros, e escreva primeiro os números pares, depois os números ímpares. Ex.: `Pares: 8, 12, 20, 64... Ímpares: 7, 13, 21, 45...`.
 9. Preencha uma matriz de 4 x 3 com números inteiros. Ao fim, leia um número inteiro e escreva apenas os valores dessa matriz que forem divisíveis pelo número lido.
 10. Com uma matriz de 5 x 2, leia os nomes e idades de 5 pessoas. Ao fim, informe quantas destas pessoas são menores de 18 anos e quantas são maiores.
-11. Preencha duas matrizes de 4 x 2 e gere uma matriz soma. Ex.: soma[1][1] = a[1][1] + b[1][1].
+11. Preencha duas matrizes de 4 x 2 e gere uma matriz soma. Ex.: `soma[1][1] = a[1][1] + b[1][1]`.
 
-## Lista 9 - Desafios com matrizes
+## Lista 9 - Desafios com Matrizes
 
 1. Utilizando uma matriz de 3 x 3, construa um Jogo da Velha que possa ser jogado por duas pessoas. Ao fim do jogo, informe se há um vencedor.
-2.
