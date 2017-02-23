@@ -16,7 +16,7 @@ Podemos definir algoritmo como uma sequência finita e ordenada de passos para a
 
 Para exemplificar, vamos começar com um algoritmo descritivo para um problema clássico do cotidiano: como fritar ovos?
 
-```
+```java
 /*
 Algoritmo para fritar ovos
 
