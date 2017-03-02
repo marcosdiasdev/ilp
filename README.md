@@ -949,6 +949,40 @@ para(inteiro x = 0; x < n; x++)
 
 - LOPES, Anita. GARCIA, Guto. **Introdução à programação – 500 algoritmos resolvidos**. Rio de Janeiro: Elsevier, 2002 - 15ª Tiragem.
 
+## Dicionário de palavras-chave
+
+- `begin` - comece, começar.
+- `button` - botão.
+- `by` - por.
+- `clock` - relógio.
+- `close` - feche, fechar.
+- `do` - faça, fazer.
+- `display` - tela, mostrar.
+- `each` - cada.
+- `error` - erro.
+- `else` - senão.
+- `exit` - sair.
+- `field` - campo.
+- `for` - para.
+- `if` - se.
+- `hard` - rígido, duro.
+- `key` - tecla, chave.
+- `keyboard` - teclado.
+- `light` - luz, claro, leve.
+- `open` - abra, abrir.
+- `password` - senha.
+- `print` - imprima, imprimir.
+- `quit` - sair, deixar, abandonar.
+- `read` - leia, ler.
+- `screen` - tela.
+- `start` - começar.
+- `show` - mostrar.
+- `sum` - soma.
+- `update` - atualizar, atualização.
+- `while` - enquanto.
+- `write` - escreva, escrever.
+- `window` - janela.
+
 ## Lista 1 - Expressões, entrada e saída de dados
 
 1. Leia dois números inteiros e escreva o resultado de sua soma.
