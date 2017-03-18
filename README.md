@@ -6,7 +6,7 @@ Antes de começarmos a programar, é necessário compreender novos conceitos e a
 
 > Você pode acessar a versão mais atualizada deste material entrando em [github.com/timarcosdias/ilp](https://github.com/timarcosdias/ilp).
 
-> Se encontrar erros ou tiver sugestões, por favor, envie-os para [ti.marcosdias@gmail.com](mailto:ti.marcosdias@gmail.com?Subject=Apostila de Lógica de Programação).
+> Se encontrar erros ou tiver sugestões, por favor, envie-os para [ti.marcosdias@gmail.com](#).
 
 > Os exemplos contidos neste material adotam a sintaxe de uma variante da linguagem Portugol desenvolvida para a ferramenta [Portugol Studio](http://lite.acad.univali.br/portugol/), mantida pela UNIVALI - Universidade do Vale do Itajaí.
 
