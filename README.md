@@ -81,7 +81,7 @@ O tipo de uma variável define o tipo de valor que ela poderá armazenar. Por ex
 - **Real (float):** número real. Ex.: 10.5 ou 0.8.
 - **Caractere (char):** uma letra do alfabeto, algarismo, sinal de pontuação ou símbolo. Ex.: 'A' ou '2' ou '$'. Valores do tipo caractere geralmente são representados entre aspas simples ('').
 - **Cadeia (string):** números, letras, palavras, frases e/ou outros símbolos. Ex.: "A" ou "abc123" ou "* é um asterisco.". Valores do tipo cadeia geralmente são representados entre aspas duplas ("").
-- **Lógico (bool):** verdadeiro ou falso (true ou false), sim ou não, 1 ou 0.
+- **Lógico (bool):** verdadeiro ou falso (true ou false), 1 ou 0.
 
 > Os valores entre parênteses correspondem aos tipos de variáveis como são usados em linguagens de programação como C++ ou Java.
 
