@@ -965,7 +965,7 @@ para(inteiro x = 0; x < n; x++)
 - `field` - campo.
 - `for` - para.
 - `if` - se.
-- `hard` - rígido, duro.
+- `hard` - difícil, rígido.
 - `key` - tecla, chave.
 - `keyboard` - teclado.
 - `light` - luz, claro, leve.
@@ -1074,7 +1074,7 @@ para(inteiro x = 0; x < n; x++)
 6. Ainda baseado no problema da sequência de Fibonacci, construa um programa que leia um número inteiro N e escreva a soma dos N primeiros termos da sequência de Fibonacci.
 7. Um número primo é um número inteiro não negativo, maior que 1, e divisível apenas por 1 e por ele mesmo. Construa um programa que leia um número inteiro N e informe se este é ou não é um número primo.
 8. O Máximo Divisor Comum (MDC) entre dois números naturais (números inteiros positivos) é o maior número natural que divide ambos. Desenvolva um programa que leia dois números inteiros positivos X e Y e escreva seu MDC.
-
+9. Um número quadrado perfeito é um inteiro que pode ser escrito como o quadrado de outro número inteiro. Em outras palavras, é um número inteiro cuja raíz quadrada é outro número inteiro. Construa um programa que leia um número inteiro positivo e informe se este é um quadrado perfeito.
 
 ## Lista 7 - Vetores
 
