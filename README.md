@@ -227,7 +227,7 @@ Recomendamos que você faça a leitura dos capítulos a seguir testando cada um 
 
 No Google Chrome, pressione <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>i</kbd> para abrir as **Ferramentas do desenvolvedor**. Estas ferramentas foram inicialmente pensadas para que desenvolvedores pudessem testar seus projetos. Nós as utilizaremos para executar os nossos programas.
 
-![alt text](imagens/console.png "Console do Google Chrome")
+<img src="imagens/console.png" alt="Console do Google Chrome" width="300px">
 
 Com a guia de ferramentas do desenvolvedor aberta, vá até a aba console, digite o código do exemplo abaixo e pressione <kbd>Enter</kbd>:
 
