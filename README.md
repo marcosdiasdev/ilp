@@ -1,3 +1,5 @@
+> O conteúdo deste material está passando por atualizações. Seja paciente. Passaremos a utilizar JavaScript em todos os exemplos.
+
 # Apostila de Introdução à Lógica de Programação
 
 A **Lógica de Programação** é a técnica de encadear pensamentos para atingir determinado objetivo por meio de um computador ou outro sistema programável.
@@ -8,16 +10,13 @@ Antes de começarmos a programar, é necessário compreender novos conceitos e a
 
 > Se encontrar erros ou tiver sugestões, por favor, envie-os para [ti.marcosdias@gmail.com](#).
 
-> Os exemplos contidos neste material adotam a sintaxe de uma variante da linguagem Portugol desenvolvida para a ferramenta [Portugol Studio](http://lite.acad.univali.br/portugol/), mantida pela UNIVALI - Universidade do Vale do Itajaí.
-
 ## 1. Algoritmo
 
 Podemos definir algoritmo como uma sequência finita e ordenada de passos para a resolução de um problema específico.
 
 Para exemplificar, vamos começar com um algoritmo descritivo para um problema clássico do cotidiano: como fritar ovos?
 
-```
-/*
+```js
 Algoritmo para fritar ovos
 
 1.    pegar frigideira, ovo, óleo e sal
@@ -30,7 +29,6 @@ Algoritmo para fritar ovos
 8.    colocar sal no ovo
 9.    retirar quando pronto
 10.   apagar o fogo
-*/
 ```
 
 Percebe que o algoritmo acima é basicamente uma receita? Algoritmos são exatamente como receitas.
@@ -215,109 +213,191 @@ Para facilitar, isole as expressões que estão antes e após o operador lógico
 
 ## 6\. Primeiros passos em programação
 
-Você deve ter notado no início deste material que mencionamos que a sintaxe utilizada em nossos exemplos seria a mesma de uma variante da linguagem Portugol.
+Em nossos exemplos de código utilizaremos a sintaxe da linguagem JavaScript.
 
 Em Lógica de Programação, a **sintaxe** está ligada à **estrutura** da linguagem de programação. Ela é o conjunto de regras que definem a forma correta de composição das estruturas básicas de uma linguagem. É o que deve responder à pergunta: como construir tal estrutura corretamente?
 
 Outro conceito que precisamos compreender é o de **semântica**. Em Lógica de Programação, a semântica está ligada ao **significado** de um determinado código. A semântica deve responder à pergunta: tal código faz realmente o que se espera que ele faça?
 
-A seguir, são abordados alguns comandos básicos para que possamos finalmente começar a programar.
+### 6.1\. Olá, mundo!
 
-### 6.1\. Declaração de variáveis
+Para começar a programar em JavaScript, não é necessário nenhum programa específico, você só precisa de um navegador. Nós recomendamos o Google Chrome ou o Mozilla Firefox. Se você estiver utilizando um smartphone Android, poderá utilizar o aplicativo [JS Run](https://itunes.apple.com/us/app/javascript-anywhere-jsanywhere/id363452277?mt=8); caso esteja utilizando um iPhone, baixe o aplicativo [JS Code Run: JavaScript Editor](https://itunes.apple.com/us/app/js-code-run-javascript-editor/id1294015040?mt=8).
+
+Recomendamos que você faça a leitura dos capítulos a seguir testando cada um dos exemplos.
+
+No Google Chrome, pressione <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>i</kbd> para abrir as **Ferramentas do desenvolvedor**. Estas ferramentas foram inicialmente pensadas para que desenvolvedores pudessem testar seus projetos. Nós as utilizaremos para executar os nossos programas.
+
+![alt text](imagens/console.png "Console do Google Chrome")
+
+Com a guia de ferramentas do desenvolvedor aberta, vá até a aba console, digite o código do exemplo abaixo e pressione <kbd>Enter</kbd>:
+
+```js
+alert("Olá, mundo!")
+```
+
+### 6.2\. Declaração de variáveis
 
 Antes que uma variável possa ser utilizada para armazenamento de um valor qualquer, ela deve ser declarada, ou seja: precisamos reservar aquele pequeno espaço na memória do computador e nomeá-lo para uso futuro:
 
-```
-inteiro idade
+```js
+var idade
 ```
 
-No exemplo acima, declaramos a variável `idade` como do tipo `inteiro`.
+No exemplo acima, declaramos a variável `idade`.
+
+Em JavaScript, o termo `var` é utilizado para declarar uma variável de escopo global, ou seja, uma variável que estará acessível a partir de qualquer parte do nosso código.
+
+Você também pode utilizar o termo `let` quando quiser uma variável com escopo de bloco, uma variável que só exista naquele local:
+
+```js
+let idade
+```
 
 Até que a variável `idade` seja inicializada, ou seja, até que ela receba algum valor, seu conteúdo será nulo ou vazio. É possível inicializar uma variável juntamente à sua declaração:
 
-```
-cadeia nome = "Fulano"
+```js
+var nome = "Fulano"
 ```
 
 Mas podemos também declarar uma variável e inicializá-la com um valor lido:
 
-```
-real preco
-leia(preco)
-```
-
-O comando `leia()` utilizado no exemplo acima será abordado na próxima seção.
-
-Antes de prosseguirmos, lembre-se que você pode declarar quantas variáveis quiser e de diversos tipos diferentes em um mesmo programa, por exemplo:
-
-```
-cadeia nome, sobrenome, apelido
-real peso, altura
-inteiro idade
+```js
+var preco = prompt("Digite um preço: ")
 ```
 
-### 6.2\. Comandos de entrada
+A função `prompt()` utilizada no exemplo acima será abordada na próxima seção.
 
-Comandos de entrada são os responsáveis por receber uma informação do usuário. Ex.: leia, escute, ouça, receba.
+Antes de prosseguirmos, lembre-se que você pode declarar quantas variáveis quiser, inclusive em uma única linha em seu programa, por exemplo:
 
+```js
+var nome, sobrenome, apelido
+let peso, altura
+let idade
 ```
-leia(nome)
+
+### 6.3\. Comandos de entrada
+
+Comandos de entrada são os responsáveis por receber uma informação do usuário. Ex.: leia, escute, ouça, receba. O comando de leitura que utilizaremos em JavaScript é o `prompt()`:
+
+```js
+var nome = prompt("Digite seu nome. Ele será armazenado na variável nome.")
+alert("O nome digitado foi " + nome)
 ```
 
-Quando se trata de linguagens de programação, os comandos costumam ter um par de parênteses logo após seu nome, onde serão informadas opções para sua execução. Neste exemplo, o valor lido pelo comando `leia()` é armazenado na variável `nome`.
+Quando se trata de linguagens de programação, os comandos costumam ter um par de parênteses logo após seu nome, onde serão informadas opções para sua execução. Estes "comandos" são chamados de **funções**. Os valores que vão entre os parênteses são chamados de **parâmetros** ou **argumentos**. Se você já viu uma função matemática, deve ter notado a semelhança. Neste exemplo, o valor lido pela função `prompt()` é armazenado na variável `nome`.
 
-### 6.3\. Comandos de saída
+### 6.4\. Comandos de saída
 
 Comandos de saída são os responsáveis por enviar uma informação ao usuário. Ex.: escreva, imprima, mostre, exiba.
 
+Em JavaScript, há três funções que podem ser utilizadas para exibir a saída de um programa:
+
+A função `alert()` exibe uma caixa de diálogo com uma mensagem.
+
+```js
+alert("Olá, mundo!")
 ```
-escreva(“Olá, mundo!”)
+
+A função `console.log()` exibe uma mensagem no console.
+
+```js
+console.log("Olá, mundo!")
 ```
 
-Neste exemplo, o comando `escreva()` irá exibir na tela o texto `Olá, mundo!`.
+A função `document.write()` exibe uma mensagem na página atual.
 
-### 6.4. Um básico exemplo de entrada, processamento e saída
-
-Neste exemplo, iremos declarar três variáveis: `a`, `b` e `c`, todas do tipo `inteiro`. Faremos a leitura de dois valores e os armazenaremos nas variáveis `a` e `b`. A variável `c` receberá a soma de `a` e `b`. Por fim, escreveremos o valor contido em `c`.
-
+```js
+document.write("Olá, mundo!")
 ```
-inteiro a, b, c
-leia(a)
-leia(b)
+
+Teste cada um dos exemplos separadamente e observe o que acontece.
+
+### 6.5. Um básico exemplo de entrada, processamento e saída
+
+Neste exemplo, iremos declarar três variáveis: `a`, `b` e `c`. Faremos a leitura de dois números inteiros e os armazenaremos nas variáveis `a` e `b`. A variável `c` receberá a soma de `a` e `b`. Por fim, escreveremos no console o valor contido em `c`.
+
+```js
+var a, b, c
+a = parseInt(prompt("Digite um número inteiro: "))
+b = parseInt(prompt("Digite outro número inteiro: "))
 c = a + b
-escreva(c)
+console.log(c)
 ```
 
-Perceba que as últimas duas linhas do exemplo acima poderiam ser substituídas por:
+> Achou estranho esse tal de parseInt()? Leia a próxima seção.
 
-```
-escreva(a + b + c)
-```
+### 6.6. Tipos de variáveis em JavaScript
 
-#### Limpando a bagunça
+Diferentemente de linguagens como C e Java, na linguagem JavaScript não é possível definir o tipo de uma variável. Isto faz com que uma variável `x`, por exemplo, possa, em um momento representar um número inteiro e, em outro momento, representar uma cadeia de caracteres. Teste o exemplo abaixo:
 
-Alguns programas precisam escrever grandes quantidades de informações e, por vezes, precisamos limpar parte delas antes de exibir outras. Para limpar todas as informações exibidas na tela, utilize o comando `limpa()`.
+```js
+var x
 
-```
-escreva("Esta linha será mostrada e logo depois apagada.")
-escreva("Esta também.")
-limpa()
-```
+x = 50
+alert("O valor de x é " + x)
 
-Ao testar o exemplo acima, você perceberá que as duas linhas serão apagadas antes mesmo de você conseguir visualizá-las. Verifique o que acontece quando fazemos o seguinte:
-
-```
-cadeia resposta
-escreva("\nEsta linha será mostrada e logo depois apagada.")
-escreva("\nEsta também.")
-escreva("\nA tela será apagada. Pressione ENTER para continuar.")
-leia(resposta)
-limpa()
+x = "Alan Turing"
+alert("O valor de x é " + x)
 ```
 
-Veja que o comando `limpa()` só é executado após a finalização do comando `leia()`. Enquanto isso, podemos visualizar os valores escritos anteriormente. Ao pressionarmos `ENTER`, o comando `leia()` é finalizado e logo o comando `limpa()` é executado.
+Devido a esta característica, costumamos dizer que a linguagem JavaScript é de **tipagem dinâmica**.
 
-### 6.5. Comentários: como dar mais sentido ao seu código
+Outra peculiaridade desta linguagem está relacionada ao fato de que é possível realizar operações com variáveis de tipos diferentes. Devido a isto, a tipagem da linguagem JavaScript é também considerada **fraca**. Teste o exemplo abaixo:
+
+```js
+var a = 2, b = "2"
+alert(a + b)
+```
+> Ué! Mas 2 + 2 não eram igual a 4?!
+
+Se surpreendeu com o resultado? Isto acontece porque a variável `b` está armazenando um valor do tipo `string` (cadeia). Em operações envolvendo valores do tipo `string`, o sinal de soma (`+`) realiza a operação de **concatenação**, ou simplesmente **junção**.
+
+Embora não se possa fixar o tipo de uma variável em JavaScript, os tipos de valores existentes nesta linguagem são:
+
+- números (`number`)
+- cadeias de caracteres (`string`)
+- lógicos (`boolean`)
+- objetos (`object`)
+- nulo (`null`)
+- indefinido (`undefined`)
+
+#### Conversão de tipos
+
+Por padrão, qualquer valor lido pela função `prompt()` é considerado uma `string` (cadeia de caracteres):
+
+```js
+var vinte = prompt("Digite 20 e pressione Enter: ")
+console.log(vinte + 1) // O resultado será 201
+```
+
+Logo, se precisarmos que o valor lido seja considerado como numérico, é necessário realizar a **conversão de tipo**.
+
+Para converter uma `string` em um número inteiro, utilizamos a função `parseInt()`. Para converter uma `string` em um número real, um número com parte decimal, utilizamos a função `parseFloat()`. O uso destas funções é muito simples: a `string` representando o número a ser convertido é informada entre parênteses e a função escolhida realiza a conversão. O exemplo anterior ficaria assim, com a devida conversão:
+
+```js
+var vinte = parseInt(prompt("Digite 20 e pressione Enter: "))
+console.log(vinte + 1) // O resultado será 21
+```
+
+Não se assuste com o uso de funções encadeadas, como no exemplo anterior. Lembre-se que, de acordo com a precedência de operadores que vimos no início deste material, as funções são a primeira coisa a ser resolvida em uma expressão. Se você possui uma função sendo executada dentro de outra, a função mais interna será executada primeiro, depois a mais externa. O operador de atribuição só recebe o resultado final.
+
+Caso se sinta mais confortável, você também pode escrever o exemplo anterior da seguinte maneira:
+
+```js
+var vinte = prompt("Digite 20 e pressione Enter: ")
+vinte = parseInt(vinte)
+console.log(vinte + 1) // O resultado será 21
+```
+
+Ou ainda:
+
+```js
+var vinteCadeia = prompt("Digite 20 e pressione Enter: ")
+var vinteInteiro = parseInt(vinteCadeia)
+console.log(vinteInteiro + 1) // O resultado será 21
+```
+
+### 6.7. Comentários: como dar mais sentido ao seu código
 
 Pense numa situação em que você precise escrever um programa em dupla, juntamente com um de seus colegas de classe. Fica combinado que você escreverá a primeira parte do programa e seu colega completará a solução a partir daí. No entanto, devido ao pequeno prazo disponível, você não poderá explicar ao seu colega pessoalmente como fez para chegar até aquele ponto da solução.
 
@@ -327,90 +407,92 @@ Mas, e se você pudesse escrever algo mais dentro do seu código para orientar s
 
 Através de comentários, você pode escrever qualquer coisa dentro do seu código sem que isso afete o funcionamento do seu programa. Para escrever um comentário, apenas insira `//` e escreva seu comentário. Exemplo:
 
-```
-inteiro x = 50
-// Isto é um comentário de uma única linha
-escreva(x)
+```js
+// Declara a variável x e atribui o valor 50
+var x = 50
+// Exibe uma mensagem com o valor de x
+alert(x)
 ```
 
 Às vezes utilizamos comentários também para **suprimir** uma ou mais linhas de código de um programa para que elas não sejam executadas:
 
-```
-inteiro x = 10, y = 20
-escreva(x)
+```js
+var x = 10, y = 20
+console.log(x)
 // escreva(y)
 // Veja que só a variável x será escrita, pois a linha que deveria escrever y foi marcada como um comentário
 ```
 
 Alguns comentários podem ser mais longos e ocupar várias linhas de código. Neste caso, a primeira linha comentada deverá ser iniciada com `/*` e a última finalizada com `*/`. Exemplo:
 
-```
-inteiro z = 30
+```js
+let z = 30
 /* Este comentário
 foi um pouco
 mais longe */
-escreva(z)
+console.log(z)
 ```
 
 ## 7. Estruturas de decisão: escolha um caminho
 
 Na programação, há momentos em que precisamos fazer decisões, definir caminhos diferentes para situações diferentes, e é por isso que existem as **estruturas de decisão**.
 
-As duas estruturas de decisão presentes na maioria das linguagens de programação são o se/senao (if/else, em inglês) e o escolha/caso (switch/case, em inglês).
+As duas estruturas de decisão presentes na maioria das linguagens de programação são o se/senão (`if`/`else`) e o escolha/caso (`switch`/`case`).
 
 As estruturas de decisão são peça fundamental na estruturação dos algoritmos utilizados nos sistemas que utilizamos diariamente. Por exemplo, pense em quando você entra com seu e-mail e senha para realizar login em uma rede social. Observe que no momento em que você clica no botão Entrar, duas situações são possíveis: seu login pode ser aceito e você entrará na rede social, ou a página indicará que seu e-mail e/ou senha estão incorretos. Para decidir qual das duas ações realizar, o sistema certamente fez uso de uma estrutura de decisão.
 
-### 7.1. Se
+### 7.1. If
 
-A estrutura `se` é utilizada na maioria dos casos em que se faz necessário decidir que ação será tomada.
+A estrutura `if` (se) é utilizada na maioria dos casos em que é necessário decidir que ação será tomada.
 
-Para que você compreenda como funciona a estrutura `se`, imagine a seguinte situação: após lermos um número inteiro qualquer, se este número for par, deveremos exibir uma mensagem informando que ele é par. Ex.:
+Para que você compreenda como funciona a estrutura `if`, imagine a seguinte situação: após lermos um número inteiro qualquer, se este número for par, deveremos exibir uma mensagem informando que ele é par. Ex.:
 
 ```
-inteiro numero
-leia(numero)
-se(numero % 2 == 0) {
-    escreva("O número lido é par.")
+var numero
+numero = prompt("Entre com um número: ")
+if(numero % 2 == 0) {
+    alert("O número lido é par.")
 }
 ```
 
-A partir da terceira linha do código acima, começamos a utilizar a estrutura de decisão `se`. Observe que ela é constituída da palavra "se" seguida de um par de parênteses. Dentro dos parênteses deve haver uma expressão lógica, ou seja, uma expressão que possa ser avaliada como `verdadeiro` ou `falso`. Quando a expressão entre parênteses é igual a `verdadeiro`, o código entre as chaves da estrutura é executado. Se o resultado da expressão for `falso`, o código entre as chaves é simplesmente ignorado.
+A partir da terceira linha do código acima, começamos a utilizar a estrutura de decisão `if`. Observe que ela é constituída da palavra `if` seguida de um par de parênteses. Dentro dos parênteses deve haver uma expressão lógica, ou seja, uma expressão que possa ser avaliada como `verdadeiro` ou `falso`, `true` ou `false`. Quando a expressão entre parênteses é igual a `true`, o código entre as chaves da estrutura é executado. Se o resultado da expressão for `false`, o código entre as chaves é simplesmente ignorado.
 
-Neste exemplo, a expressão avaliada é `numero % 2 == 0`. Considerando que a variável `numero` contenha mesmo um número par, como 4, sabemos que o resultado da expressão `numero % 2` será igual a 0, pois ao se dividir 4 por 2, o resto (ou módulo) é 0, logo a expressão retornará o valor `verdadeiro`. Observe:
+> Fixe bem isto: o termo true representa verdadeiro, já o false, falso
 
-```
+Neste exemplo, a expressão avaliada é `numero % 2 == 0`. Considerando que a variável `numero` contenha mesmo um número par, como 4, sabemos que o resultado da expressão `numero % 2` será igual a 0, pois ao se dividir 4 por 2, o resto (ou módulo) é 0, logo a expressão retornará o valor `true`. Observe:
+
+```js
 4 % 2 == 0
 0 == 0
-verdadeiro
+true
 ```
 
-Se o valor da variável `numero` for ímpar, o resto da sua divisão por 2 será 1, o mesmo acontecerá com qualquer outro número ímpar, logo a expressão retornará o valor `falso`. Observe:
+Se o valor da variável `numero` for ímpar, o resto da sua divisão por 2 será 1, o mesmo acontecerá com qualquer outro número ímpar, logo a expressão retornará o valor `false`. Observe:
 
-```
+```js
 3 % 2 == 0
 1 == 0
-falso
+false
 ```
 
-### 7.2. Se/Senão
+### 7.2. If / Else
 
 Nem sempre é suficiente apenas verificar se uma condição é atendida e executar determinada ação. Muitas vezes precisamos de uma segunda alternativa, um plano B.
 
 Ainda conforme o exemplo abordado anteriormente, imagine que caso o número lido não seja par tenhamos que mostrar uma mensagem também informando que o número é ímpar. Acompanhe o exemplo:
 
 ```
-inteiro numero
-leia(numero)
-se(numero % 2 == 0) {
-    escreva("O número lido é par.")
-} senao {
-    escreva("O número lido é ímpar.")
+var numero = prompt("Entre com um número inteiro: "")
+if(numero % 2 == 0) {
+    alert("O número lido é par.")
+} else {
+    alert("O número lido é ímpar.")
 }
 ```
 
-Observe que na quinta linha adicionamos a palavra `senao`, seguida de um par de chaves. Neste caso, o código entre as chaves só será executado se a expressão verificada no bloco `se` não for igual a `verdadeiro`, ou simplesmente for igual a `falso`.
+Observe que na quinta linha adicionamos a palavra `else` (senão), seguida de um par de chaves. Neste caso, o código entre as chaves só será executado se a expressão verificada no bloco `if` não for igual a `true`, ou simplesmente for igual a `false`.
 
-### 7.3. Se/Senão/Se
+### 7.3. If / Else / If
 
 Mas o que fazer quando temos mais de duas alternativas?
 
@@ -520,24 +602,24 @@ Quando programamos, algumas tarefas podem exigir esforços absurdamente repetiti
 
 A boa notícia é que alguém já pensou nisso antes. As linguagens de programação possuem estruturas que chamamos de **estruturas de repetição** ou de **laços de repetição**. Estas estruturas são utilizadas sempre que nos deparamos com tarefas que exijam que um procedimento se repita por várias vezes.
 
-As três estruturas de repetição que abordaremos são: enquanto (while, em inglês), faca/enquanto (do/while, em inglês) e para (for, em inglês). Cada uma dessas estruturas é mais adequada em uma situação específica, mas o propósito de automatizar tarefas repetitivas permanece em todas elas.
+As três estruturas de repetição que abordaremos são: `while` (enquanto), `do`/`while` (faça/enquanto) e `for` (para). Cada uma dessas estruturas é mais adequada em uma situação específica, mas o propósito de automatizar tarefas repetitivas permanece em todas elas.
 
 Assim como nas estruturas de decisão, o funcionamento de uma estrutura de repetição é baseado em uma condição, que mais uma vez deverá ser representada através de uma expressão lógica.
 
 A seguir, conheceremos cada uma das estruturas de repetição mais a fundo.
 
-### 8.1. Enquanto
+### 8.1. While
 
 Imagine uma situação em que você precise repetir determinada tarefa enquanto uma certa condição for verdadeira, por exemplo:
 
 >> Enquanto um for igual a um, escreva: um é igual a um.
 
-Essa mesma situação pode ser descrita em código, utilizando Portugol, da seguinte forma:
+Essa mesma situação pode ser descrita em código, utilizando JavaScript, da seguinte forma:
 
-```
-enquanto(1 == 1)
+```js
+while(1 == 1)
 {
-    escreva("um é igual a um.")
+    console.log("um é igual a um.")
 }
 ```
 
@@ -945,43 +1027,9 @@ para(inteiro x = 0; x < n; x++)
 }
 ```
 
-## 10. Referências Bibliográficas
+## 10. Depuração: solucionando erros
 
-- LOPES, Anita. GARCIA, Guto. **Introdução à programação – 500 algoritmos resolvidos**. Rio de Janeiro: Elsevier, 2002 - 15ª Tiragem.
-
-## Dicionário de palavras-chave
-
-- `begin` - comece, começar.
-- `button` - botão.
-- `by` - por.
-- `clock` - relógio.
-- `close` - feche, fechar.
-- `do` - faça, fazer.
-- `display` - tela, mostrar.
-- `each` - cada.
-- `error` - erro.
-- `else` - senão.
-- `exit` - sair.
-- `field` - campo.
-- `for` - para.
-- `if` - se.
-- `hard` - difícil, rígido.
-- `key` - tecla, chave.
-- `keyboard` - teclado.
-- `light` - luz, claro, leve.
-- `open` - abra, abrir.
-- `password` - senha.
-- `print` - imprima, imprimir.
-- `quit` - sair, deixar, abandonar.
-- `read` - leia, ler.
-- `screen` - tela.
-- `start` - começar.
-- `show` - mostrar.
-- `sum` - soma.
-- `update` - atualizar, atualização.
-- `while` - enquanto.
-- `write` - escreva, escrever.
-- `window` - janela.
+To do.
 
 ## Lista 1 - Expressões, entrada e saída de dados
 
@@ -1108,3 +1156,8 @@ para(inteiro x = 0; x < n; x++)
 ## Lista 9 - Desafios com Matrizes
 
 1. Utilizando uma matriz de 3 x 3, construa um Jogo da Velha que possa ser jogado por duas pessoas. Ao fim do jogo, informe se há um vencedor.
+
+## Referências
+
+- LOPES, Anita. GARCIA, Guto. **Introdução à programação – 500 algoritmos resolvidos**. Rio de Janeiro: Elsevier, 2002 - 15ª Tiragem.
+- MOZILLA. **Uma reintrodução ao JavaScript (Tutorial de JS)**. Mozilla Developer Network. MDN Web Docs. Disponível em: <https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/A_re-introduction_to_JavaScript>
