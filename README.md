@@ -55,13 +55,13 @@ Há algumas regras a serem seguidas ao nomear variáveis. Algumas linguanges de 
 
 Atribuir um valor a uma variável é dar um valor a uma variável. É o mesmo que guardar um valor em um espaço da memória.
 
-```
+```js
 a = 4
 ```
 
 Pode ser lido como: variável `a` recebe `4`.
 
-```
+```js
 nome = “José”
 ```
 
@@ -73,13 +73,13 @@ Observe que o símbolo de igualdade, `=`, aqui é utilizado como operador de atr
 
 O tipo de uma variável define o tipo de valor que ela poderá armazenar. Por exemplo, se precisamos armazenar um número inteiro, podemos criar uma variável do tipo **inteiro**; para armazenar nomes, utilizamos **cadeias**.
 
-- **Inteiro (int):** número inteiro. Ex.: 10 ou 50.
-- **Real (float):** número real. Ex.: 10.5 ou 0.8.
-- **Caractere (char):** uma letra do alfabeto, algarismo, sinal de pontuação ou símbolo. Ex.: 'A' ou '2' ou '$'. Valores do tipo caractere geralmente são representados entre aspas simples ('').
-- **Cadeia (string):** números, letras, palavras, frases e/ou outros símbolos. Ex.: "A" ou "abc123" ou "* é um asterisco.". Valores do tipo cadeia geralmente são representados entre aspas duplas ("").
-- **Lógico (bool):** verdadeiro ou falso (true ou false), 1 ou 0.
+- **Inteiro (integer):** número inteiro. Ex.: `10` ou `50`.
+- **Real (float):** número real. Ex.: `10.5` ou `0.8`.
+- **Caractere (character):** uma letra do alfabeto, algarismo, sinal de pontuação ou símbolo. Ex.: `'A'` ou `'2'` ou `'$'`. Valores do tipo caractere geralmente são representados entre aspas simples ('').
+- **Cadeia (string):** números, letras, palavras, frases e/ou outros símbolos. Ex.: `"A"` ou `"abc123"` ou `"* é um asterisco."`. Valores do tipo cadeia geralmente são representados entre aspas duplas ("").
+- **Lógico (boolean):** verdadeiro ou falso (`true` ou `false`), 1 ou 0.
 
-> Os valores entre parênteses correspondem aos tipos de variáveis como são usados em linguagens de programação como C++ ou Java.
+> Os valores entre parênteses correspondem aos tipos de variáveis como são usados em linguagens de programação como C++ ou Java. Geralmente, estes tipos aparecem de forma abreviada: int, char, bool.
 
 ### 2.4\. Exercícios com tipos de variáveis
 
@@ -166,7 +166,7 @@ A precedência, ou ordem, de operadores é a convenção que indica a ordem em q
 
 No exemplo abaixo, a multiplicação deve ser resolvida antes da soma.
 
-```
+```js
 3 + 4 * 9
 3 + 36
 39
@@ -174,7 +174,7 @@ No exemplo abaixo, a multiplicação deve ser resolvida antes da soma.
 
 Neste exemplo, a parte da expressão entre parênteses é resolvida antes da multiplicação.
 
-```
+```js
 (3 + 4) * 9
 7 * 9
 63
@@ -182,7 +182,7 @@ Neste exemplo, a parte da expressão entre parênteses é resolvida antes da mul
 
 Quando operadores de mesma prioridade se chocam, a operação mais à esquerda prevalece sobre as demais. Ex.:
 
-```
+```js
 3 * 4 / 3
 12 / 3
 4
@@ -190,7 +190,7 @@ Quando operadores de mesma prioridade se chocam, a operação mais à esquerda p
 
 Neste exemplo, o operador de soma tem prioridade sobre os operadores relacionais, e os operadores relacionais têm prioridade sobre o operador lógico.
 
-```
+```js
 10 < 9 e 6 + 3 > 10
 10 < 9 e 9 > 10
 F e F
@@ -225,7 +225,7 @@ Recomendamos que você faça a leitura dos capítulos a seguir testando cada um 
 
 No Google Chrome, pressione <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>i</kbd> para abrir as **Ferramentas do desenvolvedor**. Estas ferramentas foram inicialmente pensadas para que desenvolvedores pudessem testar seus projetos. Nós as utilizaremos para executar os nossos programas.
 
-<img src="imagens/console.png" alt="Console do Google Chrome" width="450px">
+<div style="text-align:center"><img src="imagens/console.png" alt="Console do Google Chrome" width="450px"></div>
 
 Com a guia de ferramentas do desenvolvedor aberta, vá até a aba console, digite o código do exemplo abaixo e pressione <kbd>Enter</kbd>:
 
@@ -251,7 +251,7 @@ Você também pode utilizar o termo `let` quando quiser uma variável com escopo
 let idade
 ```
 
-Até que a variável `idade` seja inicializada, ou seja, até que ela receba algum valor, seu conteúdo será nulo ou vazio. É possível inicializar uma variável juntamente à sua declaração:
+Em JavaScript, até que uma variável seja inicializada, ou seja, até que ela receba algum valor, seu conteúdo será `undefined` (indefinido). Você pode inicializar uma variável juntamente à sua declaração:
 
 ```js
 var nome = "Fulano"
@@ -445,7 +445,7 @@ A estrutura `if` (se) é utilizada na maioria dos casos em que é necessário de
 
 Para que você compreenda como funciona a estrutura `if`, imagine a seguinte situação: após lermos um número inteiro qualquer, se este número for par, deveremos exibir uma mensagem informando que ele é par. Ex.:
 
-```
+```js
 var numero
 numero = prompt("Entre com um número: ")
 if(numero % 2 == 0) {
@@ -479,8 +479,8 @@ Nem sempre é suficiente apenas verificar se uma condição é atendida e execut
 
 Ainda conforme o exemplo abordado anteriormente, imagine que caso o número lido não seja par tenhamos que mostrar uma mensagem também informando que o número é ímpar. Acompanhe o exemplo:
 
-```
-var numero = prompt("Entre com um número inteiro: "")
+```js
+var numero = parseInt(prompt("Entre com um número inteiro: "))
 if(numero % 2 == 0) {
     alert("O número lido é par.")
 } else {
@@ -496,51 +496,51 @@ Mas o que fazer quando temos mais de duas alternativas?
 
 Para responder a essa pergunta, vamos pensar no seguinte problema: após ler um número inteiro, precisamos informar ao usuário se este número é negativo, nulo (0) ou positivo. Podemos fazer isso da seguinte forma:
 
-```
-inteiro numero
-leia(numero)
-se(numero < 1) {
-    escreva("O número lido é negativo.")
-} senao se(numero > 1){
-    escreva("O número lido é positivo.")
-} senao {
-    escreva("O número lido é nulo.")
+```js
+var numero
+numero = parseInt(prompt("Entre com um número inteiro: "))
+if(numero < 1) {
+    console.log("O número lido é negativo.")
+} else if(numero > 1){
+    console.log("O número lido é positivo.")
+} else {
+    console.log("O número lido é nulo.")
 }
 ```
 
-Observe que neste caso foram testadas duas condições: `numero < 1` e `numero > 1`. A segunda condição segue acompanhando o primeiro `senao`, indicando que esta condição só deverá ser verificada caso a primeira não seja verdadeira. Por fim, considerando que nenhuma das duas condições seja verdadeira, o código após o segundo `senao` poderá ser executado.
+Observe que neste caso foram testadas duas condições: `numero < 1` e `numero > 1`. A segunda condição segue acompanhando o primeiro `else`, indicando que esta condição só deverá ser verificada caso a primeira não seja verdadeira. Por fim, considerando que nenhuma das duas condições seja verdadeira, o código após o segundo `else` poderá ser executado.
 
 Mais uma vez:
-- Se `numero < 1` for `verdadeiro`, o código `escreva("O número lido é negativo.")` será executado.
-- Se `numero < 1` for `falso` e `numero > 1` for `verdadeiro`, o código `escreva("O número lido é positivo.")` será executado.
-- Se `numero < 1` for `falso` e `numero > 1` for `falso`, o código `escreva("O número lido é nulo.")` será executado.
+- Se `numero < 1` for `verdadeiro`, o código `console.log("O número lido é negativo.")` será executado.
+- Se `numero < 1` for `falso` e `numero > 1` for `verdadeiro`, o código `console.log("O número lido é positivo.")` será executado.
+- Se `numero < 1` for `falso` e `numero > 1` for `falso`, o código `console.log("O número lido é nulo.")` será executado.
 
 Tenha em mente que a quantidade de testes que podem ser realizados em sequência é basicamente ilimitada, mas não é comum vermos estruturas de decisão exageradamente longas.
 
-Para adquirir um maior domínio, teste os exemplos vistos, mas não pare por aí, crie seus próprios exemplos, teste condições compostas, como `idade > 18 e peso < 70`, estruturas com e sem um `senao`, com dois ou mais `senao se` até perceber que já está dominando o assunto.
+Para adquirir um maior domínio, teste os exemplos vistos, mas não pare por aí, crie seus próprios exemplos, teste condições compostas, como `idade > 18 && peso < 70`, estruturas com e sem um `else`, com dois ou mais `else if` até perceber que já está dominando o assunto.
 
-### 7.2. Escolha/Caso
+### 7.2. Switch/Case
 
-Seguindo a mesma linha das estruturas se/senão, o escolha/caso oferece uma maneira mais prática de resolver problemas onde há muitos valores possíveis para uma variável.
+Seguindo a mesma linha das estruturas `ìf`/`else`, o `switch`/`case` (escolha/caso) oferece uma maneira mais prática de resolver problemas onde há muitos valores possíveis para uma variável.
 
 Para que você possa entender melhor, imagine que precisemos construir uma calculadora que realize as quatro operações básicas: soma, subtração, divisão e multiplicação. Poderíamos solicitar que o usuário informasse a operação desejada e, logo após, os números a serem operados. Para soma, o usuário digitaria `+`, para subtração `-` e assim por diante.
 
-Utilizando a estrutura se/senão, poderíamos verificar a opção escolhida da seguinte forma:
+Utilizando a estrutura `if`/`else`, poderíamos verificar a opção escolhida da seguinte forma:
 
-```
-se(opcao == '+')
+```js
+if(opcao == '+')
 {
     // realiza a soma
 }
-senao se(opcao == '-')
+else if(opcao == '-')
 {
     // realiza a subtração
 }
-senao se(opcao == '/')
+else if(opcao == '/')
 {
     // realiza a divisão
 }
-senao se(opcao == '*')
+else if(opcao == '*')
 {
     // realiza a multiplicação
 }
@@ -548,55 +548,55 @@ senao se(opcao == '*')
 
 Você deve ter percebido que não declaramos nem lemos a variável `opcao`, tampouco descrevemos as operações, apenas comentamos. Não se preocupe com isto. O importante neste exemplo é entendermos como se dá a seleção de uma das opções.
 
-Com a estrutura escolha/caso, o exemplo anterior poderia ser construído da seguinte forma:
+Com a estrutura `switch`/`case`, o exemplo anterior poderia ser construído da seguinte forma:
 
-```
-escolha(opcao)
+```js
+switch(opcao)
 {
-    caso '+':
+    case '+':
         // realiza a soma
-    pare
+    break
 
-    caso '-':
+    case '-':
         // realiza a subtração
-    pare
+    break
 
-    caso '/':
+    case '/':
         // realiza divisão
-    pare
+    break
 
-    caso '*':
+    case '*':
         // realiza multiplicação
 }
 ```
 
-Com o comando `escolha`, selecionamos a variável a ser verificada, neste caso, `opcao`. Em seguida, definimos cada um dos possíveis valores para a variável escolhida com a palavra `caso`. A cada caso verificado, se este for verdadeiro, realizamos a operação selecionada. Em seguida, o comando `pare` é utilizado para impedir que as opções seguintes sejam verificadas mesmo após um caso verdadeiro. Falaremos mais sobre este comando no capítulo sobre **estruturas de repetição**.
+Com o comando `switch`, selecionamos a variável a ser verificada, neste caso, `opcao`. Em seguida, definimos cada um dos possíveis valores para a variável escolhida com a palavra `case`. A cada caso verificado, se este for verdadeiro, realizamos a operação selecionada. Em seguida, o comando `break` é utilizado para impedir que as opções seguintes sejam verificadas mesmo após um caso verdadeiro. Falaremos mais sobre este comando no capítulo sobre **estruturas de repetição**.
 
 Perceba que não são utilizados operadores relacionais para verificar, por exemplo, se o valor da variável `opcao` é igual a `+` ou `-`, apenas informamos a variável a ser comparada e quais são seus possíveis valores, neste caso: `+`, `-`, `/` e `*`.
 
-É importante termos em mente que a estrutura escolha/caso só pode ser utilizada para verificar variáveis dos tipos **inteiro** e **caracter**. Além disso, não é possível o uso de operadores relacionais para verificar se, por exemplo, a variável escolhida é maior ou menor que um valor qualquer.
+Observe que não é possível o uso de operadores relacionais para verificar se, por exemplo, a variável escolhida é maior ou menor que um valor qualquer.
 
-Ainda sobre o exemplo anterior, o que fazer caso o usuário não digite uma opção válida? E se o usuário simplesmente digitasse um ponto (`.`) ou qualquer outra coisa que não estamos esperando? Para situações assim, utilizamos o `caso contrario`. O `caso contrario` nos dá a possibilidade de definir o que fazer quando nenhum dos casos previstos é verdadeiro. De forma resumida, poderíamos aplicá-lo em nosso exemplo da seguinte maneira:
+Ainda sobre o exemplo anterior, o que fazer caso o usuário não digite uma opção válida? E se o usuário simplesmente digitasse um ponto (`.`) ou qualquer outra coisa que não estamos esperando? Para situações assim, utilizamos o `default`, que é o caso padrão. O `default` nos dá a possibilidade de definir o que fazer quando nenhum dos casos previstos é verdadeiro. De forma resumida, poderíamos aplicá-lo em nosso exemplo da seguinte maneira:
 
-```
-escolha(opcao)
+```js
+switch(opcao)
 {
-    caso '+':
+    case '+':
         // realiza a soma
-    pare
+    break
 
-    caso '-':
+    case '-':
         // realiza a subtração
-    pare
+    break
 
-    caso contrario:
+    default:
         // informa ao usuário que a opção é inválida
 }
 ```
 
 ## 8. Estruturas de repetição: como evitar a fadiga
 
-Quando programamos, algumas tarefas podem exigir esforços absurdamente repetitivos. Imagine uma situação em que seja necessário exibir uma lista numerada com 50 itens. Será que precisaríamos mesmo repetir o comando `escreva()` por 50 vezes?
+Quando programamos, algumas tarefas podem exigir esforços absurdamente repetitivos. Imagine uma situação em que seja necessário exibir uma lista numerada com 50 itens. Será que precisaríamos mesmo repetir o comando `console.log()` por 50 vezes?
 
 A boa notícia é que alguém já pensou nisso antes. As linguagens de programação possuem estruturas que chamamos de **estruturas de repetição** ou de **laços de repetição**. Estas estruturas são utilizadas sempre que nos deparamos com tarefas que exijam que um procedimento se repita por várias vezes.
 
@@ -621,11 +621,11 @@ while(1 == 1)
 }
 ```
 
-Neste exemplo, enquanto a condição `1 == 1` for avaliada como verdadeira, a expressão `escreva("um é igual a um.")` será executada. Pense nisso como um ciclo: avaliamos a condição, se ela for verdadeira, o código é executado, depois tudo se repete novamente.
+Neste exemplo, enquanto a condição `1 == 1` for avaliada como verdadeira, a expressão `console.log("um é igual a um.")` será executada. Pense nisso como um ciclo: avaliamos a condição, se ela for verdadeira, o código é executado, depois tudo se repete novamente.
 
 Se você testou o código acima, deve ter percebido que ele gerou um **loop infinito**, que é como chamamos os laços de repetição intermináveis. O motivo de esse laço de repetição ser interminável é bastante óbvio, pois sabemos que 1 será sempre igual a 1, logo a condição sempre será verdadeira.
 
-Quando a condição é avaliada como falsa, o código entre chaves não é executado e o programa segue para após a estrutura de repetição.
+Quando a condição é avaliada como falsa, o código entre chaves não é executado e o programa segue para após a estrutura de repetição. Apenas para exemplificar, sem o uso de uma linguagem de programação específica, poderíamos fazer o seguinte:
 
 ```
 enquanto(esta condição for verdadeira)
@@ -638,11 +638,11 @@ se a condição for falsa, o código continuará daqui
 
 Em muitos dos casos em que utilizamos laços de repetição, nós trabalhos com números inteiros. Considere, por exemplo, uma situação em que seja necessário imprimir todos os números inteiros de 1 a 10. Em casos como este, utilizamos variáveis do tipo inteiro que possam ter seu valor alterado progressivamente. A estas variáveis damos o nome de **contadoras**:
 
-```
-inteiro x = 1
-enquanto(x <= 10)
+```js
+var x = 1
+while(x <= 10)
 {
-    escreva(x)
+    console.log(x)
     x = x + 1
 }
 ```
@@ -653,41 +653,39 @@ Ao término desse programa, o valor de `x` será igual a `10` ou igual a `11`? P
 
 Se precisarmos realizar o caminho contrário, ou seja, imprimir todos os números inteiros de 10 a 1 (em ordem decrescente), o seguinte código seria suficiente:
 
-```
-inteiro x = 10
-enquanto(x >= 1)
+```js
+var x = 10
+while(x >= 1)
 {
-    escreva(x)
+    console.log(x)
     x = x - 1
 }
 ```
 
 Perceba que, neste exemplo, o valor de `x` é **decrementado**, ou seja, subtraímos `1` do valor de `x` a cada repetição. A condição verificada também é diferente: desta vez, verificamos a cada repetição se o valor de `x` é maior ou igual a `1`.
 
-De forma bastante resumida, podemos descrever a estrutura `enquanto() { }` da seguinte forma:
+De forma bastante resumida, podemos descrever a estrutura `while() { }` da seguinte forma:
 
 1. A condição é testada
 2. Se a condição for avaliada como verdadeira, o código entre chaves é executado, retorna-se ao passo 1
 3. Se a condição for avaliada como falsa, segue-se ao passo 4
 4. A estrutura é finalizada
 
-### 8.2. Faça/Enquanto
+### 8.2. Do/While
 
 A segunda estrutura de repetição que iremos abordar funciona de forma muito semelhante à primeira, com uma pequena diferença: a condição só é verificada após a primeira execução do código. Observe o exemplo:
 
 >> Escreva: um é igual a um. Enquanto um for igual a um, repita.
 
-Essa mesma situação pode ser descrita em código, utilizando Portugol, da seguinte forma:
+Essa mesma situação pode ser descrita em código, utilizando JavaScript, da seguinte forma:
 
-```
-faca
-{
-    escreva("um é igual a um.")
-}
-enquanto(1 == 1)
+```js
+do {
+    console.log("um é igual a um.")
+} while(1 == 1)
 ```
 
-De forma bastante resumida, podemos descrever a estrutura `faca { } enquanto()` da seguinte forma:
+De forma bastante resumida, podemos descrever a estrutura `do { } while()` da seguinte forma:
 
 1. O código entre chaves é executado
 2. A condição é testada
@@ -695,32 +693,32 @@ De forma bastante resumida, podemos descrever a estrutura `faca { } enquanto()` 
 4. Se a condição for avaliada como falsa, segue-se ao passo 5
 5. A estrutura é finalizada
 
-Se você ainda não conseguiu compreender a diferença entre `enquanto` e `faca enquanto`, reflita nas seguintes situações:
+Se você ainda não conseguiu compreender a diferença entre `while` e `do`/`while`, reflita nas seguintes situações:
 
-Enquanto:
+`While` (Enquanto):
 > Mariana pede a Felipe que vá ao mercado e lhe diz: Felipe, se os tomates estiverem bons, pegue um. Enquanto houver tomates bons, continue pegando tomates. Se não houver mais tomates bons, pare de pegar os tomates.
 
-Faça/Enquanto:
+`Do`/ `While` (Faça/Enquanto):
 > Mariana pede a Felipe que vá ao mercado e lhe diz: Felipe, pegue um tomate. Enquanto houver tomates bons, continue pegando tomates. Se não houver mais tomates bons, pare de pegar os tomates.
 
 ![alt text](imagens/tomato.jpg "Tomate")
 
-### 8.3. Para
+### 8.3. For
 
-A última estrutura de repetição que iremos abordar tem um comportamento bastante semelhante ao das anteriores, porém, tem uma finalidade muito específica: a estrutura de decisão `para` é a mais adequada em situações em que o número de repetições a serem executadas já é conhecido.
+A última estrutura de repetição que iremos abordar tem um comportamento bastante semelhante ao das anteriores, porém, tem uma finalidade muito específica: a estrutura de decisão `for` (para) é a mais adequada em situações em que o número de repetições a serem executadas já é conhecido.
 
-Observe como faríamos para imprimir os números inteiros de 1 a 1000 utilizando `para`:
+Observe como faríamos para imprimir os números inteiros de 1 a 1000 utilizando `for`:
 
-```
-para(inteiro x = 1; x <= 1000; x++)
+```js
+for(var x = 1; x <= 1000; x++)
 {
-    escreva(x)
+    console.log(x)
 }
 ```
 
-Você pode ter a impressão de que a condição entre parênteses ficou maior, mas não é exatamente isso o que acontece. Ao utilizarmos a estrutura `para`, temos acesso a três regras, separadas por ponto e vírgula, que definirão como a estrutura será executada. A estas regras damos o nome de **parâmetros** ou **argumentos**.
+Você pode ter a impressão de que a condição entre parênteses ficou maior, mas não é exatamente isso o que acontece. Ao utilizarmos a estrutura `for`, temos acesso a três regras, separadas por ponto e vírgula, que definirão como a estrutura será executada. A estas regras damos o nome de **parâmetros** ou **argumentos**.
 
-1. O primeiro parâmetro é um espaço disponibilizado para a declaração e inicialização de variáveis que serão utilizadas apenas dentro desta estrutura `para`. Observe que no exemplo acima, nós declaramos e inicializamos a variável `x` com o valor `1`. A variável `x` será nossa contadora e, por vezes, também poderá ser chamada de **variável de controle**.
+1. O primeiro parâmetro é um espaço disponibilizado para a declaração e inicialização de variáveis que serão utilizadas apenas dentro desta estrutura `for`. Observe que no exemplo acima, nós declaramos e inicializamos a variável `x` com o valor `1`. A variável `x` será nossa contadora e, por vezes, também poderá ser chamada de **variável de controle**.
 2. O segundo parâmetro é referente à condição que será verificada a cada repetição. Enquanto a expressão informada for avaliada como verdadeira, o código continuará a ser repetido. No exemplo acima, definimos que o código será repetido enquanto o valor de `x` for menor ou igual a `1000`.
 3. O terceiro e último parâmetro é destinado à definição da alteração que a variável de controle irá sofrer a cada repetição. Geralmente, definimos nesta posição uma expressão de incremento ou de decremento da variável de controle. Em nosso exemplo, a variável `x` é incrementada em `1` a cada repetição.
 
@@ -728,15 +726,15 @@ De maneira resumida, podemos dizer que: considerando a(s) variável(eis) de cont
 
 #### Expressões de incremento e decremento
 
-Você deve ter notado em nossa estrutura de repetição `para` o uso da expressão `x++`. Os operadores `++` podem ser utilizados com qualquer variável numérica, seja inteira ou real, quando se deseja incrementar seu valor em `1`.
+Você deve ter notado em nossa estrutura de repetição `for` o uso da expressão `x++`. Os operadores `++` podem ser utilizados com qualquer variável numérica, seja inteira ou real, quando se deseja incrementar seu valor em `1`.
 
 Para decrementar o valor de `x` em `1`, poderíamos ter feito `x--`.
 
-Observe que isto pode ser utilizado em qualquer momento no código, tanto na estrutura `para` quanto em qualquer outra estrutura de repetição ou mesmo fora de uma estrutura de repetição.
+Observe que isto pode ser utilizado em qualquer momento no código, tanto na estrutura `for` quanto em qualquer outra estrutura de repetição ou mesmo fora de uma estrutura de repetição.
 
 Os seguintes métodos de incremento são equivalentes:
 
-```
+```js
 x = x + 1
 x += 1
 x++
@@ -746,7 +744,7 @@ Qualquer um dos métodos acima fará com que o valor contido em `x` seja increme
 
 O mesmo é válido para decremento:
 
-```
+```js
 x = x - 1
 x -= 1
 x--
@@ -754,7 +752,7 @@ x--
 
 Caso seja necessário incrementar ou decrementar o valor de uma variável em mais que `1`, os operadores `++` ou `--` não poderão ajudar. Em casos como estes, apenas os dois primeiros métodos mostrados irão funcionar. Exemplo:
 
-```
+```js
 // Incremento
 x = x + 3
 x += 3
@@ -764,53 +762,51 @@ y = y - 5
 y -= 5
 ```
 
-#### O comando pare
+#### O comando break
 
-O mesmo comando `pare` que utilizamos anteriormente com a estrutura `escolha/caso` volta a ser muito útil com estruturas de repetição. O comando `pare` pode ser utilizado para interromper uma estrutura de repetição antes que ela atinja sua condição de parada.
+O mesmo comando `break` (pare!) que utilizamos anteriormente com a estrutura `switch`/`case` volta a ser muito útil com estruturas de repetição. O comando `break` pode ser utilizado para interromper uma estrutura de repetição antes que ela atinja sua condição de parada.
 
 Um caso bastante típico acontece em programas que "perguntam ao usuário" quando parar. Imagine um programa que, infinitamente, leia um nome e responda com uma saudação. A cada repetição, este programa questiona ao usuário se ele deseja continuar.
 
-```
-cadeia nome
-caracter resposta
+```js
+var nome, resposta
 
-enquanto(verdadeiro)
+while(true)
 {
-    leia(nome)
-    escreva("Olá, ", nome, "! Tenha um bom dia.")
+    nome = prompt("Entre com seu nome: ")
+    alert("Olá, " + nome + "! Tenha um bom dia.")
 
-    escreva("Deseja continuar? (s/n)")
-    leia(resposta)
+    resposta = prompt("Deseja continuar? (s/n)")
 
-    se(resposta == 'n')
+    if(resposta == 'n')
     {
-        pare
+        break
     }
 }
 ```
 
-Perceba que, a estrutura de repetição `enquanto` deverá ser executada infinitamente, já que a expressão entre parênteses é sempre `verdadeiro`. Após mostrar visualizar a saudação, o usuário deverá digitar `n` caso deseje parar o programa. Desta forma, enquanto a resposta não for `n`, o programa continuará a ser executado.
+Perceba que, a estrutura de repetição `while` deverá ser executada infinitamente, já que a expressão entre parênteses é sempre `true`. Após mostrar visualizar a saudação, o usuário deverá digitar `n` caso deseje parar o programa. Desta forma, enquanto a resposta não for `n`, o programa continuará a ser executado.
 
-Saiba que o comando `pare` pode ser utilizado com qualquer uma das três estruturas de repetição.
+Saiba que o comando `break` pode ser utilizado com qualquer uma das três estruturas de repetição.
 
-Em algumas situações, encontraremos estruturas de repetição dentro de outras estruturas de repetição. Em casos assim, saiba que o comando `pare` irá parar apenas a estrutura de repetição mais próxima. Exemplo:
+Em algumas situações, encontraremos estruturas de repetição dentro de outras estruturas de repetição. Em casos assim, saiba que o comando `break` irá parar apenas a estrutura de repetição mais próxima. Exemplo:
 
-```
-para(inteiro x = 1; x <= 10; x++)
+```js
+for(var x = 1; x <= 10; x++)
 {
-    para(inteiro y = 1; y <= 5; y++)
+    for(var y = 1; y <= 5; y++)
     {
-        escreva("\nX: ", x, "\nY: ", y)
-        se((x + y) % 3 == 0)
+        console.log("X: " +  x + " - Y: " + y)
+        if((x + y) % 3 == 0)
         {
-            escreva("\nÉ MÚLTIPLO DE 3. PAROU!")
-            pare
+            console.log("É MÚLTIPLO DE 3. PAROU!")
+            break
         }
     }    
 }
 ```
 
-Neste caso, apenas o segundo para, o que utiliza a variável `y` como variável de controle, será parado. A estrutura anterior deverá seguir para o próximo valor e dar continuidade ao código. Teste este exemplo e veja como ele se comporta.
+Neste caso, apenas o segundo `for`, o que utiliza a variável `y` como variável de controle, será parado. A estrutura anterior deverá seguir para o próximo valor e dar continuidade ao código. Teste este exemplo e veja como ele se comporta.
 
 ## 9. Vetores e matrizes: expandindo as possibilidades
 
