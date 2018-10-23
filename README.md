@@ -1,5 +1,3 @@
-> O conteúdo deste material está passando por atualizações. Seja paciente. Passaremos a utilizar JavaScript em todos os exemplos.
-
 # Apostila de Introdução à Lógica de Programação
 
 A **Lógica de Programação** é a técnica de encadear pensamentos para atingir determinado objetivo por meio de um computador ou outro sistema programável.
@@ -227,7 +225,7 @@ Recomendamos que você faça a leitura dos capítulos a seguir testando cada um 
 
 No Google Chrome, pressione <kbd>Ctrl</kbd> + <kbd>Shift</kbd> + <kbd>i</kbd> para abrir as **Ferramentas do desenvolvedor**. Estas ferramentas foram inicialmente pensadas para que desenvolvedores pudessem testar seus projetos. Nós as utilizaremos para executar os nossos programas.
 
-<img src="imagens/console.png" alt="Console do Google Chrome" width="300px">
+<img src="imagens/console.png" alt="Console do Google Chrome" width="450px">
 
 Com a guia de ferramentas do desenvolvedor aberta, vá até a aba console, digite o código do exemplo abaixo e pressione <kbd>Enter</kbd>:
 
@@ -819,13 +817,16 @@ Neste caso, apenas o segundo para, o que utiliza a variável `y` como variável 
 Imagine o seguinte problema:
 > Crie um algoritmo que leia o nome e as 4 notas de 50 alunos, calcule a média de cada aluno e informe quais foram aprovados e quais foram reprovados.
 
-Certamente, você, começou a pensar em uma solução semalhante à seguinte:
+Certamente, você, começou a pensar em uma solução semelhante à seguinte:
 
-```
-real n1, n2, n3, n4, media
-para(inteiro x = 1; x <= 50; x++)
+```js
+var n1, n2, n3, n4, media
+for(var x = 1; x <= 50; x++)
 {
-    leia(n1, n2, n3, n4)
+    n1 = prompt()
+    n2 = prompt()
+    n3 = prompt()
+    n4 = prompt()
     media = (n1 + n2 + n3 + n4)/4
     ...
 }
@@ -835,11 +836,14 @@ Como você faria se precisasse armazenar as 4 notas de cada um desses 50 alunos 
 
 Com vetores ou matrizes, é possível armazenar inúmeros valores em uma única variável. Assim, você poderia ter algo semelhante a:
 
-```
-real n1[50], n2[50], n3[50], n4[50], media[50]
-para(inteiro n = 0; n <= 49; n++)
+```js
+var n1 = [], n2 = [], n3 = [], n4 = [], media = []
+for(var n = 0; n <= 49; n++)
 {
-    leia(n1[n], n2[n], n3[n], n4[n])
+    n1[n] = prompt()
+    n2[n] = prompt()
+    n3[n] = prompt()
+    n4[n] = prompt()
     media[n] = (n1[n] + n2[n] + n3[n] + n4[n])/4
     ...
 }
@@ -853,33 +857,28 @@ Por definição, vetores são estruturas unidimensionais, geralmente homogêneas
 
 Contamos as posições de um vetor sempre a partir de `0`. A última posição de um vetor sempre poderá ser representada por `n-1`, onde `n` é o tamanho do vetor. Observe: em um vetor `vet` de tamanho `n == 8`, a última posição de `vet` será representada pelo índice `7`, que corresponde a `n-1`.
 
-Em cada posição de um vetor há um único valor. Ou seja: em cada posição de um vetor do tipo inteiro há um único valor do tipo inteiro, como na figura a seguir.
+Em cada posição de um vetor há um único valor:
 
 ![Vetor](imagens/vetor0.png "Vetor")
 
-Este mesmo vetor poderia ser construído em Portugol da seguinte maneira:
+Este mesmo vetor poderia ser construído em JavaScript da seguinte maneira:
 
-```
-inteiro numeros[8] = { 54, 21, 100, 89, 90, 32, 23, 74 }
+```js
+var numeros = [ 54, 21, 100, 89, 90, 32, 23, 74 ]
 ```
 
-Neste caso, utilizamos um par de chaves (`{ }`) para criar uma lista de valores que seriam atribuídos ao vetor `numeros`.
+Neste caso, utilizamos um par de colchetes (`[ ]`) para criar uma lista de valores que seriam atribuídos à variável `numeros`. O termo utilizado pela linguagem JavaScript para representar um vetor é `array`, que significa **lista**.
 
-Tenha em mente também que a definição do tamanho do vetor, representada pelo valor `8` neste exemplo, não é obrigatória quando a este vetor for atribuída uma lista de valores. Se tivéssemos feito da seguinte forma, o resultado seria o mesmo:
-
-```
-inteiro numeros[] = { 54, 21, 100, 89, 90, 32, 23, 74 }
-```
 
 Apesar disto, nem sempre desejamos atribuir valores a um vetor logo em sua inicialização. Muitas vezes, queremos um vetor vazio que possa ter seus valores informados pelo usuário ou através de atribuições sucessivas ao longo do programa. Poderíamos ter declarado o vetor `numeros` sem nenhum valor e o preenchido ao longo do código:
 
-```
-inteiro numeros[8]
+```js
+var numeros = []
 
-leia(numeros[0]) // Suponha que o usuário digitou 54
-leia(numeros[1]) // Suponha que o usuário digitou 21
-leia(numeros[2]) // Suponha que o usuário digitou 100
-leia(numeros[3]) // Suponha que o usuário digitou 89
+numeros[0] = prompt() // Suponha que o usuário digitou 54
+numeros[1] = prompt() // Suponha que o usuário digitou 21
+numeros[2] = prompt() // Suponha que o usuário digitou 100
+numeros[3] = prompt() // Suponha que o usuário digitou 89
 numeros[4] = 90
 numeros[5] = 32
 numeros[6] = 23
@@ -890,45 +889,54 @@ Veja que cada valor lido ou atribuído foi armazenado em uma posição diferente
 
 Para simplificação do trabalho com vetores grandes, recomenda-se o uso de estruturas de repetição. Geralmente, utiliza-se a estrutura de repetição `para`, que oferece um mecanismo mais simples para se trabalhar com intervalos. Observe o exemplo a seguir:
 
-```
-cadeia listaDeNomes[100]
-para(inteiro x = 0; x <= 99; x++)
+```js
+var listaDeNomes = []
+for(var x = 0; x <= 99; x++)
 {
-    leia(listaDeNomes[x])
+    listaDeNomes[x] = prompt()
 }
 
-para(inteiro x = 0; x <= 99; x++)
+for(var x = 0; x <= 99; x++)
 {
-    escreva(listaDeNomes[x])
+    listaDeNomes[x] = prompt()
 }
 ```
 
-O algoritmo acima deverá ler 100 nomes e depois imprimí-los. Perceba que ao declarar a variável `listaDeNomes`, foi necessário definir seu tamanho, que é igual a `100`.
+O algoritmo acima deverá ler 100 nomes e depois imprimi-los. Perceba que ao declarar a variável `listaDeNomes`, foi necessário definir seu tamanho, que é igual a `100`.
 
-Com uma estrutura de repetição `para`, percorremos o vetor desde a posição 0 até a 99, armazenando cada nome lido em uma das posições.
+Com uma estrutura de repetição `for`, percorremos o vetor desde a posição 0 até a 99, armazenando cada nome lido em uma das posições.
 
 Novamente, com uma estrutura de repetição, percorremos cada uma das posições, imprimindo o nome armazenado em cada uma delas.
 
-Este mesmo algoritmo poderia ser construído com as estruturas de repetição `enquanto` e/ou `faca/enquanto` da seguinte maneira:
+Este mesmo algoritmo poderia ser construído com as estruturas de repetição `while` e/ou `do/while` da seguinte maneira:
 
-```
-cadeia listaDeNomes[100]
-inteiro x = 0
+```js
+var listaDeNomes = [], x = 0
 
-enquanto(x <= 99)
+while(x <= 99)
 {
-    leia(listaDeNomes[x])
+    listaDeNomes[x] = prompt()
     x++
 }
 
 x = 0
-faca
+do
 {
-    escreva(listaDeNomes[x])
+    listaDeNomes[x] = prompt()
     x++
 }
-enquanto(x <= 99)
+while(x <= 99)
 ```
+
+#### Tipos em vetores JavaScript
+
+Assim como em variáveis comuns, vetores não possuem um tipo definido de dados que podem armazenar na linguagem JavaScript. Isto faz com que possamos ter vetores como o seguinte:
+
+```js
+var lista = ['João', 16, 'Maria', 15, 'Carolina', 18]
+```
+
+Em linguagens como C, C++ e Java, isto não seria possível, já que, nestas linguagens, vetores são estruturas homogêneas (que armazenam um único tipo de dado).
 
 ### 9.2. Matrizes
 
@@ -938,41 +946,41 @@ A matriz abaixo, por exemplo, é uma matriz de tamanho `3 X 3`, ou seja: 3 linha
 
 ![alt text](imagens/matriz.png "Matriz")
 
-Poderíamos declará-la em Portugol da seguinte maneira:
+Poderíamos declará-la em JavaScript da seguinte maneira:
 
-```
-inteiro tabela[3][3] = {
-                        { 54, 21, 3 },
-                        { 29, 99, 306 },
-                        { 76, 5, 11 }
-                       }
+```js
+var tabela = [
+                [ 54, 21, 3 ],
+                [ 29, 99, 306 ],
+                [ 76, 5, 11 ]
+]
 ```
 
 Ou em uma única linha, caso não se preocupe com a formatação:
 
-```
-inteiro tabela[3][3] = { { 54, 21, 3 }, { 29, 99, 306 }, { 76, 5, 11 } }
+```js
+var tabela = [[ 54, 21, 3 ], [ 29, 99, 306 ], [ 76, 5, 11 ]]
 ```
 
-Anteriormente, dissemos que vetores são como "coleções de variáveis". Se observarmos com atenção, cada par de chaves nesta matriz é um conjunto, uma coleção de valores, um vetor. Temos três conjuntos com três valores cada. Os três conjuntos estão dentro de um conjunto maior, por isso dizemos que matrizes são como "coleções de vetores".
+Anteriormente, dissemos que vetores são como "coleções de variáveis". Se observarmos com atenção, cada par de colchetes nesta matriz é um conjunto, uma coleção de valores, um vetor. Temos três conjuntos com três valores cada. Os três conjuntos estão dentro de um conjunto maior, por isso dizemos que matrizes são como "coleções de vetores".
 
 Todos os conceitos vistos anteriormente sobre vetores são completamente válidos ao se tratar de matrizes, adicionando-se apenas mais uma dimensão. Observe que, agora, para cada uma das `n` linhas temos `m` colunas. Desta forma, para nos referirmos a qualquer posição desta matriz, precisaremos especificar uma linha e uma coluna:
 
-```
-escreva(tabela[1][2]) // O valor impresso será 306
-escreva(tabela[2][1]) // O valor impresso será 5
+```js
+console.log(tabela[1][2]) // O valor impresso será 306
+console.log(tabela[2][1]) // O valor impresso será 5
 ```
 
 Para percorrer matrizes, o método mais comumente utilizado é bastante semelhante ao utilizado para vetores. No entanto, como agora precisamos percorrer tanto linhas quanto colunas, muitas vezes torna-se necessário o uso de estruturas de repetição encadeadas:
 
-```
-inteiro tabela[3][3] = { { 54, 21, 3 }, { 29, 99, 306 }, { 76, 5, 11 } }
+```js
+var tabela = [[ 54, 21, 3 ], [ 29, 99, 306 ], [ 76, 5, 11 ]]
 
-para(inteiro x = 0; x <= 2; x++)
+for(var x = 0; x <= 2; x++)
 {
-    para(inteiro y = 0; y <= 2; y++)
+    for(var y = 0; y <= 2; y++)
     {
-        escreva(tabela[x][y])
+        console.log(tabela[x][y])
     }
 }
 ```
@@ -981,16 +989,16 @@ No exemplo acima temos duas estruturas de repetição: a mais externa para perco
 
 Para deixar este exemplo mais didático, teste-o da seguinte maneira e observe o que acontece:
 
-```
-inteiro tabela[3][3] = { { 54, 21, 3 }, { 29, 99, 306 }, { 76, 5, 11 } }
+```js
+var tabela = [[ 54, 21, 3 ], [ 29, 99, 306 ], [ 76, 5, 11 ]]
 
-para(inteiro x = 0; x <= 2; x++)
+for(var x = 0; x <= 2; x++)
 {
-    escreva("\n Repetição ", x , " do primeiro para.")
-    para(inteiro y = 0; y <= 2; y++)
+    console.log("Repetição " + x + " do primeiro para.")
+    for(var y = 0; y <= 2; y++)
     {
-        escreva("\n Repetição ", y , " do segundo para.")
-        escreva("\n Linha " , x , " / Coluna " , y ,": ", tabela[x][y])
+        console.log("Repetição " + y + " do segundo para.")
+        console.log("Linha " + x + " / Coluna " + y + ": " + tabela[x][y])
     }
 }
 ```
@@ -1007,29 +1015,59 @@ Se observarmos com calma, há padrões bastante simples pelos quais podemos iden
 
 Os elementos da diagonal primária sempre estarão em posições em que o número da linha é igual ao número da coluna. Se desejarmos percorrer os elementos da diagonal principal de uma determinada matriz de tamanho `n`, podemos contar de `0` a `n-1` utilizando um único contador para linhas e colunas:
 
-```
-inteiro matriz[3][3] = { {-1, 2, -5}, {3, 0, -3}, {5, 7, -6} }
-inteiro n = 3
-para(inteiro x = 0; x < n; x++)
+```js
+var matriz = [[ -1, 2, -5 ], [ 3, 0, -3 ], [ 5, 7, -6 ]]
+var n = 3
+for(var x = 0; x < n; x++)
 {
-        escreva("\n", matriz[x][x])
+    console.log(matriz[x][x])
 }
 ```
 
 Já os elementos da diagonal secundária de uma matriz de tamanho `n` podem ser identificados se começarmos contando de `0` nas linhas e de `n-1` nas colunas. O elemento seguinte da diagonal secundária sempre estará uma linha "após" e uma coluna "antes" da atual:
 
-```
-inteiro matriz[3][3] = { {-1, 2, -5}, {3, 0, -3}, {5, 7, -6} }
-inteiro n = 3
-para(inteiro x = 0; x < n; x++)
+```js
+var matriz = [[ -1, 2, -5 ], [ 3, 0, -3 ], [ 5, 7, -6 ]]
+var n = 3
+for(var x = 0; x < n; x++)
 {
-        escreva("\n", matriz[x][n-1-x])
+    console.log(matriz[x][n-1-x])
 }
 ```
 
 ## 10. Depuração: solucionando erros
 
-To do.
+### ReferenceError
+
+```js
+console.log(x)
+```
+
+```js
+Uncaught ReferenceError: x is not defined
+```
+
+### TypeError
+
+```js
+console.Log("Olá, mundo!")
+```
+
+```js
+Uncaught TypeError: console.Log is not a function
+```
+
+A mensagem de erro diz que `console.Log` não é uma função.
+
+### SyntaxError
+
+```js
+console..log("Olá, mundo!")
+```
+
+```js
+Uncaught SyntaxError: Unexpected token .
+```
 
 ## Lista 1 - Expressões, entrada e saída de dados
 
