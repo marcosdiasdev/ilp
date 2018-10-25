@@ -1031,6 +1031,38 @@ for(var x = 0; x < n; x++)
 }
 ```
 
+### 9.3. Recursos para arrays JavaScript
+
+
+#### push()
+A função `push()` adiciona um elemento ao final de um `array`:
+
+```js
+var cidades = ['Rio de Janeiro', 'São Paulo', 'Salvador']
+console.log(cidades) // Rio de Janeiro, São Paulo, Salvador
+cidades.push('Palmas')
+console.log(cidades) // Rio de Janeiro, São Paulo, Salvador, Palmas
+```
+
+#### pop()
+A função `pop()` remove o último elemento de um `array`:
+
+```js
+var carros = ['Mustang', 'Challenger', 'Camaro', 'Fusca']
+console.log(carros) // Mustang, Challenger, Camaro, Fusca
+carros.pop()
+console.log(carros) // Mustang, Challenger, Camaro
+```
+
+#### for...of
+
+```js
+var produtos = ['Tomate', 'Abacaxi', 'Cebola']
+for(item of produtos) {
+    console.log(item)
+}
+```
+
 ## 10. Depuração: solucionando erros
 
 ### ReferenceError
@@ -1039,9 +1071,13 @@ for(var x = 0; x < n; x++)
 console.log(x)
 ```
 
+No código acima, a variável `x` nunca foi declarada. A seguinte mensagem de erro será exibida:
+
 ```js
-Uncaught ReferenceError: x is not defined
+"Uncaught ReferenceError: x is not defined"
 ```
+
+Em tradução livre: "Erro de referência: x não está definida".
 
 ### TypeError
 
@@ -1049,11 +1085,13 @@ Uncaught ReferenceError: x is not defined
 console.Log("Olá, mundo!")
 ```
 
+No código acima, o nome da função `console.log()` está escrito incorretamente, com uma letra maiúscula. A seguinte mensagem de erro será exibida:
+
 ```js
-Uncaught TypeError: console.Log is not a function
+"Uncaught TypeError: console.Log is not a function"
 ```
 
-A mensagem de erro diz que `console.Log` não é uma função.
+Em tradução livre: "Erro de tipo: console.Log não é uma função".
 
 ### SyntaxError
 
@@ -1061,9 +1099,13 @@ A mensagem de erro diz que `console.Log` não é uma função.
 console..log("Olá, mundo!")
 ```
 
+No código acima, há dois pontos separando o objeto `console` da função `log`. A seguinte mensagem de erro será exibida:
+
 ```js
-Uncaught SyntaxError: Unexpected token .
+"Uncaught SyntaxError: Unexpected token ."
 ```
+
+Em tradução livre: "Erro de sintaxe: sinal . não esperado".
 
 ## Lista 1 - Expressões, entrada e saída de dados
 
@@ -1117,7 +1159,7 @@ Uncaught SyntaxError: Unexpected token .
 5. Construa um programa que funcione como um menu para uma lanchonete. Seu programa deverá iniciar mostrando o nome da sua lanchonete. Em seguida, seu programa deverá pedir o nome do usuário e, após lê-lo, exibir uma mensagem de boas-vindas. Após isso, seu programa deverá mostrar as opções de lanches disponíveis e seus preços: mostre pelo menos 6 opções de lanches diferentes. Permita que o usuário escolha uma das opções de lanches e, após a escolha, mostre a ele uma mensagem informando a opção que ele escolheu e quanto seu pedido irá custar. Lembre-se de avisar ao usuário caso ele escolha uma opção inexistente.
 6. Construa um programa que leia a primeira letra do mês de nascimento de uma pessoa e informe em quais meses essa pessoa pode ter nascido. Caso não exista um mês que comece com a letra lida, informe ao usuário que ele se enganou.
 
-![alt text](imagens/meses.png "Meses")
+<img src="imagens/meses.png" alt="Meses" width="280px">
 
 ## Lista 4 - Laços de Repetição: Enquanto e Faça/Enquanto
 
