@@ -604,7 +604,7 @@ As três estruturas de repetição que abordaremos são: `while` (enquanto), `do
 
 Assim como nas estruturas de decisão, o funcionamento de uma estrutura de repetição é baseado em uma condição, que mais uma vez deverá ser representada através de uma expressão lógica.
 
-A seguir, conheceremos cada uma das estruturas de repetição mais a fundo.
+A seguir, conheceremos cada uma das estruturas de repetição mais a fundo. Antes de começarmos, tenha em mente que sempre é possível utilizar qualquer uma das três estruturas de repetição em um programa onde elas se façam necessárias.
 
 ### 8.1. While
 
@@ -724,7 +724,7 @@ Você pode ter a impressão de que a condição entre parênteses ficou maior, m
 
 De maneira resumida, podemos dizer que: considerando a(s) variável(eis) de controle definida(s), enquanto a condição informada for verdadeira, o valor da(s) variável(eis) de controle será alterado e o código entre chaves será executado.
 
-#### Expressões de incremento e decremento
+### 8.4. Expressões de incremento e decremento
 
 Você deve ter notado em nossa estrutura de repetição `for` o uso da expressão `x++`. Os operadores `++` podem ser utilizados com qualquer variável numérica, seja inteira ou real, quando se deseja incrementar seu valor em `1`.
 
@@ -762,7 +762,7 @@ y = y - 5
 y -= 5
 ```
 
-#### O comando break
+### 8.5. O comando break
 
 O mesmo comando `break` (pare!) que utilizamos anteriormente com a estrutura `switch`/`case` volta a ser muito útil com estruturas de repetição. O comando `break` pode ser utilizado para interromper uma estrutura de repetição antes que ela atinja sua condição de parada.
 
@@ -865,7 +865,6 @@ var numeros = [ 54, 21, 100, 89, 90, 32, 23, 74 ]
 
 Neste caso, utilizamos um par de colchetes (`[ ]`) para criar uma lista de valores que seriam atribuídos à variável `numeros`. O termo utilizado pela linguagem JavaScript para representar um vetor é `array`, que significa **lista**.
 
-
 Apesar disto, nem sempre desejamos atribuir valores a um vetor logo em sua inicialização. Muitas vezes, queremos um vetor vazio que possa ter seus valores informados pelo usuário ou através de atribuições sucessivas ao longo do programa. Poderíamos ter declarado o vetor `numeros` sem nenhum valor e o preenchido ao longo do código:
 
 ```js
@@ -887,24 +886,24 @@ Para simplificação do trabalho com vetores grandes, recomenda-se o uso de estr
 
 ```js
 var listaDeNomes = []
-for(var x = 0; x <= 99; x++)
+for(var x = 0; x < 100; x++)
 {
     listaDeNomes[x] = prompt()
 }
 
-for(var x = 0; x <= 99; x++)
+for(var x = 0; x < 100; x++)
 {
-    listaDeNomes[x] = prompt()
+    console.log(listaDeNomes[x])
 }
 ```
 
-O algoritmo acima deverá ler 100 nomes e depois imprimi-los. Perceba que ao declarar a variável `listaDeNomes`, foi necessário definir seu tamanho, que é igual a `100`.
+O algoritmo acima deverá ler 100 nomes, armazenar cada um deles em uma posição de um vetor e depois imprimi-los. Em linguagens como C e Java, ao declarar a variável `listaDeNomes` seria necessário definir seu tamanho, que é igual a `100`.
 
 Com uma estrutura de repetição `for`, percorremos o vetor desde a posição 0 até a 99, armazenando cada nome lido em uma das posições.
 
 Novamente, com uma estrutura de repetição, percorremos cada uma das posições, imprimindo o nome armazenado em cada uma delas.
 
-Este mesmo algoritmo poderia ser construído com as estruturas de repetição `while` e/ou `do/while` da seguinte maneira:
+Este mesmo algoritmo poderia ser construído com a estrutura de repetição `while`:
 
 ```js
 var listaDeNomes = [], x = 0
@@ -914,8 +913,14 @@ while(x <= 99)
     listaDeNomes[x] = prompt()
     x++
 }
+```
 
-x = 0
+Ou `do/while`:
+
+```js
+var listaDeNomes = []
+var x = 0
+
 do
 {
     listaDeNomes[x] = prompt()
@@ -924,9 +929,11 @@ do
 while(x <= 99)
 ```
 
+Observe que nestes dois últimos exemplos nós não fizemos a impressão dos nomes lidos. Para que a impressão ocorra, apenas duplique a estrutura de repetição, substituindo a linha de leitura por uma de escrita, utilizando `console.log()` ou `document.write()`.
+
 #### Tipos em vetores JavaScript
 
-Assim como em variáveis comuns, vetores não possuem um tipo definido de dados que podem armazenar na linguagem JavaScript. Isto faz com que possamos ter vetores como o seguinte:
+Assim como variáveis comuns, vetores não possuem um tipo definido de dados que podem armazenar na linguagem JavaScript. Isto faz com que possamos ter vetores como o seguinte:
 
 ```js
 var lista = ['João', 16, 'Maria', 15, 'Carolina', 18]
@@ -1063,7 +1070,7 @@ for(item of produtos) {
 }
 ```
 
-## 10. Depuração: solucionando erros
+## 10. Depuração: solucionando erros comuns em JavaScript
 
 ### ReferenceError
 
@@ -1207,11 +1214,10 @@ Em tradução livre: "Erro de sintaxe: sinal . não esperado".
 3. Com um vetor, leia 5 números inteiros e imprima-os em ordem inversa. Ex.: 5,1,4,8,0 – 0,8,4,1,5.
 4. Com um vetor, leia 10 números reais. Imprima os números lidos, multiplicando os números de posições ímpares por 1.05, e os de posições pares por 1.02.
 5. Com um vetor, leia 5 números reais, imprima-os na ordem lida e na ordem inversa.
-6. Declare dois vetores de 10 posições do tipo inteiro. Preencha o primeiro lendo entradas do usuário. Copie o conteúdo do primeiro para o segundo. Imprima os dois vetores lado a lado.
+6. Declare dois vetores, preencha o primeiro com 10 números inteiros lidos, copie o conteúdo do primeiro para o segundo, depois imprima os dois vetores lado a lado.
 7. Em um vetor que contém as médias de uma turma de 10 alunos, calcule a média da turma e conte quantos alunos obtiveram nota acima da média da turma. Escreva a média da turma e o total de alunos acima da média.
-8. Declare dois vetores de 5 posições do tipo inteiro e um vetor de 10 posições do tipo inteiro. Preencha os dois vetores menores, depois copie os valores dos dois para o maior vetor.
-9. Declare um vetor de 5 posições do tipo cadeia. Preencha-o com 5 nomes diferentes. A seguir, permita que o usuário digite um nome. Se este nome estiver no vetor, informe que tal pessoa foi encontrada. Senão, informe que tal pessoa não foi encontrada.
-10. Declare três vetores de 5 posições. Preencha o primeiro e depois o segundo. Por fim, percorra os três vetores simultaneamente, preenchendo o terceiro com as somas dos outros dois. Imprima os três lado a lado.
+8. Declare um vetor com 5 nomes de pessoas diferentes. Em seguida, permita que o usuário digite um nome. Se este nome estiver no vetor, informe que tal pessoa foi encontrada. Senão, informe que tal pessoa não foi encontrada.
+9. Declare três vetores. Preencha o primeiro e depois o segundo, cada um com 5 números inteiros lidos. Por fim, percorra os três vetores simultaneamente, preenchendo o terceiro com as somas dos outros dois. Imprima os três lado a lado.
 
 ![alt text](imagens/vetor1.png "Vetores")
 
@@ -1228,10 +1234,7 @@ Em tradução livre: "Erro de sintaxe: sinal . não esperado".
 9. Preencha uma matriz de 4 x 3 com números inteiros. Ao fim, leia um número inteiro e escreva apenas os valores dessa matriz que forem divisíveis pelo número lido.
 10. Com uma matriz de 5 x 2, leia os nomes e idades de 5 pessoas. Ao fim, informe quantas destas pessoas são menores de 18 anos e quantas são maiores.
 11. Preencha duas matrizes de 4 x 2 e gere uma matriz soma. Ex.: `soma[1][1] = a[1][1] + b[1][1]`.
-
-## Lista 9 - Desafios com Matrizes
-
-1. Utilizando uma matriz de 3 x 3, construa um Jogo da Velha que possa ser jogado por duas pessoas. Ao fim do jogo, informe se há um vencedor.
+12. Utilizando uma matriz de 3 x 3, construa um Jogo da Velha que possa ser jogado por duas pessoas. Ao fim do jogo, informe se há um vencedor.
 
 ## Referências
 
