@@ -1246,14 +1246,13 @@ Em tradução livre: "Erro de sintaxe: sinal . não esperado".
 9. Preencha uma matriz de 4 x 3 com números inteiros. Ao fim, leia um número inteiro e escreva apenas os valores dessa matriz que forem divisíveis pelo número lido.
 10. Com uma matriz de 5 x 2, leia os nomes e idades de 5 pessoas. Ao fim, informe quantas destas pessoas são menores de 18 anos e quantas são maiores.
 11. Preencha duas matrizes de 4 x 2 e gere uma matriz soma. Ex.: `soma[1][1] = a[1][1] + b[1][1]`.
-
 12. Crie um programa que permita ao usuário entrar com as dimensões de uma matriz: número de linhas e número de colunas. Em seguida, permita que o usuário preencha cada uma das posições desta matriz.
-
 13. Criar um programa que, dada uma planilha de campeonato de futebol com números de vitórias, empates e derrotas, gere uma matriz com as pontuações dos times.
-
 14. Criar um programa que verifique se uma matriz é diagonal.
 15. Criar um programa que transforme uma matriz quadrada em matriz diagonal.
 16. Criar um programa que verifique se uma matriz é uma matriz identidade.
+
+**Extra.** Utilizando uma matriz de 3 x 3, construa um Jogo da Velha que possa ser jogado por duas pessoas. Ao fim do jogo, informe se há um vencedor.
 
 ## Lista 9 - Funções
 1. Crie uma função `escreva(texto)` que receba um texto como parâmetro e exiba este texto no console.
@@ -1264,14 +1263,10 @@ Em tradução livre: "Erro de sintaxe: sinal . não esperado".
 5. Crie uma função `cubo(num)` que receba um número como parâmetro e retorne o seu cubo.
 6. Crie uma função `potencia(num, expoente)` que receba como parâmetros um número (`num`) e um expoente, e retorne a potenciação/exponenciação de `num` elevado a `expoente`.
 7. Crie uma função `imc(peso, altura)` que receba os parâmetros `peso` e `altura`, e retorne o Índice de Massa Corporal resultante.
-
 17. Crie uma função `mostrarLista(lista)` que receba um `array` como parâmetro, percorra cada uma de suas posições e as escreva separadamente no console.
 18. Crie uma função `matrizNula(matriz)` que receba uma matriz como parâmetro, retorne `true` caso a matriz seja nula e `false` caso contrário.
 19. Crie uma função `matrizQuadrada(matriz)` que receba uma matriz como parâmetro, retorne `true` caso a matriz seja quadrada e `false` caso contrário.
 20. Crie uma função `matrizDiagonal(matriz)` que receba uma matriz como parâmetro, retorne `true` caso a matriz seja diagonal e `false` caso contrário.
-
-
-**Extra.** Utilizando uma matriz de 3 x 3, construa um Jogo da Velha que possa ser jogado por duas pessoas. Ao fim do jogo, informe se há um vencedor.
 
 ## Referências
 
