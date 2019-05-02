@@ -1263,6 +1263,9 @@ Em tradução livre: "Erro de sintaxe: sinal . não esperado".
 5. Crie uma função `cubo(num)` que receba um número como parâmetro e retorne o seu cubo.
 6. Crie uma função `potencia(num, expoente)` que receba como parâmetros um número (`num`) e um expoente, e retorne a potenciação/exponenciação de `num` elevado a `expoente`.
 7. Crie uma função `imc(peso, altura)` que receba os parâmetros `peso` e `altura`, e retorne o Índice de Massa Corporal resultante.
+8. Crie uma função `calculaAreaQuadrado(lado)` que calcule e retorne a área de um quadrado com base na medida de seu lado.
+9. Crie uma função `calculaAreaRetangulo(largura, altura)` que calcule e retorne a área de um retângulo com base em sua largura e altura.
+10. Crie uma função `calculaAreaCirculo(raio)` que calcule e retorne a área de um círculo com base em seu raio.
 17. Crie uma função `mostrarLista(lista)` que receba um `array` como parâmetro, percorra cada uma de suas posições e as escreva separadamente no console.
 18. Crie uma função `matrizNula(matriz)` que receba uma matriz como parâmetro, retorne `true` caso a matriz seja nula e `false` caso contrário.
 19. Crie uma função `matrizQuadrada(matriz)` que receba uma matriz como parâmetro, retorne `true` caso a matriz seja quadrada e `false` caso contrário.
