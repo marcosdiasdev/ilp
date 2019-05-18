@@ -1,4 +1,4 @@
-# Apostila de Introdução à Lógica de Programação
+# Introdução à Programação com JavaScript
 
 A **Lógica de Programação** é a técnica de encadear pensamentos para atingir determinado objetivo por meio de um computador ou outro sistema programável.
 
@@ -1038,7 +1038,7 @@ for(var x = 0; x < n; x++)
 }
 ```
 
-### 9.3. Recursos para arrays JavaScript
+### 9.3. Funções de arrays JavaScript
 
 
 #### push()
@@ -1072,7 +1072,13 @@ for(item of produtos) {
 
 ## 10. Funções
 
+```js
+function soma(a, b) {
+    return a + b;
+}
 ```
+
+```js
 function celsiusParaFahrenheit(temperaturaCelsius) {
     return (9 * temperaturaCelsius + 160) / 5;
 }
@@ -1080,6 +1086,64 @@ function celsiusParaFahrenheit(temperaturaCelsius) {
 temperaturaFahrenheit = celsiusParaFahrenheit(32);
 
 console.log(temperaturaFahrenheit); // 89.6
+```
+
+### 10.1. Parâmetros rest
+
+Começamos este capítulo com um exemplo de função para soma de dois termos. Mas como lidar com situações em que necessitamos de um número indefinido de parâmetros, como em uma função que possa somar um número ilimitado de termos?
+
+A solução para este problema na linguagem JavaScript são os parâmetros rest.
+
+Parâmetros rest te possibilitam estabelecer uma variável que represente um número indeterminado de parâmetros que são tratados como um array dentro de função. No exemplo abaixo, a função `soma(...termos)` retornará o resultado da soma de quantos termos forem passados por parâmetro:
+
+```js
+function soma(...termos) {
+    let resultado = 0
+    for(i = 0; i < termos.length; i++) {
+        resultado += termos[i]
+    }
+    return resultado
+}
+
+console.log(soma(2, 3, 5, 7, 1, 4, 10)); // 32
+```
+
+### 10.2. Funções recursivas
+
+Uma função é considerada recursiva quando se refere a si mesma, ou seja, quando invoca a si mesma. A função recursiva a seguir retorna o valor do fatorial do número passado por parâmetro.
+
+```js
+function fatorial(num) {
+  if (num > 1) {
+      return  num * fatorial(num-1);
+  }
+  return 1;
+}
+
+console.log(fatorial(4)); // 24
+```
+
+Diferentemente da solução convencional, com estruturas de repetição, a solução recursiva não requer o uso de uma variável para armazenamento dos resultados temporários das multiplicações. A sequência abaixo expressa a resolução do problema de maneira recursiva. Observe que em vez de estimarmos o resultado do fatorial de 3, na segunda linha, precisamos considerar o retorno da execução de `fat(3)`, depois `fat(2)` e `fat(1)` para, só então, realizarmos as multiplicações devidas, voltando passo a passo, até obtermos o resultado de `4 * 6`(ou `4 * fat(3)`), que é `24`.
+
+```js
+fat(4)
+    4 * fat(3)
+        3 * fat(2)
+            2 * fat(1)
+            2 * 1
+        3 * 2
+    4 * 6
+24
+```
+
+No exemplo a seguir, a função `fibonacci(n)`, recebe como parâmetro um inteiro `n` e retorna o valor do n-ésimo termo da sequência de Fibonacci.
+
+```js
+function fibonacci(n) {
+  if (n <= 1) return 1;
+
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
 ```
 
 ## 11. Depuração: solucionando erros comuns em JavaScript
@@ -1269,8 +1333,12 @@ Em tradução livre: "Erro de sintaxe: sinal . não esperado".
 12. Crie uma função `mostrarLista(lista)` que receba um `array` como parâmetro, percorra cada uma de suas posições e as escreva separadamente no console.
 13. Crie uma função `matrizNula(matriz)` que receba uma matriz como parâmetro, retorne `true` caso a matriz seja nula e `false` caso contrário.
 14. Crie uma função `matrizQuadrada(matriz)` que receba uma matriz como parâmetro, retorne `true` caso a matriz seja quadrada e `false` caso contrário.
-15. Crie uma função `matrizDiagonal(matriz)` que receba uma matriz como parâmetro, retorne `true` caso a matriz seja diagonal e `false` caso contrário.
+15. Crie uma função `matrizDiagonal(matriz)` que receba uma matriz como parâmetro, retorne `true` caso a matriz seja diagonal e `false` caso contrário. Utilize a função `matrizQuadrada(matriz)` para verificar se a matriz é quadrada antes de verificar se é uma matriz diagonal.
 16. Crie uma função `soma(...termos)` que retorne o resultado da soma de um número indefinido de `termos`.
+17. Crie uma função `escreva(...valores)` que funcione exatamente como a `console.log()`: escreva um número indefinido de `valores` no console.
+18. Crie uma função `mediaAritmetica(...termos)` que receba como parâmetro um número indefinido de `termos` e retorne sua média aritmética.
+19. Crie uma função `ehPrimo(numero)` que receba um número natural como parâmetro e retorne `true` caso o número seja primo ou `false` caso contrário.
+20. Crie uma função `ehPerfeito(numero)` que receba um número natural como parâmetro e retorne `true` caso o número seja perfeito ou `false` caso contrário. Um número é perfeito quando é igual à soma dos seus divisores sem contar com ele mesmo. Ex.: 6 é perfeito porque `1 + 2 + 3 = 6`.
 
 ## Referências
 
