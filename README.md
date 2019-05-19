@@ -1038,7 +1038,7 @@ for(var x = 0; x < n; x++)
 }
 ```
 
-### 9.3. Funções de arrays JavaScript
+### 9.3. Recursos para arrays JavaScript
 
 
 #### push()
@@ -1062,6 +1062,7 @@ console.log(carros) // Mustang, Challenger, Camaro
 ```
 
 #### for...of
+O loop `for..of` percorre um `array` e atribui a uma variável temporária o valor referente a cada posição.
 
 ```js
 var produtos = ['Tomate', 'Abacaxi', 'Cebola']
@@ -1072,23 +1073,69 @@ for(item of produtos) {
 
 ## 10. Funções
 
+Uma função é um procedimento armazenado, um bloco de código que pode ser executado a partir de um ponto específico de um programa. Funções geralmente possuem nomes, mas, em JavaScript, é comum vermos funções anônimas.
+
+Um exemplo bastante didático, porém não tão útil, é a função `soma(a, b)`:
+
 ```js
 function soma(a, b) {
     return a + b;
 }
 ```
 
+Ao observar o exemplo acima, considere que:
+
+1. Uma função é declarada através da palavra `function`;
+2. Uma função pode acompanhar um nome, e sempre acompanha um par de parênteses;
+3. Dentro dos parênteses vão, neste caso, duas variáveis, que representam os valores a serem somados. A estes valores damos o nome de **parâmetros**, mas nem toda função possui parâmetros;
+4. Em seguida, abre-se um bloco, utilizando chaves, que descreve o procedimento a ser realizado pela função.
+5. A função em questão retorna `a + b`, porém, o que exatamente é o retorno? O retorno, representado pela palavra `return` é o valor a ser devolvido a quem invocar (ou chamar) esta função.
+
+Execute o código da função `soma(a, b)` acima e observe o que acontece.
+
+Você deve ter notado que nada aconteceu. Isso porque a função foi apenas declarada. Agora, precisamos realizar a chamada desta função. Para isto, se já tiver executado o exemplo acima, execute o seguinte código:
+
+```js
+var resultado = soma(10, 20);
+console.log(resultado); // 30
+```
+
+Se executou o código acima, você deve ter obtido o valor `30` impresso no console. A variável `resultado` foi criada apenas para armazenar o retorno da função `soma(a, b)`. Como o nosso propósito era apenas escrever o retorno da função, poderíamos ter simplificado para:
+
+```js
+console.log(soma(10, 20)); // 30
+```
+
+Como falamos há pouco, embora didática, a função `soma(a, b)` não é um dos exemplos mais úteis de funções. E se pudéssemos construir uma função que converta uma temperatura de Celsius para Fahrenheit, para que não precisemos nos lembrar da fórmula a cada vez que for necessário realizar uma conversão?
+
 ```js
 function celsiusParaFahrenheit(temperaturaCelsius) {
     return (9 * temperaturaCelsius + 160) / 5;
 }
 
-temperaturaFahrenheit = celsiusParaFahrenheit(32);
-
-console.log(temperaturaFahrenheit); // 89.6
+console.log(celsiusParaFahrenheit(32)); // 89.6
 ```
 
-### 10.1. Parâmetros rest
+### 10.1. Funções sem parâmetro ou sem retorno
+
+Como já dissemos, nem toda função possui parâmetro. Saiba também que nem toda função possui retorno. A seguir, construímos a função `mostrarHoras()`, que mostra em uma caixa de diálogo o horário atual:
+
+```js
+function mostrarHoras() {
+	let data = new Date();
+	alert(data.getHours() + ':' + data.getMinutes() + ':' + data.getSeconds());
+}
+```
+
+A função `mostrarHoras()` não possui parâmetros nem um retorno explícito. No entanto, em JavaScript, se uma função não possuir retorno explícito, esta retornará `undefined`. Tente imprimir o retorno desta função:
+
+```js
+console.log(mostrarHoras()); // undefined
+```
+
+Você verá que, embora um alerta seja exibido com o horário atual, no console o valor impresso será `undefined`.
+
+### 10.2. Parâmetros rest
 
 Começamos este capítulo com um exemplo de função para soma de dois termos. Mas como lidar com situações em que necessitamos de um número indefinido de parâmetros, como em uma função que possa somar um número ilimitado de termos?
 
@@ -1108,7 +1155,7 @@ function soma(...termos) {
 console.log(soma(2, 3, 5, 7, 1, 4, 10)); // 32
 ```
 
-### 10.2. Funções recursivas
+### 10.3. Funções recursivas
 
 Uma função é considerada recursiva quando se refere a si mesma, ou seja, quando invoca a si mesma. A função recursiva a seguir retorna o valor do fatorial do número passado por parâmetro.
 
@@ -1136,7 +1183,7 @@ fat(4)
 24
 ```
 
-No exemplo a seguir, a função `fibonacci(n)`, recebe como parâmetro um inteiro `n` e retorna o valor do n-ésimo termo da sequência de Fibonacci.
+No exemplo a seguir, a função `fibonacci(n)`, recebe como parâmetro um inteiro `n` e retorna o valor do n-ésimo termo da sequência de Fibonacci. Faça o exercício de tentar interpretá-la como fizemos no exemplo anterior. Lembre-se que cada chamada da função, desde que `n` seja maior que `1`, resultará em duas novas chamadas.
 
 ```js
 function fibonacci(n) {
