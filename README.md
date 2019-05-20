@@ -624,7 +624,6 @@ while(1 == 1)
 Neste exemplo, enquanto a condição `1 == 1` for avaliada como verdadeira, a expressão `console.log("um é igual a um.")` será executada. Pense nisso como um ciclo: avaliamos a condição, se ela for verdadeira, o código é executado, depois tudo se repete novamente.
 
 Se você testou o código acima, deve ter percebido que ele gerou um **loop infinito**, que é como chamamos os laços de repetição intermináveis. O motivo de esse laço de repetição ser interminável é bastante óbvio, pois sabemos que 1 será sempre igual a 1, logo a condição sempre será verdadeira.
-
 Quando a condição é avaliada como falsa, o código entre chaves não é executado e o programa segue para após a estrutura de repetição. Apenas para exemplificar, sem o uso de uma linguagem de programação específica, poderíamos fazer o seguinte:
 
 ```
