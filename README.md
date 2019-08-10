@@ -1389,8 +1389,8 @@ Em tradução livre: "Erro de sintaxe: sinal . não esperado".
 
 ## Lista 10 - Objetos
 1. Construa uma classe `Pessoa`, contendo algumas propriedades, como `nome`, `idade` e  `sexo` e um método `apresenta()`, que exiba uma mensagem de apresentação com os dados desta pessoa.
-2. Construa uma classe `Retângulo`, contendo as propriedades `altura` e `largura`, e um método `area()` ou `calculaArea()`. A área de um retângulo é dada pela seguinte fórmula: `A = b * h`, onde `A` representa área, `b` representa `base` e `h` representa altura.
-3. Construa uma classe `Cubo`, contendo a propriedade `aresta` e um método `volume()` ou `calculaVolume()`. Um cubo possui medidas iguais em todas as suas arestas, o que resulta em seus lados todos iguais. O volume de um cubo é dado pela fórmula `V = a ^ 3`, onde `V` representa o volume e `a` a medida da aresta.
+2. Construa uma classe `Retangulo`, contendo as propriedades `altura` e `largura`, e um método `area()` ou `calculaArea()`. A área de um retângulo é dada pela seguinte fórmula: `A = b * h`, onde `A` representa área, `b` representa `base` e `h` representa altura.
+3. Construa uma classe `Cubo`, contendo a propriedade `aresta` e um método `volume()` ou `calculaVolume()`. Um cubo possui medidas iguais em todas as suas arestas, o que resulta em seus lados todos iguais. O volume de um cubo é dado pela fórmula `V = a ** 3`, onde `V` representa o volume e `a` a medida da aresta.
 4. Construa uma classe `Carro`, contendo as propriedades `modelo`, `marca`, `cor`, `portas`, `ano`, `anoModelo`, `ligado`, `farolLigado` `velocidade`, e os métodos `ligaDesliga()`, `acelera()`, `freia()` e `ligaDesligaFarol()`. Os métodos devem interagir com as propriedades do objeto. Seja criativo.
 
 
