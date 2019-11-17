@@ -1193,7 +1193,106 @@ function fibonacci(n) {
 }
 ```
 
-## 11. Depuração: solucionando erros comuns em JavaScript
+## 11. Orientação a objetos
+
+Na programação, objetos são um recurso que tem por princípio aproximar a forma como escrevemos e compreendemos código da forma como lidamos com elementos do mundo real.
+
+Até agora tivemos acesso a dois recursos que nos possibilitaram (1) armazenar valores e, consequentemente, representar características, e (2) definir e realizar ações. O primeiro deles são as variáveis e o segundo as funções. Objetos nos permitem concentrar estes dois recursos.
+
+Em JavaScript, objetos são representados por um par de chaves `{ }`:
+
+```js
+var meuObjeto = { }
+```
+
+Como dito antes, uma das grandes vantagens dos objetos está na possibilidade de concentrarmos características e ações (variáveis e funções) em um só lugar.
+
+Imagine que precisemos representar um retângulo, concentrando suas características, como `largura` e `altura`:
+
+```js
+var retangulo = { largura: 5, altura: 4 }
+```
+
+Após definido o objeto `retangulo`, para imprimir sua `largura`, por exemplo, basta o seguinte:
+
+```js
+console.log(retangulo.largura);
+```
+
+Em JavaScript, as **propriedades** dos objetos
+
+```js
+var retangulo = {
+    largura: 5,
+    altura: 4,
+    calculaArea: function() {
+        return(this.largura * this.altura)
+    }
+}
+```
+
+Saiba que você já estava lidando com objetos desde os primeiros exemplos que realizamos neste material. O próprio `console` é um objeto e `log()` é uma função que pertence a ele.
+
+Para aprender mais sobre objetos em JavaScript, acesse [Trabalhando com objetos](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Trabalhando_com_Objetos).
+
+### 11.1. Classes
+
+A definição mais simples e objetiva para classes seria que **classes são modelos para a criação de objetos**. Classes são um recurso existente em outras linguagens já há um bom tempo. Na linguagem JavaScript, porém, as classes só foram introduzidas por volta de 2015.
+
+Em uma classe se pode definir, por exemplo, quais propriedades (e métodos) um objeto (que ainda será criado) deverá possuir. A grande vantagem é que esse modelo pode ser reaproveitado para a criação de quantos objetos forem necessários, diferentemente do que fizemos na seção anterior.
+
+O código a seguir mostra a declaração de uma classe `Pessoa`, com as propriedades `nome` e `idade`, e o método `apresentar()`.
+
+```js
+class Pessoa {
+
+    nome;
+    idade;
+
+    apresentar() {
+        console.log("Olá! Meu nome é " + this.nome + " e tenho " + this.idade + " anos.")
+    }
+}
+```
+
+Para criar um objeto a partir da classe `Pessoa` e utilizá-lo, logo abaixo, podemos executar o seguinte código:
+
+```js
+var umaPessoa = new Pessoa();
+
+umaPessoa.nome = "Alice";
+umaPessoa.idade = 19;
+Â
+umaPessoa.apresentar();
+```
+
+#### O operador this
+
+Observe que para fazer referência às propriedades `nome` e `idade` dentro do método `apresentar()` na classe `Pessoa`, foi necessário utilizar o operador `this` . Sempre que precisar referenciar uma propriedade dentro de um método ou referenciar um método dentro de outro, utilize o operador `this`. O termo this pode ser traduzido do inglês como este, esta ou isto. Ao usar `this.nome` o que queremos dizer é que nos referimos à propriedade `nome` desta classe.
+
+A importância de se utilizar o operador `this` fica mais clara quando enxergamos além do escopo da classe. Considere o seguinte exemplo:
+
+```js
+var texto = "Este texto será impresso";
+
+class Mensagem {
+    texto = "Não este."
+    exibir() {
+        console.log(texto)
+    }
+}
+
+var msg = new Mensagem();
+msg.exibir();
+```
+
+Como não utilizamos o `this`, o JavaScript irá considerar a variável `texto` como foi declarada fora da classe. Modifique o método `exibir()` adicionando o operador `this` à variável texto e observe a diferença.
+
+#### O construtor
+
+...
+
+## 12. Depuração: solucionando erros comuns em JavaScript
 
 ### ReferenceError
 
@@ -1397,4 +1496,5 @@ Em tradução livre: "Erro de sintaxe: sinal . não esperado".
 ## Referências
 
 - LOPES, Anita. GARCIA, Guto. **Introdução à programação – 500 algoritmos resolvidos**. Rio de Janeiro: Elsevier, 2002 - 15ª Tiragem.
-- MOZILLA. **Uma reintrodução ao JavaScript (Tutorial de JS)**. Mozilla Developer Network. MDN Web Docs. Disponível em: <https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/A_re-introduction_to_JavaScript>
+- MOZILLA. **Guia JavaScript**. Mozilla Developer Network. MDN Web Docs. Disponível em: <https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide>.
+- MOZILLA. **Uma reintrodução ao JavaScript (Tutorial de JS)**. Mozilla Developer Network. MDN Web Docs. Disponível em: <https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/A_re-introduction_to_JavaScript>.
