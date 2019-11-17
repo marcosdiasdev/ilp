@@ -1261,15 +1261,20 @@ class Pessoa {
 }
 ```
 
-Para criar um objeto a partir da classe `Pessoa` e utilizá-lo, logo abaixo, podemos executar o seguinte código:
+Para criar objetos a partir da classe `Pessoa` e utilizá-los, podemos executar o seguinte código:
 
 ```js
-var umaPessoa = new Pessoa();
+var pessoa1 = new Pessoa();
+var pessoa2 = new Pessoa();
 
-umaPessoa.nome = "Alice";
-umaPessoa.idade = 19;
-Â
-umaPessoa.apresentar();
+pessoa1.nome = "Alice";
+pessoa1.idade = 19;
+
+pessoa2.nome = "Hugo";
+pessoa2.idade = 21;
+
+pessoa1.apresentar();
+pessoa2.apresentar();
 ```
 
 #### O operador this
@@ -1296,7 +1301,43 @@ Como não utilizamos o `this`, o JavaScript irá considerar a variável `texto` 
 
 #### O construtor
 
-...
+Em uma expressão como `new Pessoa()`, o operador `new` é o responsável pela criação de objetos. Quando utilizado, o operador `new` executa o método **construtor** da classe. O propósito deste método é definir como se dará a criação do objeto.
+
+Por padrão, toda classe possui um construtor, mesmo que não explícito. Um construtor padrão não possui nenhum comportamento específico, no entanto, podemos modificá-lo conforme a necessidade. O construtor abaixo exibirá uma mensagem sempre que um novo objeto do tipo `Triangulo` for criado:
+
+```js
+class Triangulo {
+    base;
+    altura;
+    constructor() {
+        console.log("Um novo triângulo foi criado.")
+    }
+}
+```
+
+A principal utilidade de um construtor é definir valores para as propriedades do objeto em sua criação. Anteriormente, criamos a classe `Pessoa` e, sempre que construíamos um novo objeto a partir dessa classe, era necessário acessar cada uma das propriedades e modificá-la: `pessoa1.nome = "Tal nome"`. No exemplo abaixo, reconstruímos a classe `Pessoa` com um construtor que nos permite criar objetos já com `nome` e `idade` inicializados:
+
+```js
+class Pessoa {
+
+    constructor(nome, idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+
+    apresentar() {
+        console.log("Olá! Meu nome é " + this.nome + " e tenho " + this.idade + " anos.")
+    }
+}
+```
+
+Observe que não foi necessário declarar `nome` e `idade` antes do construtor, como fizemos no primeiro exemplo da classe `Pessoa`. Como estas duas propriedades já têm seus valores inicializados no construtor, seria redundante tê-los declarado antes. Para utilizar este construtor, bastaria o seguinte:
+
+```js
+var pessoa1 = new Pessoa("Carolina", 20);
+
+pessoa1.apresentar();
+```
 
 ## 12. Depuração: solucionando erros comuns em JavaScript
 
