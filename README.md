@@ -1195,23 +1195,19 @@ function fibonacci(n) {
 
 ## 11. Orientação a objetos
 
-Na programação, objetos são um recurso que tem por princípio aproximar a forma como escrevemos e compreendemos código da forma como lidamos com elementos do mundo real.
-
-Até agora tivemos acesso a dois recursos que nos possibilitaram (1) armazenar valores e, consequentemente, representar características, e (2) definir e realizar ações. O primeiro deles são as variáveis e o segundo as funções. Objetos nos permitem concentrar estes dois recursos.
-
-Em JavaScript, objetos são representados por um par de chaves `{ }`:
+Na programação, objetos são um recurso que tem por princípio aproximar a forma como escrevemos e compreendemos código da forma como lidamos com elementos do mundo real. Em JavaScript, objetos são representados por um par de chaves `{ }`:
 
 ```js
 var meuObjeto = { }
 ```
 
-Como dito antes, uma das grandes vantagens dos objetos está na possibilidade de concentrarmos características e ações (variáveis e funções) em um só lugar. Imagine que precisemos representar um retângulo, concentrando suas características, como `largura` e `altura`:
+Até agora tivemos acesso a dois recursos que nos possibilitaram (1) armazenar valores e, consequentemente, representar características, e (2) definir e realizar ações. O primeiro deles são as variáveis e o segundo as funções. Objetos nos permitem concentrar estes dois recursos. Imagine que precisemos representar um retângulo, concentrando suas características, como `largura` e `altura`:
 
 ```js
 var retangulo = { largura: 5, altura: 4 }
 ```
 
-Após definido o objeto `retangulo`, para imprimir sua `largura`, por exemplo, basta o seguinte:
+Quando falamos em orientação a objetos, `largura` e `altura` são consideradas **propriedades** ou **atributos** do objeto `retangulo`. Após definido o objeto `retangulo`, para imprimir sua `largura`, por exemplo, basta o seguinte:
 
 ```js
 console.log(retangulo.largura);
@@ -1229,15 +1225,19 @@ var retangulo = {
 }
 ```
 
-Agora, o cálculo da área pode ser obtido da seguinte maneira:
+>> Não se preocupe com o this no exemplo anterior. Ele será explicado na seção seguinte.
+
+Por ser vinculada a um objeto, a função `calcularArea()` também pode ser chamada de **método**. Agora, o cálculo da área pode ser obtido da seguinte maneira:
 
 ```js
 console.log(retangulo.calcularArea());
 ```
 
-Em JavaScript, as **propriedades** dos objetos
+Saiba que você já estava lidando com objetos desde os primeiros exemplos que realizamos neste material. Na verdade, o que se diz é que praticamente todas as coisas são objetos em JavaScript. O próprio `console` é um objeto e `log()` é uma função (ou método) que pertence a ele. A função `alert()` pertence ao objeto `window`, embora não seja obrigatório mencioná-lo:
 
-Saiba que você já estava lidando com objetos desde os primeiros exemplos que realizamos neste material. O próprio `console` é um objeto e `log()` é uma função que pertence a ele.
+```js
+window.alert("Teste isso.");
+```
 
 Para aprender mais sobre objetos em JavaScript, acesse [Trabalhando com objetos](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Trabalhando_com_Objetos).
 
