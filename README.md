@@ -1205,9 +1205,7 @@ Em JavaScript, objetos são representados por um par de chaves `{ }`:
 var meuObjeto = { }
 ```
 
-Como dito antes, uma das grandes vantagens dos objetos está na possibilidade de concentrarmos características e ações (variáveis e funções) em um só lugar.
-
-Imagine que precisemos representar um retângulo, concentrando suas características, como `largura` e `altura`:
+Como dito antes, uma das grandes vantagens dos objetos está na possibilidade de concentrarmos características e ações (variáveis e funções) em um só lugar. Imagine que precisemos representar um retângulo, concentrando suas características, como `largura` e `altura`:
 
 ```js
 var retangulo = { largura: 5, altura: 4 }
@@ -1219,17 +1217,25 @@ Após definido o objeto `retangulo`, para imprimir sua `largura`, por exemplo, b
 console.log(retangulo.largura);
 ```
 
-Em JavaScript, as **propriedades** dos objetos
+Se precisássemos definir uma função para cálculo da área, bastaria adicionar mais uma propriedade e vincular a ela uma função:
 
 ```js
 var retangulo = {
     largura: 5,
     altura: 4,
-    calculaArea: function() {
+    calcularArea: function() {
         return(this.largura * this.altura)
     }
 }
 ```
+
+Agora, o cálculo da área pode ser obtido da seguinte maneira:
+
+```js
+console.log(retangulo.calcularArea());
+```
+
+Em JavaScript, as **propriedades** dos objetos
 
 Saiba que você já estava lidando com objetos desde os primeiros exemplos que realizamos neste material. O próprio `console` é um objeto e `log()` é uma função que pertence a ele.
 
