@@ -1230,13 +1230,13 @@ var retangulo = {
 Por ser vinculada a um objeto, a função `calcularArea()` também pode ser chamada de **método**. Agora, o cálculo da área pode ser obtido da seguinte maneira:
 
 ```js
-console.log(retangulo.calcularArea());
+console.log(retangulo.calcularArea())
 ```
 
 Saiba que você já estava lidando com objetos desde os primeiros exemplos que realizamos neste material. Na verdade, o que se diz é que praticamente todas as coisas são objetos em JavaScript. O próprio `console` é um objeto e `log()` é uma função (ou método) que pertence a ele. A função `alert()` pertence ao objeto `window`, embora não seja obrigatório mencioná-lo:
 
 ```js
-window.alert("Teste isso.");
+window.alert("Teste isso.")
 ```
 
 Para aprender mais sobre objetos em JavaScript, acesse [Trabalhando com objetos](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Guide/Trabalhando_com_Objetos).
@@ -1252,8 +1252,8 @@ O código a seguir mostra a declaração de uma classe `Pessoa`, com as propried
 ```js
 class Pessoa {
 
-    nome;
-    idade;
+    nome
+    idade
 
     apresentar() {
         console.log("Olá! Meu nome é " + this.nome + " e tenho " + this.idade + " anos.")
@@ -1264,17 +1264,17 @@ class Pessoa {
 Para criar objetos a partir da classe `Pessoa` e utilizá-los, podemos executar o seguinte código:
 
 ```js
-var pessoa1 = new Pessoa();
-var pessoa2 = new Pessoa();
+var pessoa1 = new Pessoa()
+var pessoa2 = new Pessoa()
 
-pessoa1.nome = "Alice";
-pessoa1.idade = 19;
+pessoa1.nome = "Alice"
+pessoa1.idade = 19
 
-pessoa2.nome = "Hugo";
-pessoa2.idade = 21;
+pessoa2.nome = "Hugo"
+pessoa2.idade = 21
 
-pessoa1.apresentar();
-pessoa2.apresentar();
+pessoa1.apresentar()
+pessoa2.apresentar()
 ```
 
 #### O operador this
@@ -1284,7 +1284,7 @@ Observe que para fazer referência às propriedades `nome` e `idade` dentro do m
 A importância de se utilizar o operador `this` fica mais clara quando enxergamos além do escopo da classe. Considere o seguinte exemplo:
 
 ```js
-var texto = "Este texto será impresso";
+var texto = "Este texto será impresso"
 
 class Mensagem {
     texto = "Não este."
@@ -1293,8 +1293,8 @@ class Mensagem {
     }
 }
 
-var msg = new Mensagem();
-msg.exibir();
+var msg = new Mensagem()
+msg.exibir()
 ```
 
 Como não utilizamos o `this`, o JavaScript irá considerar a variável `texto` como foi declarada fora da classe. Modifique o método `exibir()` adicionando o operador `this` à variável texto e observe a diferença.
@@ -1307,8 +1307,8 @@ Por padrão, toda classe possui um construtor, mesmo que não explícito. Um con
 
 ```js
 class Triangulo {
-    base;
-    altura;
+    base
+    altura
     constructor() {
         console.log("Um novo triângulo foi criado.")
     }
@@ -1321,8 +1321,8 @@ A principal utilidade de um construtor é definir valores para as propriedades d
 class Pessoa {
 
     constructor(nome, idade) {
-        this.nome = nome;
-        this.idade = idade;
+        this.nome = nome
+        this.idade = idade
     }
 
     apresentar() {
@@ -1334,9 +1334,9 @@ class Pessoa {
 Observe que não foi necessário declarar `nome` e `idade` antes do construtor, como fizemos no primeiro exemplo da classe `Pessoa`. Como estas duas propriedades já têm seus valores inicializados no construtor, seria redundante tê-los declarado antes. Para utilizar este construtor, bastaria o seguinte:
 
 ```js
-var pessoa1 = new Pessoa("Carolina", 20);
+var pessoa1 = new Pessoa("Carolina", 20)
 
-pessoa1.apresentar();
+pessoa1.apresentar()
 ```
 
 ## 12. Depuração: solucionando erros comuns em JavaScript
