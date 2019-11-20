@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 plugins:
   - jekyll-relative-links
 relative_links:
@@ -9,6 +8,3 @@ include:
   - README.md
   - LICENSE.md
   - COPYING.md
-=======
-theme: jekyll-theme-cayman
->>>>>>> a97b67efb907237cab52647f04d4354ca3d6e5e5
