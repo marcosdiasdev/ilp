@@ -1,14 +1,16 @@
 # Introdução à Programação com JavaScript
 
-A **Lógica de Programação** é a técnica de encadear pensamentos para atingir determinado objetivo por meio de um computador ou outro sistema programável.
+A **programação de computadores** é a técnica de encadear pensamentos para atingir determinado objetivo por meio de um computador ou outro sistema programável.
 
-Antes de começarmos a programar, é necessário compreender novos conceitos e até rever alguns dos já vistos nas aulas de Matemática.
+Este material aborda os principais conteúdos para que você entenda e consiga aplicar os fundamentos básicos da programação com a linguagem JavaScript.
 
-> Você pode acessar a versão mais atualizada deste material entrando em [github.com/timarcosdias/ilp](https://github.com/timarcosdias/ilp).
+Não tenha pressa. Leia com atenção e seja persistente. A programação de computadores pode ser intimidadora, mas, a cada passo que der, você se sentirá cada vez mais motivado a entrar nesse mundo. 
 
-> Se encontrar erros ou tiver sugestões, por favor, envie-os para [ti.marcosdias@gmail.com](#).
+Bons estudos!
 
 ## 1. Algoritmo
+
+Após entender o que é a programação de computadores, o primeiro conceito com o qual costumamos nos deparar no aprendizado de programação é o conceito de **algoritmo**. 
 
 Podemos definir algoritmo como uma sequência finita e ordenada de passos para a resolução de um problema específico.
 
