@@ -8,3 +8,5 @@ include:
   - README.md
   - LICENSE.md
   - COPYING.md
+
+theme: jekyll-theme-cayman
