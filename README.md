@@ -2,7 +2,7 @@
 
 A **programação de computadores** é a técnica de encadear pensamentos para atingir determinado objetivo por meio de um computador ou outro sistema programável.
 
-Este material aborda os principais conteúdos para que você entenda e consiga aplicar os fundamentos básicos da programação com a linguagem JavaScript.
+Este material aborda os principais conteúdos para que você entenda e consiga aplicar os fundamentos básicos da programação com a linguagem JavaScript. No final deste material existem listas de exercícios para a prática dos fundamentos aprendidos em cada uma das seções. Se você está começando agora, a recomendação é: resolva todos os exercícios, se possível, até mais de uma vez.
 
 Não tenha pressa. Leia com atenção e seja persistente. A programação de computadores pode ser intimidadora, mas, a cada passo que der, você se sentirá cada vez mais motivado a entrar nesse mundo. 
 
