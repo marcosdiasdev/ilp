@@ -64,7 +64,7 @@ a = 4
 Pode ser lido como: variável `a` recebe `4`.
 
 ```js
-nome = “José”
+nome = "José"
 ```
 
 Pode ser lido como: variável `nome` recebe `José`.
