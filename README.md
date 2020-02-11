@@ -501,9 +501,9 @@ Para responder a essa pergunta, vamos pensar no seguinte problema: após ler um 
 ```js
 var numero
 numero = parseInt(prompt("Entre com um número inteiro: "))
-if(numero < 1) {
+if(numero < 0) {
     console.log("O número lido é negativo.")
-} else if(numero > 1){
+} else if(numero > 0){
     console.log("O número lido é positivo.")
 } else {
     console.log("O número lido é nulo.")
