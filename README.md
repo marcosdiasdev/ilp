@@ -935,7 +935,7 @@ Observe que nestes dois últimos exemplos nós não fizemos a impressão dos nom
 
 #### Tipos em vetores JavaScript
 
-Assim como variáveis comuns, vetores não possuem um tipo definido de dados que podem armazenar na linguagem JavaScript. Isto faz com que possamos ter vetores como o seguinte:
+Assim como variáveis comuns, em JavaScript, os vetores não possuem um tipo definido de dados que podem armazenar. Isto faz com que possamos ter vetores como o seguinte:
 
 ```js
 var lista = ['João', 16, 'Maria', 15, 'Carolina', 18]
