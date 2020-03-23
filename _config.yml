@@ -11,3 +11,4 @@ include:
 
 theme: jekyll-theme-cayman
 title: "Introdução à Programação com JavaScript"
+show_downloads: ["true"]
