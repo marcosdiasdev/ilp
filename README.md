@@ -943,6 +943,52 @@ var lista = ['João', 16, 'Maria', 15, 'Carolina', 18]
 
 Em linguagens como C, C++ e Java, isto não seria possível, já que, nestas linguagens, vetores são estruturas homogêneas (que armazenam um único tipo de dado).
 
+#### Dimensionamento de vetores
+
+Na linguagem JavaScript, vetores são dinamicamente dimensionados, o que significa que não é necessário estipular o tamanho do vetor no momento da sua criação (como é feito em linguagens como C, C++ e Java), o vetor terá, inicialmente, o tamanho 0 (zero) e irá aumentar conforme utilizarmos seu espaço:
+
+```js
+var listaDeCompras = [] 	// Aqui o tamanho do vetor é 0
+listaDeCompras[0] = "Pão"	// Aqui o tamanho do vetor é 1
+listaDeCompras[1] = "Leite"	// Aqui o tamanho do vetor é 2
+listaDeCompras[2] = "Ovos"	// Aqui o tamanho do vetor é 3
+```
+
+No exemplo acima, começamos a utilizar o vetor a partir da posição 0, a primeira posição disponível em um vetor. Mas, e se tivéssemos começado da posição 5, por exemplo? Se apenas ocuparmos a posição 5, o tamanho do vetor será 1 ou 5?
+
+```js
+var listaDeCompras = [] 	// Aqui o tamanho do vetor é 0
+listaDeCompras[5] = "Tomate"	// Aqui o tamanho do vetor é 6
+```
+
+Nem 1 nem 5. O tamanho do vetor, neste caso, será 6. Mas, por quê? Porque estamos ocupando a posição 5, que, na sequência, é a 6ª posição do vetor. Para que possamos utilizar a 6ª posição, a linguagem gera posições vazias entre o índice 0 e o índice 4, como se tivéssemos feito o seguinte:
+
+
+```js
+		    // 0,1,2,3,4,5
+var listaDeCompras = [  , , , , , "Tomate" ]
+```
+
+#### A propriedade length
+
+Certo, já sabemos como um vetor é dimensionado, mas e se precisarmos descobrir o tamanho de um vetor qualquer? Imagine que você tenha criado um programa que leia diversos valores em uma estrutura de repetição, mas você não saiba quantas vezes essa estrutura de repetição foi executada. Em casos como esse (e em muitos outros), deve-se utilizar a propriedade `length`.
+
+A propriedade `length` retorna o tamanho de um vetor. Basta utilizá-la junto ao nome do vetor com um ponto:
+
+```js
+var numeros = [2, 5, 7, 9]
+console.log(numeros.length)	// O tamanho impresso será 4
+```
+
+Esta propriedade é muito utilizada quando se precisa percorrer um vetor já preenchido:
+
+```js
+var capitais = ["Palmas", "São Paulo", "Rio de Janeiro", "Belo Horizonte", "Salvador", "Recife", "Goiânia"]
+for(i = 0; i < capitais.length; i++) {
+	console.log(capitais[i])
+}
+```
+
 ### 9.2. Matrizes
 
 Semelhante ao conceito encontrado na Matemática, em Lógica de Programação, matriz é o nome que damos a estruturas de dados bidimensionais. Enquanto que podemos representar visualmente um vetor como uma única linha ou coluna com diversos valores, uma matriz se parece mais com uma tabela em que há uma ou mais linhas e colunas.
