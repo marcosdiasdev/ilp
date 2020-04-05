@@ -1522,7 +1522,7 @@ Em tradução livre: "Erro de sintaxe: sinal . não esperado".
 6. Ainda baseado no problema da sequência de Fibonacci, construa um programa que leia um número inteiro N e escreva a soma dos N primeiros termos da sequência de Fibonacci.
 7. Um número primo é um número inteiro não negativo, maior que 1, e divisível apenas por 1 e por ele mesmo. Construa um programa que leia um número inteiro N e informe se este é ou não é um número primo.
 8. O Máximo Divisor Comum (MDC) entre dois números naturais (números inteiros positivos) é o maior número natural que divide ambos. Desenvolva um programa que leia dois números inteiros positivos X e Y e escreva seu MDC.
-9. Um número quadrado perfeito é um inteiro que pode ser escrito como o quadrado de outro número inteiro. Em outras palavras, é um número inteiro cuja raíz quadrada é outro número inteiro. Construa um programa que leia um número inteiro positivo e informe se este é um quadrado perfeito.
+9. Um número perfeito é um número natural (inteiro não-negativo {0,1,2,3,4...}) cujo valor é igual à soma de seus divisores naturais, sem contar com ele mesmo. Ex.: 6 é um número perfeito porque a soma de seus divisores é igual a ele mesmo: 1 + 2 + 3 = 6. Construa um programa que leia um número natural e informe se este é um número perfeito.
 
 ## Lista 7 - Vetores
 
