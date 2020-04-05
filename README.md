@@ -1095,9 +1095,27 @@ O método `push()` adiciona um elemento ao final de um `array`:
 
 ```js
 var cidades = ['Rio de Janeiro', 'São Paulo', 'Salvador']
-console.log(cidades) // Rio de Janeiro, São Paulo, Salvador
+console.log(cidades) // [Rio de Janeiro, São Paulo, Salvador]
 cidades.push('Palmas')
-console.log(cidades) // Rio de Janeiro, São Paulo, Salvador, Palmas
+console.log(cidades) // [Rio de Janeiro, São Paulo, Salvador, Palmas]
+```
+
+#### unshift()
+O método `unshift()` adiciona um ou mais elementos ao início de um `array` e retorna o novo tamanho (`length`) do `array`:
+
+```js
+var filmes = ['A Coisa', 'O Vizinho', 'Piratas do Caribe']
+filmes.unshift('Vingadores', 'Pantera Negra') // O retorno será 5
+console.log(filmes) // [Vingadores, Pantera Negra, A Coisa, O Vizinho, Piratas do Caribe]
+```
+
+#### shift()
+O método `shift()` remove um elemento do início de um `array` e retorna o elemento removido:
+
+```js
+var planetas = ['Plutão', 'Mercúrio', 'Marte']
+planetas.shift()  // O retorno será Plutão
+console.log(planetas) // [Mercúrio, Marte]
 ```
 
 #### pop()
@@ -1105,9 +1123,104 @@ O método `pop()` remove o último elemento de um `array`:
 
 ```js
 var carros = ['Mustang', 'Challenger', 'Camaro', 'Fusca']
-console.log(carros) // Mustang, Challenger, Camaro, Fusca
+console.log(carros) // [Mustang, Challenger, Camaro, Fusca]
 carros.pop()
-console.log(carros) // Mustang, Challenger, Camaro
+console.log(carros) // [Mustang, Challenger, Camaro]
+```
+
+#### splice()
+O métood `splice()` altera o conteúdo de um `array`, adicionando novos elementos e removendo antigos. O método retorna um `array` contendo os elementos removidos e altera o `array` original permanentemente.
+
+Este método aceita até três parâmetros: (1) índice inicial, (2) número de elementos a serem removidos a partir do índice inicial e (3) elementos a serem inseridos.
+
+```js
+var disciplinas = ["Matemática", "Arte", "História"]
+
+// Remove 2 elementos a partir do índice 1, e insere "Física"
+var removidos = disciplinas.splice(1, 2, "Física")
+
+console.log(disciplinas) // [Matemática, Física]
+console.log(removidos) // [Arte, História]
+
+// Insere um elemento na posição 0
+disciplinas.splice(0, 0, "Química")
+console.log(disciplinas) // [Química, Matemática, Física]
+```
+
+#### slice()
+O método `slice()` retorna um intervalo de um `array`, sem modificar o `array` original.
+
+Este método aceita dois parâmetros: (1) posição inicial do intervalo e (2) posição final do intervalo.
+
+```js
+var estruturas = ["if", "else", "while", "for", "switch"]
+
+var repeticao = estruturas.slice(2, 4)
+
+console.log(repeticao) // [while, for]
+```
+
+Observe no exemplo acima que, embora tenhamos indicado o intervalo dos índices 2 a 4, apenas os elementos dos índices 2 e 3 foram retornados. O slice não retorna o elemento da posição final informada.
+
+É possível também utilizar um valor negativo no segundo parâmetro, indicando quantas posições contar a partir do final do `array`.
+
+#### sort()
+O método `sort()` ordena os elementos de um `array` conforme a tabela de caracteres [Unicode](https://pt.wikipedia.org/wiki/Unicode) e retorna o próprio `array`.
+
+```js
+var tempos = [10.2, 10, 10.8, 11, 11.3, 11.4]
+tempos.sort() 
+console.log(tempos) // [10, 10.2, 10.8, 11, 11.3, 11.4]
+
+var valores = [2, 1, 10, 8, 9, 80]
+valores.sort() 
+console.log(valores) // [1, 10, 2, 8, 80, 9]
+
+var estados = ["Roraima", "Acre", "Tocantins", "Bahia"]
+estados.sort()
+console.log(estados) // ["Acre", "Bahia", "Roraima", "Tocantins"]
+```
+
+Observe no segundo exemplo acima que os números não estão necessariamente ordenados em ordem crescente, já que "10" vem antes de "2" e "80" vem antes de "9" em código Unicode.
+
+Você pode construir sua própria função de ordenação e aplicá-la ao método `sort()`. Passe pela [documentação do método](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/sort) para ver como.
+
+#### reverse()
+O método `reverse()` inverte os elementos de um `array`. O último passa a ser o primeiro e vice-versa.
+
+```js
+var sistemas = ["Android", "iOS", "macOS", "Linux", "Windows"]
+sistemas.reverse()
+console.log(sistemas) // ["Windows", "Linux", "macOS", "iOS", "Android"]
+```
+
+#### indexOf()
+O método `indexOf()` retorna o primeiro índice em que determinado elemento é encontrado em um `array`. O método retorna `-1` se o elemento não puder ser encontrado.
+
+Este método aceita até dois parâmetros: (1) o valor a ser procurado e (2) a posição de onde começar a procurar.
+
+```js
+var cores = ["verde", "amarelo", "azul", "branco"]
+console.log(cores.indexOf("azul")) // 2
+
+var numeros = [9, 8, 7, 6, 5, 6, 7, 8, 9]
+console.log(numeros.indexOf(6, 4)) // 5
+```
+
+No segundo exemplo, o número `6` pode ser encontrado também na posição `3`, mas estamos buscando a partir da posição `4`.
+
+#### includes()
+O método `includes()` verifica se um `array` possui determinado elemento e retorna `true` caso positivo ou `false` caso contrário.
+
+Este método aceita até dois parâmetros: (1) o valor a ser procurado e (2) a posição de onde começar a procurar.
+
+```js
+var cores = ["verde", "amarelo", "azul", "branco"]
+var encontrou = cores.includes("amarelo") 
+console.log(encontrou) // true
+
+var numeros = [9, 8, 7, 6, 5, 4, 3, 2, 1] 
+console.log(numeros.includes(9, 1)) // false
 ```
 
 #### for...of
