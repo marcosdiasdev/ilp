@@ -1088,9 +1088,10 @@ for(var x = 0; x < n; x++)
 
 ### 9.3. Recursos para arrays JavaScript
 
+Neste capítulo conheceremos alguns dos métodos do objeto Array, que facilitarão a forma como trabalhamos com listas. Além deles, conheceremos o loop for...of.
 
 #### push()
-A função `push()` adiciona um elemento ao final de um `array`:
+O método `push()` adiciona um elemento ao final de um `array`:
 
 ```js
 var cidades = ['Rio de Janeiro', 'São Paulo', 'Salvador']
@@ -1100,7 +1101,7 @@ console.log(cidades) // Rio de Janeiro, São Paulo, Salvador, Palmas
 ```
 
 #### pop()
-A função `pop()` remove o último elemento de um `array`:
+O método `pop()` remove o último elemento de um `array`:
 
 ```js
 var carros = ['Mustang', 'Challenger', 'Camaro', 'Fusca']
