@@ -4,13 +4,13 @@ A **programação de computadores** é a técnica de encadear pensamentos para a
 
 Este material aborda os principais conteúdos para que você entenda e consiga aplicar os fundamentos básicos da programação com a linguagem JavaScript. No final deste material existem listas de exercícios para a prática dos fundamentos aprendidos em cada uma das seções. Se você está começando agora, a recomendação é: resolva todos os exercícios, se possível, até mais de uma vez.
 
-Não tenha pressa. Leia com atenção e seja persistente. A programação de computadores pode ser intimidadora, mas, a cada passo que der, você se sentirá cada vez mais motivado a entrar nesse mundo. 
+Não tenha pressa. Leia com atenção e seja persistente. A programação de computadores pode ser intimidadora, mas, a cada passo que der, você se sentirá cada vez mais motivado a entrar nesse mundo.
 
 Bons estudos!
 
 ## 1. Algoritmo
 
-Após entender o que é a programação de computadores, o primeiro conceito com o qual costumamos nos deparar no aprendizado de programação é o conceito de **algoritmo**. 
+Após entender o que é a programação de computadores, o primeiro conceito com o qual costumamos nos deparar no aprendizado de programação é o conceito de **algoritmo**.
 
 Podemos definir algoritmo como uma sequência finita e ordenada de passos para a resolução de um problema específico.
 
@@ -1169,11 +1169,11 @@ O método `sort()` ordena os elementos de um `array` conforme a tabela de caract
 
 ```js
 var tempos = [10.2, 10, 10.8, 11, 11.3, 11.4]
-tempos.sort() 
+tempos.sort()
 console.log(tempos) // [10, 10.2, 10.8, 11, 11.3, 11.4]
 
 var valores = [2, 1, 10, 8, 9, 80]
-valores.sort() 
+valores.sort()
 console.log(valores) // [1, 10, 2, 8, 80, 9]
 
 var estados = ["Roraima", "Acre", "Tocantins", "Bahia"]
@@ -1216,10 +1216,10 @@ Este método aceita até dois parâmetros: (1) o valor a ser procurado e (2) a p
 
 ```js
 var cores = ["verde", "amarelo", "azul", "branco"]
-var encontrou = cores.includes("amarelo") 
+var encontrou = cores.includes("amarelo")
 console.log(encontrou) // true
 
-var numeros = [9, 8, 7, 6, 5, 4, 3, 2, 1] 
+var numeros = [9, 8, 7, 6, 5, 4, 3, 2, 1]
 console.log(numeros.includes(9, 1)) // false
 ```
 
@@ -1661,6 +1661,7 @@ Quando se disser "Leia uma matriz", entenda que todos os elementos da matriz dev
 ---
 
 1. Leia e armazene `nome`, `idade` e `salário` de 5 pessoas em uma única matriz. Ao fim, exiba a matriz em formato tabular. Ex.:
+
 ```
 José        30      3000.00
 Maria       28      3200.00
@@ -1668,7 +1669,9 @@ Carlos      41      9500.00
 Joaquim     56      12000.00
 Silvia      32      10000.00
 ```
+
 2. Leia uma matriz `3 x 3` de inteiros. Ao fim, exiba a matriz em formato tabular e também o elemento do centro. Ex.:
+
 ```
 1   2   3
 4   5   6
@@ -1676,9 +1679,11 @@ Silvia      32      10000.00
 
 Elemento do centro: 5
 ```
+
 3. Leia uma matriz quadrada `N x N` de inteiros, onde `N` é um inteiro informado pelo usuário. Exiba a matriz em formato tabular.
 4. Leia uma matriz `N x M` de inteiros, onde `N` e `M` são inteiros informados pelo usuário. Exiba a matriz em formato tabular.
 5. Gere uma matriz `4 x 4` de inteiros. Ao fim, exiba a matriz em formato tabular e também os elementos dos cantos. Ex.:
+
 ```
 1   7   5   3
 5   2   0   9
@@ -1687,7 +1692,9 @@ Elemento do centro: 5
 
 Elementos dos cantos: 1, 3, 2 e 9
 ```
+
 6. Gere uma matriz `3 x 3` de inteiros aleatórios. Exiba a matriz em formato tabular e também os resultados das somas dos elementos da diagonal principal e da diagonal secundária. Ex.:
+
 ```
 5   3   2
 8   5   4
@@ -1696,7 +1703,9 @@ Elementos dos cantos: 1, 3, 2 e 9
 Soma da diagonal principal: 13
 Soma da diagonal secundária: 14
 ```
+
 7. Gere uma matriz `10 x 10` de inteiros, onde o valor de cada elemento é dado pela soma de seus índices. Exiba a matriz em formato tabular. Ex.:
+
 ```
 0   1   2   3   4   5   6   7   8   9
 1   2   3   4   5   6   7   8   9   10
@@ -1704,14 +1713,18 @@ Soma da diagonal secundária: 14
 ...
 9   10  11  12  13  14  15  16  17  18
 ```
+
 8. Gere uma matriz identidade `N x N`, onde `N` é um inteiro informado pelo usuário. Uma matriz identidade é uma matriz quadrada em que os elementos de sua diagonal principal são todos iguais a `1` e os demais elementos iguais a `0`. Exiba a matriz identidade em formato tabular. Ex.:
+
 ```
 1   0   0   0
 0   1   0   0
 0   0   1   0
 0   0   0   1
 ```
-9. Gere uma matriz `3 x 3` inteiros aleatórios, exiba a matriz em formato tabular, depois escreva os elementos pares e os ímpares dessa matriz, separados e na ordem em que aparecem. Ex.: 
+
+9. Gere uma matriz `3 x 3` inteiros aleatórios, exiba a matriz em formato tabular, depois escreva os elementos pares e os ímpares dessa matriz, separados e na ordem em que aparecem. Ex.:
+
 ```
 8   1   3
 5   6   7
@@ -1720,9 +1733,11 @@ Soma da diagonal secundária: 14
 Pares: 8, 6, 4, 2
 Ímpares: 1, 3, 5, 7, 3
 ```
+
 10. Leia uma matriz `2 x 3` de inteiros e exiba essa matriz em formato tabular. Logo após, leia um inteiro `D` e escreva os elementos dessa matriz que sejam divisíveis por `D`.
 11. Gere duas matrizes `4 x 2` de inteiros aleatórios, `A` e `B`. Em seguida, gere uma matriz resultante de `A + B` e exiba as três em formato tabular.
 12. Considerando que `N` é um inteiro `>= 3` informado pelo usuário, gere uma matriz quadrada `N x N`, em que os elementos às margens da matriz sejam iguais a `1` e os internos sejam iguais a `0`. Ao fim, exiba a matriz em formato tabular. Ex.:
+
 ```
 1   1   1       1   1   1   1       1   1   1   1   1
 1   0   1       1   0   0   1       1   0   0   0   1
@@ -1730,10 +1745,12 @@ Pares: 8, 6, 4, 2
                 1   1   1   1       1   0   0   0   1
                                     1   1   1   1   1
 ```
+
 13. Considerando que `N` e `M` são inteiros informados pelo usuário, leia uma matriz `N x M` de inteiros, e gere uma matriz transposta a partir dela. Exiba a matriz original e a matriz transposta em formato tabular. Ex.:
+
 ```
 Matriz original:
-1   2   3 
+1   2   3
 4   5   6
 
 Matriz transposta:
@@ -1741,7 +1758,9 @@ Matriz transposta:
 2   5   
 3   6
 ```
+
 14. Considerando que `N` e `M` são inteiros informados pelo usuário, leia uma matriz `N x M` de inteiros, e gere uma matriz rotacionada em 90 graus em sentido horário a partir dela. Exiba a matriz original e a matriz rotacionada em formato tabular. Ex.:
+
 ```
 Matriz original:
 1   2
@@ -1752,6 +1771,7 @@ Matriz rotacionada:
 5   3   1
 6   4   2
 ```
+
 15. Utilizando uma matriz de `3 x 3`, construa um Jogo da Velha que possa ser jogado por duas pessoas. Ao fim do jogo, informe quem venceu ou se houve empate.
 
 ## Lista 9 - Funções
