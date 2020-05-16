@@ -703,7 +703,7 @@ Se você ainda não conseguiu compreender a diferença entre `while` e `do`/`whi
 `Do`/ `While` (Faça/Enquanto):
 > Mariana pede a Felipe que vá ao mercado e lhe diz: Felipe, pegue um tomate. Enquanto houver tomates bons, continue pegando tomates. Se não houver mais tomates bons, pare de pegar os tomates.
 
-<div style="text-align:center"><img src="imagens/tomato.png" alt="Tomate"></div>
+<div style="text-align:center"><img src="imagens/tomato.jpg" alt="Tomate"></div>
 
 ### 8.3. For
 
