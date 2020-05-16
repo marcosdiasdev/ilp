@@ -132,7 +132,7 @@ Uma tabela verdade é uma tabela utilizada em Lógica para verificar se uma expr
 
 No exemplo a seguir, temos a tabela verdade dos operadores lógicos `e` e `ou`. Observe que as variáveis `X` e `Y` representam expressões que podem ser verdadeiras ou falsas de forma independente.
 
-![alt text](imagens/tabela-verdade1.png "Tabela Verdade 1")
+<div style="text-align:center"><img src="imagens/tabela-verdade1.png" alt="Tabela Verdade 1"></div>
 
 Para compreender como se dá a construção dessa tabela verdade, podemos nos fazer estas duas perguntas:
 
@@ -147,13 +147,13 @@ O operador `ou` já funciona de maneira diferente. Ao questionarmos se `X` ou `Y
 
 O operador `não` é utilizado para negar uma determinada expressão. Ex.: se `X == verdadeiro`, então `não X == falso`; se `X == falso`, então `não X == verdadeiro`.
 
-![alt text](imagens/tabela-verdade2.png "Tabela Verdade 2")
+<div style="text-align:center"><img src="imagens/tabela-verdade2.png" alt="Tabela Verdade 2"></div>
 
 ### 4.3\. Exercícios com tabela verdade
 
 **1\. Complete a seguinte tabela verdade:**
 
-![alt text](imagens/tabela-verdade-exercicios.png "Tabela Verdade - Exercícios")
+<div style="text-align:center"><img src="imagens/tabela-verdade-exercicios.png" alt="Tabela Verdade - Exercícios"></div>
 
 ## 5\. Precedência de operadores
 
@@ -703,7 +703,7 @@ Se você ainda não conseguiu compreender a diferença entre `while` e `do`/`whi
 `Do`/ `While` (Faça/Enquanto):
 > Mariana pede a Felipe que vá ao mercado e lhe diz: Felipe, pegue um tomate. Enquanto houver tomates bons, continue pegando tomates. Se não houver mais tomates bons, pare de pegar os tomates.
 
-![alt text](imagens/tomato.jpg "Tomate")
+<div style="text-align:center"><img src="imagens/tomato.png" alt="Tomate"></div>
 
 ### 8.3. For
 
@@ -857,7 +857,7 @@ Contamos as posições de um vetor sempre a partir de `0`. A última posição d
 
 Em cada posição de um vetor há um único valor:
 
-![Vetor](imagens/vetor0.png "Vetor")
+<div style="text-align:center"><img src="imagens/vetor0.png" alt="Vetor"></div>
 
 Este mesmo vetor poderia ser construído em JavaScript da seguinte maneira:
 
@@ -995,7 +995,7 @@ Semelhante ao conceito encontrado na Matemática, em Lógica de Programação, m
 
 A matriz abaixo, por exemplo, é uma matriz de tamanho `3 X 3`, ou seja: 3 linhas e 3 colunas.
 
-![alt text](imagens/matriz.png "Matriz")
+<div style="text-align:center"><img src="imagens/matriz1.png" alt="Matriz"></div>
 
 Poderíamos declará-la em JavaScript da seguinte maneira:
 
@@ -1058,7 +1058,7 @@ for(var x = 0; x <= 2; x++)
 
 Para que uma matriz possua uma diagonal, esta matriz deve obrigatoriamente ser uma matriz quadrada, ou seja, uma matriz que possua o mesmo número de linhas e colunas.
 
-![alt text](imagens/diagonal.png "Diagonais")
+<div style="text-align:center"><img src="imagens/diagonal.png" alt="Diagonais"></div>
 
 No exemplo acima, pode-se ver as diagonais primária e secundária de uma matriz de tamanho `3 X 3`.
 
@@ -1597,7 +1597,7 @@ Em tradução livre: "Erro de sintaxe: sinal . não esperado".
 5. Construa um programa que funcione como um menu para uma lanchonete. Seu programa deverá iniciar mostrando o nome da sua lanchonete. Em seguida, seu programa deverá pedir o nome do usuário e, após lê-lo, exibir uma mensagem de boas-vindas. Após isso, seu programa deverá mostrar as opções de lanches disponíveis e seus preços: mostre pelo menos 6 opções de lanches diferentes. Permita que o usuário escolha uma das opções de lanches e, após a escolha, mostre a ele uma mensagem informando a opção que ele escolheu e quanto seu pedido irá custar. Lembre-se de avisar ao usuário caso ele escolha uma opção inexistente.
 6. Construa um programa que leia a primeira letra do mês de nascimento de uma pessoa e informe em quais meses essa pessoa pode ter nascido. Caso não exista um mês que comece com a letra lida, informe ao usuário que ele se enganou.
 
-<img src="imagens/meses.png" alt="Meses" width="280px">
+<div style="text-align:center"><img src="imagens/meses.png" alt="Meses" width="280px"></div>
 
 ## Lista 4 - Laços de Repetição: Enquanto e Faça/Enquanto
 
@@ -1650,7 +1650,7 @@ Em tradução livre: "Erro de sintaxe: sinal . não esperado".
 8. Declare um vetor com 5 nomes de pessoas diferentes. Em seguida, permita que o usuário digite um nome. Se este nome estiver no vetor, informe que tal pessoa foi encontrada. Senão, informe que tal pessoa não foi encontrada.
 9. Declare três vetores. Preencha o primeiro e depois o segundo, cada um com 5 números inteiros lidos. Por fim, percorra os três vetores simultaneamente, preenchendo o terceiro com as somas dos outros dois. Imprima os três lado a lado.
 
-![alt text](imagens/vetor1.png "Vetores")
+<div style="text-align:center"><img src="imagens/vetor1.png" alt="Vetores"></div>
 
 ## Lista 8 - Matrizes
 
@@ -1660,7 +1660,7 @@ Quando se disser "Leia uma matriz", entenda que todos os elementos da matriz dev
 
 ---
 
-1. Leia e armazene `nome`, `idade` e `salário` de 5 pessoas em uma única matriz. Ao fim, exiba a matriz em formato tabular. Ex.:
+1\. Leia e armazene `nome`, `idade` e `salário` de 5 pessoas em uma única matriz. Ao fim, exiba a matriz em formato tabular. Ex.:
 
 ```
 José        30      3000.00
@@ -1670,7 +1670,7 @@ Joaquim     56      12000.00
 Silvia      32      10000.00
 ```
 
-2. Leia uma matriz `3 x 3` de inteiros. Ao fim, exiba a matriz em formato tabular e também o elemento do centro. Ex.:
+2\. Leia uma matriz `3 x 3` de inteiros. Ao fim, exiba a matriz em formato tabular e também o elemento do centro. Ex.:
 
 
 ```
@@ -1682,9 +1682,9 @@ Silvia      32      10000.00
 Elemento do centro: 5
 ```
 
-3. Leia uma matriz quadrada `N x N` de inteiros, onde `N` é um inteiro informado pelo usuário. Exiba a matriz em formato tabular.
-4. Leia uma matriz `N x M` de inteiros, onde `N` e `M` são inteiros informados pelo usuário. Exiba a matriz em formato tabular.
-5. Gere uma matriz `4 x 4` de inteiros. Ao fim, exiba a matriz em formato tabular e também os elementos dos cantos. Ex.:
+3\. Leia uma matriz quadrada `N x N` de inteiros, onde `N` é um inteiro informado pelo usuário. Exiba a matriz em formato tabular.
+4\. Leia uma matriz `N x M` de inteiros, onde `N` e `M` são inteiros informados pelo usuário. Exiba a matriz em formato tabular.
+5\. Gere uma matriz `4 x 4` de inteiros. Ao fim, exiba a matriz em formato tabular e também os elementos dos cantos. Ex.:
 
 ```
 1   7   5   3
@@ -1695,7 +1695,7 @@ Elemento do centro: 5
 Elementos dos cantos: 1, 3, 2 e 9
 ```
 
-6. Gere uma matriz `3 x 3` de inteiros aleatórios. Exiba a matriz em formato tabular e também os resultados das somas dos elementos da diagonal principal e da diagonal secundária. Ex.:
+6\. Gere uma matriz `3 x 3` de inteiros aleatórios. Exiba a matriz em formato tabular e também os resultados das somas dos elementos da diagonal principal e da diagonal secundária. Ex.:
 
 ```
 5   3   2
@@ -1706,7 +1706,7 @@ Soma da diagonal principal: 13
 Soma da diagonal secundária: 14
 ```
 
-7. Gere uma matriz `10 x 10` de inteiros, onde o valor de cada elemento é dado pela soma de seus índices. Exiba a matriz em formato tabular. Ex.:
+7\. Gere uma matriz `10 x 10` de inteiros, onde o valor de cada elemento é dado pela soma de seus índices. Exiba a matriz em formato tabular. Ex.:
 
 ```
 0   1   2   3   4   5   6   7   8   9
@@ -1716,7 +1716,7 @@ Soma da diagonal secundária: 14
 9   10  11  12  13  14  15  16  17  18
 ```
 
-8. Gere uma matriz identidade `N x N`, onde `N` é um inteiro informado pelo usuário. Uma matriz identidade é uma matriz quadrada em que os elementos de sua diagonal principal são todos iguais a `1` e os demais elementos iguais a `0`. Exiba a matriz identidade em formato tabular. Ex.:
+8\. Gere uma matriz identidade `N x N`, onde `N` é um inteiro informado pelo usuário. Uma matriz identidade é uma matriz quadrada em que os elementos de sua diagonal principal são todos iguais a `1` e os demais elementos iguais a `0`. Exiba a matriz identidade em formato tabular. Ex.:
 
 ```
 1   0   0   0
@@ -1725,7 +1725,7 @@ Soma da diagonal secundária: 14
 0   0   0   1
 ```
 
-9. Gere uma matriz `3 x 3` inteiros aleatórios, exiba a matriz em formato tabular, depois escreva os elementos pares e os ímpares dessa matriz, separados e na ordem em que aparecem. Ex.:
+9\. Gere uma matriz `3 x 3` inteiros aleatórios, exiba a matriz em formato tabular, depois escreva os elementos pares e os ímpares dessa matriz, separados e na ordem em que aparecem. Ex.:
 
 ```
 8   1   3
@@ -1736,9 +1736,9 @@ Pares: 8, 6, 4, 2
 Ímpares: 1, 3, 5, 7, 3
 ```
 
-10. Leia uma matriz `2 x 3` de inteiros e exiba essa matriz em formato tabular. Logo após, leia um inteiro `D` e escreva os elementos dessa matriz que sejam divisíveis por `D`.
-11. Gere duas matrizes `4 x 2` de inteiros aleatórios, `A` e `B`. Em seguida, gere uma matriz resultante de `A + B` e exiba as três em formato tabular.
-12. Considerando que `N` é um inteiro `>= 3` informado pelo usuário, gere uma matriz quadrada `N x N`, em que os elementos às margens da matriz sejam iguais a `1` e os internos sejam iguais a `0`. Ao fim, exiba a matriz em formato tabular. Ex.:
+10\. Leia uma matriz `2 x 3` de inteiros e exiba essa matriz em formato tabular. Logo após, leia um inteiro `D` e escreva os elementos dessa matriz que sejam divisíveis por `D`.
+11\. Gere duas matrizes `4 x 2` de inteiros aleatórios, `A` e `B`. Em seguida, gere uma matriz resultante de `A + B` e exiba as três em formato tabular.
+12\. Considerando que `N` é um inteiro `>= 3` informado pelo usuário, gere uma matriz quadrada `N x N`, em que os elementos às margens da matriz sejam iguais a `1` e os internos sejam iguais a `0`. Ao fim, exiba a matriz em formato tabular. Ex.:
 
 ```
 1   1   1       1   1   1   1       1   1   1   1   1
@@ -1748,7 +1748,7 @@ Pares: 8, 6, 4, 2
                                     1   1   1   1   1
 ```
 
-13. Considerando que `N` e `M` são inteiros informados pelo usuário, leia uma matriz `N x M` de inteiros, e gere uma matriz transposta a partir dela. Exiba a matriz original e a matriz transposta em formato tabular. Ex.:
+13\. Considerando que `N` e `M` são inteiros informados pelo usuário, leia uma matriz `N x M` de inteiros, e gere uma matriz transposta a partir dela. Exiba a matriz original e a matriz transposta em formato tabular. Ex.:
 
 ```
 Matriz original:
@@ -1761,7 +1761,7 @@ Matriz transposta:
 3   6
 ```
 
-14. Considerando que `N` e `M` são inteiros informados pelo usuário, leia uma matriz `N x M` de inteiros, e gere uma matriz rotacionada em 90 graus em sentido horário a partir dela. Exiba a matriz original e a matriz rotacionada em formato tabular. Ex.:
+14\. Considerando que `N` e `M` são inteiros informados pelo usuário, leia uma matriz `N x M` de inteiros, e gere uma matriz rotacionada em 90 graus em sentido horário a partir dela. Exiba a matriz original e a matriz rotacionada em formato tabular. Ex.:
 
 ```
 Matriz original:
@@ -1774,7 +1774,7 @@ Matriz rotacionada:
 6   4   2
 ```
 
-15. Utilizando uma matriz de `3 x 3`, construa um Jogo da Velha que possa ser jogado por duas pessoas. Ao fim do jogo, informe quem venceu ou se houve empate.
+15\. Utilizando uma matriz de `3 x 3`, construa um Jogo da Velha que possa ser jogado por duas pessoas. Ao fim do jogo, informe quem venceu ou se houve empate.
 
 ## Lista 9 - Funções
 1. Crie uma função `escreva(texto)` que receba um texto como parâmetro e exiba esse texto no console.
