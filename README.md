@@ -995,7 +995,7 @@ Semelhante ao conceito encontrado na Matemática, em Lógica de Programação, m
 
 A matriz abaixo, por exemplo, é uma matriz de tamanho `3 X 3`, ou seja: 3 linhas e 3 colunas.
 
-<div style="text-align:center"><img src="imagens/matriz1.png" alt="Matriz"></div>
+<div style="text-align:center"><img src="imagens/matriz.png" alt="Matriz"></div>
 
 Poderíamos declará-la em JavaScript da seguinte maneira:
 
