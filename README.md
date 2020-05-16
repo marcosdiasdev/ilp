@@ -1672,7 +1672,9 @@ Silvia      32      10000.00
 
 2. Leia uma matriz `3 x 3` de inteiros. Ao fim, exiba a matriz em formato tabular e também o elemento do centro. Ex.:
 
+
 ```
+
 1   2   3
 4   5   6
 7   8   9
