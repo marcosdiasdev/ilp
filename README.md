@@ -1787,19 +1787,20 @@ Matriz rotacionada:
 5. Crie uma função `quadrado(num)` que receba um número como parâmetro e retorne o seu quadrado.
 6. Crie uma função `cubo(num)` que receba um número como parâmetro e retorne o seu cubo.
 7. Crie uma função `potencia(num, expoente)` que receba como parâmetros um número (`num`) e um expoente, e retorne a potenciação/exponenciação de `num` elevado a `expoente`.
-8. Crie uma função `imc(peso, altura)` que receba os parâmetros `peso` e `altura`, e retorne o Índice de Massa Corporal resultante.
-9. Crie uma função `calculaAreaQuadrado(lado)` que calcule e retorne a área de um quadrado com base na medida de seu lado.
-10. Crie uma função `calculaAreaRetangulo(largura, altura)` que calcule e retorne a área de um retângulo com base em sua largura e altura.
-11. Crie uma função `calculaAreaCirculo(raio)` que calcule e retorne a área de um círculo com base em seu raio.
-12. Crie uma função `mostrarLista(lista)` que receba um `array` como parâmetro, percorra cada uma de suas posições e as escreva separadamente no console.
-13. Crie uma função `matrizNula(matriz)` que receba uma matriz como parâmetro, retorne `true` caso a matriz seja nula e `false` caso contrário.
-14. Crie uma função `matrizQuadrada(matriz)` que receba uma matriz como parâmetro, retorne `true` caso a matriz seja quadrada e `false` caso contrário.
-15. Crie uma função `matrizDiagonal(matriz)` que receba uma matriz como parâmetro, retorne `true` caso a matriz seja diagonal e `false` caso contrário. Utilize a função `matrizQuadrada(matriz)` para verificar se a matriz é quadrada antes de verificar se é uma matriz diagonal.
-16. Crie uma função `soma(...termos)` que retorne o resultado da soma de um número indefinido de `termos`.
-17. Crie uma função `escreva(...valores)` que funcione exatamente como a `console.log()`: escreva um número indefinido de `valores` no console.
-18. Crie uma função `mediaAritmetica(...termos)` que receba como parâmetro um número indefinido de `termos` e retorne sua média aritmética.
-19. Crie uma função `ehPrimo(numero)` que receba um número natural como parâmetro e retorne `true` caso o número seja primo ou `false` caso contrário.
-20. Crie uma função `ehPerfeito(numero)` que receba um número natural como parâmetro e retorne `true` caso o número seja perfeito ou `false` caso contrário. Um número é perfeito quando é igual à soma dos seus divisores sem contar com ele mesmo. Ex.: 6 é perfeito porque `1 + 2 + 3 = 6`.
+8. Crie uma função recursiva `potencia(num, expoente)` que receba como parâmetros um número (`num`) e um expoente, e retorne a potenciação/exponenciação de `num` elevado a `expoente`. Nesta função não são permitidas estruturas de repetição.
+9. Crie uma função `imc(peso, altura)` que receba os parâmetros `peso` e `altura`, e retorne o Índice de Massa Corporal resultante.
+10. Crie uma função `calculaAreaQuadrado(lado)` que calcule e retorne a área de um quadrado com base na medida de seu lado.
+11. Crie uma função `calculaAreaRetangulo(largura, altura)` que calcule e retorne a área de um retângulo com base em sua largura e altura.
+12. Crie uma função `calculaAreaCirculo(raio)` que calcule e retorne a área de um círculo com base em seu raio.
+13. Crie uma função `mostrarLista(lista)` que receba um `array` como parâmetro, percorra cada uma de suas posições e as escreva separadamente no console.
+14. Crie uma função `matrizNula(matriz)` que receba uma matriz como parâmetro, retorne `true` caso a matriz seja nula e `false` caso contrário.
+15. Crie uma função `matrizQuadrada(matriz)` que receba uma matriz como parâmetro, retorne `true` caso a matriz seja quadrada e `false` caso contrário.
+16. Crie uma função `matrizDiagonal(matriz)` que receba uma matriz como parâmetro, retorne `true` caso a matriz seja diagonal e `false` caso contrário. Utilize a função `matrizQuadrada(matriz)` para verificar se a matriz é quadrada antes de verificar se é uma matriz diagonal.
+17. Crie uma função `soma(...termos)` que retorne o resultado da soma de um número indefinido de `termos`.
+18. Crie uma função `escreva(...valores)` que funcione exatamente como a `console.log()`: escreva um número indefinido de `valores` no console.
+19. Crie uma função `mediaAritmetica(...termos)` que receba como parâmetro um número indefinido de `termos` e retorne sua média aritmética.
+20. Crie uma função `ehPrimo(numero)` que receba um número natural como parâmetro e retorne `true` caso o número seja primo ou `false` caso contrário.
+21. Crie uma função `ehPerfeito(numero)` que receba um número natural como parâmetro e retorne `true` caso o número seja perfeito ou `false` caso contrário. Um número é perfeito quando é igual à soma dos seus divisores sem contar com ele mesmo. Ex.: 6 é perfeito porque `1 + 2 + 3 = 6`.
 
 ## Lista 10 - Objetos
 1. Construa uma classe `Pessoa`, contendo algumas propriedades, como `nome`, `idade` e  `sexo` e um método `apresenta()`, que exiba uma mensagem de apresentação com os dados desta pessoa.
