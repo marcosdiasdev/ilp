@@ -8,6 +8,9 @@ Não tenha pressa. Leia com atenção e seja persistente. A programação de com
 
 Bons estudos!
 
+## Sumário
+{% include toc.html html=content %}
+
 ## 1. Algoritmo
 
 Após entender o que é a programação de computadores, o primeiro conceito com o qual costumamos nos deparar no aprendizado de programação é o conceito de **algoritmo**.
