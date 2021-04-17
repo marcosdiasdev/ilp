@@ -25,7 +25,7 @@ Algoritmo para fritar ovos
 1.    pegar frigideira, ovo, óleo e sal
 2.    colocar óleo na frigideira
 3.    acender o fogo
-4.    levar a frigideira ao fogo
+4.    lelet a frigideira ao fogo
 5.    esperar o óleo esquentar
 6.    quebrar o ovo
 7.    colocar o ovo
@@ -72,7 +72,7 @@ nome = "José"
 
 Pode ser lido como: variável `nome` recebe `José`.
 
-Observe que o símbolo de igualdade, `=`, aqui é utilizado como operador de atribuição. Para igualdade, utilize `==`.
+Observe que o símbolo de igualdade, `=`, aqui é utilizado como operador de atribuição. Para igualdade, utilize `==` ou `===`.
 
 ### 2.3\. Tipos de variáveis
 
@@ -81,8 +81,8 @@ O tipo de uma variável define o tipo de valor que ela poderá armazenar. Por ex
 - **Inteiro (integer):** número inteiro. Ex.: `10` ou `50`.
 - **Real (float):** número real. Ex.: `10.5` ou `0.8`.
 - **Caractere (character):** uma letra do alfabeto, algarismo, sinal de pontuação ou símbolo. Ex.: `'A'` ou `'2'` ou `'$'`. Valores do tipo caractere geralmente são representados entre aspas simples ('').
-- **Cadeia (string):** números, letras, palavras, frases e/ou outros símbolos. Ex.: `"A"` ou `"abc123"` ou `"* é um asterisco."`. Valores do tipo cadeia geralmente são representados entre aspas duplas ("").
-- **Lógico (boolean):** verdadeiro ou falso (`true` ou `false`), 1 ou 0.
+- **Cadeia (string):** números, letras, palavras, frases e/ou outros símbolos. Ex.: `"A"` ou `"abc123"` ou `"* é um asterisco."`. Valores do tipo cadeia geralmente são representados entre aspas duplas (""); embora em JavaScript se possa utilizar também aspas simples ('').
+- **Lógico (boolean):** verdadeiro ou falso (`true` e `false` em JavaScript).
 
 > Os valores entre parênteses correspondem aos tipos de variáveis como são usados em linguagens de programação como C++ ou Java. Geralmente, estes tipos aparecem de forma abreviada: int, char, bool.
 
@@ -101,7 +101,7 @@ O tipo de uma variável define o tipo de valor que ela poderá armazenar. Por ex
 
 ## 3\. Operadores
 
-Um operador é um símbolo que, como seu próprio nome diz, é utilizado para representar operações lógico-matemáticas. Os operadores que iremos utilizar são os operadores aritméticos, os operadores relacionais e os operadores lógicos. Observe que alguns deles, já utilizados na Matemática, terão seu símbolo substituído por outro na Programação.
+Um operador é um símbolo que, como seu próprio nome diz, é utilizado para representar operações lógico-matemáticas. Os operadores que iremos utilizar são os operadores aritméticos, os operadores relacionais e os operadores lógicos. Observe que alguns deles, já utilizados na Matemática, terão seu símbolo substituído por outro na Programação. Já que utilizaremos JavaScript como linguagem de programação neste material, todos os operadores nos exemplos serão operadores válidos na linguagem JavaScript.
 
 ### 3.1\. Operadores Aritméticos
 
@@ -110,7 +110,7 @@ Um operador é um símbolo que, como seu próprio nome diz, é utilizado para re
 - **Multiplicação (*):** `8 * 8`
 - **Divisão (/):** `40 / 5`
 - **Resto/Módulo (%):** `20 % 3`
-- **Potenciação (^):** `2 ^ 2`
+- **Potenciação (\*\*):** `2 ** 2`
 
 ### 3.2\. Operadores Relacionais
 
@@ -123,36 +123,34 @@ Um operador é um símbolo que, como seu próprio nome diz, é utilizado para re
 
 ### 3.3\. Operadores Lógicos
 
-- **E/Conjunção (e; &&; and):** `5 == 5 e 9 > 7`
-- **OU/Disjunção (ou; \|\|; or):** `5 > 3 ou 7 >= 1`
-- **NÃO/Negação (nao; !; not):** `nao(3 > 2) == falso`
+- **E/Conjunção (&&):** `5 == 5 && 9 > 7`
+- **Ou/Disjunção (\|\|):** `5 > 3 || 7 >= 1`
+- **Não/Negação (!):** `!(3 > 2) == false`
 
 ## 4\. Tabela verdade
 
 Uma tabela verdade é uma tabela utilizada em Lógica para verificar se uma expressão é verdadeira ou falsa.
 
-### 4.1\. Operadores "e" e "ou"
+### 4.1\. Operadores "e", "ou" e "não"
 
-No exemplo a seguir, temos a tabela verdade dos operadores lógicos `e` e `ou`. Observe que as variáveis `X` e `Y` representam expressões que podem ser verdadeiras ou falsas de forma independente.
+No exemplo a seguir, temos a tabela verdade dos operadores lógicos `e` e `ou` (`&&` e `||` em JavaScript). Observe que as variáveis `X` e `Y` representam expressões que podem ser verdadeiras ou falsas de forma independente.
 
 <div style="text-align:center"><img src="imagens/tabela-verdade1.png" alt="Tabela Verdade 1"></div>
 
-Para compreender como se dá a construção dessa tabela verdade, podemos nos fazer estas duas perguntas:
+Para compreender como se dá a construção desta tabela, podemos nos fazer as seguintes perguntas:
 
 - `X` e `Y` são verdadeiros?
 - `X` ou `Y` são verdadeiros?
 
-Ao questionar se `X` e `Y` são verdadeiros, questionamos se ambos são verdadeiros. Ou seja: a expressão `X e Y` só é verdadeira quando `X == verdadeiro` e `Y == verdadeiro`.
+Ao questionar se `X` e `Y` são verdadeiros, questionamos se ambos são verdadeiros. Ou seja: a expressão `X && Y` só é verdadeira quando `X == true` e `Y == true`. Repare que aqui já começamos a utilizar os termos `true` e `false` para representar valores verdadeiros ou falsos.
 
-O operador `ou` já funciona de maneira diferente. Ao questionarmos se `X` ou `Y` são verdadeiros, questionamos se pelo menos um deles é verdadeiro. Ou seja: a expressão `X ou Y` é verdadeira quando `X == verdadeiro` e `Y == falso`, ou `X == falso` e `Y == verdadeiro`, ou `X == verdadeiro` e `Y == verdadeiro`.
+O operador **ou** (`||`) já funciona de maneira diferente. Ao questionarmos se `X` ou `Y` são verdadeiros, questionamos se pelo menos um deles é verdadeiro. Ou seja: a expressão `X || Y` é verdadeira quando `X == true` e `Y == false`, ou `X == false` e `Y == true`, ou `X == true` e `Y == true`.
 
-### 4.2\. Operador "não"
-
-O operador `não` é utilizado para negar uma determinada expressão. Ex.: se `X == verdadeiro`, então `não X == falso`; se `X == falso`, então `não X == verdadeiro`.
+O operador **não** (`!`) é utilizado para negar uma determinada expressão. Ex.: se `X == true`, então `!X == false`; se `X == false`, então `!X == true`.
 
 <div style="text-align:center"><img src="imagens/tabela-verdade2.png" alt="Tabela Verdade 2"></div>
 
-### 4.3\. Exercícios com tabela verdade
+### 4.2\. Exercícios com tabela verdade
 
 **1\. Complete a seguinte tabela verdade:**
 
@@ -211,8 +209,9 @@ Para facilitar, isole as expressões que estão antes e após o operador lógico
 - a) `2 + 3 - 5 * 8 / 4`
 - b) `7 * 4 / 2 + 9 - 6`
 - c) `(4 + 2) * 3 / 4`
-- d) `7 > 2 e 3 -5 < 8`
-- e) `8 > 12 e 5 < 3 + 4`
+- d) `7 > 2 && 3 -5 < 8`
+- e) `8 > 12 && 5 < 3 + 4`
+- e) `9 > 15 || 3 < 3 + 4`
 
 ## 6\. Primeiros passos em programação
 
@@ -224,7 +223,7 @@ Outro conceito que precisamos compreender é o de **semântica**. Em Lógica de 
 
 ### 6.1\. Olá, mundo!
 
-Para começar a programar em JavaScript, não é necessário nenhum programa específico, você só precisa de um navegador. Nós recomendamos o Google Chrome ou o Mozilla Firefox. Se você estiver utilizando um smartphone Android, poderá utilizar o aplicativo [JS Run](https://itunes.apple.com/us/app/javascript-anywhere-jsanywhere/id363452277?mt=8); caso esteja utilizando um iPhone, baixe o aplicativo [JS Code Run: JavaScript Editor](https://itunes.apple.com/us/app/js-code-run-javascript-editor/id1294015040?mt=8).
+Para começar a programar em JavaScript, não é necessário nenhum programa específico, você só precisa de um navegador. Nós recomendamos o Google Chrome ou o Mozilla Firefox. Se você estiver utilizando um smartphone Android, poderá utilizar o aplicativo [JS Run](https://itunes.apple.com/us/app/javascript-anywhere-jsanywhere/id363452277?mt=8) ou o [Spck Editor](https://play.google.com/store/apps/details?id=io.spck&hl=pt_BR&gl=US); caso esteja utilizando um iPhone, baixe o aplicativo [JS Code Run: JavaScript Editor](https://itunes.apple.com/us/app/js-code-run-javascript-editor/id1294015040?mt=8).
 
 Recomendamos que você faça a leitura dos capítulos a seguir testando cada um dos exemplos.
 
@@ -243,29 +242,29 @@ alert("Olá, mundo!")
 Antes que uma variável possa ser utilizada para armazenamento de um valor qualquer, ela deve ser declarada, ou seja: precisamos reservar aquele pequeno espaço na memória do computador e nomeá-lo para uso futuro:
 
 ```js
-var idade
+let idade
 ```
 
 No exemplo acima, declaramos a variável `idade`.
 
-Em JavaScript, o termo `var` é utilizado para declarar uma variável de escopo global, ou seja, uma variável que estará acessível a partir de qualquer parte do nosso código.
+Em JavaScript, o termo `let` é utilizado para declarar uma variável com escopo de bloco, ou seja, uma variável que só é acessível dentro do bloco em que foi declarada. Um exemplo de bloco são as estruturas de decisão e de repetição que conheceremos em breve.
 
-Você também pode utilizar o termo `let` quando quiser uma variável com escopo de bloco, uma variável que só exista naquele local:
+Você também pode utilizar o termo `var` para declarar uma variável com escopo global. Variáveis assim, mesmo se declaradas dentro de um bloco, serão acessíveis do lado de fora dele.
 
 ```js
-let idade
+var idade
 ```
 
 Em JavaScript, até que uma variável seja inicializada, ou seja, até que ela receba algum valor, seu conteúdo será `undefined` (indefinido). Você pode inicializar uma variável juntamente à sua declaração:
 
 ```js
-var nome = "Fulano"
+let nome = "Fulano"
 ```
 
 Mas podemos também declarar uma variável e inicializá-la com um valor lido:
 
 ```js
-var preco = prompt("Digite um preço: ")
+let preco = prompt("Digite um preço: ")
 ```
 
 A função `prompt()` utilizada no exemplo acima será abordada na próxima seção.
@@ -273,17 +272,27 @@ A função `prompt()` utilizada no exemplo acima será abordada na próxima seç
 Antes de prosseguirmos, lembre-se que você pode declarar quantas variáveis quiser, inclusive em uma única linha em seu programa, por exemplo:
 
 ```js
-var nome, sobrenome, apelido
+let nome, sobrenome, apelido
 let peso, altura
 let idade
 ```
+
+#### Constantes
+
+Em certos casos precisamos declarar variáveis que não terão seu valor ou referência modificados. Este tipo de variável é chamado de **constante**. Para declarar uma constante em JavaScript, utilize o termo `const`:
+
+```js
+const cidade = 'Pequim'
+```
+
+É importante saber que constantes devem sempre ser inicializadas junto à sua declaração, como fizemos no exemplo acima. Tente declarar uma constante sem inicializá-la ou tente modificar o valor de uma constante já inicializada e verifique o que acontece.
 
 ### 6.3\. Comandos de entrada
 
 Comandos de entrada são os responsáveis por receber uma informação do usuário. Ex.: leia, escute, ouça, receba. O comando de leitura que utilizaremos em JavaScript é o `prompt()`:
 
 ```js
-var nome = prompt("Digite seu nome. Ele será armazenado na variável nome.")
+let nome = prompt("Digite seu nome. Ele será armazenado na variável nome.")
 alert("O nome digitado foi " + nome)
 ```
 
@@ -320,21 +329,21 @@ Teste cada um dos exemplos separadamente e observe o que acontece.
 Neste exemplo, iremos declarar três variáveis: `a`, `b` e `c`. Faremos a leitura de dois números inteiros e os armazenaremos nas variáveis `a` e `b`. A variável `c` receberá a soma de `a` e `b`. Por fim, escreveremos no console o valor contido em `c`.
 
 ```js
-var a, b, c
-a = parseInt(prompt("Digite um número inteiro: "))
-b = parseInt(prompt("Digite outro número inteiro: "))
+let a, b, c
+a = Number(prompt("Digite um número inteiro: "))
+b = Number(prompt("Digite outro número inteiro: "))
 c = a + b
 console.log(c)
 ```
 
-> Achou estranho esse tal de parseInt()? Leia a próxima seção.
+> Achou estranho esse tal de Number()? Leia a próxima seção.
 
 ### 6.6. Tipos de variáveis em JavaScript
 
 Diferentemente de linguagens como C e Java, na linguagem JavaScript não é possível definir o tipo de uma variável. Isto faz com que uma variável `x`, por exemplo, possa, em um momento representar um número inteiro e, em outro momento, representar uma cadeia de caracteres. Teste o exemplo abaixo:
 
 ```js
-var x
+let x
 
 x = 50
 alert("O valor de x é " + x)
@@ -348,7 +357,7 @@ Devido a esta característica, costumamos dizer que a linguagem JavaScript é de
 Outra peculiaridade desta linguagem está relacionada ao fato de que é possível realizar operações com variáveis de tipos diferentes. Devido a isto, a tipagem da linguagem JavaScript é também considerada **fraca**. Teste o exemplo abaixo:
 
 ```js
-var a = 2, b = "2"
+let a = 2, b = "2"
 alert(a + b)
 ```
 > Ué! Mas 2 + 2 não eram igual a 4?!
@@ -369,16 +378,27 @@ Embora não se possa fixar o tipo de uma variável em JavaScript, os tipos de va
 Por padrão, qualquer valor lido pela função `prompt()` é considerado uma `string` (cadeia de caracteres):
 
 ```js
-var vinte = prompt("Digite 20 e pressione Enter: ")
+let vinte = prompt("Digite 20 e pressione Enter: ")
 console.log(vinte + 1) // O resultado será 201
 ```
 
 Logo, se precisarmos que o valor lido seja considerado como numérico, é necessário realizar a **conversão de tipo**.
 
-Para converter uma `string` em um número inteiro, utilizamos a função `parseInt()`. Para converter uma `string` em um número real, um número com parte decimal, utilizamos a função `parseFloat()`. O uso destas funções é muito simples: a `string` representando o número a ser convertido é informada entre parênteses e a função escolhida realiza a conversão. O exemplo anterior ficaria assim, com a devida conversão:
+Em JavaScript não existe bem uma distinção entre números inteiros e números reais. Um número real é simplesmente um valor numérico acompanhado de uma parte decimal.
+
+Para converter uma `string` em um número inteiro, utilizamos a função `parseInt()`. Se a `string` informada possuir uma parte decimal, essa parte será ignorada:
 
 ```js
-var vinte = parseInt(prompt("Digite 20 e pressione Enter: "))
+let numeroInteiro = parseInt("3.5") 
+console.log(numeroInteiro) // O resultado será somente 3
+```
+
+Se a `string` a ser convertida representar um número com parte decimal poderemos utilizar a função `parseFloat()`.
+
+Há ainda uma alternativa mais simples a essas duas funções que realiza por conta própria o trabalho de decidir se o número em questão é um inteiro ou real: a função `Number()`.
+
+```js
+let vinte = Number(prompt("Digite 20 e pressione Enter: "))
 console.log(vinte + 1) // O resultado será 21
 ```
 
@@ -387,17 +407,17 @@ Não se assuste com o uso de funções encadeadas, como no exemplo anterior. Lem
 Caso se sinta mais confortável, você também pode escrever o exemplo anterior da seguinte maneira:
 
 ```js
-var vinte = prompt("Digite 20 e pressione Enter: ")
-vinte = parseInt(vinte)
+let vinte = prompt("Digite 20 e pressione Enter: ")
+vinte = Number(vinte)
 console.log(vinte + 1) // O resultado será 21
 ```
 
 Ou ainda:
 
 ```js
-var vinteCadeia = prompt("Digite 20 e pressione Enter: ")
-var vinteInteiro = parseInt(vinteCadeia)
-console.log(vinteInteiro + 1) // O resultado será 21
+let vinteCadeia = prompt("Digite 20 e pressione Enter: ")
+let vinteNumerico = Number(vinteCadeia)
+console.log(vinteNumerico + 1) // O resultado será 21
 ```
 
 ### 6.7. Comentários: como dar mais sentido ao seu código
@@ -412,7 +432,7 @@ Através de comentários, você pode escrever qualquer coisa dentro do seu códi
 
 ```js
 // Declara a variável x e atribui o valor 50
-var x = 50
+let x = 50
 // Exibe uma mensagem com o valor de x
 alert(x)
 ```
@@ -420,7 +440,7 @@ alert(x)
 Às vezes utilizamos comentários também para **suprimir** uma ou mais linhas de código de um programa para que elas não sejam executadas:
 
 ```js
-var x = 10, y = 20
+let x = 10, y = 20
 console.log(x)
 // escreva(y)
 // Veja que só a variável x será escrita, pois a linha que deveria escrever y foi marcada como um comentário
@@ -435,6 +455,42 @@ foi um pouco
 mais longe */
 console.log(z)
 ```
+
+### 6.8. Escrevendo mensagens melhores
+
+Frequentemente você precisará escrever mensagens em seus programas. Quando essas mensagens precisarem incluir variáveis e resultados de expressões há alguns recursos que podemos utilizar a nosso favor.
+
+A função `console.log` permite que vários valores sejam informados separados por vírgula, inclusive tornando possível misturar strings e variáveis. Observe o exemplo a seguir:
+
+```js
+let nome = 'Júlia'
+let idade = 19
+console.log(nome, ' tem ', idade, ' anos.')
+// Júlia tem 19 anos
+```
+
+A função `alert` não permite vários valores, mas você pode passar uma grande string concatenada com sinais de `+`:
+
+```js
+let nome = 'Geovana'
+let idade = 21
+alert(nome + ' tem ' + idade + ' anos.')
+// Geovana tem 21 anos
+```
+
+#### Template strings
+
+Há um recurso que pode simplificar mais ainda o nosso trabalho com mensagens, chamado `template strings`. Com elas é possível mesclar strings, variáveis e outras expressões, em uma única expressão, sem a necessidade de abrir e fechar aspas várias vezes ou usar o operador de concatenação:
+
+```js
+let anoAtual = 2021
+let nascimento = 1990
+let nome = 'José'
+alert(`${nome} nasceu em ${nascimento}. Se estamos em ${anoAtual}, ele certamente tem ${anoAtual-nascimento} anos.`)
+// José nasceu em 1990. Se estamos em 2021, ele certamente tem 31 anos.
+```
+
+Uma template string deve ser envolvida por crases (\`\`) ao invés de aspas, e toda variável ou expressão dentro dela deve aparecer dentro de chaves acompanhadas por um cifrão `${}`.
 
 ## 7. Estruturas de decisão: escolha um caminho
 
@@ -451,7 +507,7 @@ A estrutura `if` (se) é utilizada na maioria dos casos em que é necessário de
 Para que você compreenda como funciona a estrutura `if`, imagine a seguinte situação: após lermos um número inteiro qualquer, se este número for par, deveremos exibir uma mensagem informando que ele é par. Ex.:
 
 ```js
-var numero
+let numero
 numero = prompt("Entre com um número: ")
 if(numero % 2 == 0) {
     alert("O número lido é par.")
@@ -485,7 +541,7 @@ Nem sempre é suficiente apenas verificar se uma condição é atendida e execut
 Ainda conforme o exemplo abordado anteriormente, imagine que caso o número lido não seja par tenhamos que mostrar uma mensagem também informando que o número é ímpar. Acompanhe o exemplo:
 
 ```js
-var numero = parseInt(prompt("Entre com um número inteiro: "))
+let numero = parseInt(prompt("Entre com um número inteiro: "))
 if(numero % 2 == 0) {
     alert("O número lido é par.")
 } else {
@@ -502,7 +558,7 @@ Mas o que fazer quando temos mais de duas alternativas?
 Para responder a essa pergunta, vamos pensar no seguinte problema: após ler um número inteiro, precisamos informar ao usuário se este número é negativo, nulo (0) ou positivo. Podemos fazer isso da seguinte forma:
 
 ```js
-var numero
+let numero
 numero = parseInt(prompt("Entre com um número inteiro: "))
 if(numero < 0) {
     console.log("O número lido é negativo.")
@@ -524,7 +580,7 @@ Tenha em mente que a quantidade de testes que podem ser realizados em sequência
 
 Para adquirir um maior domínio, teste os exemplos vistos, mas não pare por aí, crie seus próprios exemplos, teste condições compostas, como `idade > 18 && peso < 70`, estruturas com e sem um `else`, com dois ou mais `else if` até perceber que já está dominando o assunto.
 
-### 7.2. Switch/Case
+### 7.4. Switch/Case
 
 Seguindo a mesma linha das estruturas `ìf`/`else`, o `switch`/`case` (escolha/caso) oferece uma maneira mais prática de resolver problemas onde há muitos valores possíveis para uma variável.
 
@@ -644,7 +700,7 @@ se a condição for falsa, o código continuará daqui
 Em muitos dos casos em que utilizamos laços de repetição, nós trabalhos com números inteiros. Considere, por exemplo, uma situação em que seja necessário imprimir todos os números inteiros de 1 a 10. Em casos como este, utilizamos variáveis do tipo inteiro que possam ter seu valor alterado progressivamente. A estas variáveis damos o nome de **contadoras**:
 
 ```js
-var x = 1
+let x = 1
 while(x <= 10)
 {
     console.log(x)
@@ -659,7 +715,7 @@ Ao término desse programa, o valor de `x` será igual a `10` ou igual a `11`? P
 Se precisarmos realizar o caminho contrário, ou seja, imprimir todos os números inteiros de 10 a 1 (em ordem decrescente), o seguinte código seria suficiente:
 
 ```js
-var x = 10
+let x = 10
 while(x >= 1)
 {
     console.log(x)
@@ -715,7 +771,7 @@ A última estrutura de repetição que iremos abordar tem um comportamento basta
 Observe como faríamos para imprimir os números inteiros de 1 a 1000 utilizando `for`:
 
 ```js
-for(var x = 1; x <= 1000; x++)
+for(let x = 1; x <= 1000; x++)
 {
     console.log(x)
 }
@@ -774,7 +830,7 @@ O mesmo comando `break` (pare!) que utilizamos anteriormente com a estrutura `sw
 Um caso bastante típico acontece em programas que "perguntam ao usuário" quando parar. Imagine um programa que, infinitamente, leia um nome e responda com uma saudação. A cada repetição, este programa questiona ao usuário se ele deseja continuar.
 
 ```js
-var nome, resposta
+let nome, resposta
 
 while(true)
 {
@@ -790,16 +846,16 @@ while(true)
 }
 ```
 
-Perceba que, a estrutura de repetição `while` deverá ser executada infinitamente, já que a expressão entre parênteses é sempre `true`. Após mostrar visualizar a saudação, o usuário deverá digitar `n` caso deseje parar o programa. Desta forma, enquanto a resposta não for `n`, o programa continuará a ser executado.
+Perceba que, a estrutura de repetição `while` deverá ser executada infinitamente, já que a expressão entre parênteses é sempre `true`. Após visualizar a saudação, o usuário deverá digitar `n` caso deseje parar o programa. Desta forma, enquanto a resposta não for `n`, o programa continuará a ser executado.
 
 Saiba que o comando `break` pode ser utilizado com qualquer uma das três estruturas de repetição.
 
 Em algumas situações, encontraremos estruturas de repetição dentro de outras estruturas de repetição. Em casos assim, saiba que o comando `break` irá parar apenas a estrutura de repetição mais próxima. Exemplo:
 
 ```js
-for(var x = 1; x <= 10; x++)
+for(let x = 1; x <= 10; x++)
 {
-    for(var y = 1; y <= 5; y++)
+    for(let y = 1; y <= 5; y++)
     {
         console.log("X: " +  x + " - Y: " + y)
         if((x + y) % 3 == 0)
@@ -813,6 +869,20 @@ for(var x = 1; x <= 10; x++)
 
 Neste caso, apenas o segundo `for`, o que utiliza a variável `y` como variável de controle, será parado. A estrutura anterior deverá seguir para o próximo valor e dar continuidade ao código. Teste este exemplo e veja como ele se comporta.
 
+### 8.6. O comando continue
+
+Além do `break`, há outro comando utilizado para controlar estruturas de repetição: o `continue`. Diferentemente do `break`, o comando `continue` não finaliza a estrutura de repetição, mas sim a repetição/iteração atual.
+
+```js
+for(let i = 1; i <= 10; i++) {
+    console.log(`O valor de i é ${i}`)
+    continue
+    console.log(`O próximo valor de i será ${i+1}`)
+}
+```
+
+Observe que no exemplo acima, a mensagem que mostra o próximo valor de `i` nunca será exibida porque toda iteração é interrompida logo após a execução do primeiro `console.log`.
+
 ## 9. Vetores e matrizes: expandindo as possibilidades
 
 Imagine o seguinte problema:
@@ -821,8 +891,8 @@ Imagine o seguinte problema:
 Certamente, você, começou a pensar em uma solução semelhante à seguinte:
 
 ```js
-var n1, n2, n3, n4, media
-for(var x = 1; x <= 50; x++)
+let n1, n2, n3, n4, media
+for(let x = 1; x <= 50; x++)
 {
     n1 = prompt()
     n2 = prompt()
@@ -838,8 +908,8 @@ Como você faria se precisasse armazenar as 4 notas de cada um desses 50 alunos 
 Com vetores ou matrizes, é possível armazenar inúmeros valores em uma única variável. Assim, você poderia ter algo semelhante a:
 
 ```js
-var n1 = [], n2 = [], n3 = [], n4 = [], media = []
-for(var n = 0; n <= 49; n++)
+let n1 = [], n2 = [], n3 = [], n4 = [], media = []
+for(let n = 0; n <= 49; n++)
 {
     n1[n] = prompt()
     n2[n] = prompt()
@@ -865,7 +935,7 @@ Em cada posição de um vetor há um único valor:
 Este mesmo vetor poderia ser construído em JavaScript da seguinte maneira:
 
 ```js
-var numeros = [ 54, 21, 100, 89, 90, 32, 23, 74 ]
+let numeros = [ 54, 21, 100, 89, 90, 32, 23, 74 ]
 ```
 
 Neste caso, utilizamos um par de colchetes (`[ ]`) para criar uma lista de valores que seriam atribuídos à variável `numeros`. O termo utilizado pela linguagem JavaScript para representar um vetor é `array`, que significa **lista**.
@@ -873,7 +943,7 @@ Neste caso, utilizamos um par de colchetes (`[ ]`) para criar uma lista de valor
 Apesar disto, nem sempre desejamos atribuir valores a um vetor logo em sua inicialização. Muitas vezes, queremos um vetor vazio que possa ter seus valores informados pelo usuário ou através de atribuições sucessivas ao longo do programa. Poderíamos ter declarado o vetor `numeros` sem nenhum valor e o preenchido ao longo do código:
 
 ```js
-var numeros = []
+let numeros = []
 
 numeros[0] = prompt() // Suponha que o usuário digitou 54
 numeros[1] = prompt() // Suponha que o usuário digitou 21
@@ -890,13 +960,13 @@ Veja que cada valor lido ou atribuído foi armazenado em uma posição diferente
 Para simplificação do trabalho com vetores grandes, recomenda-se o uso de estruturas de repetição. Geralmente, utiliza-se a estrutura de repetição `para`, que oferece um mecanismo mais simples para se trabalhar com intervalos. Observe o exemplo a seguir:
 
 ```js
-var listaDeNomes = []
-for(var x = 0; x < 100; x++)
+let listaDeNomes = []
+for(let x = 0; x < 100; x++)
 {
     listaDeNomes[x] = prompt()
 }
 
-for(var x = 0; x < 100; x++)
+for(let x = 0; x < 100; x++)
 {
     console.log(listaDeNomes[x])
 }
@@ -911,7 +981,7 @@ Novamente, com uma estrutura de repetição, percorremos cada uma das posições
 Este mesmo algoritmo poderia ser construído com a estrutura de repetição `while`:
 
 ```js
-var listaDeNomes = [], x = 0
+let listaDeNomes = [], x = 0
 
 while(x <= 99)
 {
@@ -923,8 +993,8 @@ while(x <= 99)
 Ou `do/while`:
 
 ```js
-var listaDeNomes = []
-var x = 0
+let listaDeNomes = []
+let x = 0
 
 do
 {
@@ -941,7 +1011,7 @@ Observe que nestes dois últimos exemplos nós não fizemos a impressão dos nom
 Assim como variáveis comuns, em JavaScript, os vetores não possuem um tipo definido de dados que podem armazenar. Isto faz com que possamos ter vetores como o seguinte:
 
 ```js
-var lista = ['João', 16, 'Maria', 15, 'Carolina', 18]
+let lista = ['João', 16, 'Maria', 15, 'Carolina', 18]
 ```
 
 Em linguagens como C, C++ e Java, isto não seria possível, já que, nestas linguagens, vetores são estruturas homogêneas (que armazenam um único tipo de dado).
@@ -951,7 +1021,7 @@ Em linguagens como C, C++ e Java, isto não seria possível, já que, nestas lin
 Na linguagem JavaScript, vetores são dinamicamente dimensionados, o que significa que não é necessário estipular o tamanho do vetor no momento da sua criação (como é feito em linguagens como C, C++ e Java), o vetor terá, inicialmente, o tamanho 0 (zero) e irá aumentar conforme utilizarmos seu espaço:
 
 ```js
-var listaDeCompras = [] 	// Aqui o tamanho do vetor é 0
+let listaDeCompras = [] 	// Aqui o tamanho do vetor é 0
 listaDeCompras[0] = "Pão"	// Aqui o tamanho do vetor é 1
 listaDeCompras[1] = "Leite"	// Aqui o tamanho do vetor é 2
 listaDeCompras[2] = "Ovos"	// Aqui o tamanho do vetor é 3
@@ -960,7 +1030,7 @@ listaDeCompras[2] = "Ovos"	// Aqui o tamanho do vetor é 3
 No exemplo acima, começamos a utilizar o vetor a partir da posição 0, a primeira posição disponível em um vetor. Mas, e se tivéssemos começado da posição 5, por exemplo? Se apenas ocuparmos a posição 5, o tamanho do vetor será 1 ou 5?
 
 ```js
-var listaDeCompras = [] 	// Aqui o tamanho do vetor é 0
+let listaDeCompras = [] 	// Aqui o tamanho do vetor é 0
 listaDeCompras[5] = "Tomate"	// Aqui o tamanho do vetor é 6
 ```
 
@@ -969,7 +1039,7 @@ Nem 1 nem 5. O tamanho do vetor, neste caso, será 6. Mas, por quê? Porque esta
 
 ```js
 		    // 0,1,2,3,4,5
-var listaDeCompras = [  , , , , , "Tomate" ]
+let listaDeCompras = [  , , , , , "Tomate" ]
 ```
 
 #### A propriedade length
@@ -979,14 +1049,14 @@ Certo, já sabemos como um vetor é dimensionado, mas e se precisarmos descobrir
 A propriedade `length` retorna o tamanho de um vetor. Basta utilizá-la junto ao nome do vetor com um ponto:
 
 ```js
-var numeros = [2, 5, 7, 9]
+let numeros = [2, 5, 7, 9]
 console.log(numeros.length)	// O tamanho impresso será 4
 ```
 
 Esta propriedade é muito utilizada quando se precisa percorrer um vetor já preenchido:
 
 ```js
-var capitais = ["Palmas", "São Paulo", "Rio de Janeiro", "Belo Horizonte", "Salvador", "Recife", "Goiânia"]
+let capitais = ["Palmas", "São Paulo", "Rio de Janeiro", "Belo Horizonte", "Salvador", "Recife", "Goiânia"]
 for(i = 0; i < capitais.length; i++) {
 	console.log(capitais[i])
 }
@@ -1003,7 +1073,7 @@ A matriz abaixo, por exemplo, é uma matriz de tamanho `3 X 3`, ou seja: 3 linha
 Poderíamos declará-la em JavaScript da seguinte maneira:
 
 ```js
-var tabela = [
+let tabela = [
                 [ 54, 21, 3 ],
                 [ 29, 99, 306 ],
                 [ 76, 5, 11 ]
@@ -1013,7 +1083,7 @@ var tabela = [
 Ou em uma única linha, caso não se preocupe com a formatação:
 
 ```js
-var tabela = [[ 54, 21, 3 ], [ 29, 99, 306 ], [ 76, 5, 11 ]]
+let tabela = [[ 54, 21, 3 ], [ 29, 99, 306 ], [ 76, 5, 11 ]]
 ```
 
 Anteriormente, dissemos que vetores são como "coleções de variáveis". Se observarmos com atenção, cada par de colchetes nesta matriz é um conjunto, uma coleção de valores, um vetor. Temos três conjuntos com três valores cada. Os três conjuntos estão dentro de um conjunto maior, por isso dizemos que matrizes são como "coleções de vetores".
@@ -1028,11 +1098,11 @@ console.log(tabela[2][1]) // O valor impresso será 5
 Para percorrer matrizes, o método mais comumente utilizado é bastante semelhante ao utilizado para vetores. No entanto, como agora precisamos percorrer tanto linhas quanto colunas, muitas vezes torna-se necessário o uso de estruturas de repetição encadeadas:
 
 ```js
-var tabela = [[ 54, 21, 3 ], [ 29, 99, 306 ], [ 76, 5, 11 ]]
+let tabela = [[ 54, 21, 3 ], [ 29, 99, 306 ], [ 76, 5, 11 ]]
 
-for(var x = 0; x <= 2; x++)
+for(let x = 0; x <= 2; x++)
 {
-    for(var y = 0; y <= 2; y++)
+    for(let y = 0; y <= 2; y++)
     {
         console.log(tabela[x][y])
     }
@@ -1044,12 +1114,12 @@ No exemplo acima temos duas estruturas de repetição: a mais externa para perco
 Para deixar este exemplo mais didático, teste-o da seguinte maneira e observe o que acontece:
 
 ```js
-var tabela = [[ 54, 21, 3 ], [ 29, 99, 306 ], [ 76, 5, 11 ]]
+let tabela = [[ 54, 21, 3 ], [ 29, 99, 306 ], [ 76, 5, 11 ]]
 
-for(var x = 0; x <= 2; x++)
+for(let x = 0; x <= 2; x++)
 {
     console.log("Repetição " + x + " do primeiro para.")
-    for(var y = 0; y <= 2; y++)
+    for(let y = 0; y <= 2; y++)
     {
         console.log("Repetição " + y + " do segundo para.")
         console.log("Linha " + x + " / Coluna " + y + ": " + tabela[x][y])
@@ -1070,9 +1140,9 @@ Se observarmos com calma, há padrões bastante simples pelos quais podemos iden
 Os elementos da diagonal primária sempre estarão em posições em que o número da linha é igual ao número da coluna. Se desejarmos percorrer os elementos da diagonal principal de uma determinada matriz de tamanho `n`, podemos contar de `0` a `n-1` utilizando um único contador para linhas e colunas:
 
 ```js
-var matriz = [[ -1, 2, -5 ], [ 3, 0, -3 ], [ 5, 7, -6 ]]
-var n = 3
-for(var x = 0; x < n; x++)
+let matriz = [[ -1, 2, -5 ], [ 3, 0, -3 ], [ 5, 7, -6 ]]
+let n = 3
+for(let x = 0; x < n; x++)
 {
     console.log(matriz[x][x])
 }
@@ -1081,23 +1151,23 @@ for(var x = 0; x < n; x++)
 Já os elementos da diagonal secundária de uma matriz de tamanho `n` podem ser identificados se começarmos contando de `0` nas linhas e de `n-1` nas colunas. O elemento seguinte da diagonal secundária sempre estará uma linha "após" e uma coluna "antes" da atual:
 
 ```js
-var matriz = [[ -1, 2, -5 ], [ 3, 0, -3 ], [ 5, 7, -6 ]]
-var n = 3
-for(var x = 0; x < n; x++)
+let matriz = [[ -1, 2, -5 ], [ 3, 0, -3 ], [ 5, 7, -6 ]]
+let n = 3
+for(let x = 0; x < n; x++)
 {
     console.log(matriz[x][n-1-x])
 }
 ```
 
-### 9.3. Recursos para arrays JavaScript
+### 9.3. Métodos do objeto Array e outras utilidades
 
-Neste capítulo conheceremos alguns dos métodos do objeto Array, que facilitarão a forma como trabalhamos com listas. Além deles, conheceremos o loop for...of.
+Neste capítulo conheceremos alguns dos métodos do objeto Array e outras utilidades, que facilitarão a forma como trabalhamos com listas.
 
 #### push()
 O método `push()` adiciona um elemento ao final de um `array`:
 
 ```js
-var cidades = ['Rio de Janeiro', 'São Paulo', 'Salvador']
+let cidades = ['Rio de Janeiro', 'São Paulo', 'Salvador']
 console.log(cidades) // [Rio de Janeiro, São Paulo, Salvador]
 cidades.push('Palmas')
 console.log(cidades) // [Rio de Janeiro, São Paulo, Salvador, Palmas]
@@ -1107,7 +1177,7 @@ console.log(cidades) // [Rio de Janeiro, São Paulo, Salvador, Palmas]
 O método `unshift()` adiciona um ou mais elementos ao início de um `array` e retorna o novo tamanho (`length`) do `array`:
 
 ```js
-var filmes = ['A Coisa', 'O Vizinho', 'Piratas do Caribe']
+let filmes = ['A Coisa', 'O Vizinho', 'Piratas do Caribe']
 filmes.unshift('Vingadores', 'Pantera Negra') // O retorno será 5
 console.log(filmes) // [Vingadores, Pantera Negra, A Coisa, O Vizinho, Piratas do Caribe]
 ```
@@ -1116,7 +1186,7 @@ console.log(filmes) // [Vingadores, Pantera Negra, A Coisa, O Vizinho, Piratas d
 O método `shift()` remove um elemento do início de um `array` e retorna o elemento removido:
 
 ```js
-var planetas = ['Plutão', 'Mercúrio', 'Marte']
+let planetas = ['Plutão', 'Mercúrio', 'Marte']
 planetas.shift()  // O retorno será Plutão
 console.log(planetas) // [Mercúrio, Marte]
 ```
@@ -1125,7 +1195,7 @@ console.log(planetas) // [Mercúrio, Marte]
 O método `pop()` remove o último elemento de um `array`:
 
 ```js
-var carros = ['Mustang', 'Challenger', 'Camaro', 'Fusca']
+let carros = ['Mustang', 'Challenger', 'Camaro', 'Fusca']
 console.log(carros) // [Mustang, Challenger, Camaro, Fusca]
 carros.pop()
 console.log(carros) // [Mustang, Challenger, Camaro]
@@ -1137,10 +1207,10 @@ O métood `splice()` altera o conteúdo de um `array`, adicionando novos element
 Este método aceita até três parâmetros: (1) índice inicial, (2) número de elementos a serem removidos a partir do índice inicial e (3) elementos a serem inseridos.
 
 ```js
-var disciplinas = ["Matemática", "Arte", "História"]
+let disciplinas = ["Matemática", "Arte", "História"]
 
 // Remove 2 elementos a partir do índice 1, e insere "Física"
-var removidos = disciplinas.splice(1, 2, "Física")
+let removidos = disciplinas.splice(1, 2, "Física")
 
 console.log(disciplinas) // [Matemática, Física]
 console.log(removidos) // [Arte, História]
@@ -1156,9 +1226,9 @@ O método `slice()` retorna um intervalo de um `array`, sem modificar o `array` 
 Este método aceita dois parâmetros: (1) posição inicial do intervalo e (2) posição final do intervalo.
 
 ```js
-var estruturas = ["if", "else", "while", "for", "switch"]
+let estruturas = ["if", "else", "while", "for", "switch"]
 
-var repeticao = estruturas.slice(2, 4)
+let repeticao = estruturas.slice(2, 4)
 
 console.log(repeticao) // [while, for]
 ```
@@ -1171,15 +1241,15 @@ Observe no exemplo acima que, embora tenhamos indicado o intervalo dos índices 
 O método `sort()` ordena os elementos de um `array` conforme a tabela de caracteres [Unicode](https://pt.wikipedia.org/wiki/Unicode) e retorna o próprio `array`.
 
 ```js
-var tempos = [10.2, 10, 10.8, 11, 11.3, 11.4]
+let tempos = [10.2, 10, 10.8, 11, 11.3, 11.4]
 tempos.sort()
 console.log(tempos) // [10, 10.2, 10.8, 11, 11.3, 11.4]
 
-var valores = [2, 1, 10, 8, 9, 80]
+let valores = [2, 1, 10, 8, 9, 80]
 valores.sort()
 console.log(valores) // [1, 10, 2, 8, 80, 9]
 
-var estados = ["Roraima", "Acre", "Tocantins", "Bahia"]
+let estados = ["Roraima", "Acre", "Tocantins", "Bahia"]
 estados.sort()
 console.log(estados) // ["Acre", "Bahia", "Roraima", "Tocantins"]
 ```
@@ -1192,7 +1262,7 @@ Você pode construir sua própria função de ordenação e aplicá-la ao métod
 O método `reverse()` inverte os elementos de um `array`. O último passa a ser o primeiro e vice-versa.
 
 ```js
-var sistemas = ["Android", "iOS", "macOS", "Linux", "Windows"]
+let sistemas = ["Android", "iOS", "macOS", "Linux", "Windows"]
 sistemas.reverse()
 console.log(sistemas) // ["Windows", "Linux", "macOS", "iOS", "Android"]
 ```
@@ -1203,10 +1273,10 @@ O método `indexOf()` retorna o primeiro índice em que determinado elemento é 
 Este método aceita até dois parâmetros: (1) o valor a ser procurado e (2) a posição de onde começar a procurar.
 
 ```js
-var cores = ["verde", "amarelo", "azul", "branco"]
+let cores = ["verde", "amarelo", "azul", "branco"]
 console.log(cores.indexOf("azul")) // 2
 
-var numeros = [9, 8, 7, 6, 5, 6, 7, 8, 9]
+let numeros = [9, 8, 7, 6, 5, 6, 7, 8, 9]
 console.log(numeros.indexOf(6, 4)) // 5
 ```
 
@@ -1218,19 +1288,19 @@ O método `includes()` verifica se um `array` possui determinado elemento e reto
 Este método aceita até dois parâmetros: (1) o valor a ser procurado e (2) a posição de onde começar a procurar.
 
 ```js
-var cores = ["verde", "amarelo", "azul", "branco"]
-var encontrou = cores.includes("amarelo")
+let cores = ["verde", "amarelo", "azul", "branco"]
+let encontrou = cores.includes("amarelo")
 console.log(encontrou) // true
 
-var numeros = [9, 8, 7, 6, 5, 4, 3, 2, 1]
+let numeros = [9, 8, 7, 6, 5, 4, 3, 2, 1]
 console.log(numeros.includes(9, 1)) // false
 ```
 
 #### for...of
-O loop `for..of` percorre um `array` e atribui a uma variável temporária o valor referente a cada posição.
+O `for..of` não é um método do objeto `Array`, mas pode ser bastante útil como uma alternativa ao loop `for` que já conhecemos. Este loop percorre um `array` e atribui a uma variável temporária o valor referente a cada posição.
 
 ```js
-var produtos = ['Tomate', 'Abacaxi', 'Cebola']
+let produtos = ['Tomate', 'Abacaxi', 'Cebola']
 for(item of produtos) {
     console.log(item)
 }
@@ -1261,7 +1331,7 @@ Execute o código da função `soma(a, b)` acima e observe o que acontece.
 Você deve ter notado que nada aconteceu. Isso porque a função foi apenas declarada. Agora, precisamos realizar a chamada desta função. Para isto, se já tiver executado o exemplo acima, execute o seguinte código:
 
 ```js
-var resultado = soma(10, 20);
+let resultado = soma(10, 20);
 console.log(resultado); // 30
 ```
 
@@ -1363,13 +1433,13 @@ function fibonacci(n) {
 Na programação, objetos são um recurso que tem por princípio aproximar a forma como escrevemos e compreendemos código da forma como lidamos com elementos do mundo real. Em JavaScript, objetos são representados por um par de chaves `{ }`:
 
 ```js
-var meuObjeto = { }
+let meuObjeto = { }
 ```
 
 Até agora tivemos acesso a dois recursos que nos possibilitaram (1) armazenar valores e, consequentemente, representar características, e (2) definir e realizar ações. O primeiro deles são as variáveis e o segundo as funções. Objetos nos permitem concentrar estes dois recursos. Imagine que precisemos representar um retângulo, concentrando suas características, como `largura` e `altura`:
 
 ```js
-var retangulo = { largura: 5, altura: 4 }
+let retangulo = { largura: 5, altura: 4 }
 ```
 
 Quando falamos em orientação a objetos, `largura` e `altura` são consideradas **propriedades** ou **atributos** do objeto `retangulo`. Após definido o objeto `retangulo`, para imprimir sua `largura`, por exemplo, basta o seguinte:
@@ -1381,7 +1451,7 @@ console.log(retangulo.largura);
 Se precisássemos definir uma função para cálculo da área, bastaria adicionar mais uma propriedade e vincular a ela uma função:
 
 ```js
-var retangulo = {
+let retangulo = {
     largura: 5,
     altura: 4,
     calcularArea: function() {
@@ -1429,8 +1499,8 @@ class Pessoa {
 Para criar objetos a partir da classe `Pessoa` e utilizá-los, podemos executar o seguinte código:
 
 ```js
-var pessoa1 = new Pessoa()
-var pessoa2 = new Pessoa()
+let pessoa1 = new Pessoa()
+let pessoa2 = new Pessoa()
 
 pessoa1.nome = "Alice"
 pessoa1.idade = 19
@@ -1449,7 +1519,7 @@ Observe que para fazer referência às propriedades `nome` e `idade` dentro do m
 A importância de se utilizar o operador `this` fica mais clara quando enxergamos além do escopo da classe. Considere o seguinte exemplo:
 
 ```js
-var texto = "Este texto será impresso"
+let texto = "Este texto será impresso"
 
 class Mensagem {
     texto = "Não este."
@@ -1458,7 +1528,7 @@ class Mensagem {
     }
 }
 
-var msg = new Mensagem()
+let msg = new Mensagem()
 msg.exibir()
 ```
 
@@ -1499,7 +1569,7 @@ class Pessoa {
 Observe que não foi necessário declarar `nome` e `idade` antes do construtor, como fizemos no primeiro exemplo da classe `Pessoa`. Como estas duas propriedades já têm seus valores inicializados no construtor, seria redundante tê-los declarado antes. Para utilizar este construtor, bastaria o seguinte:
 
 ```js
-var pessoa1 = new Pessoa("Carolina", 20)
+let pessoa1 = new Pessoa("Carolina", 20)
 
 pessoa1.apresentar()
 ```
@@ -1660,7 +1730,7 @@ Em tradução livre: "Erro de sintaxe: sinal . não esperado".
 Na presente lista de exercícios, quando o enunciado disser "Gere uma matriz", você deverá declarar a matriz vazia e utilizar estruturas de repetição para percorrê-la e atribuir valores automaticamente. Nesse caso, os valores não serão informados pelo usuário; exceto o tamanho da matriz, quando especificado. Por exemplo, poderíamos atribuir um número inteiro aleatório, entre 1 e 100, à variável `x` da seguinte maneira:
 
 ```js
-var x = parseInt(Math.random() * 100 + 1);
+let x = parseInt(Math.random() * 100 + 1);
 ```
 
 Quando se disser "Leia uma matriz", entenda que todos os elementos da matriz deverão ser lidos; ou seja, informados pelo usuário.
