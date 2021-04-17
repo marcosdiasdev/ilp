@@ -486,11 +486,13 @@ Há um recurso que pode simplificar mais ainda o nosso trabalho com mensagens, c
 let anoAtual = 2021
 let nascimento = 1990
 let nome = 'José'
-alert(`${nome} nasceu em ${nascimento}. Se estamos em ${anoAtual}, ele certamente tem ${anoAtual-nascimento} anos.`)
+alert(`${nome} nasceu em ${nascimento}. 
+Se estamos em ${anoAtual}, 
+ele certamente tem ${anoAtual-nascimento} anos.`)
 // José nasceu em 1990. Se estamos em 2021, ele certamente tem 31 anos.
 ```
 
-Uma template string deve ser envolvida por crases (\`\`) ao invés de aspas, e toda variável ou expressão dentro dela deve aparecer dentro de chaves acompanhadas por um cifrão `${}`.
+Uma template string deve ser envolvida por crases (\`\`) ao invés de aspas, e toda variável ou expressão dentro dela deve aparecer dentro de chaves acompanhadas por um cifrão `${}`. Além disso, template strings podem ser quebradas em várias linhas para facilitar a organização do código.
 
 ## 7. Estruturas de decisão: escolha um caminho
 
