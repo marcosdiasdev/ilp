@@ -1683,6 +1683,74 @@ cliente.exibirDados()
 // RG do Cliente: 750021
 ```
 
+#### Atributos e métodos estáticos
+
+Até o momento, usamos classes para definir atributos e métodos, mas foram os objetos que os utilizaram. Em algumas situações pode ser necessário definir atributos e métodos que serão utilizados pela classe, e não pelos objetos. Atributos e métodos assim são chamados de **estáticos**.
+
+Quando um atributo ou método é definido como estático, somente a classe pode acessá-lo e modificá-lo. Objetos não possuem acesso a atributos e métodos estáticos. 
+
+A seguir, vamos utilizar um atributo estático para contar quantos objetos já foram criados a partir da classe `Veiculo`:
+
+```js
+class Veiculo {
+  fabricante
+  modelo
+  static contador = 0
+  
+  constructor(fabricante, modelo) {
+    this.fabricante = fabricante
+	this.modelo = modelo
+	Veiculo.contador++
+  }
+}
+```
+
+Ao declarar o atributo `contador` com a palavra-chave `static` estamos definindo que este atributo deverá permanecer e ser acessado somente pela classe `Veiculo` e não por seus objetos. Veja o que acontece no código abaixo:
+
+```js
+const uno = new Veiculo("Fiat", "Uno")
+
+console.log(uno.contador) // undefined
+
+console.log(Veiculo.contador); // 1
+```
+
+Quando tentamos acessar o atributo `contador` por meio do objeto `uno`, obtemos o resultado `undefined`, porém, ao acessar essa propriedade por meio do nome da classe, podemos ver que seu valor é `1`.
+
+Também pode fazer sentido que determinados métodos sejam estáticos, principalmente quando se deseja manipular um atributo estático ou executar alguma ação independente de objetos:
+
+```js
+class Veiculo {
+  fabricante
+  modelo
+  static contador = 0
+  
+  constructor(fabricante, modelo) {
+    this.fabricante = fabricante
+	this.modelo = modelo
+	Veiculo.contador++
+  }
+  
+  static reiniciarContador() {
+    this.contador = 0  
+  }
+}
+```
+
+No exemplo acima, a palavra-chave `this` dentro do método estático `reiniciarContador()` faz referência à classe `Veiculo`, e não a um objeto. Teste com o código abaixo:
+
+```js
+const gol = new Veiculo("Volkswagen", "Gol")
+const cruze = new Veiculo("Chevrolet", "Cruze")
+const renegade = new Veiculo("Renegade", "Jeep")
+
+console.log(Veiculo.contador) // 3
+
+Veiculo.reiniciarContador()
+
+console.log(Veiculo.contador) // 0
+```
+
 ### 11.2 Herança
 
 A programação orientada a objetos carrega influências bastante notáveis da biologia. A ideia de se utilizar classes na programação, inclusive, parece ter sido motivada pela Taxonomia, na qual os organismos são organizados em agrupamentos (classes) conforme compartilham de características em comum.
