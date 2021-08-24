@@ -1586,13 +1586,13 @@ Imagine um sistema que manuseie dados de vários clientes. Vez ou outra um clien
 
 ```js
 class Cliente {
-	nome
-	rg
+  nome
+  rg
 	
-	constructor(nome, rg) {
-		this.nome = nome
-		this.rg = rg
-	}
+  constructor(nome, rg) {
+    this.nome = nome
+    this.rg = rg
+  }
 }
 ```
 
@@ -1607,13 +1607,13 @@ Para evitar a alteração indiscriminada do valor de `rg`, podemos tornar este a
 
 ```js
 class Cliente {
-	nome
-	#rg
-	
-	constructor(nome, rg) {
-		this.nome = nome
-		this.#rg = rg
-	}
+  nome
+  #rg
+  
+  constructor(nome, rg) {
+    this.nome = nome
+    this.#rg = rg
+  }
 }
 ```
 
