@@ -1482,7 +1482,7 @@ Para aprender mais sobre objetos em JavaScript, acesse [Trabalhando com objetos]
 
 A definição mais simples e objetiva para classes seria que **classes são modelos para a criação de objetos**. Classes são um recurso existente em outras linguagens já há um bom tempo. Na linguagem JavaScript, porém, as classes só foram introduzidas por volta de 2015.
 
-Em uma classe se pode definir, por exemplo, quais propriedades (e métodos) um objeto (que ainda será criado) deverá possuir. A grande vantagem é que esse modelo pode ser reaproveitado para a criação de quantos objetos forem necessários, diferentemente do que fizemos na seção anterior.
+Em uma classe se pode definir, por exemplo, quais atributos e métodos um objeto, que ainda será criado, deverá possuir. A grande vantagem é que esse modelo pode ser reaproveitado para a criação de quantos objetos forem necessários, diferentemente do que fizemos na seção anterior.
 
 O código a seguir mostra a declaração de uma classe `Pessoa`, com as propriedades `nome` e `idade`, e o método `apresentar()`.
 
