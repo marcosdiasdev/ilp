@@ -1576,6 +1576,114 @@ let pessoa1 = new Pessoa("Carolina", 20)
 pessoa1.apresentar()
 ```
 
+### 11.2 Herança
+
+A programação orientada a objetos carrega influências bastante notáveis da biologia. A ideia de se utilizar classes na programação, inclusive, parece ter sido motivada pela Taxonomia, na qual os organismos são organizados em agrupamentos (classes) conforme compartilham de características em comum.
+
+Por vezes, iremos nos deparar com classes diferentes que compartilham das mesmas propriedades (atributos e métodos). Em alguns desses casos, faremos uso de um dos principais recursos da programação orientada a objetos: a **herança**.
+
+A herança é o relacionamento em que uma classe mãe compartilha seus atributos e métodos de forma **unilateral** com uma ou mais classes filhas. Dizemos unilateral porque somente a(s) classe(s) filha(s) recebe(m) propriedades da mãe, mas não o inverso.
+
+Dadas como exemplo as classes `A` e `B`, essas duas são candidatas a um relacionamento de herança quando podemos afirmar que `A` é um(a) `B` ou que `B` é um(a) `A`. 
+
+Um exemplo bastante prático disso seriam as classes `Pessoa` e `Professor`. Podemos afirmar que `Professor` é uma `Pessoa`. Neste caso, faz muito sentido que a classe `Professor` seja uma classe filha (ou subclasse) da classe `Pessoa`, a classe mãe (ou superclasse). Mas por que não o contrário? Veja: toda `Pessoa` pode possuir um `nome` e uma `idade`; todo `Professor` também. Já um `Professor` pode possuir algo como um `curso` em que leciona; nem toda `Pessoa` leciona em um curso. Percebemos que as propriedades da classe `Pessoa` são comuns à classe `Professor`, mas esta última pode possuir propriedades que são somente suas.
+
+Considere o seguinte exemplo de classe `Pessoa`: 
+
+```js
+class Pessoa {
+  nome;
+  idade;
+
+  constructor(nome, idade) {
+    this.nome = nome;
+    this.idade = idade;
+  }
+
+  apresentar() {
+    console.log(`Olá! Meu nome é ${this.nome} e tenho ${this.idade} anos.`);
+  }
+}
+```
+
+Para criar uma nova classe `Professor`, que possua as mesmas propriedades da classe `Pessoa`, podemos fazer apenas:
+
+```js
+class Professor extends Pessoa { }
+```
+
+Junte as duas classes anteriores ao código a seguir e verifique como um objeto do tipo `Professor` pode ser criado exatamente como criaríamos um objeto do tipo `Pessoa`:
+
+```js
+const professor = new Professor("Xavier", 55)
+professor.apresentar()
+```
+
+Ao declarar a classe `Professor` com a palavra-chave `extends` temos a possibilidade de informar de que classe a classe `Professor` é derivada. Neste caso, escolhemos a classe `Pessoa`. Isto significa que a classe `Professor` terá acesso aos mesmo atributos e métodos já declarados na classe `Pessoa`, inclusive seu construtor.
+
+Porém, faria pouco sentido criar novas classes utilizando `extends` se essas novas classes forem sempre iguais às suas classes mães, ou superclasses. Como faríamos para adicionar novas propriedades à classe `Professor` mantendo as que já foram definidas na classe `Pessoa`?
+
+```js
+class Professor extends Pessoa {
+  curso;
+}
+```
+
+No exemplo acima, acrescentamos à classe `Professor` o atributo `curso`. Mas para que esse atributo pudesse ser inicializado já na criação do objeto, seria necessário modificar também o construtor da classe:
+
+```js
+class Professor extends Pessoa {
+  curso;
+  
+  // Este construtor não irá funcionar
+  constructor(nome, idade, curso) {
+    this.nome = nome;
+	this.idade = idade;
+    this.curso = curso;
+  }
+}
+```
+
+Se você tentou criar um objeto a partir do construtor acima, deve ter se deparado com uma mensagem de erro que indicava que é necessário utilizar `super()` antes do `this` em uma classe derivada:
+
+> `Uncaught ReferenceError: Must call super constructor in derived class before accessing 'this' or returning from derived constructor`
+
+Neste caso, o operador `super()` se refere ao construtor da superclasse `Pessoa`. Como `Professor` está estendendo a classe `Pessoa`, a criação de objetos do tipo `Professor` é feita por meio do construtor da classe `Pessoa`. 
+
+Sendo assim, no construtor de nossa subclasse `Professor`, deveremos invocar primeiro o construtor da classe `Pessoa` por meio do operador `super()`, e poderemos passar os mesmos parâmetros que são aceitos no construtor original: `nome` e `idade`. Somente após isso é que poderemos inicializar os atributos específicos da classe `Professor`.
+
+```js
+class Professor extends Pessoa {
+  curso;
+  
+  constructor(nome, idade, curso) {
+    super(nome, idade);
+    this.curso = curso;
+  }
+}
+```
+
+Assim temos um novo construtor que inicializa não só `nome` e `idade`, que são comuns à qualquer `Pessoa`, mas também inicializamos o atributo `curso`, específico de `Professor`.
+
+Por fim, subclasses podem tanto definir novos comportamentos para métodos já existentes em suas classes mães, como também podem definir novos métodos:
+
+```js
+class Professor extends Pessoa {
+  curso;
+  
+  constructor(nome, idade, cursos) {
+    super(nome, idade);
+    this.curso = curso;
+  }
+  
+  apresentar() {
+    console.log(`Olá! Eu sou o(a) Prof(a). ${this.nome} e leciono no curso de ${this.curso}.`);
+  }
+}
+```
+
+Neste último exemplo modificamos o método `apresentar()` para que ele exiba uma mensagem diferente da exibida por objetos do tipo `Pessoa`.
+
 ## 12. Depuração: solucionando erros comuns em JavaScript
 
 ### ReferenceError
