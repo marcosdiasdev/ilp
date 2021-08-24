@@ -1576,6 +1576,113 @@ let pessoa1 = new Pessoa("Carolina", 20)
 pessoa1.apresentar()
 ```
 
+#### Atributos e métodos privados
+
+Eventualmente, necessitamos que métodos ou atributos de um objeto não sejam acessados diretamente por quem o está manipulando. Geralmente isso ocorre com atributos que possuem valores sensíveis e que não devem ser modificados sem um critério específico.
+
+Por padrão, todos os atributos e métodos de uma classe são **públicos**, o que significa que eles podem ser acessados e modificados a qualquer momento após a criação de um objeto. Um atributo ou método que recusa esse tipo de comportamento é considerado **privado**.
+
+Imagine um sistema que manuseie dados de vários clientes. Vez ou outra um cliente erra o número do seu documento de idade (RG) durante o cadastro e precisa modificar esse valor depois. Porém, por uma política do sistema, um número de documento nunca deve ser alterado sem que antes se registre que essa alteração ocorreu.
+
+```js
+class Cliente {
+	nome
+	rg
+	
+	constructor(nome, rg) {
+		this.nome = nome
+		this.rg = rg
+	}
+}
+```
+
+Na classe acima, nada garante que iremos registrar a alteração do número do RG. Podemos simplesmente criar um novo objeto `Cliente` e modificar seu `rg` a qualquer momento:
+
+```js
+const cliente = new Cliente("Leôncio", "152387")
+cliente.rg = "872315"
+```
+
+Para evitar a alteração indiscriminada do valor de `rg`, podemos tornar este atributo **privado** utilizando o sinal `#` (cerquilha) antes de seu nome:
+
+```js
+class Cliente {
+	nome
+	#rg
+	
+	constructor(nome, rg) {
+		this.nome = nome
+		this.#rg = rg
+	}
+}
+```
+
+A partir de agora, se criarmos um novo objeto `Cliente` e tentarmos acessar ou modificar o atributo `#rg` veremos uma mensagem de erro que indica que este campo privado só pode ser acessado de dentro da classe:
+
+```js
+const cliente = new Cliente("Leônidas", "228943")
+cliente.#rg = "438922"
+
+// Uncaught SyntaxError: Private field '#rg' must be declared in an enclosing class
+```
+
+E se tentarmos utilizar `rg` sem o sinal de `#` acabaremos criando um novo atributo; assim teremos um `rg` público e um `#rg` privado. Você provavelmente não vai querer fazer isso:
+
+```js
+const cliente = new Cliente("Helena", "678891")
+cliente.rg = "918867"
+
+console.log(cliente)
+
+// Cliente {nome: "Jorge", rg: "918867", #rg: "678891"}
+```
+
+Então, como modificar um atributo privado? Por meio de um método público. Como atributos privados só podem ser acessados e modificados a partir de dentro da classe, um método que seja público poderá fazer esse acesso ou alteração por nós:
+
+```js
+class Cliente {
+  nome
+  #rg
+
+  constructor(nome, rg) {
+    this.nome = nome
+    this.#rg = rg
+  }
+
+  alterarRg(novoRg) {
+    console.log(
+      `O RG de ${this.nome} foi alterado de ${this.#rg} para ${novoRg}.`
+    );
+    this.#rg = novoRg
+  }
+  
+  exibirDados() {
+    console.log(`Nome do Cliente: ${this.nome}`)
+    console.log(`RG do Cliente: ${this.#rg}`)
+  }  
+}
+```
+
+Agora podemos criar um objeto `Cliente`, modificar seu `#rg` por meio do método público `alterarRg()`, que registra no console a alteração que está ocorrendo, e ainda podemos visualizar os novos dados por meio do método `exibirDados()`:
+
+```js
+const cliente = new Cliente("Heleonora", "210075")
+cliente.exibirDados()
+
+// Nome do Cliente: Heleonora
+// RG do Cliente: 210075
+
+
+cliente.alterarRg("750021")
+
+// O RG de Heleonora foi alterado de 210075 para 750021.
+
+cliente.exibirDados()
+
+// Nome do Cliente: Heleonora
+// RG do Cliente: 750021
+```
+
 ### 11.2 Herança
 
 A programação orientada a objetos carrega influências bastante notáveis da biologia. A ideia de se utilizar classes na programação, inclusive, parece ter sido motivada pela Taxonomia, na qual os organismos são organizados em agrupamentos (classes) conforme compartilham de características em comum.
