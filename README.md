@@ -1557,7 +1557,7 @@ const dobro = original.map(dobra);
 console.log(dobro); // [20, 100, 400, 600, 1000]
 ```
 
-Podemos perceber no exemplo acima que a função `map` percorre cada posição do vetor `original`, e a cada posição percorrida invoca a função `dobra` passando o valor daquela posição: `10`, depois `50`, depois `200`, e assim por diante. A cada vez que a função `dobra`é invocada, ela recebe o valor da posição atual e retorna o dobro dele, sendo assim:`20`, `100`, `400`, `600` e `1000`. Quando a função `map`termina de percorrer o vetor`original`, a variável `dobro` recebe um novo vetor contendo os valores gerados durante o processo.
+Podemos perceber no exemplo acima que a função `map` percorre cada posição do vetor `original`, e a cada posição percorrida invoca a função `dobra` passando o valor daquela posição: `10`, depois `50`, depois `200`, e assim por diante. A cada vez que a função `dobra` é invocada, ela recebe o valor da posição atual e retorna o dobro dele, sendo assim:`20`, `100`, `400`, `600` e `1000`. Quando a função `map`termina de percorrer o vetor`original`, a variável `dobro` recebe um novo vetor contendo os valores gerados durante o processo.
 
 Além do caso da função `map`, e das outras citadas nesta seção, as funções callback são necessárias para vários outros processos na linguagem JavaScript, inclusive para lidar com **funções assíncronas**. Mas esse é um assunto que deverá interessar apenas àqueles que pretendem se aprofundar nesta linguagem. Para conhecer mais sobre funções assíncronas, acesse: https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Asynchronous/Concepts
 
