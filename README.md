@@ -1458,7 +1458,15 @@ const soma = function (x, y) {
 };
 ```
 
-A função acima é considerada **anônima**, pois não possui um nome. Mas como invocar uma função que não possui um nome? Neste caso, por meio da variável `soma`, que carrega uma referência para a função anônima declarada.
+A função acima é considerada **anônima**, pois não possui um nome. Mas como invocar uma função que não possui um nome? Neste caso, por meio da variável `soma`, que carrega uma referência para a função anônima declarada:
+
+```js
+const soma = function (x, y) {
+  return x + y;
+};
+
+console.log(soma(4, 4)); // 8
+```
 
 Há uma terceira forma de se declarar uma função, chamada **arrow function** ou função seta. O exemplo anterior poderia ser construído com uma arrow function da seguinte forma:
 
@@ -1466,6 +1474,8 @@ Há uma terceira forma de se declarar uma função, chamada **arrow function** o
 const soma = (x, y) => {
   return x + y;
 };
+
+console.log(soma(6, 3)); // 9
 ```
 
 Assim como na forma que utilizamos até aqui, os parênteses servem para definir os argumentos (ou parâmetros) da função. Após a seta - `=>` - é declarado o corpo da função.
@@ -1474,9 +1484,67 @@ Em uma arrow function que possui somente um argumento, os parênteses tornam-se 
 
 ```js
 const metade = numero => numero / 2;
+
+console.log(metade(8)); // 4
 ```
 
 A função `metade` possui um único parâmetro `numero` e retorna o resultado da expressão `numero / 2`.
+
+### 10.5. Funções callback
+
+Funções callback ou **callback functions** são funções passadas como argumentos para outras funções. Uma função callback pode ser utilizada pela função que a recebe para completar uma tarefa.
+
+Para a construção deste exemplo, utilizaremos a mesma função `soma(x, y)`, porém, agora com um terceiro argumento chamado `callback`. Dentro do corpo da função `soma(x, y, callback)`, o argumento `callback` será invocado como uma função que receberá o resultado da expressão `x + y`.
+
+```js
+function soma(x, y, callback) {
+  callback(x + y);
+}
+```
+
+No exemplo acima, o argumento `callback` pode ser qualquer função que receba um único argumento, e essa função pode fazer absolutamente qualquer coisa com esse argumento.
+
+É importante entendermos que, ao invocar a função `soma`, devemos informar três argumentos: dois números e uma função. Essa função pode ser (1) declarada no ato da invocação ou (2) declarada previamente e apenas passada na lista de argumentos. Construiremos a seguir um exemplo em que a função `callback` é declarada no ato da invocação da função `soma`. A função que usaremos como callback deverá exibir no console o resultado da soma de `x` e `y`.
+
+```js
+function soma(x, y, callback) {
+  callback(x + y);
+}
+
+soma(2, 3, function exibe(valor) {
+  console.log(`O resultado é ${valor}`); // O resultado é 5
+});
+```
+
+Observe que a função `exibe` possui um único argumento chamado `valor`, e imprime no console um texto contendo esse `valor`. Sabemos que o resultado da impressão será `O resultado é 5`, pois na declaração da função `soma` especificamos que a função que fosse passada como `callback` seria invocada recebendo como argumento o resultado de `x + y`.
+
+Como mencionamos anteriormente, uma função que será usada como `callback` também pode ser declarada previamente e apenas informada na lista de argumentos, no ato da invocação da função que a receberá. A seguir, a função `exibe` é primeiro declarada, e depois passada como argumento na invocação da função `soma`:
+
+```js
+function soma(x, y, callback) {
+  callback(x + y);
+}
+
+function exibe(valor) {
+  console.log(`O resultado é ${valor}`);
+}
+
+soma(6, 6, exibe); // O resultado é 12
+```
+
+Funções callback também podem ser funções anônimas ou arrow functions:
+
+```js
+function metade(numero, callback) {
+  callback(numero / 2);
+}
+
+metade(4, function (valor) {
+  console.log(`O resultado é ${valor}`);
+});
+
+metade(10, valor => console.log(`O resultado é ${valor}`));
+```
 
 ## 11. Orientação a objetos
 
