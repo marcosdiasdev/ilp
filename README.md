@@ -1504,13 +1504,11 @@ function soma(x, y, callback) {
 
 No exemplo acima, o argumento `callback` pode ser qualquer função que receba um único argumento, e essa função pode fazer absolutamente qualquer coisa com esse argumento.
 
+> > Em todos os exemplos a seguir, considere que a função `soma` já foi declarada.
+
 É importante entendermos que, ao invocar a função `soma`, devemos informar três argumentos: dois números e uma função. Essa função pode ser (1) declarada no ato da invocação ou (2) declarada previamente e apenas passada na lista de argumentos. Construiremos a seguir um exemplo em que a função `callback` é declarada no ato da invocação da função `soma`. A função que usaremos como callback deverá exibir no console o resultado da soma de `x` e `y`.
 
 ```js
-function soma(x, y, callback) {
-  callback(x + y);
-}
-
 soma(2, 3, function exibe(valor) {
   console.log(`O resultado é ${valor}`); // O resultado é 5
 });
@@ -1521,10 +1519,6 @@ Observe que a função `exibe` possui um único argumento chamado `valor`, e imp
 Como mencionamos anteriormente, uma função que será usada como `callback` também pode ser declarada previamente e apenas informada na lista de argumentos, no ato da invocação da função que a receberá. A seguir, a função `exibe` é primeiro declarada, e depois passada como argumento na invocação da função `soma`:
 
 ```js
-function soma(x, y, callback) {
-  callback(x + y);
-}
-
 function exibe(valor) {
   console.log(`O resultado é ${valor}`);
 }
@@ -1532,19 +1526,40 @@ function exibe(valor) {
 soma(6, 6, exibe); // O resultado é 12
 ```
 
-Funções callback também podem ser funções anônimas ou arrow functions:
+Funções callback também podem ser funções anônimas ou arrow functions. Inclusive, é muito mais comum vê-las sendo usadas nestas duas formas:
 
 ```js
-function metade(numero, callback) {
-  callback(numero / 2);
-}
-
-metade(4, function (valor) {
+soma(4, 2, function (valor) {
   console.log(`O resultado é ${valor}`);
 });
 
-metade(10, valor => console.log(`O resultado é ${valor}`));
+soma(1, 7, valor => console.log(`O resultado é ${valor}`));
 ```
+
+#### Uso de funções callback na linguagem JavaScript
+
+A linguagem JavaScript faz uso massivo de funções callback. Em uma das seções anteriores conhecemos alguns dos métodos
+do objeto Array, que são funções nativas da linguagem JavaScript que podem ser aplicadas a vetores. Além das que vimos, há outras funções bastante úteis, que dependem de funções callback para que sejam utilizadas, como é o caso de `map`, `filter`, `reduce` e `forEach`.
+
+A função (ou método) `map` nos permite percorrer um vetor e gerar um novo vetor a partir do vetor percorrido, com a possibilidade de modificar os valores de cada posição. A cada posição percorrida no vetor original, uma função callback é invocada. O vetor que está sendo gerado receberá para cada posição o valor retornado pela função callback.
+
+A seguir, construiremos uma função chamada `dobra(valor)`, que retorna um valor multiplicado por 2. Depois utilizaremos a função `map` da linguagem JavaScript para percorrer um vetor com valores numéricos e gerar um novo vetor com o dobro de cada valor do vetor original.
+
+```js
+function dobra(valor) {
+  return 2 * valor;
+}
+
+const original = [10, 50, 200, 300, 500];
+
+const dobro = original.map(dobra);
+
+console.log(dobro); // [20, 100, 400, 600, 1000]
+```
+
+Podemos perceber no exemplo acima que a função `map` percorre cada posição do vetor `original`, e a cada posição percorrida invoca a função `dobra` passando o valor daquela posição: `10`, depois `50, depois `200`, e assim por diante. A cada vez que a função `dobra`é invocada, ela recebe o valor da posição atual e retorna o dobro dele, sendo assim:`20`, `100`, `400`, `600`e`1000`. Quando a função `map`termina de percorrer o vetor`original`, a variável `dobro` recebe um novo vetor contendo os valores gerados durante o processo.
+
+Além do caso da função `map`, e das outras citadas nesta seção, as funções callback são necessárias para vários outros processos na linguagem JavaScript, inclusive para lidar com **funções assíncronas**. Mas esse é um assunto que deverá interessar apenas àqueles que pretendem se aprofundar nesta linguagem. Para conhecer mais sobre funções assíncronas, acesse: https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/Asynchronous/Concepts
 
 ## 11. Orientação a objetos
 
