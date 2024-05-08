@@ -1970,15 +1970,15 @@ class Professor extends Pessoa {
 }
 ```
 
-Assim temos um novo construtor que inicializa não só `nome` e `idade`, que são comuns à qualquer `Pessoa`, mas também inicializamos o atributo `curso`, específico de `Professor`.
+Assim temos um novo construtor que inicializa não só `nome` e `idade`, que são comuns a qualquer `Pessoa`, mas também inicializamos o atributo `curso`, específico de `Professor`.
 
-Por fim, subclasses podem tanto definir novos comportamentos para métodos já existentes em suas classes mães, como também podem definir novos métodos:
+Por fim, subclasses podem tanto definir novos comportamentos para métodos já existentes em suas classes mães como também podem definir novos métodos:
 
 ```js
 class Professor extends Pessoa {
   curso;
 
-  constructor(nome, idade, cursos) {
+  constructor(nome, idade, curso) {
     super(nome, idade);
     this.curso = curso;
   }
