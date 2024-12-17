@@ -43,18 +43,19 @@ Uma boa recomendação para a construção de algoritmos descritivos é sempre u
 
 ## 2\. Variável
 
-Na Matemática, variável é o nome que se dá ao termo que substitui um outro desconhecido, como numa equação: `y = 2x + 1`. Em Lógica de Programação, o valor de uma variável pode ser conhecido ou não.
+Na Matemática, variável é o nome que se dá ao termo que substitui um outro desconhecido. Variáveis são amplamente utilizadas em equações, por exemplo: `y = 2x + 1`. Na programação, o valor de uma variável pode ser conhecido ou não.
 
-De forma genérica, uma variável é uma referência a um local na memória do computador, onde um valor pode estar armazenado, por exemplo: em um programa de computador, podemos ter uma variável chamada `idade`, que armazena o valor `18`.
+De forma bastante simplista, uma variável é uma referência a um local na memória do computador, onde um valor pode estar armazenado. Por exemplo: em um programa de computador, podemos ter uma variável chamada `idade`, que armazena o valor `18`.
 
 ### 2.1\. Nomenclatura de variáveis
 
 Há algumas regras a serem seguidas ao nomear variáveis. Algumas linguanges de programação poderão apresentar padrões diferentes, mas há algumas convenções que devem ser sempre seguidas para manter o código legível e livre de erros:
 
-- O nome de uma variável não deve conter espaços ou acentos
-- O nome de uma variável não deve conter operadores
-- O nome de uma variável não deve ser só um número
-- Algumas linguagens de programação diferenciam letras maiúsculas de letras minúsculas, logo: `Nome` pode ser diferente de `nome`
+- O nome de uma variável não deve conter espaços;
+- O nome de uma variável não deve conter operadores;
+- O nome de uma variável não deve ser só um número;
+- Embora seja permitido em JavaScript, o uso de acentos não é permitido em muitas linguagens de programação, por isso recomendamos evitá-los;
+- Algumas linguagens de programação diferenciam letras maiúsculas de letras minúsculas, logo: `Nome` pode ser diferente de `nome`;
 - Variáveis cujo nome seja um substantivo composto, como "data de nascimento", **podem** ser nomeadas com o padrão camelCase: `dataDeNascimento`. Este padrão define que todas as palavras após a primeira devem começar com letra maiúscula. Outra alternativa é utilizar um traço inferior (`_`), ou underline, entre cada palavra: `data_de_nascimento`.
 
 ### 2.2\. Atribuição de valores
@@ -77,19 +78,19 @@ Observe que o símbolo de igualdade, `=`, aqui é utilizado como operador de atr
 
 ### 2.3\. Tipos de variáveis
 
-O tipo de uma variável define o tipo de valor que ela poderá armazenar. Por exemplo, se precisamos armazenar um número inteiro, podemos criar uma variável do tipo **inteiro**; para armazenar nomes, utilizamos **cadeias**.
+O tipo de uma variável define o tipo de valor que ela poderá armazenar. Por exemplo, se precisamos armazenar um número inteiro, podemos criar uma variável do tipo **inteiro**; para armazenar nomes, utilizamos **cadeias de caracteres**. Cada linguagem de programação pode possuir seus próprios tipos ou simplesmente utilizar nomes diferentes dos usados por outras linguagens. Abaixo listamos os tipos primitivos de variáveis mais comumente encontrados nas linguagens de programação.
 
-- **Inteiro (integer):** número inteiro. Ex.: `10` ou `50`.
-- **Real (float):** número real. Ex.: `10.5` ou `0.8`.
-- **Caractere (character):** uma letra do alfabeto, algarismo, sinal de pontuação ou símbolo. Ex.: `'A'` ou `'2'` ou `'$'`. Valores do tipo caractere geralmente são representados entre aspas simples ('').
-- **Cadeia (string):** números, letras, palavras, frases e/ou outros símbolos. Ex.: `"A"` ou `"abc123"` ou `"* é um asterisco."`. Valores do tipo cadeia geralmente são representados entre aspas duplas (""); embora em JavaScript se possa utilizar também aspas simples ('').
-- **Lógico (boolean):** verdadeiro ou falso (`true` e `false` em JavaScript).
+- **Inteiro (integer):** utilizado para representar um número inteiro. Ex.: `10` ou `50`.
+- **Real (float):** utilizado para representar um número real. Ex.: `10.5` ou `0.8`.
+- **Caractere (character):** utilizado para representar uma letra do alfabeto, algarismo, sinal de pontuação ou símbolo. Ex.: `'A'` ou `'2'` ou `'$'`. Valores do tipo caractere geralmente são representados entre aspas simples ('').
+- **Cadeia de caracteres (string):** utilizado para representar números, letras, palavras, frases e/ou outros símbolos. Ex.: `"A"` ou `"abc123"` ou `"* é um asterisco."`. Valores do tipo cadeia de caracteres geralmente são representados entre aspas duplas (""); embora em JavaScript se possa utilizar também aspas simples ('').
+- **Lógico (boolean):** utilizado para representar um tipo de dado lógico que pode ter apenas dois valores possíveis: verdadeiro ou falso (`true` ou `false` em JavaScript).
 
-> Os valores entre parênteses correspondem aos tipos de variáveis como são usados em linguagens de programação como C++ ou Java. Geralmente, estes tipos aparecem de forma abreviada: int, char, bool.
+Os valores entre parênteses correspondem aos tipos de variáveis como são usados em linguagens de programação como C++ ou Java. Geralmente, esses tipos aparecem de forma abreviada, como `int`, `char` e `bool`.
 
 ### 2.4\. Exercícios com tipos de variáveis
 
-**1\. Informe o tipo de variável adequado para cada item abaixo:**
+**Para fixar seu conhecimento a respeito de tipos de variáveis, reflita sobre o tipo de variável adequado para cada item abaixo:**
 
 - a) Idade de uma pessoa
 - b) Valor de uma conta de luz
@@ -365,7 +366,7 @@ alert(a + b);
 
 > Ué! Mas 2 + 2 não eram igual a 4?!
 
-Se surpreendeu com o resultado? Isto acontece porque a variável `b` está armazenando um valor do tipo `string` (cadeia). Em operações envolvendo valores do tipo `string`, o sinal de soma (`+`) realiza a operação de **concatenação**, ou simplesmente **junção**.
+Se surpreendeu com o resultado? Isto acontece porque a variável `b` está armazenando um valor do tipo `string` (cadeia de caracteres). Em operações envolvendo valores do tipo `string`, o sinal de soma (`+`) realiza a operação de **concatenação**, ou simplesmente **junção**.
 
 Embora não se possa fixar o tipo de uma variável em JavaScript, os tipos de valores existentes nesta linguagem são:
 
