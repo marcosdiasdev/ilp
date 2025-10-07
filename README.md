@@ -20,7 +20,7 @@ Podemos definir algoritmo como uma sequência finita e ordenada de passos para a
 
 Para exemplificar, vamos começar com um algoritmo descritivo para um problema clássico do cotidiano: como fritar ovos?
 
-```js
+``` txt
 Algoritmo para fritar ovos
 
 1.    pegar frigideira, ovo, óleo e sal
@@ -49,7 +49,7 @@ De forma bastante simplista, uma variável é uma referência a um local na mem�
 
 ### 2.1\. Nomenclatura de variáveis
 
-Há algumas regras a serem seguidas ao nomear variáveis. Algumas linguanges de programação poderão apresentar padrões diferentes, mas há algumas convenções que devem ser sempre seguidas para manter o código legível e livre de erros:
+Há algumas regras a serem seguidas ao nomear variáveis. Algumas linguagens de programação poderão apresentar padrões diferentes, mas há algumas convenções que devem ser sempre seguidas para manter o código legível e livre de erros:
 
 - O nome de uma variável não deve conter espaços;
 - O nome de uma variável não deve conter operadores;
@@ -331,10 +331,9 @@ Teste cada um dos exemplos separadamente e observe o que acontece.
 Neste exemplo, iremos declarar três variáveis: `a`, `b` e `c`. Faremos a leitura de dois números inteiros e os armazenaremos nas variáveis `a` e `b`. A variável `c` receberá a soma de `a` e `b`. Por fim, escreveremos no console o valor contido em `c`.
 
 ```js
-let a, b, c;
-a = Number(prompt("Digite um número inteiro: "));
-b = Number(prompt("Digite outro número inteiro: "));
-c = a + b;
+let a = Number(prompt("Digite um número inteiro: "));
+let b = Number(prompt("Digite outro número inteiro: "));
+let c = a + b;
 console.log(c);
 ```
 
@@ -359,9 +358,9 @@ Devido a esta característica, costumamos dizer que a linguagem JavaScript é de
 Outra peculiaridade desta linguagem está relacionada ao fato de que é possível realizar operações com variáveis de tipos diferentes. Devido a isto, a tipagem da linguagem JavaScript é também considerada **fraca**. Teste o exemplo abaixo:
 
 ```js
-let a = 2,
-  b = "2";
-alert(a + b);
+let a = 2;
+let b = "2";
+alert(a + b); // 22
 ```
 
 > Ué! Mas 2 + 2 não eram igual a 4?!
@@ -444,8 +443,8 @@ alert(x);
 Às vezes utilizamos comentários também para **suprimir** uma ou mais linhas de código de um programa para que elas não sejam executadas:
 
 ```js
-let x = 10,
-  y = 20;
+let x = 10;
+let y = 20;
 console.log(x);
 // escreva(y)
 // Veja que só a variável x será escrita, pois a linha que deveria escrever y foi marcada como um comentário
@@ -456,8 +455,8 @@ Alguns comentários podem ser mais longos e ocupar várias linhas de código. Ne
 ```js
 let z = 30;
 /* Este comentário
-foi um pouco
-mais longe */
+possui mais de
+uma linha */
 console.log(z);
 ```
 
@@ -470,8 +469,7 @@ A função `console.log` permite que vários valores sejam informados separados 
 ```js
 let nome = "Júlia";
 let idade = 19;
-console.log(nome, " tem ", idade, " anos.");
-// Júlia tem 19 anos
+console.log(nome, " tem " idade, " anos"); // Júlia tem 19 anos
 ```
 
 A função `alert` não permite vários valores, mas você pode passar uma grande string concatenada com sinais de `+`:
@@ -479,8 +477,7 @@ A função `alert` não permite vários valores, mas você pode passar uma grand
 ```js
 let nome = "Geovana";
 let idade = 21;
-alert(nome + " tem " + idade + " anos.");
-// Geovana tem 21 anos
+alert(nome + " tem " + idade + " anos"); // Geovana tem 21 anos
 ```
 
 #### Template strings
@@ -514,8 +511,7 @@ A estrutura `if` (se) é utilizada na maioria dos casos em que é necessário de
 Para que você compreenda como funciona a estrutura `if`, imagine a seguinte situação: após lermos um número inteiro qualquer, se este número for par, deveremos exibir uma mensagem informando que ele é par. Ex.:
 
 ```js
-let numero;
-numero = prompt("Entre com um número: ");
+let numero = prompt("Entre com um número: ");
 if (numero % 2 == 0) {
   alert("O número lido é par.");
 }
@@ -566,7 +562,7 @@ Para responder a essa pergunta, vamos pensar no seguinte problema: após ler um 
 
 ```js
 let numero;
-numero = parseInt(prompt("Entre com um número inteiro: "));
+numero = parseInt(prompt("Insira um número inteiro: "));
 if (numero < 0) {
   console.log("O número lido é negativo.");
 } else if (numero > 0) {
@@ -592,7 +588,7 @@ Para adquirir um maior domínio, teste os exemplos vistos, mas não pare por aí
 
 Seguindo a mesma linha das estruturas `ìf`/`else`, o `switch`/`case` (escolha/caso) oferece uma maneira mais prática de resolver problemas onde há muitos valores possíveis para uma variável.
 
-Para que você possa entender melhor, imagine que precisemos construir uma calculadora que realize as quatro operações básicas: soma, subtração, divisão e multiplicação. Poderíamos solicitar que o usuário informasse a operação desejada e, logo após, os números a serem operados. Para soma, o usuário digitaria `+`, para subtração `-` e assim por diante.
+Para que você possa entender melhor, imagine que precisariamos construir uma calculadora que realize as quatro operações básicas: soma, subtração, divisão e multiplicação. Poderíamos solicitar que o usuário informasse a operação desejada e, logo após, os números a serem operados. Para soma, o usuário digitaria `+`, para subtração `-` e assim por diante.
 
 Utilizando a estrutura `if`/`else`, poderíamos verificar a opção escolhida da seguinte forma:
 
@@ -764,7 +760,7 @@ Se você ainda não conseguiu compreender a diferença entre `while` e `do`/`whi
 
 ### 8.3. For
 
-A última estrutura de repetição que iremos abordar tem um comportamento bastante semelhante ao das anteriores, porém, tem uma finalidade muito específica: a estrutura de decisão `for` (para) é a mais adequada em situações em que o número de repetições a serem executadas já é conhecido.
+A última estrutura de repetição que iremos abordar tem um comportamento bastante semelhante ao das anteriores, porém, tem uma finalidade muito específica: a estrutura de decisão `for` (para) é a mais adequada em situações em que o número de repetições a serem executadas já é conhecido e finito.
 
 Observe como faríamos para imprimir os números inteiros de 1 a 1000 utilizando `for`:
 
@@ -803,6 +799,7 @@ Qualquer um dos métodos acima fará com que o valor contido em `x` seja increme
 O mesmo é válido para decremento:
 
 ```js
+// x recebe seu valor, menos 1
 x = x - 1;
 x -= 1;
 x--;
